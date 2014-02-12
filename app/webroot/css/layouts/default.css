@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Univers Condensed";
+  src: url('/css/fonts/universcondensed.ttf') format('truetype'), url('/css/fonts/universcondensed.otf') format('opentype'), url('/css/fonts/universcondensed.eot') format('embedded-opentype'), url('/css/fonts/universcondensed.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Univers Condensed Bold";
+  src: url('/css/fonts/universcondensedbold.ttf') format('truetype'), url('/css/fonts/universcondensedbold.otf') format('opentype'), url('/css/fonts/universcondensedbold.eot') format('embedded-opentype'), url('/css/fonts/universcondensedbold.woff') format('woff');
+}
+
+/* line 3, ../../sass/layouts/default.sass */
+.menu-button {
+  font-family: "Univers Condensed Bold";
+  text-transform: uppercase;
+}
