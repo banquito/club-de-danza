@@ -9,6 +9,17 @@
 }
 
 /* line 3, ../../sass/layouts/default.sass */
+footer > .navbar {
+  margin-bottom: 0;
+  padding-top: 14px;
+}
+
+/* line 7, ../../sass/layouts/default.sass */
+.row-banner {
+  margin-bottom: 20px;
+}
+
+/* line 10, ../../sass/layouts/default.sass */
 .menu-button {
   font-family: "Univers Condensed Bold";
   text-transform: uppercase;
