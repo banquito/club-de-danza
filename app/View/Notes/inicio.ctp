@@ -34,12 +34,8 @@
             <img src="http://lorempixel.com/400/200/" alt="">
             <div class="caption">
                 <h3>Nota 1</h3>
-                <p>
-                ...
-                </p>
-                <p>
-                <a href="#" class="btn btn-primary">Action</a>
-                <a href="#" class="btn btn-default">Action</a>
+                <p class="text-right">
+                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
                 </p>
             </div>
         </div>
@@ -49,12 +45,8 @@
             <img src="http://lorempixel.com/400/200/" alt="">
             <div class="caption">
                 <h3>Nota 2</h3>
-                <p>
-                ...
-                </p>
-                <p>
-                <a href="#" class="btn btn-primary">Action</a>
-                <a href="#" class="btn btn-default">Action</a>
+                <p class="text-right">
+                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
                 </p>
             </div>
         </div>
@@ -64,12 +56,8 @@
             <img src="http://lorempixel.com/400/200/" alt="">
             <div class="caption">
                 <h3>Nota 3</h3>
-                <p>
-                ...
-                </p>
-                <p>
-                <a href="#" class="btn btn-primary">Action</a>
-                <a href="#" class="btn btn-default">Action</a>
+                <p class="text-right">
+                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
                 </p>
             </div>
         </div>
@@ -81,12 +69,8 @@
             <img src="http://lorempixel.com/400/200/" alt="" class="pull-left">
             <div class="caption">
                 <h3>Nota 4</h3>
-                <p>
-                ...
-                </p>
-                <p>
-                <a href="#" class="btn btn-primary">Action</a>
-                <a href="#" class="btn btn-default">Action</a>
+                <p class="text-right">
+                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
                 </p>
             </div>
         </div>
@@ -96,12 +80,8 @@
             <img src="http://lorempixel.com/400/200/" alt="">
             <div class="caption">
                 <h3>Nota 5</h3>
-                <p>
-                ...
-                </p>
-                <p>
-                <a href="#" class="btn btn-primary">Action</a>
-                <a href="#" class="btn btn-default">Action</a>
+                <p class="text-right">
+                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
                 </p>
             </div>
         </div>
@@ -113,12 +93,8 @@
             <img src="http://lorempixel.com/400/200/" alt="">
             <div class="caption">
                 <h3>Nota 1</h3>
-                <p>
-                ...
-                </p>
-                <p>
-                <a href="#" class="btn btn-primary">Action</a>
-                <a href="#" class="btn btn-default">Action</a>
+                <p class="text-right">
+                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
                 </p>
             </div>
         </div>
@@ -128,12 +104,8 @@
             <img src="http://lorempixel.com/400/200/" alt="">
             <div class="caption">
                 <h3>Nota 2</h3>
-                <p>
-                ...
-                </p>
-                <p>
-                <a href="#" class="btn btn-primary">Action</a>
-                <a href="#" class="btn btn-default">Action</a>
+                <p class="text-right">
+                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
                 </p>
             </div>
         </div>
@@ -143,12 +115,8 @@
             <img src="http://lorempixel.com/400/200/" alt="">
             <div class="caption">
                 <h3>Nota 3</h3>
-                <p>
-                ...
-                </p>
-                <p>
-                <a href="#" class="btn btn-primary">Action</a>
-                <a href="#" class="btn btn-default">Action</a>
+                <p class="text-right">
+                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
                 </p>
             </div>
         </div>
