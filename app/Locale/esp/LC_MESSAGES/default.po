@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Club de Danza\n"
 "POT-Creation-Date: 2014-02-13 19:57-0300\n"
-"PO-Revision-Date: 2014-02-13 20:05-0300\n"
+"PO-Revision-Date: 2014-02-16 23:46-0300\n"
 "Last-Translator: Ale Prieto <aleprieto@gmail.com>\n"
 "Language-Team: Colectivo Libre <contacto@colectivolibre.com.ar>\n"
 "MIME-Version: 1.0\n"
@@ -98,19 +98,19 @@ msgstr ""
 
 #: Controller/UsersController.php:37;72;100
 msgid "Invalid user"
-msgstr ""
+msgstr "Usuario inválido"
 
 #: Controller/UsersController.php:52;76
 msgid "The user has been saved."
-msgstr ""
+msgstr "El usuario ha sido guardado"
 
 #: Controller/UsersController.php:55;79
 msgid "The user could not be saved. Please, try again."
-msgstr ""
+msgstr "El usuario no ha sido guardado. Por favor, intente nuevamente."
 
 #: Controller/UsersController.php:104
 msgid "The user has been deleted."
-msgstr ""
+msgstr "El usuario ha sido eliminado."
 
 #: Controller/UsersController.php:106
 msgid "The user could not be deleted. Please, try again."
@@ -372,7 +372,7 @@ msgstr "Lista de Notas"
 #: View/Users/edit.ctp:25
 #: View/Users/view.ctp:71
 msgid "List Users"
-msgstr ""
+msgstr "Listar Usuarios"
 
 #: View/Notes/add.ctp:20
 #: View/Notes/edit.ctp:22
@@ -389,7 +389,7 @@ msgstr ""
 #: View/Users/index.ctp:62
 #: View/Users/view.ctp:72
 msgid "New User"
-msgstr ""
+msgstr "Nuevo Usuario"
 
 #: View/Notes/edit.ctp:4
 #: View/Notes/view.ctp:44
@@ -495,37 +495,37 @@ msgstr ""
 #: View/States/view.ctp:50
 #: View/Users/view.ctp:9
 msgid "Username"
-msgstr ""
+msgstr "Nombre de usuario"
 
 #: View/Rols/view.ctp:54
 #: View/States/view.ctp:51
 #: View/Users/view.ctp:14
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #: View/Rols/view.ctp:56
 #: View/States/view.ctp:53
 #: View/Users/view.ctp:24
 msgid "Lastname"
-msgstr ""
+msgstr "Apellido"
 
 #: View/Rols/view.ctp:57
 #: View/States/view.ctp:54
 #: View/Users/view.ctp:29
 msgid "Gender"
-msgstr ""
+msgstr "Sexo"
 
 #: View/Rols/view.ctp:58
 #: View/States/view.ctp:55
 #: View/Users/view.ctp:34
 msgid "Birthday"
-msgstr ""
+msgstr "Cumpleaños"
 
 #: View/Rols/view.ctp:59
 #: View/States/view.ctp:56
 #: View/Users/view.ctp:39
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: View/Rols/view.ctp:62
 #: View/States/view.ctp:59
@@ -561,20 +561,20 @@ msgstr ""
 
 #: View/Users/add.ctp:4
 msgid "Add User"
-msgstr ""
+msgstr "Nuevo Usuario"
 
 #: View/Users/edit.ctp:4
 #: View/Users/view.ctp:69
 msgid "Edit User"
-msgstr ""
+msgstr "Editar Usuario"
 
 #: View/Users/index.ctp:2
 msgid "Users"
-msgstr ""
+msgstr "Usuarios"
 
 #: View/Users/view.ctp:70
 msgid "Delete User"
-msgstr ""
+msgstr "Eliminar Usuario"
 
 #: View/Users/view.ctp:82
 msgid "Related Notes"
@@ -582,7 +582,7 @@ msgstr ""
 
 #: View/Users/view.ctp:92
 msgid "User Id"
-msgstr ""
+msgstr "Id de usuario"
 
 #: View/ViewBlock.php:80
 msgid "A view block with the name '%s' is already/still open."
@@ -615,5 +615,5 @@ msgstr ""
 #: Model/User.php:validation
 #: for field email
 msgid "email"
-msgstr ""
+msgstr "email"
 
