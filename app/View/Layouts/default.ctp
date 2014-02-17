@@ -44,16 +44,16 @@
 								<a href="/notas" class="menu-button">Notas</a>
 							</li>
 							<li>
-								<a href="#" class="menu-button">Audiciones</a>
-							</li>
-							<li>
-								<a href="#" class="menu-button">Convocatorias</a>
-							</li>
-							<li>
-								<a href="#" class="menu-button">Casting</a>
+								<a href="#" class="menu-button">Audiciones y Convocatorias</a>
 							</li>
 							<li>
 								<a href="#" class="menu-button">Clasificados</a>
+							</li>
+							<li>
+								<a href="#" class="menu-button">Cursos y Talleres</a>
+							</li>
+							<li>
+								<a href="#" class="menu-button">Cartelera</a>
 							</li>
 							<li>
 								<a href="#" class="menu-button">Mapa de la Danza</a>
@@ -69,11 +69,12 @@
 		</header>
 
 		<div id="container" class="container">
-			<section id="content" class="col-lg-9">
+			<section id="content" class="col-lg-8 col-lg-offset-1">
 				<?php echo $this->Session->flash(); ?>
 				<?php echo $this->fetch('content'); ?>
 			</section>
-			<aside class="col-lg-3">
+			
+			<aside class="col-lg-2">
 				
 				<!-- Login -->
 				<div class="row row-login">
