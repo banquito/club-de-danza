@@ -8,6 +8,8 @@ App::uses('AppModel', 'Model');
  * @property Note $Note
  */
 class User extends AppModel {
+	const ARTISTA = '100';
+	const ADMIN = '500';
 
 /**
  * Validation rules
@@ -121,5 +123,13 @@ class User extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+
+
+	public function beforeSave($options = array()) {
+		if (isset($this->data[$this->alias]['password'])) {
+			$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
+		}
+		return true;
+	}
 
 }

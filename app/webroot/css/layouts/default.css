@@ -8,19 +8,65 @@
   src: url('/css/fonts/universcondensedbold.ttf') format('truetype'), url('/css/fonts/universcondensedbold.otf') format('opentype'), url('/css/fonts/universcondensedbold.eot') format('embedded-opentype'), url('/css/fonts/universcondensedbold.woff') format('woff');
 }
 
+/* line 1, ../../sass/_images.sass */
+.image-center {
+  margin: auto;
+}
+
+/* line 4, ../../sass/_images.sass */
+.thumbnail-horizontal {
+  display: inline-flex;
+}
+
 /* line 3, ../../sass/layouts/default.sass */
+nav.navbar {
+  margin-bottom: 40px;
+}
+
+/* line 6, ../../sass/layouts/default.sass */
 footer > .navbar {
   margin-bottom: 0;
   padding-top: 14px;
 }
 
-/* line 7, ../../sass/layouts/default.sass */
+/* line 10, ../../sass/layouts/default.sass */
+.navbar-brand {
+  height: auto;
+}
+
+/* line 13, ../../sass/layouts/default.sass */
 .row-banner {
   margin-bottom: 20px;
 }
 
-/* line 10, ../../sass/layouts/default.sass */
+/* line 16, ../../sass/layouts/default.sass */
+.row-login {
+  font-family: "Univers Condensed Bold";
+  text-transform: uppercase;
+  background-color: #f80047;
+  color: white;
+  margin-bottom: 18px;
+  margin-left: auto;
+  margin-top: -40px;
+  position: fixed;
+  z-index: 100;
+}
+/* line 27, ../../sass/layouts/default.sass */
+.row-login a, .row-login a:visited {
+  color: white;
+}
+/* line 30, ../../sass/layouts/default.sass */
+.row-login a:hover {
+  color: #feccda;
+}
+
+/* line 33, ../../sass/layouts/default.sass */
 .menu-button {
   font-family: "Univers Condensed Bold";
   text-transform: uppercase;
+}
+
+/* line 36, ../../sass/layouts/default.sass */
+#container {
+  margin-top: 90px;
 }

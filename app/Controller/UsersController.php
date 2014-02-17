@@ -13,7 +13,12 @@ class UsersController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'RequestHandler');
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow('add', 'logout');
+	}
 
 /**
  * index method
@@ -24,6 +29,51 @@ class UsersController extends AppController {
 		$this->User->recursive = 0;
 		$this->set('users', $this->Paginator->paginate());
 	}
+
+
+public function login() {
+		// $this -> layout = 'login';
+
+		if ($this->request->is('post')) {
+			if ($this->Auth->login()) {
+				$this->redirect($this->Auth->redirect());
+			} else {
+				$this->Session->setFlash(__('Invalid username or password, try again'));
+			}
+		}
+	}
+
+	public function logout() {
+		$this -> redirect($this -> Auth -> logout());
+	}
+
+	public function isAuthorized($user = null) {
+		// All registered users can add posts
+		// if ($this -> action === 'add') {
+		// return true;
+		// }
+
+		// Todos los usuarios registrados podrán cambiar su location
+		// if ($this->action === 'setLocation') {
+		// 	return true;
+		// }
+
+		// The owner of a post can edit and delete it
+		// if (in_array($this -> action, array(
+		// 'edit',
+		// 'delete'
+		// ))) {
+		// $postId = $this -> request -> params['pass'][0];
+		// if ($this -> Post -> isOwnedBy($postId, $user['id'])) {
+		// return true;
+		// }
+		// }
+
+		return parent::isAuthorized($user);
+	}
+
+
+
 
 /**
  * view method

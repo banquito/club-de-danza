@@ -1,12 +1,37 @@
-@import fonts
+@import colors, fonts, images
+
+nav.navbar
+	margin-bottom: 40px
 
 footer > .navbar
 	margin-bottom: 0
 	padding-top: 14px
 
+.navbar-brand
+	height: auto
+
 .row-banner
 	margin-bottom: 20px
 
+.row-login
+	+navfont
+
+	background-color: $login
+	color: $white
+	margin-bottom: 18px
+	margin-left: auto
+	margin-top: -40px
+	position: fixed
+	z-index: 100
+
+	a, a:visited
+		color: $white
+
+	a:hover
+		color: $login-hover
+
 .menu-button
-	font-family: "Univers Condensed Bold"
-	text-transform: uppercase
+	+navfont
+
+#container
+	margin-top: 90px

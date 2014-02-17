@@ -20,6 +20,7 @@
  */
 
 App::uses('Controller', 'Controller');
+App::uses('User', 'Model');
 
 /**
  * Application Controller
@@ -31,4 +32,45 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+	public $components = array(
+		'Session',
+		'Auth' => array(
+			'loginAction' => array(
+				'admin' => FALSE,
+				'controller' => 'users',
+				'action' => 'login'
+			),
+			'loginRedirect' => array(
+				// 'admin' => TRUE,             # Ver
+				'controller' => 'notes',
+				'action' => 'index'
+			),
+			'logoutRedirect' => array(
+				'admin' => FALSE,
+				'controller' => 'pages',
+				'action' => 'inicio'
+			),
+			'authorize' => array('Controller'),
+		),
+	);
+
+	public $uses = array('User');
+
+	public function beforeFilter() {
+		$user = AuthComponent::user(); 
+		# Usuario administrador(40) y superiores
+		// if ($user['Rol']['weight'] >= '40') {
+		// 	$this -> layout = 'admin';
+		// }
+	}
+
+	public function isAuthorized($user) {
+		// Admin can access every action
+		if (isset($user['role']) && $user['role'] === 'admin') {
+		  return true;
+		}
+
+		// Default deny
+		return false;
+	}
 }

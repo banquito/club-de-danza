@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+
 /**
  * Notes Controller
  *
@@ -15,6 +16,11 @@ class NotesController extends AppController {
  */
 	public $components = array('Paginator');
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow('inicio');
+	}
+
 /**
  * index method
  *
@@ -23,6 +29,40 @@ class NotesController extends AppController {
 	public function index() {
 		$this->Note->recursive = 0;
 		$this->set('notes', $this->Paginator->paginate());
+	}
+
+	public function inicio() {
+		// $this->Note->recursive = 0;
+		// $this->set('notes', $this->Paginator->paginate());
+	}
+
+	public function isAuthorized($user) {
+		$registered = array('index');
+		$admin = array('add', 'delete', 'edit', 'index');
+
+		// All registered users can index posts
+		if (in_array($this->action, $registered)) {
+			return true;
+		}
+
+		// // The owner of a post can edit and delete it
+		// if (in_array($this->action, array('edit', 'delete'))) {
+			// $postId = $this->request->params['pass'][0];
+			// if ($this->Post->isOwnedBy($postId, $user['id'])) {
+				// return true;
+			// }
+		// }
+
+		// $user = AuthComponent::user();  # creo que está demás...
+
+		# Usuario administrador(500) y superiores
+		if ($user['Rol']['weight'] >= User::ADMIN) {
+			if (in_array($this->action, $admin)) {
+				return true;
+			}
+		}
+
+		return parent::isAuthorized($user);
 	}
 
 /**
