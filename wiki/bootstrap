@@ -1,2 +1,5 @@
 Media queries breakpoints
 	@screen-lg:	992px
+
+Container sizes
+	@container-large-desktop: ((940px + @grid-gutter-width))
