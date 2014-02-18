@@ -6,10 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<?php
 		echo $this->Html->meta('icon');
-		echo $this->Html->css(array(
-		'//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css',
-		'//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css',
-		'layouts/default'
+		echo $this->Html->css(array('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
+			, 'vendors/bootstrap.min'
+			, 'layouts/default'
 		));
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -19,7 +18,6 @@
 		<script src="../../assets/js/html5shiv.js"></script>
 		<script src="../../assets/js/respond.min.js"></script>
 		<![endif]-->
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>
@@ -82,6 +80,19 @@
 						<a href="/login" class="btn btn-xs">Login</a>
 						|
 						<a href="/registro" class="btn btn-xs">Registro</a>
+					</div>
+				</div>
+
+				<!-- Redes Sociales -->
+				<div class="row row-redes-sociales">
+					<div class="col-lg-12 text-center">
+						<a href="#" class="btn btn-xs">
+							<i class="fa fa-facebook-square"></i>
+						</a>
+						|
+						<a href="#" class="btn btn-xs">
+							<i class="fa fa-twitter-square"></i>
+						</a>
 					</div>
 				</div>
 

@@ -6,6 +6,19 @@
 /* line 4, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_images.sass */
 .thumbnail-horizontal {
   display: inline-flex;
+  width: 440px;
+}
+/* line 8, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_images.sass */
+.thumbnail-horizontal .img-horizontal {
+  height: 100%;
+  width: 195px;
+}
+/* line 12, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_images.sass */
+.thumbnail-horizontal img {
+  max-height: 100%;
+  margin-bottom: auto;
+  margin-top: auto;
+  max-width: 100%;
 }
 
 /* line 3, ../../sass/pages/inicio.sass */

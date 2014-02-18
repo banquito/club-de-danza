@@ -30,33 +30,27 @@
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="thumbnail">
             <img src="http://lorempixel.com/400/200/" alt="">
-            <div class="caption">
-                <h3>Nota 1</h3>
-                <p class="text-right">
-                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
-                </p>
+            <div class="caption caption-vermas">
+                <p class="text-center"><strong>Nota 1</strong></p>
+                <a href="#" class="btn-vermas"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
             </div>
         </div>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="thumbnail">
             <img src="http://lorempixel.com/400/200/" alt="">
-            <div class="caption">
-                <h3>Nota 2</h3>
-                <p class="text-right">
-                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
-                </p>
+            <div class="caption caption-vermas">
+                <p class="text-center"><strong>Nota 2</strong></p>
+                <a href="#" class="btn-vermas"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
             </div>
         </div>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="thumbnail">
             <img src="http://lorempixel.com/400/200/" alt="">
-            <div class="caption">
-                <h3>Nota 3</h3>
-                <p class="text-right">
-                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
-                </p>
+            <div class="caption caption-vermas">
+                <p class="text-center"><strong>Nota 3</strong></p>
+                <a href="#" class="btn-vermas"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
             </div>
         </div>
     </div>
@@ -64,23 +58,21 @@
 <div class="row">
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
         <div class="thumbnail thumbnail-horizontal">
-            <img src="http://lorempixel.com/400/200/" alt="" class="pull-left">
-            <div class="caption">
-                <h3>Nota 4</h3>
-                <p class="text-right">
-                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
-                </p>
+            <div class="img-horizontal">
+                <img src="http://lorempixel.com/400/200/" alt="" class="pull-left">
+            </div>
+            <div class="caption caption-vermas">
+                <p class="text-center"><strong>Nota 4</strong></p>
+                <a href="#" class="btn-vermas"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
             </div>
         </div>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="thumbnail">
             <img src="http://lorempixel.com/400/200/" alt="">
-            <div class="caption">
-                <h3>Nota 5</h3>
-                <p class="text-right">
-                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
-                </p>
+            <div class="caption caption-vermas">
+                <p class="text-center"><strong>Nota 5</strong></p>
+                <a href="#" class="btn-vermas"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
             </div>
         </div>
     </div>
@@ -89,33 +81,27 @@
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="thumbnail">
             <img src="http://lorempixel.com/400/200/" alt="">
-            <div class="caption">
-                <h3>Nota 1</h3>
-                <p class="text-right">
-                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
-                </p>
+            <div class="caption caption-vermas">
+                <p class="text-center"><strong>Nota 1</strong></p>
+                <a href="#" class="btn-vermas"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
             </div>
         </div>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="thumbnail">
             <img src="http://lorempixel.com/400/200/" alt="">
-            <div class="caption">
-                <h3>Nota 2</h3>
-                <p class="text-right">
-                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
-                </p>
+            <div class="caption caption-vermas">
+                <p class="text-center"><strong>Nota 2</strong></p>
+                <a href="#" class="btn-vermas"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
             </div>
         </div>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="thumbnail">
             <img src="http://lorempixel.com/400/200/" alt="">
-            <div class="caption">
-                <h3>Nota 3</h3>
-                <p class="text-right">
-                <a href="#" class="btn"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
-                </p>
+            <div class="caption caption-vermas">
+                <p class="text-center"><strong>Nota 3</strong></p>
+                <a href="#" class="btn-vermas"><?php echo $this->Html->image('layouts/vermas.png'); ?></a>
             </div>
         </div>
     </div>

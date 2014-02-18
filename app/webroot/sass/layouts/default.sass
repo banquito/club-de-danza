@@ -1,5 +1,11 @@
 @import colors, fonts, images
 
+a.btn-vermas
+	display: block
+
+	img
+		margin-right: -9px
+
 nav.navbar
 	margin-bottom: 40px
 	border-bottom-color: $login
@@ -8,18 +14,31 @@ footer > .navbar
 	margin-bottom: 0
 	padding-top: 14px
 
+.caption.caption-vermas
+	padding-bottom: 0
+
+.carousel-control .glyphicon-chevron-left
+	margin-left: -4px
+
+.carousel-inner
+	box-shadow: 0 0 5px 5px #CCCCCC
+	margin-bottom: 20px
+
 .menu-button
 	+navfont
 
 .navbar-brand
 	height: auto
 
-.navbar-default .navbar-nav > li > a:hover, .thumbnail h3:hover
+.navbar-default .navbar-nav > li > a:hover, .thumbnail p:hover
 	color: $login
 
 
 .row-banner
 	margin-bottom: 20px
+
+	div:first-child
+		margin-top: 18px
 
 .row-login
 	+navfont
@@ -38,8 +57,24 @@ footer > .navbar
 	a:hover
 		color: $login-hover
 
-.thumbnail h3:hover
-	cursor: pointer
+.row-redes-sociales
+	background-color: $login
+	color: $white
+	margin-bottom: 18px
+	margin-left: auto
+	margin-top: -17px
+	position: fixed
+	z-index: 100
+
+	a, a:visited
+		color: $white
+
+
+.thumbnail 
+	height: 188px
+
+	p:hover
+		cursor: pointer
 
 #container
 	margin-top: 90px
