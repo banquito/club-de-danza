@@ -31,16 +31,27 @@ footer > .navbar {
 }
 
 /* line 11, ../../sass/layouts/default.sass */
+.menu-button {
+  font-family: "Univers Condensed Bold";
+  text-transform: uppercase;
+}
+
+/* line 14, ../../sass/layouts/default.sass */
 .navbar-brand {
   height: auto;
 }
 
-/* line 14, ../../sass/layouts/default.sass */
+/* line 17, ../../sass/layouts/default.sass */
+.navbar-default .navbar-nav > li > a:hover, .thumbnail h3:hover {
+  color: #f80047;
+}
+
+/* line 21, ../../sass/layouts/default.sass */
 .row-banner {
   margin-bottom: 20px;
 }
 
-/* line 17, ../../sass/layouts/default.sass */
+/* line 24, ../../sass/layouts/default.sass */
 .row-login {
   font-family: "Univers Condensed Bold";
   text-transform: uppercase;
@@ -52,22 +63,21 @@ footer > .navbar {
   position: fixed;
   z-index: 100;
 }
-/* line 28, ../../sass/layouts/default.sass */
+/* line 35, ../../sass/layouts/default.sass */
 .row-login a, .row-login a:visited {
   color: white;
 }
-/* line 31, ../../sass/layouts/default.sass */
+/* line 38, ../../sass/layouts/default.sass */
 .row-login a:hover {
   color: #feccda;
 }
 
-/* line 34, ../../sass/layouts/default.sass */
-.menu-button {
-  font-family: "Univers Condensed Bold";
-  text-transform: uppercase;
+/* line 41, ../../sass/layouts/default.sass */
+.thumbnail h3:hover {
+  cursor: pointer;
 }
 
-/* line 37, ../../sass/layouts/default.sass */
+/* line 44, ../../sass/layouts/default.sass */
 #container {
   margin-top: 90px;
 }

@@ -8,8 +8,15 @@ footer > .navbar
 	margin-bottom: 0
 	padding-top: 14px
 
+.menu-button
+	+navfont
+
 .navbar-brand
 	height: auto
+
+.navbar-default .navbar-nav > li > a:hover, .thumbnail h3:hover
+	color: $login
+
 
 .row-banner
 	margin-bottom: 20px
@@ -31,8 +38,8 @@ footer > .navbar
 	a:hover
 		color: $login-hover
 
-.menu-button
-	+navfont
+.thumbnail h3:hover
+	cursor: pointer
 
 #container
 	margin-top: 90px

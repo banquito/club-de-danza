@@ -69,12 +69,12 @@
 		</header>
 
 		<div id="container" class="container">
-			<section id="content" class="col-lg-8 col-lg-offset-1">
+			<section id="content" class="col-lg-9">
 				<?php echo $this->Session->flash(); ?>
 				<?php echo $this->fetch('content'); ?>
 			</section>
 			
-			<aside class="col-lg-2">
+			<aside class="col-lg-3">
 				
 				<!-- Login -->
 				<div class="row row-login">
@@ -118,7 +118,7 @@
 						·
 						<a href="#">Contacto</a>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-6 text-right">
 						Club de Danza - Copyright &copy; 2014 - Todos los derechos reservados
 						<?php echo $this->Html->image('layouts/logofooter.png'); ?>
 					</div>
