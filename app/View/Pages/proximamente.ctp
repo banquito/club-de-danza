@@ -1,5 +1,5 @@
 <?php
-echo $this->Html->css('layouts/proximamente', '', array('inline'=>FALSE));
+echo $this->Html->css('pages/proximamente', '', array('inline'=>FALSE));
 ?>
 
 <div class="row">

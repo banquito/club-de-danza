@@ -1,3 +1,7 @@
+<?php 
+echo $this->Html->css('users/add', '', array('inline'=>FALSE));
+?>
+
 <div class="users form">
 <?php echo $this->Form->create('User', array('class' => 'form-horizontal')); ?>
 	<fieldset>
