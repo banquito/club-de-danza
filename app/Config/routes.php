@@ -27,6 +27,7 @@
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'inicio'));
 	Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
 	Router::connect('/notas', array('controller' => 'notes', 'action' => 'inicio'));
+	Router::connect('/proximamente', array('controller' => 'pages', 'action' => 'display', 'proximamente'));
 	Router::connect('/registro', array('controller' => 'users', 'action' => 'add'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.

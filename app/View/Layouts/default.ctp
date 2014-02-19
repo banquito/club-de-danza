@@ -57,7 +57,7 @@
 								<a href="#" class="menu-button">Mapa de la Danza</a>
 							</li>
 							<li>
-								<a href="#" class="menu-button">Artistas</a>
+								<a href="/proximamente" class="menu-button">Artistas</a>
 							</li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
@@ -67,16 +67,18 @@
 		</header>
 
 		<div id="container" class="container">
-			<section id="content" class="col-lg-9">
+		<div class="row">
+			
+			<section id="content" class="col-sm-9">
 				<?php echo $this->Session->flash(); ?>
 				<?php echo $this->fetch('content'); ?>
 			</section>
 			
-			<aside class="col-lg-3">
+			<aside class="col-sm-3">
 				
 				<!-- Login -->
 				<div class="row row-login">
-					<div class="col-lg-12 text-center">
+					<div class="col-sm-12 text-center">
 						<a href="/login" class="btn btn-xs">Login</a>
 						|
 						<a href="/registro" class="btn btn-xs">Registro</a>
@@ -85,7 +87,7 @@
 
 				<!-- Redes Sociales -->
 				<div class="row row-redes-sociales">
-					<div class="col-lg-12 text-center">
+					<div class="col-sm-12 text-center">
 						<a href="#" class="btn btn-xs">
 							<i class="fa fa-facebook-square"></i>
 						</a>
@@ -97,39 +99,40 @@
 				</div>
 
 				<div class="row row-banner">
-					<div class="col-lg-12">
-						<img src="http://lorempixel.com/400/200?d=<?php echo time(); ?>" alt="" class="image-center img-responsive">
+					<div class="col-sm-12">
+						<img src="http://lorempixel.com/400/200/fashion/4" alt="" class="image-center img-responsive">
 					</div>
 				</div>
 				<div class="row row-banner">
-					<div class="col-lg-12">
-						<img src="http://lorempixel.com/200/800/" alt="" class="image-center img-responsive">
+					<div class="col-sm-12">
+						<img src="http://lorempixel.com/200/300/technics/9" alt="" class="image-center img-responsive banner-large">
 					</div>
 				</div>
 				<div class="row row-banner">
-					<div class="col-lg-12">
-						<img src="http://lorempixel.com/400/200?d=<?php echo time(); ?>" alt="" class="image-center img-responsive">
+					<div class="col-sm-12">
+						<img src="http://lorempixel.com/400/200/food/8" alt="" class="image-center img-responsive">
 					</div>
 				</div>
 				<div class="row row-banner">
-					<div class="col-lg-12">
-						<img src="http://lorempixel.com/400/200?d=<?php echo time(); ?>" alt="" class="image-center img-responsive">
+					<div class="col-sm-12">
+						<img src="http://lorempixel.com/400/200/nightlife/5" alt="" class="image-center img-responsive">
 					</div>
 				</div>
 
 			</aside>
 		</div>
+		</div>
 		<footer>
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="container">
-					<div class="col-lg-6">
+					<div class="col-sm-6">
 						<a href="#">Sobre Club de Danza</a>
 						·
 						<a href="#">Términos y condiciones</a>
 						·
 						<a href="#">Contacto</a>
 					</div>
-					<div class="col-lg-6 text-right">
+					<div class="col-sm-6 text-right">
 						Club de Danza - Copyright &copy; 2014 - Todos los derechos reservados
 						<?php echo $this->Html->image('layouts/logofooter.png'); ?>
 					</div>

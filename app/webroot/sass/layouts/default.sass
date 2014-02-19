@@ -1,21 +1,37 @@
 @import colors, fonts, images
 
-a.btn-vermas
-	display: block
+h1
+	background-color: $login
+	color: $white
+	font-family: "Univers Condensed Bold"
+	font-size: 1.3em
+	margin: 0
+	padding: 10px 15px 0
+	text-transform: uppercase
 
-	img
-		margin-right: -9px
+	& ~ div
+		width: 212px
+		border-top: 10px solid $login
+		border-right: 10px solid transparent
 
-nav.navbar
-	margin-bottom: 40px
-	border-bottom-color: $login
+h3
+	font-size: 1em
+	margin-top: 5px
+	text-align: left
+
+header
+	nav
+		background-image: image-url('layouts/backheader.jpg')
+
+		&.navbar
+			margin-bottom: 40px
+			border-bottom-color: $login
 
 footer > .navbar
+	font-size: 0.83em
 	margin-bottom: 0
 	padding-top: 14px
 
-.caption.caption-vermas
-	padding-bottom: 0
 
 .carousel-control .glyphicon-chevron-left
 	margin-left: -4px
@@ -24,21 +40,17 @@ footer > .navbar
 	box-shadow: 0 0 5px 5px #CCCCCC
 	margin-bottom: 20px
 
-.menu-button
+li > a.menu-button
 	+navfont
+
+	padding-left: 7px
+	padding-right: 7px
 
 .navbar-brand
 	height: auto
 
 .navbar-default .navbar-nav > li > a:hover, .thumbnail p:hover
 	color: $login
-
-
-.row-banner
-	margin-bottom: 20px
-
-	div:first-child
-		margin-top: 18px
 
 .row-login
 	+navfont
@@ -57,6 +69,9 @@ footer > .navbar
 	a:hover
 		color: $login-hover
 
+.row-header-h1
+	margin-bottom: 20px
+
 .row-redes-sociales
 	background-color: $login
 	color: $white
@@ -69,12 +84,12 @@ footer > .navbar
 	a, a:visited
 		color: $white
 
-
-.thumbnail 
-	height: 188px
-
-	p:hover
-		cursor: pointer
-
 #container
 	margin-top: 90px
+
+#container-h1
+	height: 0 
+	width: 80px
+	border-bottom: 80px solid blue
+	border-left: 40px solid transparent
+	border-right: 40px solid transparent
