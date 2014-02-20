@@ -40,16 +40,8 @@ class AppController extends Controller {
 				'controller' => 'users',
 				'action' => 'login'
 			),
-			'loginRedirect' => array(
-				// 'admin' => TRUE,             # Ver
-				'controller' => 'notes',
-				'action' => 'inicio'
-			),
-			'logoutRedirect' => array(
-				'admin' => FALSE,
-				'controller' => 'pages',
-				'action' => 'inicio'
-			),
+			'loginRedirect' => '/',
+			'logoutRedirect' => '/',
 			'authorize' => array('Controller'),
 		),
 	);
@@ -57,7 +49,7 @@ class AppController extends Controller {
 	public $uses = array('User');
 
 	public function beforeFilter() {
-		$user = AuthComponent::user(); 
+		// $user = AuthComponent::user(); 
 		# Usuario administrador(40) y superiores
 		// if ($user['Rol']['weight'] >= '40') {
 		// 	$this -> layout = 'admin';
@@ -66,7 +58,7 @@ class AppController extends Controller {
 
 	public function isAuthorized($user) {
 		// Admin can access every action
-		if (isset($user['role']) && $user['role'] === 'admin') {
+		if (isset($user['Rol']) && $user['Rol']['weight'] >= '500') {
 		  return true;
 		}
 

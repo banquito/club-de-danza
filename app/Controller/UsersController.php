@@ -16,8 +16,9 @@ class UsersController extends AppController {
 	public $components = array('Paginator', 'RequestHandler');
 
 	public function beforeFilter() {
-		parent::beforeFilter();
-		$this->Auth->allow('add', 'logout');
+		//parent::beforeFilter();
+		// $this->Auth->allow('add', 'logout');
+		$this->Auth->allow('*');
 	}
 
 /**

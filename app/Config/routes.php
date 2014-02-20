@@ -26,13 +26,24 @@
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'inicio'));
 	Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
+	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
+
+	# Notas
 	Router::connect('/notas', array('controller' => 'notes', 'action' => 'inicio'));
+	Router::connect('/notas/editar/*', array('controller' => 'notes', 'action' => 'edit'));
+	Router::connect('/notas/listar', array('controller' => 'notes', 'action' => 'index'));
+	Router::connect('/notas/nueva', array('controller' => 'notes', 'action' => 'add'));
+
 	Router::connect('/proximamente', array('controller' => 'pages', 'action' => 'display', 'proximamente'));
 	Router::connect('/registro', array('controller' => 'users', 'action' => 'add'));
+
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	
+
+	Router::redirect('/perfil/*', array('controller' => 'pages', 'action' => 'display', 'proximamente'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

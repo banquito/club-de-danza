@@ -57,8 +57,6 @@
 	<div class="col-sm-4">
 			<h1>Notas</h1>
 			<div></div>
-			<!-- <div id="triangle-topleft" style="width: 212px; border-top-width: 10px; border-right-width: 10px;"></div> -->
-			<style> #triangle-topleft {width:10; height:10; border-top:100px solid red; border-right:100px solid transparent;border-top: 100px solid red;} </style>
 	</div>
 </div>
 

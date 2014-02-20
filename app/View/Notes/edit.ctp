@@ -1,24 +1,86 @@
-<div class="notes form">
-<?php echo $this->Form->create('Note'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Note'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('title');
-		echo $this->Form->input('description');
-		echo $this->Form->input('image');
-		echo $this->Form->input('user_id');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<?php 
+//echo $this->Html->css('notes/edit', '', array('inline'=>FALSE));
+?>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Note.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Note.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Notes'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
+<div class="row row-header-h1">
+	<div class="col-sm-12">
+		<h1><?php echo __('Edit Note'); ?></h1>
+		<div></div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<?php echo $this->Form->create('Note', array('class' => 'form-horizontal', 'role' => 'form')) ?>
+			<?php echo $this->Form->input('id'); ?>
+			<div class="form-group">
+				<label for="title" class="col-sm-4 control-label"><?php echo __('Title'); ?></label>
+				<div class="col-sm-8">
+					<?php	echo $this->Form->input('title', array(
+						'class' => 'form-control',
+						'label' => false,
+						'placeholder' => __('Note title'),
+						'required' => 'required',
+						'type' => 'text'
+					));
+			 		?>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="description" class="col-sm-4 control-label"><?php echo __('Short Description'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->input('description', array(
+						'class' => 'form-control',
+						'label' => false,
+						'placeholder' => __('Description'),
+						'required' => 'required',
+						'type' => 'text'
+					));
+					?>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Image'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->input('image', array(
+						'class' => 'form-control',
+						'label' => false,
+						'placeholder' => __('Image'),
+						'required' => 'required',
+						'type' => 'text'
+					));
+					?>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Resume'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->input('resume', array(
+						'class' => 'form-control',
+						'label' => false,
+						'placeholder' => __('Resume'),
+						'required' => 'required',
+					));
+					?>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Body'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->input('body', array(
+						'class' => 'form-control',
+						'label' => false,
+						'placeholder' => __('Body'),
+						'required' => 'required',
+					));
+					?>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-2">
+					<button type="submit" class="btn btn-default"><?php echo __('Aceptar'); ?></button>
+				</div>
+			</div>
+		<?php echo $this->Form->end() ?>
+	</div>
 </div>

@@ -21,107 +21,90 @@
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="/">
-						<?php echo $this->Html->image('layouts/clubdedanza.png'); ?>
-						</a>
-					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav">
-							<li<?php echo (strpos($this->params->url, 'notes') !== FALSE) || (strpos($this->params->url, 'notas') !== FALSE) ? ' class="active"' : ''?>>
-								<a href="/notas" class="menu-button">Notas</a>
-							</li>
-							<li>
-								<a href="#" class="menu-button">Audiciones y Convocatorias</a>
-							</li>
-							<li>
-								<a href="#" class="menu-button">Clasificados</a>
-							</li>
-							<li>
-								<a href="#" class="menu-button">Cursos y Talleres</a>
-							</li>
-							<li>
-								<a href="#" class="menu-button">Cartelera</a>
-							</li>
-							<li>
-								<a href="#" class="menu-button">Mapa de la Danza</a>
-							</li>
-							<li>
-								<a href="/proximamente" class="menu-button">Artistas</a>
-							</li>
-						</ul>
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>
+			<?php 
+			$user = AuthComponent::user();
+			if($user['Rol']['weight'] >= User::ADMIN):
+				echo $this -> element('navbar_admin');
+			else:
+				echo $this -> element('navbar');
+			endif;
+			?>
 
 		</header>
 
 		<div id="container" class="container">
-		<div class="row">
-			
-			<section id="content" class="col-sm-9">
-				<?php echo $this->Session->flash(); ?>
-				<?php echo $this->fetch('content'); ?>
-			</section>
-			
-			<aside class="col-sm-3">
+			<div class="row">
 				
-				<!-- Login -->
-				<div class="row row-login">
-					<div class="col-sm-12 text-center">
-						<a href="/login" class="btn btn-xs">Login</a>
-						|
-						<a href="/registro" class="btn btn-xs">Registro</a>
-					</div>
-				</div>
+				<!-- Contenido -->
+				<section id="content" class="col-sm-9">
+					<?php //debug(AuthComponent::user()); ?>
 
-				<!-- Redes Sociales -->
-				<div class="row row-redes-sociales">
-					<div class="col-sm-12 text-center">
-						<a href="#" class="btn btn-xs">
-							<i class="fa fa-facebook-square"></i>
-						</a>
-						|
-						<a href="#" class="btn btn-xs">
-							<i class="fa fa-twitter-square"></i>
-						</a>
-					</div>
-				</div>
+					<?php echo $this->Session->flash(); ?>
+					<?php echo $this->fetch('content'); ?>
+				</section>
+				
 
-				<div class="row row-banner">
-					<div class="col-sm-12">
-						<img src="http://lorempixel.com/400/200/fashion/4" alt="" class="image-center img-responsive">
+				<!-- Barra lateral -->
+				<aside class="col-sm-3">
+					
+					<!-- Login -->
+					<div class="row row-login">
+						<div class="col-sm-12 text-center">
+							<?php if(AuthComponent::user('id')): ?>
+								<?php
+								echo $this -> Html -> link(AuthComponent::user('name')
+									, '/perfil/' . AuthComponent::user('id')
+									, array('class' => "btn btn-xs")
+								);
+								?>
+								|
+								<a href="/logout" class="btn btn-xs">Salir</a>
+							<?php else: ?>
+								<a href="/login" class="btn btn-xs">Login</a>
+								|
+								<a href="/registro" class="btn btn-xs">Registro</a>
+							<?php endif; ?>
+						</div>
 					</div>
-				</div>
-				<div class="row row-banner">
-					<div class="col-sm-12">
-						<img src="http://lorempixel.com/200/300/technics/9" alt="" class="image-center img-responsive banner-large">
-					</div>
-				</div>
-				<div class="row row-banner">
-					<div class="col-sm-12">
-						<img src="http://lorempixel.com/400/200/food/8" alt="" class="image-center img-responsive">
-					</div>
-				</div>
-				<div class="row row-banner">
-					<div class="col-sm-12">
-						<img src="http://lorempixel.com/400/200/nightlife/5" alt="" class="image-center img-responsive">
-					</div>
-				</div>
 
-			</aside>
+					<!-- Redes Sociales -->
+					<div class="row row-redes-sociales">
+						<div class="col-sm-12 text-center">
+							<a href="#" class="btn btn-xs">
+								<i class="fa fa-facebook-square"></i>
+							</a>
+							|
+							<a href="#" class="btn btn-xs">
+								<i class="fa fa-twitter-square"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="row row-banner">
+						<div class="col-sm-12">
+							<img src="http://lorempixel.com/400/200/fashion/4" alt="" class="image-center img-responsive">
+						</div>
+					</div>
+					<div class="row row-banner">
+						<div class="col-sm-12">
+							<img src="http://lorempixel.com/200/300/technics/9" alt="" class="image-center img-responsive banner-large">
+						</div>
+					</div>
+					<div class="row row-banner">
+						<div class="col-sm-12">
+							<img src="http://lorempixel.com/400/200/food/8" alt="" class="image-center img-responsive">
+						</div>
+					</div>
+					<div class="row row-banner">
+						<div class="col-sm-12">
+							<img src="http://lorempixel.com/400/200/nightlife/5" alt="" class="image-center img-responsive">
+						</div>
+					</div>
+
+				</aside>
+			</div>
 		</div>
-		</div>
+
 		<footer>
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="container">

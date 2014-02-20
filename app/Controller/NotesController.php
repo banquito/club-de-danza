@@ -87,8 +87,10 @@ class NotesController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+			$note = $this->request->data;
+			$note['Note']['user_id'] = AuthComponent::user('id');
 			$this->Note->create();
-			if ($this->Note->save($this->request->data)) {
+			if ($this->Note->save($note)) {
 				$this->Session->setFlash(__('The note has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
