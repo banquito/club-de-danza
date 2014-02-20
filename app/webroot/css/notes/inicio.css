@@ -1,9 +1,9 @@
-/* line 3, ../../sass/_carrousel.sass */
+/* line 3, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-control {
   width: 0;
 }
 
-/* line 6, ../../sass/_carrousel.sass */
+/* line 6, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-indicators {
   bottom: 0;
   left: 50%;
@@ -19,9 +19,9 @@
   z-index: 15;
 }
 
-/* line 20, ../../sass/_carrousel.sass */
+/* line 20, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-caption {
-  background-color: #f80047;
+  background-color: #dd104c;
   bottom: 0;
   color: white;
   height: 30%;

@@ -23,7 +23,9 @@ if((strpos($this->params->url, 'notes') !== FALSE) || (strpos($this->params->url
 			<ul class="nav navbar-nav">
 
 				<li class="dropdown <?php echo $notesActive; ?>">
-					<a href="/notas" class="dropdown-toggle menu-button" data-toggle="dropdown">Notas <b class="caret"></b></a>
+					<a href="/notas" class="dropdown-toggle menu-button" data-toggle="dropdown">
+						Notas <b class="caret"></b>
+					</a>
 
 					<ul class="dropdown-menu">
 						<li><a href="/notas">Notas</a></li>
@@ -49,6 +51,19 @@ if((strpos($this->params->url, 'notes') !== FALSE) || (strpos($this->params->url
 				</li>
 				<li>
 					<a href="/proximamente" class="menu-button">Artistas</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav pull-right">
+				<li class="dropdown">
+					<a href="/notas" class="dropdown-toggle menu-button" data-toggle="dropdown">
+						<i class="fa fa-th fa-lg"></i>
+					</a>
+
+					<ul class="dropdown-menu pull-right">
+						<li><a href="/slider">Slider</a></li>
+						<li class="divider"></li>
+						<li><a href="/usuarios/listar">Listar Usuarios</a></li>
+					</ul>
 				</li>
 			</ul>
 		</div><!-- /.navbar-collapse -->

@@ -36,6 +36,8 @@
 
 	Router::connect('/proximamente', array('controller' => 'pages', 'action' => 'display', 'proximamente'));
 	Router::connect('/registro', array('controller' => 'users', 'action' => 'add'));
+	
+	Router::connect('/usuarios/listar', array('controller' => 'users', 'action' => 'index'));
 
 /**
  * ...and connect the rest of 'Pages' controller's URLs.

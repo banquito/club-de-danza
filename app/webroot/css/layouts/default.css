@@ -1,54 +1,54 @@
-/* line 1, ../../sass/_cajas.sass */
+/* line 1, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 a.btn-vermas {
   display: block;
 }
-/* line 4, ../../sass/_cajas.sass */
+/* line 4, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 a.btn-vermas img {
   margin-right: -9px;
 }
 
-/* line 7, ../../sass/_cajas.sass */
+/* line 7, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .caption.caption-vermas {
   padding-bottom: 0;
 }
 
-/* line 10, ../../sass/_cajas.sass */
+/* line 10, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner {
   margin-bottom: 20px;
 }
-/* line 13, ../../sass/_cajas.sass */
+/* line 13, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner div:first-child {
   margin-top: 18px;
 }
-/* line 16, ../../sass/_cajas.sass */
+/* line 16, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner img {
   height: 150px;
 }
-/* line 19, ../../sass/_cajas.sass */
+/* line 19, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner img.banner-large {
   height: 300px;
 }
 
-/* line 22, ../../sass/_cajas.sass */
+/* line 22, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail {
   height: 192px;
   max-height: 192px;
 }
-/* line 27, ../../sass/_cajas.sass */
+/* line 27, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail p:hover {
   cursor: pointer;
 }
 
-/* line 30, ../../sass/_cajas.sass */
+/* line 30, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal {
   display: table;
   width: 440px;
 }
-/* line 34, ../../sass/_cajas.sass */
+/* line 34, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal .caption-vermas {
   height: 72%;
 }
-/* line 37, ../../sass/_cajas.sass */
+/* line 37, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal .img-horizontal {
   height: 100%;
   max-height: 350px;
@@ -57,7 +57,7 @@ a.btn-vermas img {
   width: 195px;
   vertical-align: middle;
 }
-/* line 45, ../../sass/_cajas.sass */
+/* line 45, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal img {
   max-height: 178px;
   margin-bottom: auto;
@@ -65,7 +65,7 @@ a.btn-vermas img {
   max-width: 100%;
 }
 
-/* line 51, ../../sass/_cajas.sass */
+/* line 51, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 #text-nota4 {
   height: 100%;
 }
@@ -80,14 +80,14 @@ a.btn-vermas img {
   src: url('/css/fonts/universcondensedbold.ttf') format('truetype'), url('/css/fonts/universcondensedbold.otf') format('opentype'), url('/css/fonts/universcondensedbold.eot') format('embedded-opentype'), url('/css/fonts/universcondensedbold.woff') format('woff');
 }
 
-/* line 1, ../../sass/_images.sass */
+/* line 1, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_images.sass */
 .image-center {
   margin: auto;
 }
 
 /* line 3, ../../sass/layouts/default.sass */
 h1 {
-  background-color: #f80047;
+  background-color: #dd104c;
   color: white;
   font-family: "Univers Condensed Bold";
   font-size: 1.3em;
@@ -98,7 +98,7 @@ h1 {
 /* line 12, ../../sass/layouts/default.sass */
 h1 ~ div {
   width: 212px;
-  border-top: 10px solid #f80047;
+  border-top: 10px solid #dd104c;
   border-right: 10px solid transparent;
 }
 
@@ -116,7 +116,7 @@ header nav {
 /* line 26, ../../sass/layouts/default.sass */
 header nav.navbar {
   margin-bottom: 40px;
-  border-bottom-color: #f80047;
+  border-bottom-color: #dd104c;
 }
 
 /* line 30, ../../sass/layouts/default.sass */
@@ -126,18 +126,27 @@ footer > .navbar {
   padding-top: 14px;
 }
 
-/* line 36, ../../sass/layouts/default.sass */
+/* line 35, ../../sass/layouts/default.sass */
+.actions > a {
+  color: #ca94aa;
+}
+/* line 38, ../../sass/layouts/default.sass */
+.actions > a:hover {
+  color: #dd104c;
+}
+
+/* line 41, ../../sass/layouts/default.sass */
 .carousel-control .glyphicon-chevron-left {
   margin-left: -4px;
 }
 
-/* line 39, ../../sass/layouts/default.sass */
+/* line 44, ../../sass/layouts/default.sass */
 .carousel-inner {
   box-shadow: 0 0 5px 5px #cccccc;
   margin-bottom: 20px;
 }
 
-/* line 43, ../../sass/layouts/default.sass */
+/* line 48, ../../sass/layouts/default.sass */
 li > a.menu-button {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
@@ -146,22 +155,22 @@ li > a.menu-button {
   padding-right: 7px;
 }
 
-/* line 49, ../../sass/layouts/default.sass */
+/* line 54, ../../sass/layouts/default.sass */
 .navbar-brand {
   height: auto;
 }
 
-/* line 52, ../../sass/layouts/default.sass */
+/* line 57, ../../sass/layouts/default.sass */
 .navbar-default .navbar-nav > li > a:hover, .thumbnail p:hover {
-  color: #f80047;
+  color: #dd104c;
 }
 
-/* line 55, ../../sass/layouts/default.sass */
+/* line 60, ../../sass/layouts/default.sass */
 .row-login {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
   text-transform: uppercase;
-  background-color: #f80047;
+  background-color: #dd104c;
   color: white;
   margin-bottom: 18px;
   margin-left: auto;
@@ -169,23 +178,23 @@ li > a.menu-button {
   position: fixed;
   z-index: 100;
 }
-/* line 66, ../../sass/layouts/default.sass */
+/* line 71, ../../sass/layouts/default.sass */
 .row-login a, .row-login a:visited {
   color: white;
 }
-/* line 69, ../../sass/layouts/default.sass */
+/* line 74, ../../sass/layouts/default.sass */
 .row-login a:hover {
   color: #feccda;
 }
 
-/* line 72, ../../sass/layouts/default.sass */
+/* line 77, ../../sass/layouts/default.sass */
 .row-header-h1 {
   margin-bottom: 20px;
 }
 
-/* line 75, ../../sass/layouts/default.sass */
+/* line 80, ../../sass/layouts/default.sass */
 .row-redes-sociales {
-  background-color: #f80047;
+  background-color: #dd104c;
   color: white;
   margin-bottom: 18px;
   margin-left: auto;
@@ -193,17 +202,17 @@ li > a.menu-button {
   position: fixed;
   z-index: 100;
 }
-/* line 84, ../../sass/layouts/default.sass */
+/* line 89, ../../sass/layouts/default.sass */
 .row-redes-sociales a, .row-redes-sociales a:visited {
   color: white;
 }
 
-/* line 87, ../../sass/layouts/default.sass */
+/* line 92, ../../sass/layouts/default.sass */
 #container {
   margin-top: 90px;
 }
 
-/* line 90, ../../sass/layouts/default.sass */
+/* line 95, ../../sass/layouts/default.sass */
 #container-h1 {
   height: 0;
   width: 80px;
