@@ -25,13 +25,20 @@ class Banner extends AppModel {
 			),
 		),
 		'image' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			'vacio'     => array(
+				'rule'      => 'archivoVacio',
+				'on'        =>  'create',
+				'message'   => 'Debe ingresar una imagen.',
+			),
+			'tipoDeArchivo' => array(
+				'rule'      =>  array('extension', array('gif', 'jpeg', 'png', 'jpg')),
+				'on'        =>  'create',
+				'message'   =>  'Ingrese una extensión válida.',
+			),
+			'tipoDeArchivoUpdate'   => array(
+				 'rule'      =>  array('extension', array('gif', 'jpeg', 'png', 'jpg')),
+				 'on'    	=> 'update',
+				 'message'   =>  'Verifique la extensión del archivo o el tamaño.',
 			),
 		),
 		'link' => array(
@@ -103,5 +110,23 @@ class Banner extends AppModel {
 			'finderQuery' => '',
 		)
 	);
+
+
+	/***********************************************************************************************************
+	* Funciones
+	********************************************************************************************************** */
+
+
+	public function archivoVacio($field = array()) {
+		$keya = key($field);
+		$valuea = array_values($field);
+		$valueb = $valuea[0];
+		
+		if (!empty($valueb['name'])){
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }

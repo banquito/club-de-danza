@@ -57,7 +57,6 @@ echo $this->Html->css('notes/edit', '', array('inline'=>FALSE));
 							<?php echo $this->Form->input('image', array(
 								'label' => false,
 								'placeholder' => __('Image'),
-								'required' => 'required',
 								'type' => 'file'
 							));
 							?>

@@ -55,7 +55,6 @@
 						'class' => 'form-control',
 						'label' => false,
 						'placeholder' => __('Published'),
-						'required' => 'required',
 					));
 					?>
 				</div>

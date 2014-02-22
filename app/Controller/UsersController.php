@@ -16,9 +16,9 @@ class UsersController extends AppController {
 	public $components = array('Paginator', 'RequestHandler');
 
 	public function beforeFilter() {
-		//parent::beforeFilter();
-		// $this->Auth->allow('add', 'logout');
-		$this->Auth->allow('*');
+		parent::beforeFilter();
+		$this->Auth->allow('add', 'logout');
+		// $this->Auth->allow('*');
 	}
 
 /**
@@ -98,17 +98,27 @@ public function login() {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+			$user = $this->request->data;
+			$rolId = $this->User->Rol->field('id', array('weight' => User::ARTISTA));
+			$user['User']['rol_id'] = $rolId;
+			
+			# Se crea el usuario y se lo autorregistra
 			$this->User->create();
-			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+			if ($this->User->save($user)) {
+				$id = $this->User->id;
+		        $user['User'] = array_merge(
+		            $user['User'],
+		            array('id' => $id)
+		        );
+		        $this->Auth->login($user['User']);
+				return $this->redirect($this->referer());
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}
 		}
-		$rols = $this->User->Rol->find('list');
+
 		$states = $this->User->State->find('list');
-		$this->set(compact('rols', 'states'));
+		$this->set(compact('states'));
 	}
 
 /**

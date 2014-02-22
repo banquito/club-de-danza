@@ -24,13 +24,20 @@ class Slider extends AppModel {
 			),
 		),
 		'image' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			'vacio' => array(
+				'rule'		=> 'archivoVacio',
+				'on'		=>  'create',
+				'message'	=> 'Debe ingresar una imagen.',
+			),
+			'tipoDeArchivo' => array(
+				'rule'		=>  array('extension', array('gif', 'jpeg', 'png', 'jpg')),
+				'on'		=>  'create',
+				'message'	=>  'Ingrese una extensión válida.',
+			),
+			'tipoDeArchivoUpdate'	=> array(
+				 'rule'		=>  array('extension', array('gif', 'jpeg', 'png', 'jpg')),
+				 'on'		=> 'update',
+				 'message'	=>  'Verifique la extensión del archivo o el tamaño.',
 			),
 		),
 		'link' => array(
@@ -72,17 +79,34 @@ class Slider extends AppModel {
 		)
 	);
 
+	/***********************************************************************************************************
+	* Funciones
+	********************************************************************************************************** */
+
+
+	public function archivoVacio($field = array()) {
+		$keya = key($field);
+		$valuea = array_values($field);
+		$valueb = $valuea[0];
+		
+		if (!empty($valueb['name'])){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public $findMethods = array('published' =>  true);
 
-    // TODO: ver cómo filtrar las categorías
-    protected function _findPublished($state, $query, $results = array()) {
-        if ($state === 'before') {
-        	$query['fields'] = array('Slider.title', 'Slider.image', 'Slider.link');
-        	$query['recursive'] = -1;
-            $query['conditions']['Slider.published'] = true;
-            return $query;
-        }
-        return $results;
-    }
+	// TODO: ver cómo filtrar las categorías
+	protected function _findPublished($state, $query, $results = array()) {
+		if ($state === 'before') {
+			$query['fields'] = array('Slider.title', 'Slider.image', 'Slider.link');
+			$query['recursive'] = -1;
+			$query['conditions']['Slider.published'] = true;
+			return $query;
+		}
+		return $results;
+	}
 
 }

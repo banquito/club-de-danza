@@ -29,7 +29,6 @@ class SlidersController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			
 			$slider = $this->request->data;
 			$image = '';
 
@@ -135,7 +134,30 @@ class SlidersController extends AppController {
 			throw new NotFoundException(__('Invalid slider'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Slider->save($this->request->data)) {
+			$slider = $this->request->data;
+
+			# Se verifica si se subió una imagen y se setea la imagen
+			if (isset($slider['Slider']['image']['name']) 
+					&& ($slider['Slider']['image']['name'] != '')
+					&& isset($slider['Slider']['image']['tmp_name'])
+					&& ($slider['Slider']['image']['tmp_name'] != '')) {
+				
+				$imageName = $slider['Slider']['image']['name'];
+				$uploadDir = IMAGES_URL . 'sliders/';
+				$uploadFile = $uploadDir . $imageName;
+				
+				if (!move_uploaded_file($slider['Slider']['image']['tmp_name'], $uploadFile)) {
+					$this -> Session -> setFlash(__('The image could not be saved. Please, verify the file.'));
+					return $this -> redirect(array('action' => 'add', $slider));
+				}
+				
+				$slider['Slider']['image'] = $imageName;
+			
+			} else {
+				$slider['Slider']['image'] = $this -> Slider -> read('image', $id);
+			}
+
+			if ($this->Slider->save($slider)) {
 				$this->Session->setFlash(__('The slider has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {

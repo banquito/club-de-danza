@@ -15,6 +15,11 @@ class BannersController extends AppController {
  */
 	public $components = array('Paginator');
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this -> Auth -> allow('get');
+	}
+
 /**
  * index method
  *
@@ -47,8 +52,30 @@ class BannersController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+			$banner = $this->request->data;
+			$image = '';
+
+			# Se setea el usuario creador de la nota = usuario logeado
+			$banner['Banner']['user_id'] = AuthComponent::user('id');
+			
+			# Se verifica si se subió una imagen y se setea la imagen
+			if (isset($banner['Banner']['image']['name']) && ($banner['Banner']['image']['name'] != '')) {
+				$imageName = $banner['Banner']['image']['name'];
+				$uploadDir = IMAGES_URL . 'banners/';
+				$uploadFile = $uploadDir . $imageName;
+				
+				if (!move_uploaded_file($banner['Banner']['image']['tmp_name'], $uploadFile)) {
+					$this -> Session -> setFlash(__('The image could not be saved. Please, verify the file.'));
+					return $this -> redirect(array('action' => 'add', $banner));
+				}
+				
+				$image = $imageName;
+			}
+
+			$banner['Banner']['image'] = $image;
+
 			$this->Banner->create();
-			if ($this->Banner->save($this->request->data)) {
+			if ($this->Banner->save($banner)) {
 				$this->Session->setFlash(__('The banner has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -72,10 +99,37 @@ class BannersController extends AppController {
 			throw new NotFoundException(__('Invalid banner'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Banner->save($this->request->data)) {
+			$banner = $this->request->data;
+
+			# Se verifica si se subió una imagen y se setea la imagen
+			if (isset($banner['Banner']['image']['name']) 
+					&& ($banner['Banner']['image']['name'] != '')
+					&& isset($banner['Banner']['image']['tmp_name'])
+					&& ($banner['Banner']['image']['tmp_name'] != '')) {
+				
+				$imageName = $banner['Banner']['image']['name'];
+				$uploadDir = IMAGES_URL . 'banners/';
+				$uploadFile = $uploadDir . $imageName;
+				
+				if (!move_uploaded_file($banner['Banner']['image']['tmp_name'], $uploadFile)) {
+					$this -> Session -> setFlash(__('The image could not be saved. Please, verify the file.'));
+					return $this -> redirect(array('action' => 'add', $banner));
+				}
+				
+				$banner['Banner']['image'] = $imageName;
+			
+			} else {
+				$banner['Banner']['image'] = $this -> Banner -> field('image', array('id'=>$id));
+				debug($banner['Banner']['image'], $showHtml = null, $showFrom = true);
+			}
+
+
+
+			if ($this->Banner->save($banner)) {
 				$this->Session->setFlash(__('The banner has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
+				$this->request->data['Banner']['image'] = $this -> Banner -> field('image', array('id'=>$id));
 				$this->Session->setFlash(__('The banner could not be saved. Please, try again.'));
 			}
 		} else {
@@ -106,4 +160,76 @@ class BannersController extends AppController {
 			$this->Session->setFlash(__('The banner could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
+	}
+
+/**
+ * get method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return banners
+ */
+	public function get($cantidad = null, $categoria = null, $excluded = null) {
+		if (!$cantidad || !$categoria) {
+			throw new NotFoundException(__('Invalid banner'));
+		}
+		$categoria_id = $this->Banner->Bannercategory->field('id', array('name' => $categoria));
+		
+		if (!$categoria_id) {
+			throw new NotFoundException(__('Invalid banner'));
+		}
+		
+		// $options['joins'] = array(
+		//     array('table' => 'categories_tracks',
+		//         'alias' => 'CategoriesTrack',
+		//         'type' => 'inner',
+		//         'conditions' => array(
+		//             'Track.id = CategoriesTrack.track_id'
+		//         )
+		//     ),
+		//     array('table' => 'categories',
+		//         'alias' => 'Category',
+		//         'type' => 'inner',
+		//         'conditions' => array(
+		//             'CategoriesTrack.category_id = Category.id'
+		//         )
+		//     )
+		// );
+		$options['joins'] = array(
+		    array('table' => 'banners_bannercategories',
+		        'alias' => 'BannersBannercategories',
+		        'type' => 'inner',
+		        'conditions' => array(
+		            'Banner.id = BannersBannercategories.banner_id'
+		        )
+		    ),
+		    array('table' => 'bannercategories',
+		        'alias' => 'Bannercategory',
+		        'type' => 'inner',
+		        'conditions' => array(
+		            'BannersBannercategories.bannercategory_id = Bannercategory.id'
+		        )
+		    )
+		);
+		
+		$options['conditions'] = array('Bannercategory.id' => $categoria_id
+			, 'Banner.published' => true
+		);
+		
+		# Se excluyen algunos videos para no repetirlos en el listado
+		if($excluded):
+			$excluded = explode('-', $excluded);
+			foreach($excluded as $key => $val)
+				if(empty($val))
+					unset($excluded[$key]);
+			$options['conditions'] = array_merge($options['conditions']
+				, array('NOT' => array('Banner.id' => $excluded))
+			);
+		endif;
+		
+		$options['limit'] = $cantidad;
+		$options['order'] = 'RAND()';
+		
+		return $this->Banner->find('all', $options);
+	}
+}

@@ -1,3 +1,29 @@
+<div class="row row-header-h1">
+	<div class="col-sm-12">
+		<h1><?php echo h($banner['Banner']['title']); ?></h1>
+		<div></div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<p><?php echo $this -> Time -> format('d-m-Y', h($banner['Banner']['created'])); ?></p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<p><?php echo h($banner['Banner']['link']); ?></p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<?php $image = '/' . IMAGES_URL . ($banner['Banner']['image'] ? 'banners/'.$banner['Banner']['image'] : 'layouts/sinfoto.jpg'); ?>
+		<img alt="imagen-nota" class="img-responsive" src="<?php echo $image; ?>" />
+	</div>
+</div>
+
+
+
+
 <div class="banners view">
 <h2><?php echo __('Banner'); ?></h2>
 	<dl>

@@ -12,6 +12,7 @@ echo $this->Html->css('sliders/edit', '', array('inline'=>FALSE));
 <div class="row">
 	<div class="col-sm-12">
 		<?php echo $this->Form->create('Slider', array('class' => 'form-horizontal', 'role' => 'form', 'type' => 'file')) ?>
+			<?php echo $this->Form->input('id'); ?>
 			<div class="form-group">
 				<label for="title" class="col-sm-4 control-label"><?php echo __('Title'); ?></label>
 				<div class="col-sm-8">
@@ -43,7 +44,6 @@ echo $this->Html->css('sliders/edit', '', array('inline'=>FALSE));
 							<?php echo $this->Form->input('image', array(
 								'label' => false,
 								'placeholder' => __('Image'),
-								'required' => 'required',
 								'type' => 'file'
 							));
 							?>
@@ -71,7 +71,6 @@ echo $this->Html->css('sliders/edit', '', array('inline'=>FALSE));
 						'class' => 'form-control',
 						'label' => false,
 						'placeholder' => __('Published'),
-						'required' => 'required',
 					));
 					?>
 				</div>

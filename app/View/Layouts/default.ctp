@@ -37,9 +37,7 @@
 				
 				<!-- Contenido -->
 				<section id="content" class="col-sm-9">
-					<?php //debug(AuthComponent::user()); ?>
-
-					<?php echo $this->Session->flash(); ?>
+					<?php //echo $this->Session->flash(); ?>
 					<?php echo $this->fetch('content'); ?>
 				</section>
 				
@@ -47,7 +45,7 @@
 				<!-- Barra lateral -->
 				<aside class="col-sm-3">
 					
-					<!-- Login -->
+					<!-- Login Buttons -->
 					<div class="row row-login">
 						<div class="col-sm-12 text-center">
 							<?php if(AuthComponent::user('id')): ?>
@@ -60,9 +58,13 @@
 								|
 								<a href="/logout" class="btn btn-xs">Salir</a>
 							<?php else: ?>
-								<a href="/login" class="btn btn-xs">Login</a>
+								<a href="#" class="btn btn-xs" data-toggle="modal" data-target="#modalLogin">
+									<?php echo __('Login') ?>
+								</a>
 								|
-								<a href="/registro" class="btn btn-xs">Registro</a>
+								<a href="/registro" class="btn btn-xs" data-toggle="modal" data-target="#modalRegister">
+									<?php echo __('Register') ?>
+								</a>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -80,26 +82,8 @@
 						</div>
 					</div>
 
-					<div class="row row-banner">
-						<div class="col-sm-12">
-							<img src="http://lorempixel.com/400/200/fashion/4" alt="" class="image-center img-responsive">
-						</div>
-					</div>
-					<div class="row row-banner">
-						<div class="col-sm-12">
-							<img src="http://lorempixel.com/200/300/technics/9" alt="" class="image-center img-responsive banner-large">
-						</div>
-					</div>
-					<div class="row row-banner">
-						<div class="col-sm-12">
-							<img src="http://lorempixel.com/400/200/food/8" alt="" class="image-center img-responsive">
-						</div>
-					</div>
-					<div class="row row-banner">
-						<div class="col-sm-12">
-							<img src="http://lorempixel.com/400/200/nightlife/5" alt="" class="image-center img-responsive">
-						</div>
-					</div>
+					<!-- Banners -->
+					<?php echo $this -> element('banners'); ?>
 
 				</aside>
 			</div>
@@ -123,14 +107,20 @@
 			</nav>
 		</footer>
 			
+		<!-- Modal Login & Modal Register -->
+		<?php 
+		echo $this->element('modal_login'); 
+		echo $this->element('modal_register'); 
+		?>
 
-			<?php echo $this->element('sql_dump'); ?>
-			<?php
-			echo $this->Html->script(array(
+		<!-- Scripts -->
+		<?php echo $this->element('sql_dump'); ?>
+		<?php
+		echo $this->Html->script(array(
 			'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
 			'//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'
-			));
-			echo $this->fetch('script');
-			?>
-		</body>
-	</html>
+		));
+		echo $this->fetch('script');
+		?>
+	</body>
+</html>

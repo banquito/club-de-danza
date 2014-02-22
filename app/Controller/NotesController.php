@@ -169,8 +169,6 @@ class NotesController extends AppController {
 				$note['Note']['image'] = $imageName;
 			}
 
-
-
 			if ($this->Note->save($note)) {
 				$this->Session->setFlash(__('The note has been saved.'));
 				return $this->redirect(array('action' => 'index'));
