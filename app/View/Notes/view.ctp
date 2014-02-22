@@ -11,7 +11,7 @@
 </div>
 <div class="row">
 	<div class="col-sm-8">
-		<p><?php echo h($note['Note']['resume']); ?></p>
+		<p><?php echo $note['Note']['resume']; ?></p>
 	</div>
 	<div class="col-sm-4">
 		<?php $image = '/' . IMAGES_URL . ($note['Note']['image'] ? 'notes/'.$note['Note']['image'] : 'layouts/sinfoto.jpg'); ?>
@@ -20,7 +20,7 @@
 </div>
 <div class="row">
 	<div class="col-sm-12">
-		<p><?php echo h($note['Note']['body']); ?></p>
+		<p><?php echo $note['Note']['body']; ?></p>
 	</div>
 </div>
 <div class="row">

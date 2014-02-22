@@ -1,5 +1,6 @@
 <?php 
 echo $this->Html->css('notes/edit', '', array('inline'=>FALSE));
+echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false));
 ?>
 
 <div class="row row-header-h1">
@@ -57,6 +58,7 @@ echo $this->Html->css('notes/edit', '', array('inline'=>FALSE));
 							<?php echo $this->Form->input('image', array(
 								'label' => false,
 								'placeholder' => __('Image'),
+								'required' => FALSE,
 								'type' => 'file'
 							));
 							?>

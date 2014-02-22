@@ -3,6 +3,7 @@
 // debug(IMAGES_URL);
 // debug(WWW_ROOT);
 // debug(WWW_ROOT . IMAGES_URL . 'notes/');
+echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false));
 ?>
 
 <div class="row row-header-h1">
@@ -62,7 +63,7 @@
 						'class' => 'form-control',
 						'label' => false,
 						'placeholder' => __('Resume'),
-						'required' => 'required',
+						// 'required' => 'required',
 					));
 					?>
 				</div>
@@ -74,7 +75,7 @@
 						'class' => 'form-control',
 						'label' => false,
 						'placeholder' => __('Body'),
-						'required' => 'required',
+						// 'required' => 'required',
 					));
 					?>
 				</div>
