@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Club de Danza\n"
 "POT-Creation-Date: 2014-02-22 19:50-0300\n"
-"PO-Revision-Date: 2014-02-22 20:01-0300\n"
+"PO-Revision-Date: 2014-02-22 20:07-0300\n"
 "Last-Translator: Ale Prieto <aleprieto@gmail.com>\n"
 "Language-Team: Colectivo Libre <contacto@colectivolibre.com.ar>\n"
 "Language: \n"
@@ -792,7 +792,7 @@ msgstr "Nueva Nota"
 #: View/Notes/add.ctp:33
 #: View/Notes/edit.ctp:31
 msgid "Short Description"
-msgstr "Bajada"
+msgstr "Epígrafe"
 
 #: View/Notes/add.ctp:38
 #: View/Notes/edit.ctp:36
