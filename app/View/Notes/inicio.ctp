@@ -1,42 +1,7 @@
-<?php
-// debug($notes, $showHtml = null, $showFrom = true);
-echo $this->Html->css('pages/inicio', array('inline' => false)); 
-?>
+<?php echo $this->Html->css('pages/inicio', array('inline' => false)); ?>
 
-
-<!-- Carrusel / Slider -->
-<div id="slider-home" class="carousel slide" data-ride="carousel">
-	<!-- Indicators -->
-	<ol class="carousel-indicators">
-		<li data-target="#slider-home" data-slide-to="0" class="active"></li>
-		<li data-target="#slider-home" data-slide-to="1"></li>
-		<li data-target="#slider-home" data-slide-to="2"></li>
-	</ol>
-	<!-- Wrapper for slides -->
-	<div class="carousel-inner">
-		<div class="item active">
-			<?php echo $this->Html->image('sliders/01.jpg', array('class' => 'image-center')); ?>
-			<div class="carousel-caption ">
-                <h3>TÍTULO</h3>
-            </div>
-		</div>
-		<div class="item">
-			<?php echo $this->Html->image('sliders/01.jpg', array('class' => 'image-center')); ?>
-			<div class="carousel-caption ">
-                <h3>TÍTULO</h3>
-            </div>
-		</div>
-		<div class="item">
-			<?php echo $this->Html->image('sliders/01.jpg', array('class' => 'image-center')); ?>
-			<div class="carousel-caption ">
-                <h3>TÍTULO</h3>
-            </div>
-		</div>
-	</div>
-	<!-- Controls -->
-	<a class="left carousel-control" href="#slider-home" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
-	<a class="right carousel-control" href="#slider-home" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
-</div>
+<!-- Slider & Carrusel -->
+<?php echo $this -> element('slider'); ?>
 
 <!-- Título -->
 <div class="row row-header-h1">
@@ -48,15 +13,9 @@ echo $this->Html->css('pages/inicio', array('inline' => false));
 
 <!-- Notas -->
 <?php
-for ($i=0; $i < sizeof($notes); $i++):
-	$note = $notes[$i];
-
-	if ($i != 0 && $i % 3 == 0) {
-		echo '</div>';
-	}
-	if ($i % 3 == 0) {
-		echo '<div class="row">';
-	}
+foreach($notes as $key => $note):
+	if ($key != 0 && $key % 3 == 0) echo '</div>';
+	if ($key % 3 == 0) echo '<div class="row">';
 ?>
 	<div class="col-xs-4 col-sm-4 col-md-4 col-sm-4">
 		<a href="/notas/ver/<?php echo $note['Note']['id']; ?>">
@@ -74,10 +33,9 @@ for ($i=0; $i < sizeof($notes); $i++):
 		</a>
 	</div>
 
-<?php
-endfor;
-?>
+<?php endforeach; ?>
 
+<!-- Paginación -->
 <p class="text-center">
 	<?php
 	echo $this->Paginator->counter(array(

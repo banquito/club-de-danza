@@ -65,6 +65,18 @@ echo $this->Html->css('sliders/edit', '', array('inline'=>FALSE));
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Published'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->input('published', array(
+						'class' => 'form-control',
+						'label' => false,
+						'placeholder' => __('Published'),
+						'required' => 'required',
+					));
+					?>
+				</div>
+			</div>
+			<div class="form-group">
 				<div class="col-sm-offset-4 col-sm-2">
 					<button type="submit" class="btn btn-default"><?php echo __('Aceptar'); ?></button>
 				</div>
