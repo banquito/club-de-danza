@@ -8,7 +8,7 @@
 		echo $this->Form->input('link');
 		echo $this->Form->input('published');
 		echo $this->Form->input('user_id');
-		echo $this->Form->input('bannercategorie_id');
+		echo $this->Form->input('Bannercategory');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -21,6 +21,6 @@
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Bannercategories'), array('controller' => 'bannercategories', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Bannercategorie'), array('controller' => 'bannercategories', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Bannercategory'), array('controller' => 'bannercategories', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

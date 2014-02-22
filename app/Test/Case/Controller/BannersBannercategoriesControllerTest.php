@@ -1,11 +1,11 @@
 <?php
-App::uses('BannersController', 'Controller');
+App::uses('BannersBannercategoriesController', 'Controller');
 
 /**
- * BannersController Test Case
+ * BannersBannercategoriesController Test Case
  *
  */
-class BannersControllerTest extends ControllerTestCase {
+class BannersBannercategoriesControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,6 +13,7 @@ class BannersControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.banners_bannercategory',
 		'app.banner',
 		'app.user',
 		'app.rol',
@@ -20,7 +21,7 @@ class BannersControllerTest extends ControllerTestCase {
 		'app.country',
 		'app.note',
 		'app.bannercategory',
-		'app.banners_bannercategory'
+		'app.bannercategorie'
 	);
 
 /**

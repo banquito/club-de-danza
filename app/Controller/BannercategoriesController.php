@@ -56,7 +56,8 @@ class BannercategoriesController extends AppController {
 			}
 		}
 		$users = $this->Bannercategory->User->find('list');
-		$this->set(compact('users'));
+		$banners = $this->Bannercategory->Banner->find('list');
+		$this->set(compact('users', 'banners'));
 	}
 
 /**
@@ -82,7 +83,8 @@ class BannercategoriesController extends AppController {
 			$this->request->data = $this->Bannercategory->find('first', $options);
 		}
 		$users = $this->Bannercategory->User->find('list');
-		$this->set(compact('users'));
+		$banners = $this->Bannercategory->Banner->find('list');
+		$this->set(compact('users', 'banners'));
 	}
 
 /**

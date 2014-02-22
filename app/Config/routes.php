@@ -28,6 +28,11 @@
 	Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
 	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
 
+	# Banners
+	Router::connect('/banners/nuevo', array('controller' => 'banners', 'action' => 'add'));
+	Router::connect('/banners/editar/*', array('controller' => 'banners', 'action' => 'edit'));
+	Router::connect('/banners/ver/*', array('controller' => 'banners', 'action' => 'view'));
+	
 	# Notas
 	Router::connect('/notas', array('controller' => 'notes', 'action' => 'inicio'));
 	Router::connect('/notas/editar/*', array('controller' => 'notes', 'action' => 'edit'));

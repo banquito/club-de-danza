@@ -10,7 +10,6 @@
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('bannercategorie_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($banners as $banner): ?>
@@ -24,9 +23,6 @@
 		<td><?php echo h($banner['Banner']['modified']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($banner['User']['name'], array('controller' => 'users', 'action' => 'view', $banner['User']['id'])); ?>
-		</td>
-		<td>
-			<?php echo $this->Html->link($banner['Bannercategorie']['name'], array('controller' => 'bannercategories', 'action' => 'view', $banner['Bannercategorie']['id'])); ?>
 		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $banner['Banner']['id'])); ?>
@@ -57,6 +53,6 @@
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Bannercategories'), array('controller' => 'bannercategories', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Bannercategorie'), array('controller' => 'bannercategories', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Bannercategory'), array('controller' => 'bannercategories', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

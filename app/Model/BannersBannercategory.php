@@ -1,12 +1,12 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Bannercategory Model
+ * BannersBannercategory Model
  *
- * @property User $User
  * @property Banner $Banner
+ * @property Bannercategory $Bannercategory
  */
-class Bannercategory extends AppModel {
+class BannersBannercategory extends AppModel {
 
 /**
  * Validation rules
@@ -14,9 +14,9 @@ class Bannercategory extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
+		'banner_id' => array(
+			'uuid' => array(
+				'rule' => array('uuid'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -24,9 +24,9 @@ class Bannercategory extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'user_id' => array(
-			'uuid' => array(
-				'rule' => array('uuid'),
+		'bannercategory_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -44,34 +44,19 @@ class Bannercategory extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
+		'Banner' => array(
+			'className' => 'Banner',
+			'foreignKey' => 'banner_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Bannercategory' => array(
+			'className' => 'Bannercategory',
+			'foreignKey' => 'bannercategory_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		)
 	);
-
-/**
- * hasAndBelongsToMany associations
- *
- * @var array
- */
-	public $hasAndBelongsToMany = array(
-		'Banner' => array(
-			'className' => 'Banner',
-			'joinTable' => 'banners_bannercategories',
-			'foreignKey' => 'bannercategory_id',
-			'associationForeignKey' => 'banner_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-		)
-	);
-
 }

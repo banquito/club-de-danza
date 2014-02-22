@@ -63,6 +63,9 @@ if((strpos($this->params->url, 'notes') !== FALSE) || (strpos($this->params->url
 						<li><a href="/sliders"><?php echo __('List Slider'); ?></a></li>
 						<li><a href="/sliders/nuevo"><?php echo __('Add Slider'); ?></a></li>
 						<li class="divider"></li>
+						<li><a href="/banners"><?php echo __('List Banners'); ?></a></li>
+						<li><a href="/banners/nuevo"><?php echo __('Add Banners'); ?></a></li>
+						<li class="divider"></li>
 						<li><a href="/usuarios/listar">Listar Usuarios</a></li>
 					</ul>
 				</li>

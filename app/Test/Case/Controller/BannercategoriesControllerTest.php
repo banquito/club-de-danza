@@ -18,7 +18,9 @@ class BannercategoriesControllerTest extends ControllerTestCase {
 		'app.rol',
 		'app.state',
 		'app.country',
-		'app.note'
+		'app.note',
+		'app.banner',
+		'app.banners_bannercategory'
 	);
 
 /**
