@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-02-13 19:57-0300\n"
+"POT-Creation-Date: 2014-02-21 21:49-0300\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -34,43 +34,47 @@ msgstr ""
 msgid "The country could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/NotesController.php:37;71;98
+#: Controller/NotesController.php:84;139;191
 msgid "Invalid note"
 msgstr ""
 
-#: Controller/NotesController.php:52;75
+#: Controller/NotesController.php:110;156
+msgid "The image could not be saved. Please, verify the file."
+msgstr ""
+
+#: Controller/NotesController.php:122;166
 msgid "The note has been saved."
 msgstr ""
 
-#: Controller/NotesController.php:55;78
+#: Controller/NotesController.php:125;169
 msgid "The note could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/NotesController.php:102
+#: Controller/NotesController.php:195
 msgid "The note has been deleted."
 msgstr ""
 
-#: Controller/NotesController.php:104
+#: Controller/NotesController.php:197
 msgid "The note could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/RolsController.php:37;69;94
+#: Controller/RolsController.php:42;74;99
 msgid "Invalid rol"
 msgstr ""
 
-#: Controller/RolsController.php:52;73
+#: Controller/RolsController.php:57;78
 msgid "The rol has been saved."
 msgstr ""
 
-#: Controller/RolsController.php:55;76
+#: Controller/RolsController.php:60;81
 msgid "The rol could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/RolsController.php:98
+#: Controller/RolsController.php:103
 msgid "The rol has been deleted."
 msgstr ""
 
-#: Controller/RolsController.php:100
+#: Controller/RolsController.php:105
 msgid "The rol could not be deleted. Please, try again."
 msgstr ""
 
@@ -94,23 +98,27 @@ msgstr ""
 msgid "The state could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/UsersController.php:37;72;100
+#: Controller/UsersController.php:42
+msgid "Invalid username or password, try again"
+msgstr ""
+
+#: Controller/UsersController.php:88;123;151
 msgid "Invalid user"
 msgstr ""
 
-#: Controller/UsersController.php:52;76
+#: Controller/UsersController.php:103;127
 msgid "The user has been saved."
 msgstr ""
 
-#: Controller/UsersController.php:55;79
+#: Controller/UsersController.php:106;130
 msgid "The user could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/UsersController.php:104
+#: Controller/UsersController.php:155
 msgid "The user has been deleted."
 msgstr ""
 
-#: Controller/UsersController.php:106
+#: Controller/UsersController.php:157
 msgid "The user could not be deleted. Please, try again."
 msgstr ""
 
@@ -120,13 +128,11 @@ msgstr ""
 
 #: View/Countries/add.ctp:9
 #: View/Countries/edit.ctp:10
-#: View/Notes/add.ctp:12
-#: View/Notes/edit.ctp:13
 #: View/Rols/add.ctp:11
 #: View/Rols/edit.ctp:12
 #: View/States/add.ctp:10
 #: View/States/edit.ctp:11
-#: View/Users/add.ctp:17
+#: View/Users/add.ctp:59
 #: View/Users/edit.ctp:18
 msgid "Submit"
 msgstr ""
@@ -135,10 +141,7 @@ msgstr ""
 #: View/Countries/edit.ctp:13
 #: View/Countries/index.ctp:9;40
 #: View/Countries/view.ctp:27;47
-#: View/Notes/add.ctp:15
-#: View/Notes/edit.ctp:16
-#: View/Notes/index.ctp:12;48
-#: View/Notes/view.ctp:42
+#: View/Notes/index.ctp:17
 #: View/Rols/add.ctp:14
 #: View/Rols/edit.ctp:15
 #: View/Rols/index.ctp:11;44
@@ -147,9 +150,9 @@ msgstr ""
 #: View/States/edit.ctp:14
 #: View/States/index.ctp:10;44
 #: View/States/view.ctp:32;61
-#: View/Users/add.ctp:20
+#: View/Users/add.ctp:62
 #: View/Users/edit.ctp:21
-#: View/Users/index.ctp:17;60
+#: View/Users/index.ctp:18
 #: View/Users/view.ctp:67;93
 msgid "Actions"
 msgstr ""
@@ -171,9 +174,8 @@ msgstr ""
 #: View/States/add.ctp:16
 #: View/States/edit.ctp:18
 #: View/States/view.ctp:36
-#: View/Users/add.ctp:26
+#: View/Users/add.ctp:68
 #: View/Users/edit.ctp:28
-#: View/Users/index.ctp:65
 #: View/Users/view.ctp:75
 msgid "List States"
 msgstr ""
@@ -184,9 +186,8 @@ msgstr ""
 #: View/Countries/view.ctp:34;68
 #: View/States/index.ctp:46
 #: View/States/view.ctp:37
-#: View/Users/add.ctp:27
+#: View/Users/add.ctp:69
 #: View/Users/edit.ctp:29
-#: View/Users/index.ctp:66
 #: View/Users/view.ctp:76
 msgid "New State"
 msgstr ""
@@ -199,8 +200,7 @@ msgstr ""
 #: View/Countries/edit.ctp:16
 #: View/Countries/index.ctp:20
 #: View/Countries/view.ctp:59
-#: View/Notes/edit.ctp:19
-#: View/Notes/index.ctp:28
+#: View/Notes/index.ctp:32
 #: View/Rols/edit.ctp:18
 #: View/Rols/index.ctp:24
 #: View/Rols/view.ctp:83
@@ -208,7 +208,6 @@ msgstr ""
 #: View/States/index.ctp:24
 #: View/States/view.ctp:80
 #: View/Users/edit.ctp:24
-#: View/Users/index.ctp:40
 #: View/Users/view.ctp:107
 msgid "Delete"
 msgstr ""
@@ -216,9 +215,7 @@ msgstr ""
 #: View/Countries/edit.ctp:16
 #: View/Countries/index.ctp:20
 #: View/Countries/view.ctp:30;59
-#: View/Notes/edit.ctp:19
-#: View/Notes/index.ctp:28
-#: View/Notes/view.ctp:45
+#: View/Notes/index.ctp:32
 #: View/Rols/edit.ctp:18
 #: View/Rols/index.ctp:24
 #: View/Rols/view.ctp:40;83
@@ -226,7 +223,7 @@ msgstr ""
 #: View/States/index.ctp:24
 #: View/States/view.ctp:35;80
 #: View/Users/edit.ctp:24
-#: View/Users/index.ctp:40
+#: View/Users/index.ctp:38
 #: View/Users/view.ctp:70;107
 msgid "Are you sure you want to delete # %s?"
 msgstr ""
@@ -237,49 +234,50 @@ msgstr ""
 
 #: View/Countries/index.ctp:18
 #: View/Countries/view.ctp:57
-#: View/Notes/index.ctp:26
+#: View/Notes/index.ctp:30
 #: View/Rols/index.ctp:22
 #: View/Rols/view.ctp:81
 #: View/States/index.ctp:22
 #: View/States/view.ctp:78
-#: View/Users/index.ctp:38
 #: View/Users/view.ctp:105
 msgid "View"
 msgstr ""
 
 #: View/Countries/index.ctp:19
 #: View/Countries/view.ctp:58
-#: View/Notes/index.ctp:27
+#: View/Notes/index.ctp:31
 #: View/Rols/index.ctp:23
 #: View/Rols/view.ctp:82
 #: View/States/index.ctp:23
 #: View/States/view.ctp:79
-#: View/Users/index.ctp:39
 #: View/Users/view.ctp:106
 msgid "Edit"
 msgstr ""
 
 #: View/Countries/index.ctp:28
-#: View/Notes/index.ctp:36
+#: View/Notes/index.ctp:41
+#: View/Notes/inicio.ctp:101
 #: View/Rols/index.ctp:32
 #: View/States/index.ctp:32
-#: View/Users/index.ctp:48
+#: View/Users/index.ctp:50
 msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
 msgstr ""
 
 #: View/Countries/index.ctp:33
-#: View/Notes/index.ctp:41
+#: View/Notes/index.ctp:47
+#: View/Notes/inicio.ctp:107
 #: View/Rols/index.ctp:37
 #: View/States/index.ctp:37
-#: View/Users/index.ctp:53
+#: View/Users/index.ctp:56
 msgid "previous"
 msgstr ""
 
 #: View/Countries/index.ctp:35
-#: View/Notes/index.ctp:43
+#: View/Notes/index.ctp:49
+#: View/Notes/inicio.ctp:109
 #: View/Rols/index.ctp:39
 #: View/States/index.ctp:39
-#: View/Users/index.ctp:55
+#: View/Users/index.ctp:58
 msgid "next"
 msgstr ""
 
@@ -298,7 +296,7 @@ msgid "Country"
 msgstr ""
 
 #: View/Countries/view.ctp:4;42
-#: View/Notes/view.ctp:4
+#: View/Notes/view.ctp:41
 #: View/Rols/view.ctp:4;52
 #: View/States/view.ctp:4;49
 #: View/Users/view.ctp:4;86
@@ -313,7 +311,7 @@ msgid "Name"
 msgstr ""
 
 #: View/Countries/view.ctp:14;44
-#: View/Notes/view.ctp:24
+#: View/Notes/view.ctp:61
 #: View/Rols/view.ctp:24;60
 #: View/States/view.ctp:14;57
 #: View/Users/view.ctp:44;90
@@ -321,7 +319,7 @@ msgid "Created"
 msgstr ""
 
 #: View/Countries/view.ctp:19;45
-#: View/Notes/view.ctp:29
+#: View/Notes/view.ctp:66
 #: View/Rols/view.ctp:29;61
 #: View/States/view.ctp:19;58
 #: View/Users/view.ctp:49;91
@@ -340,99 +338,79 @@ msgstr ""
 msgid "Country Id"
 msgstr ""
 
-#: View/Notes/add.ctp:4
+#: View/Notes/add.ctp:10
 msgid "Add Note"
 msgstr ""
 
-#: View/Notes/add.ctp:18
-#: View/Notes/edit.ctp:20
-#: View/Notes/view.ctp:46
-#: View/Users/add.ctp:28
-#: View/Users/edit.ctp:30
-#: View/Users/index.ctp:67
-#: View/Users/view.ctp:77
-msgid "List Notes"
-msgstr ""
-
 #: View/Notes/add.ctp:19
-#: View/Notes/edit.ctp:21
-#: View/Notes/index.ctp:51
-#: View/Notes/view.ctp:48
-#: View/Rols/add.ctp:18
-#: View/Rols/edit.ctp:20
-#: View/Rols/index.ctp:47
-#: View/Rols/view.ctp:43
-#: View/States/add.ctp:19
-#: View/States/edit.ctp:21
-#: View/States/index.ctp:49
-#: View/States/view.ctp:40
-#: View/Users/add.ctp:23
-#: View/Users/edit.ctp:25
-#: View/Users/view.ctp:71
-msgid "List Users"
-msgstr ""
-
-#: View/Notes/add.ctp:20
-#: View/Notes/edit.ctp:22
-#: View/Notes/index.ctp:52
-#: View/Notes/view.ctp:49
-#: View/Rols/add.ctp:19
-#: View/Rols/edit.ctp:21
-#: View/Rols/index.ctp:48
-#: View/Rols/view.ctp:44;92
-#: View/States/add.ctp:20
-#: View/States/edit.ctp:22
-#: View/States/index.ctp:50
-#: View/States/view.ctp:41;89
-#: View/Users/index.ctp:62
-#: View/Users/view.ctp:72
-msgid "New User"
-msgstr ""
-
-#: View/Notes/edit.ctp:4
-#: View/Notes/view.ctp:44
-msgid "Edit Note"
-msgstr ""
-
-#: View/Notes/index.ctp:2
-msgid "Notes"
-msgstr ""
-
-#: View/Notes/index.ctp:50
-#: View/Notes/view.ctp:47
-#: View/Users/add.ctp:29
-#: View/Users/edit.ctp:31
-#: View/Users/index.ctp:68
-#: View/Users/view.ctp:78;116
-msgid "New Note"
-msgstr ""
-
-#: View/Notes/view.ctp:2
-msgid "Note"
-msgstr ""
-
-#: View/Notes/view.ctp:9
+#: View/Notes/edit.ctp:17
+#: View/Notes/view.ctp:46
 #: View/Users/view.ctp:87
 msgid "Title"
 msgstr ""
 
-#: View/Notes/view.ctp:14
+#: View/Notes/add.ctp:24
+#: View/Notes/edit.ctp:22
+msgid "Note title (max.: 50 characters)"
+msgstr ""
+
+#: View/Notes/add.ctp:33
+#: View/Notes/edit.ctp:31
+msgid "Short Description"
+msgstr ""
+
+#: View/Notes/add.ctp:38
+#: View/Notes/edit.ctp:36
+#: View/Notes/view.ctp:51
 #: View/Users/view.ctp:88
 msgid "Description"
 msgstr ""
 
-#: View/Notes/view.ctp:19
+#: View/Notes/add.ctp:46;51
+#: View/Notes/edit.ctp:44;57
+#: View/Notes/view.ctp:56
 #: View/Users/view.ctp:89
 msgid "Image"
 msgstr ""
 
-#: View/Notes/view.ctp:34
-#: View/Users/view.ctp:2
-msgid "User"
+#: View/Notes/add.ctp:59;64
+#: View/Notes/edit.ctp:67;72
+msgid "Resume"
 msgstr ""
 
-#: View/Notes/view.ctp:45
-msgid "Delete Note"
+#: View/Notes/add.ctp:71;76
+#: View/Notes/edit.ctp:79;84
+msgid "Body"
+msgstr ""
+
+#: View/Notes/add.ctp:84
+#: View/Notes/edit.ctp:92
+#: View/Users/login.ctp:36
+msgid "Aceptar"
+msgstr ""
+
+#: View/Notes/edit.ctp:7
+msgid "Edit Note"
+msgstr ""
+
+#: View/Notes/edit.ctp:49
+msgid "No image"
+msgstr ""
+
+#: View/Notes/index.ctp:3
+#: View/Users/add.ctp:70
+#: View/Users/edit.ctp:30
+#: View/Users/view.ctp:77
+msgid "List Notes"
+msgstr ""
+
+#: View/Notes/inicio.ctp:87
+msgid "No Title"
+msgstr ""
+
+#: View/Notes/view.ctp:71
+#: View/Users/view.ctp:2
+msgid "User"
 msgstr ""
 
 #: View/Rols/add.ctp:4
@@ -442,11 +420,37 @@ msgstr ""
 #: View/Rols/add.ctp:17
 #: View/Rols/edit.ctp:19
 #: View/Rols/view.ctp:41
-#: View/Users/add.ctp:24
+#: View/Users/add.ctp:66
 #: View/Users/edit.ctp:26
-#: View/Users/index.ctp:63
 #: View/Users/view.ctp:73
 msgid "List Rols"
+msgstr ""
+
+#: View/Rols/add.ctp:18
+#: View/Rols/edit.ctp:20
+#: View/Rols/index.ctp:47
+#: View/Rols/view.ctp:43
+#: View/States/add.ctp:19
+#: View/States/edit.ctp:21
+#: View/States/index.ctp:49
+#: View/States/view.ctp:40
+#: View/Users/add.ctp:65
+#: View/Users/edit.ctp:25
+#: View/Users/index.ctp:3
+#: View/Users/view.ctp:71
+msgid "List Users"
+msgstr ""
+
+#: View/Rols/add.ctp:19
+#: View/Rols/edit.ctp:21
+#: View/Rols/index.ctp:48
+#: View/Rols/view.ctp:44;92
+#: View/States/add.ctp:20
+#: View/States/edit.ctp:22
+#: View/States/index.ctp:50
+#: View/States/view.ctp:41;89
+#: View/Users/view.ctp:72
+msgid "New User"
 msgstr ""
 
 #: View/Rols/edit.ctp:4
@@ -460,9 +464,8 @@ msgstr ""
 
 #: View/Rols/index.ctp:46
 #: View/Rols/view.ctp:42
-#: View/Users/add.ctp:25
+#: View/Users/add.ctp:67
 #: View/Users/edit.ctp:27
-#: View/Users/index.ctp:64
 #: View/Users/view.ctp:74
 msgid "New Rol"
 msgstr ""
@@ -557,8 +560,14 @@ msgstr ""
 msgid "Delete State"
 msgstr ""
 
-#: View/Users/add.ctp:4
+#: View/Users/add.ctp:8
 msgid "Add User"
+msgstr ""
+
+#: View/Users/add.ctp:71
+#: View/Users/edit.ctp:31
+#: View/Users/view.ctp:78;116
+msgid "New Note"
 msgstr ""
 
 #: View/Users/edit.ctp:4
@@ -566,8 +575,12 @@ msgstr ""
 msgid "Edit User"
 msgstr ""
 
-#: View/Users/index.ctp:2
-msgid "Users"
+#: View/Users/login.ctp:9;14
+msgid "Nombre de Usuario"
+msgstr ""
+
+#: View/Users/login.ctp:22;27
+msgid "Contraseña"
 msgstr ""
 
 #: View/Users/view.ctp:70
@@ -582,16 +595,28 @@ msgstr ""
 msgid "User Id"
 msgstr ""
 
-#: View/ViewBlock.php:80
-msgid "A view block with the name '%s' is already/still open."
-msgstr ""
-
 #: Model/Country.php:validation for field name
 #: Model/Note.php:validation for field title
 #: Model/Rol.php:validation for field name;validation for field observation
 #: Model/State.php:validation for field name
 #: Model/User.php:validation for field username;validation for field password;validation for field name;validation for field lastname
 msgid "notEmpty"
+msgstr ""
+
+#: Model/Note.php:validation for field image
+msgid "Debe ingresar una imagen."
+msgstr ""
+
+#: Model/Note.php:validation for field image
+msgid "Ingrese una extensión válida."
+msgstr ""
+
+#: Model/Note.php:validation for field image
+msgid "El tamaño del archivo es damasiado grande."
+msgstr ""
+
+#: Model/Note.php:validation for field image
+msgid "Verifique la extensión del archivo o el tamaño."
 msgstr ""
 
 #: Model/Note.php:validation for field user_id

@@ -33,6 +33,7 @@
 	Router::connect('/notas/editar/*', array('controller' => 'notes', 'action' => 'edit'));
 	Router::connect('/notas/listar', array('controller' => 'notes', 'action' => 'index'));
 	Router::connect('/notas/nueva', array('controller' => 'notes', 'action' => 'add'));
+	Router::connect('/notas/ver/*', array('controller' => 'notes', 'action' => 'view'));
 
 	Router::connect('/proximamente', array('controller' => 'pages', 'action' => 'display', 'proximamente'));
 	Router::connect('/registro', array('controller' => 'users', 'action' => 'add'));

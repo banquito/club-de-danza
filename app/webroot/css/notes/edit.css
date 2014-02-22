@@ -1,0 +1,13 @@
+/* line 1, ../../sass/notes/edit.sass */
+.row-image-name {
+  margin-bottom: 5px;
+}
+/* line 4, ../../sass/notes/edit.sass */
+.row-image-name > div {
+  line-height: 2em;
+  overflow: hidden;
+}
+/* line 9, ../../sass/notes/edit.sass */
+.row-image-name .label {
+  font-size: 0.9em;
+}

@@ -1,5 +1,5 @@
 <?php 
-//echo $this->Html->css('notes/edit', '', array('inline'=>FALSE));
+echo $this->Html->css('notes/edit', '', array('inline'=>FALSE));
 ?>
 
 <div class="row row-header-h1">
@@ -11,7 +11,7 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $this->Form->create('Note', array('class' => 'form-horizontal', 'role' => 'form')) ?>
+		<?php echo $this->Form->create('Note', array('class' => 'form-horizontal', 'role' => 'form', 'type' => 'file')) ?>
 			<?php echo $this->Form->input('id'); ?>
 			<div class="form-group">
 				<label for="title" class="col-sm-4 control-label"><?php echo __('Title'); ?></label>
@@ -19,8 +19,9 @@
 					<?php	echo $this->Form->input('title', array(
 						'class' => 'form-control',
 						'label' => false,
-						'placeholder' => __('Note title'),
+						'placeholder' => __('Note title (max.: 50 characters)'),
 						'required' => 'required',
+						'maxlength' => 50,
 						'type' => 'text'
 					));
 			 		?>
@@ -42,14 +43,24 @@
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Image'); ?></label>
 				<div class="col-sm-8">
-					<?php echo $this->Form->input('image', array(
-						'class' => 'form-control',
-						'label' => false,
-						'placeholder' => __('Image'),
-						'required' => 'required',
-						'type' => 'text'
-					));
-					?>
+					<div class="row row-image-name">
+						<div class="col-sm-12">
+							<span class="label <?php echo ($this->request->data['Note']['image']) ? 'label-primary' : 'label-danger'; ?>">
+								<?php echo ($imageName = $this->request->data['Note']['image']) ? $imageName : __('No image'); ?>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<?php echo $this->Form->input('image', array(
+								'label' => false,
+								'placeholder' => __('Image'),
+								'required' => 'required',
+								'type' => 'file'
+							));
+							?>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="form-group">

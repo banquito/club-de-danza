@@ -1,5 +1,8 @@
 <?php 
 //echo $this->Html->css('notes/add', '', array('inline'=>FALSE));
+// debug(IMAGES_URL);
+// debug(WWW_ROOT);
+// debug(WWW_ROOT . IMAGES_URL . 'notes/');
 ?>
 
 <div class="row row-header-h1">
@@ -11,15 +14,16 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $this->Form->create('Note', array('class' => 'form-horizontal', 'role' => 'form')) ?>
+		<?php echo $this->Form->create('Note', array('class' => 'form-horizontal', 'role' => 'form', 'type' => 'file')) ?>
 			<div class="form-group">
 				<label for="title" class="col-sm-4 control-label"><?php echo __('Title'); ?></label>
 				<div class="col-sm-8">
 					<?php	echo $this->Form->input('title', array(
 						'class' => 'form-control',
 						'label' => false,
-						'placeholder' => __('Note title'),
+						'placeholder' => __('Note title (max.: 50 characters)'),
 						'required' => 'required',
+						'maxlength' => 50,
 						'type' => 'text'
 					));
 			 		?>
@@ -42,11 +46,11 @@
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Image'); ?></label>
 				<div class="col-sm-8">
 					<?php echo $this->Form->input('image', array(
-						'class' => 'form-control',
+						'class' => 'btn btn-default col-sm-12',
 						'label' => false,
 						'placeholder' => __('Image'),
 						'required' => 'required',
-						'type' => 'text'
+						'type' => 'file'
 					));
 					?>
 				</div>
