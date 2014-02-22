@@ -10,43 +10,50 @@
 			<div></div>
 	</div>
 </div>
-
-<!-- Notas -->
-<?php
-foreach($notes as $key => $note):
-	if ($key != 0 && $key % 3 == 0) echo '</div>';
-	if ($key % 3 == 0) echo '<div class="row">';
-?>
-	<div class="col-xs-4 col-sm-4 col-md-4 col-sm-4">
-		<a href="/notas/ver/<?php echo $note['Note']['id']; ?>">
-			<div class="thumbnail thumbnail-vermas thumbnail-vertical">
-			 	<div class="img-vertical text-center">
-					<?php $image = IMAGES_URL . ($note['Note']['image'] ? 'notes/'.$note['Note']['image'] : 'layouts/sinfoto.jpg'); ?>
-					<img alt="imagen-nota" src="<?php echo $image; ?>" />
-				</div>
-				<div class="caption caption-vermas">
-					<p class="title-vermas">
-						<?php echo ($title = $note['Note']['title']) ? substr($title, 0, 50) : __('No Title'); ?>
-					</p>
-				</div>
+<div class="row">
+	<div class="col-sm-12">
+		
+		<!-- Notas -->
+		<?php
+		foreach($notes as $key => $note):
+			if ($key != 0 && $key % 3 == 0) echo '</div>';
+			if ($key % 3 == 0) echo '<div class="row">';
+		?>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-sm-4">
+				<a href="/notas/ver/<?php echo $note['Note']['id']; ?>">
+					<div class="thumbnail thumbnail-vermas thumbnail-vertical">
+					 	<div class="img-vertical text-center">
+							<?php $image = IMAGES_URL . ($note['Note']['image'] ? 'notes/'.$note['Note']['image'] : 'layouts/sinfoto.jpg'); ?>
+							<img alt="imagen-nota" src="<?php echo $image; ?>" />
+						</div>
+						<div class="caption caption-vermas">
+							<p class="title-vermas">
+								<?php echo ($title = $note['Note']['title']) ? substr($title, 0, 50) : __('No Title'); ?>
+							</p>
+						</div>
+					</div>
+				</a>
 			</div>
-		</a>
+		<?php endforeach; ?>
 	</div>
+</div>
 
-<?php endforeach; ?>
-
-<!-- Paginación -->
-<p class="text-center">
-	<?php
-	echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>
-</p>
-<div class="paging text-center">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous') . ' ', array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ' | '));
-		echo $this->Paginator->next(' ' . __('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
+<div class="row">
+	<div class="col-sm-12">
+		<!-- Paginación -->
+		<p class="text-center">
+			<?php
+			echo $this->Paginator->counter(array(
+				'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+			));
+			?>
+		</p>
+		<div class="paging text-center">
+			<?php
+				echo $this->Paginator->prev('< ' . __('previous') . ' ', array(), null, array('class' => 'prev disabled'));
+				echo $this->Paginator->numbers(array('separator' => ' | '));
+				echo $this->Paginator->next(' ' . __('next') . ' >', array(), null, array('class' => 'next disabled'));
+			?>
+		</div>
+	</div>
 </div>
