@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Club de Danza\n"
-"POT-Creation-Date: 2014-02-21 21:49-0300\n"
-"PO-Revision-Date: 2014-02-21 21:54-0300\n"
+"POT-Creation-Date: 2014-02-22 19:50-0300\n"
+"PO-Revision-Date: 2014-02-22 20:01-0300\n"
 "Last-Translator: Ale Prieto <aleprieto@gmail.com>\n"
 "Language-Team: Colectivo Libre <contacto@colectivolibre.com.ar>\n"
 "Language: \n"
@@ -16,6 +16,72 @@ msgstr ""
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: ARGENTINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
+
+#: Controller/BannercategoriesController.php:37;72;100
+msgid "Invalid bannercategory"
+msgstr ""
+
+#: Controller/BannercategoriesController.php:52;76
+msgid "The bannercategory has been saved."
+msgstr "La Categoría de Banner ha sido guardada"
+
+#: Controller/BannercategoriesController.php:55;79
+msgid "The bannercategory could not be saved. Please, try again."
+msgstr "La Categoría de Banner no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/BannercategoriesController.php:104
+msgid "The bannercategory has been deleted."
+msgstr "La Categoría de Banner ha sido eliminada."
+
+#: Controller/BannercategoriesController.php:106
+msgid "The bannercategory could not be deleted. Please, try again."
+msgstr "La Categoría de Banner no ha sido eliminada. Por favor, intente nuevamente."
+
+#: Controller/BannersBannercategoriesController.php:37;72;100
+msgid "Invalid banners bannercategory"
+msgstr ""
+
+#: Controller/BannersBannercategoriesController.php:52;76
+msgid "The banners bannercategory has been saved."
+msgstr "La Categoría de Banner ha sido guardada"
+
+#: Controller/BannersBannercategoriesController.php:55;79
+msgid "The banners bannercategory could not be saved. Please, try again."
+msgstr "La Categoría de Banner no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/BannersBannercategoriesController.php:104
+msgid "The banners bannercategory has been deleted."
+msgstr "La Categoría de Banner ha sido eliminada."
+
+#: Controller/BannersBannercategoriesController.php:106
+msgid "The banners bannercategory could not be deleted. Please, try again."
+msgstr "La Categoría de Banner no ha sido eliminada. Por favor, intente nuevamente."
+
+#: Controller/BannersController.php:42;99;154;174;179
+msgid "Invalid banner"
+msgstr "Banner inválido"
+
+#: Controller/BannersController.php:68;115
+#: Controller/NotesController.php:54;165
+#: Controller/SlidersController.php:45;150
+msgid "The image could not be saved. Please, verify the file."
+msgstr "La imagen no ha sido guardado. Por favor, intente nuevamente."
+
+#: Controller/BannersController.php:79;129
+msgid "The banner has been saved."
+msgstr "El banner ha sido guardado"
+
+#: Controller/BannersController.php:82;133
+msgid "The banner could not be saved. Please, try again."
+msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
+
+#: Controller/BannersController.php:158
+msgid "The banner has been deleted."
+msgstr "El banner ha sido eliminado."
+
+#: Controller/BannersController.php:160
+msgid "The banner could not be deleted. Please, try again."
+msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
 
 #: Controller/CountriesController.php:37;69;94
 msgid "Invalid country"
@@ -37,30 +103,25 @@ msgstr ""
 msgid "The country could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/NotesController.php:84;139;191
-msgid "Invalid note"
-msgstr ""
-
-#: Controller/NotesController.php:110;156
-#, fuzzy
-msgid "The image could not be saved. Please, verify the file."
-msgstr "El usuario no ha sido guardado. Por favor, intente nuevamente."
-
-#: Controller/NotesController.php:122;166
+#: Controller/NotesController.php:66;173
 msgid "The note has been saved."
-msgstr ""
+msgstr "La nota ha sido guardada"
 
-#: Controller/NotesController.php:125;169
+#: Controller/NotesController.php:69;176
 msgid "The note could not be saved. Please, try again."
-msgstr ""
+msgstr "La nota no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/NotesController.php:195
+#: Controller/NotesController.php:132;148;198
+msgid "Invalid note"
+msgstr "Nota inválida"
+
+#: Controller/NotesController.php:202
 msgid "The note has been deleted."
-msgstr ""
+msgstr "La nota ha sido eliminada."
 
-#: Controller/NotesController.php:197
+#: Controller/NotesController.php:204
 msgid "The note could not be deleted. Please, try again."
-msgstr ""
+msgstr "La nota no ha sido eliminada. Por favor, intente nuevamente."
 
 #: Controller/RolsController.php:42;74;99
 msgid "Invalid rol"
@@ -81,6 +142,26 @@ msgstr ""
 #: Controller/RolsController.php:105
 msgid "The rol could not be deleted. Please, try again."
 msgstr ""
+
+#: Controller/SlidersController.php:56;161
+msgid "The slider has been saved."
+msgstr "El slider ha sido guardado"
+
+#: Controller/SlidersController.php:59;164
+msgid "The slider could not be saved. Please, try again."
+msgstr "El slider no ha sido guardado. Por favor, intente nuevamente."
+
+#: Controller/SlidersController.php:118;134;184
+msgid "Invalid slider"
+msgstr "Slider inválido"
+
+#: Controller/SlidersController.php:188
+msgid "The slider has been deleted."
+msgstr "El slider ha sido eliminado."
+
+#: Controller/SlidersController.php:190
+msgid "The slider could not be deleted. Please, try again."
+msgstr "El slider no ha sido guardado. Por favor, intente nuevamente."
 
 #: Controller/StatesController.php:37;71;98
 msgid "Invalid state"
@@ -104,34 +185,39 @@ msgstr ""
 
 #: Controller/UsersController.php:42
 msgid "Invalid username or password, try again"
-msgstr ""
+msgstr "Nombre de usuario o contraseña inválido, intente nuevamente"
 
-#: Controller/UsersController.php:88;123;151
+#: Controller/UsersController.php:88;133;161
 msgid "Invalid user"
 msgstr "Usuario inválido"
 
-#: Controller/UsersController.php:103;127
-msgid "The user has been saved."
-msgstr "El usuario ha sido guardado"
-
-#: Controller/UsersController.php:106;130
+#: Controller/UsersController.php:116;140
 msgid "The user could not be saved. Please, try again."
 msgstr "El usuario no ha sido guardado. Por favor, intente nuevamente."
 
-#: Controller/UsersController.php:155
+#: Controller/UsersController.php:137
+msgid "The user has been saved."
+msgstr "El usuario ha sido guardado"
+
+#: Controller/UsersController.php:165
 msgid "The user has been deleted."
 msgstr "El usuario ha sido eliminado."
 
-#: Controller/UsersController.php:157
+#: Controller/UsersController.php:167
 msgid "The user could not be deleted. Please, try again."
+msgstr "El usuario no ha sido eliminado. Por favor, intente nuevamente."
+
+#: View/Bannercategories/add.ctp:4
+msgid "Add Bannercategory"
 msgstr ""
 
-#: View/Countries/add.ctp:4
-msgid "Add Country"
-msgstr ""
-
+#: View/Bannercategories/add.ctp:11
+#: View/Bannercategories/edit.ctp:12
+#: View/BannersBannercategories/add.ctp:10
+#: View/BannersBannercategories/edit.ctp:11
 #: View/Countries/add.ctp:9
 #: View/Countries/edit.ctp:10
+#: View/Elements/modal_register.ctp:53
 #: View/Rols/add.ctp:11
 #: View/Rols/edit.ctp:12
 #: View/States/add.ctp:10
@@ -141,6 +227,16 @@ msgstr ""
 msgid "Submit"
 msgstr "Guardar"
 
+#: View/Bannercategories/add.ctp:14
+#: View/Bannercategories/edit.ctp:15
+#: View/Bannercategories/index.ctp:10;44
+#: View/Bannercategories/view.ctp:32;57
+#: View/Banners/index.ctp:15
+#: View/Banners/view.ctp:73;95
+#: View/BannersBannercategories/add.ctp:13
+#: View/BannersBannercategories/edit.ctp:14
+#: View/BannersBannercategories/index.ctp:10;44
+#: View/BannersBannercategories/view.ctp:32
 #: View/Countries/add.ctp:12
 #: View/Countries/edit.ctp:13
 #: View/Countries/index.ctp:9;40
@@ -150,6 +246,7 @@ msgstr "Guardar"
 #: View/Rols/edit.ctp:15
 #: View/Rols/index.ctp:11;44
 #: View/Rols/view.ctp:37;64
+#: View/Sliders/index.ctp:15
 #: View/States/add.ctp:13
 #: View/States/edit.ctp:14
 #: View/States/index.ctp:10;44
@@ -160,6 +257,426 @@ msgstr "Guardar"
 #: View/Users/view.ctp:67;93
 msgid "Actions"
 msgstr "Acciones"
+
+#: View/Bannercategories/add.ctp:17
+#: View/Bannercategories/edit.ctp:19
+#: View/Bannercategories/view.ctp:36
+#: View/Banners/view.ctp:81
+#: View/BannersBannercategories/add.ctp:19
+#: View/BannersBannercategories/edit.ctp:21
+#: View/BannersBannercategories/index.ctp:49
+#: View/BannersBannercategories/view.ctp:40
+msgid "List Bannercategories"
+msgstr ""
+
+#: View/Bannercategories/add.ctp:18
+#: View/Bannercategories/edit.ctp:20
+#: View/Bannercategories/index.ctp:47
+#: View/Bannercategories/view.ctp:38
+#: View/Banners/view.ctp:79
+#: View/Rols/add.ctp:18
+#: View/Rols/edit.ctp:20
+#: View/Rols/index.ctp:47
+#: View/Rols/view.ctp:43
+#: View/States/add.ctp:19
+#: View/States/edit.ctp:21
+#: View/States/index.ctp:49
+#: View/States/view.ctp:40
+#: View/Users/add.ctp:65
+#: View/Users/edit.ctp:25
+#: View/Users/index.ctp:3
+#: View/Users/view.ctp:71
+msgid "List Users"
+msgstr "Listar Usuarios"
+
+#: View/Bannercategories/add.ctp:19
+#: View/Bannercategories/edit.ctp:21
+#: View/Bannercategories/index.ctp:48
+#: View/Bannercategories/view.ctp:39
+#: View/Banners/view.ctp:80
+#: View/Rols/add.ctp:19
+#: View/Rols/edit.ctp:21
+#: View/Rols/index.ctp:48
+#: View/Rols/view.ctp:44;92
+#: View/States/add.ctp:20
+#: View/States/edit.ctp:22
+#: View/States/index.ctp:50
+#: View/States/view.ctp:41;89
+#: View/Users/view.ctp:72
+msgid "New User"
+msgstr "Nuevo Usuario"
+
+#: View/Bannercategories/add.ctp:20
+#: View/Bannercategories/edit.ctp:22
+#: View/Bannercategories/index.ctp:49
+#: View/Bannercategories/view.ctp:40
+#: View/Banners/view.ctp:77
+#: View/BannersBannercategories/add.ctp:17
+#: View/BannersBannercategories/edit.ctp:19
+#: View/BannersBannercategories/index.ctp:47
+#: View/BannersBannercategories/view.ctp:38
+#: View/Elements/navbar_admin.ctp:66
+msgid "List Banners"
+msgstr "Listar Banners"
+
+#: View/Bannercategories/add.ctp:21
+#: View/Bannercategories/edit.ctp:23
+#: View/Bannercategories/index.ctp:50
+#: View/Bannercategories/view.ctp:41;81
+#: View/Banners/view.ctp:78
+#: View/BannersBannercategories/add.ctp:18
+#: View/BannersBannercategories/edit.ctp:20
+#: View/BannersBannercategories/index.ctp:48
+#: View/BannersBannercategories/view.ctp:39
+msgid "New Banner"
+msgstr "Nuevo Banner"
+
+#: View/Bannercategories/edit.ctp:4
+#: View/Bannercategories/view.ctp:34
+msgid "Edit Bannercategory"
+msgstr ""
+
+#: View/Bannercategories/edit.ctp:18
+#: View/Bannercategories/index.ctp:24
+#: View/Bannercategories/view.ctp:72
+#: View/Banners/index.ctp:27
+#: View/Banners/view.ctp:107
+#: View/BannersBannercategories/edit.ctp:17
+#: View/BannersBannercategories/index.ctp:24
+#: View/Countries/edit.ctp:16
+#: View/Countries/index.ctp:20
+#: View/Countries/view.ctp:59
+#: View/Notes/index.ctp:32
+#: View/Rols/edit.ctp:18
+#: View/Rols/index.ctp:24
+#: View/Rols/view.ctp:83
+#: View/Sliders/index.ctp:27
+#: View/States/edit.ctp:17
+#: View/States/index.ctp:24
+#: View/States/view.ctp:80
+#: View/Users/edit.ctp:24
+#: View/Users/view.ctp:107
+msgid "Delete"
+msgstr "Eliminar"
+
+#: View/Bannercategories/edit.ctp:18
+#: View/Bannercategories/index.ctp:24
+#: View/Bannercategories/view.ctp:35;72
+#: View/Banners/index.ctp:27
+#: View/Banners/view.ctp:76;107
+#: View/BannersBannercategories/edit.ctp:17
+#: View/BannersBannercategories/index.ctp:24
+#: View/BannersBannercategories/view.ctp:35
+#: View/Countries/edit.ctp:16
+#: View/Countries/index.ctp:20
+#: View/Countries/view.ctp:30;59
+#: View/Notes/index.ctp:32
+#: View/Rols/edit.ctp:18
+#: View/Rols/index.ctp:24
+#: View/Rols/view.ctp:40;83
+#: View/Sliders/index.ctp:27
+#: View/States/edit.ctp:17
+#: View/States/index.ctp:24
+#: View/States/view.ctp:35;80
+#: View/Users/edit.ctp:24
+#: View/Users/index.ctp:38
+#: View/Users/view.ctp:70;107
+msgid "Are you sure you want to delete # %s?"
+msgstr "¿Está seguro que desea eliminar # %s?"
+
+#: View/Bannercategories/index.ctp:2
+msgid "Bannercategories"
+msgstr ""
+
+#: View/Bannercategories/index.ctp:22
+#: View/Bannercategories/view.ctp:70
+#: View/Banners/index.ctp:25
+#: View/Banners/view.ctp:105
+#: View/BannersBannercategories/index.ctp:22
+#: View/Countries/index.ctp:18
+#: View/Countries/view.ctp:57
+#: View/Notes/index.ctp:30
+#: View/Rols/index.ctp:22
+#: View/Rols/view.ctp:81
+#: View/Sliders/index.ctp:25
+#: View/States/index.ctp:22
+#: View/States/view.ctp:78
+#: View/Users/view.ctp:105
+msgid "View"
+msgstr "Ver"
+
+#: View/Bannercategories/index.ctp:23
+#: View/Bannercategories/view.ctp:71
+#: View/Banners/index.ctp:26
+#: View/Banners/view.ctp:106
+#: View/BannersBannercategories/index.ctp:23
+#: View/Countries/index.ctp:19
+#: View/Countries/view.ctp:58
+#: View/Notes/index.ctp:31
+#: View/Rols/index.ctp:23
+#: View/Rols/view.ctp:82
+#: View/Sliders/index.ctp:26
+#: View/States/index.ctp:23
+#: View/States/view.ctp:79
+#: View/Users/view.ctp:106
+msgid "Edit"
+msgstr "Editar"
+
+#: View/Bannercategories/index.ctp:32
+#: View/Banners/index.ctp:37
+#: View/BannersBannercategories/index.ctp:32
+#: View/Countries/index.ctp:28
+#: View/Notes/index.ctp:41
+#: View/Notes/inicio.ctp:42
+#: View/Rols/index.ctp:32
+#: View/Sliders/index.ctp:37
+#: View/States/index.ctp:32
+#: View/Users/index.ctp:50
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr "Página {:page} de {:pages}, mostrando {:current} de un total de {:count}, empezando en {:start} y terminando en {:end}"
+
+#: View/Bannercategories/index.ctp:37
+#: View/Banners/index.ctp:43
+#: View/BannersBannercategories/index.ctp:37
+#: View/Countries/index.ctp:33
+#: View/Notes/index.ctp:47
+#: View/Notes/inicio.ctp:48
+#: View/Rols/index.ctp:37
+#: View/Sliders/index.ctp:43
+#: View/States/index.ctp:37
+#: View/Users/index.ctp:56
+msgid "previous"
+msgstr "anterior"
+
+#: View/Bannercategories/index.ctp:39
+#: View/Banners/index.ctp:45
+#: View/BannersBannercategories/index.ctp:39
+#: View/Countries/index.ctp:35
+#: View/Notes/index.ctp:49
+#: View/Notes/inicio.ctp:50
+#: View/Rols/index.ctp:39
+#: View/Sliders/index.ctp:45
+#: View/States/index.ctp:39
+#: View/Users/index.ctp:58
+msgid "next"
+msgstr "próximo"
+
+#: View/Bannercategories/index.ctp:46
+#: View/Bannercategories/view.ctp:37
+#: View/Banners/view.ctp:82;116
+msgid "New Bannercategory"
+msgstr ""
+
+#: View/Bannercategories/view.ctp:2
+msgid "Bannercategory"
+msgstr ""
+
+#: View/Bannercategories/view.ctp:4;49
+#: View/Banners/view.ctp:30;90
+#: View/BannersBannercategories/view.ctp:4
+#: View/Countries/view.ctp:4;42
+#: View/Rols/view.ctp:4;52
+#: View/States/view.ctp:4;49
+#: View/Users/view.ctp:4;86
+msgid "Id"
+msgstr ""
+
+#: View/Bannercategories/view.ctp:9
+#: View/Banners/view.ctp:91
+#: View/Countries/view.ctp:9;43
+#: View/Rols/view.ctp:9;55
+#: View/States/view.ctp:9;52
+#: View/Users/view.ctp:19
+msgid "Name"
+msgstr "Nombres"
+
+#: View/Bannercategories/view.ctp:14;54
+#: View/Banners/view.ctp:55;92
+#: View/BannersBannercategories/view.ctp:19
+#: View/Countries/view.ctp:14;44
+#: View/Rols/view.ctp:24;60
+#: View/States/view.ctp:14;57
+#: View/Users/view.ctp:44;90
+msgid "Created"
+msgstr "Creado"
+
+#: View/Bannercategories/view.ctp:19;55
+#: View/Banners/view.ctp:60;93
+#: View/BannersBannercategories/view.ctp:24
+#: View/Countries/view.ctp:19;45
+#: View/Rols/view.ctp:29;61
+#: View/States/view.ctp:19;58
+#: View/Users/view.ctp:49;91
+msgid "Modified"
+msgstr "Modificado"
+
+#: View/Bannercategories/view.ctp:24
+#: View/Banners/view.ctp:65
+#: View/Users/view.ctp:2
+msgid "User"
+msgstr "Usuario"
+
+#: View/Bannercategories/view.ctp:35
+msgid "Delete Bannercategory"
+msgstr "Eliminar Categoría de Banner"
+
+#: View/Bannercategories/view.ctp:45
+msgid "Related Banners"
+msgstr ""
+
+#: View/Bannercategories/view.ctp:50
+#: View/Banners/add.ctp:12
+#: View/Banners/edit.ctp:17
+#: View/Banners/view.ctp:35
+#: View/Notes/add.ctp:19
+#: View/Notes/edit.ctp:17
+#: View/Sliders/add.ctp:12
+#: View/Sliders/edit.ctp:17
+#: View/Users/view.ctp:87
+msgid "Title"
+msgstr "Título"
+
+#: View/Bannercategories/view.ctp:51
+#: View/Banners/add.ctp:26;31
+#: View/Banners/edit.ctp:33;46
+#: View/Banners/view.ctp:40
+#: View/Notes/add.ctp:46;51
+#: View/Notes/edit.ctp:46;59
+#: View/Sliders/add.ctp:26;31
+#: View/Sliders/edit.ctp:33;46
+#: View/Users/view.ctp:89
+msgid "Image"
+msgstr "Imagen"
+
+#: View/Bannercategories/view.ctp:52
+#: View/Banners/add.ctp:39;44
+#: View/Banners/edit.ctp:56;61
+#: View/Banners/view.ctp:45
+#: View/Sliders/add.ctp:39;44
+#: View/Sliders/edit.ctp:55;60
+msgid "Link"
+msgstr "Enlace"
+
+#: View/Bannercategories/view.ctp:53
+#: View/Banners/add.ctp:52;57
+#: View/Banners/edit.ctp:69;74
+#: View/Banners/view.ctp:50
+#: View/Sliders/add.ctp:52;57
+#: View/Sliders/edit.ctp:68;73
+msgid "Published"
+msgstr "Publicado"
+
+#: View/Bannercategories/view.ctp:56
+#: View/Banners/view.ctp:94
+#: View/Users/view.ctp:92
+msgid "User Id"
+msgstr "Id de usuario"
+
+#: View/Banners/add.ctp:3
+msgid "Add Banner"
+msgstr "Agregar Banner"
+
+#: View/Banners/add.ctp:17
+#: View/Notes/add.ctp:24
+#: View/Notes/edit.ctp:22
+#: View/Sliders/add.ctp:17
+msgid "Note title (max.: 50 characters)"
+msgstr "Título de la Nota  (máx.: 50 caracteres)"
+
+#: View/Banners/add.ctp:63;68
+#: View/Banners/edit.ctp:80;85
+msgid "Banner Category"
+msgstr ""
+
+#: View/Banners/add.ctp:76
+#: View/Banners/edit.ctp:93
+#: View/Elements/modal_login.ctp:39
+#: View/Notes/add.ctp:84
+#: View/Notes/edit.ctp:93
+#: View/Sliders/add.ctp:64
+#: View/Sliders/edit.ctp:80
+#: View/Users/login.ctp:36
+msgid "Aceptar"
+msgstr ""
+
+#: View/Banners/edit.ctp:7
+#: View/Banners/view.ctp:75
+msgid "Edit Banner"
+msgstr "Editar Banner"
+
+#: View/Banners/edit.ctp:22
+msgid "Banner title (max.: 50 characters)"
+msgstr "Título del Banner  (máx.: 50 caracteres)"
+
+#: View/Banners/edit.ctp:38
+#: View/Notes/edit.ctp:51
+#: View/Sliders/edit.ctp:38
+msgid "No image"
+msgstr "Sin Imagen"
+
+#: View/Banners/index.ctp:3
+msgid "List Banner"
+msgstr "Listar Banner"
+
+#: View/Banners/view.ctp:28
+#: View/BannersBannercategories/view.ctp:9
+msgid "Banner"
+msgstr ""
+
+#: View/Banners/view.ctp:76
+msgid "Delete Banner"
+msgstr "Eliminar Banner"
+
+#: View/Banners/view.ctp:86
+msgid "Related Bannercategories"
+msgstr ""
+
+#: View/BannersBannercategories/add.ctp:4
+msgid "Add Banners Bannercategory"
+msgstr ""
+
+#: View/BannersBannercategories/add.ctp:16
+#: View/BannersBannercategories/edit.ctp:18
+#: View/BannersBannercategories/view.ctp:36
+msgid "List Banners Bannercategories"
+msgstr ""
+
+#: View/BannersBannercategories/add.ctp:20
+#: View/BannersBannercategories/edit.ctp:22
+#: View/BannersBannercategories/index.ctp:50
+#: View/BannersBannercategories/view.ctp:41
+msgid "New Bannercategorie"
+msgstr ""
+
+#: View/BannersBannercategories/edit.ctp:4
+#: View/BannersBannercategories/view.ctp:34
+msgid "Edit Banners Bannercategory"
+msgstr ""
+
+#: View/BannersBannercategories/index.ctp:2
+msgid "Banners Bannercategories"
+msgstr ""
+
+#: View/BannersBannercategories/index.ctp:46
+#: View/BannersBannercategories/view.ctp:37
+msgid "New Banners Bannercategory"
+msgstr ""
+
+#: View/BannersBannercategories/view.ctp:2
+msgid "Banners Bannercategory"
+msgstr ""
+
+#: View/BannersBannercategories/view.ctp:14
+msgid "Bannercategory Id"
+msgstr ""
+
+#: View/BannersBannercategories/view.ctp:35
+msgid "Delete Banners Bannercategory"
+msgstr ""
+
+#: View/Countries/add.ctp:4
+msgid "Add Country"
+msgstr ""
 
 #: View/Countries/add.ctp:15
 #: View/Countries/edit.ctp:17
@@ -201,89 +718,9 @@ msgstr ""
 msgid "Edit Country"
 msgstr ""
 
-#: View/Countries/edit.ctp:16
-#: View/Countries/index.ctp:20
-#: View/Countries/view.ctp:59
-#: View/Notes/index.ctp:32
-#: View/Rols/edit.ctp:18
-#: View/Rols/index.ctp:24
-#: View/Rols/view.ctp:83
-#: View/States/edit.ctp:17
-#: View/States/index.ctp:24
-#: View/States/view.ctp:80
-#: View/Users/edit.ctp:24
-#: View/Users/view.ctp:107
-msgid "Delete"
-msgstr "Eliminar"
-
-#: View/Countries/edit.ctp:16
-#: View/Countries/index.ctp:20
-#: View/Countries/view.ctp:30;59
-#: View/Notes/index.ctp:32
-#: View/Rols/edit.ctp:18
-#: View/Rols/index.ctp:24
-#: View/Rols/view.ctp:40;83
-#: View/States/edit.ctp:17
-#: View/States/index.ctp:24
-#: View/States/view.ctp:35;80
-#: View/Users/edit.ctp:24
-#: View/Users/index.ctp:38
-#: View/Users/view.ctp:70;107
-msgid "Are you sure you want to delete # %s?"
-msgstr ""
-
 #: View/Countries/index.ctp:2
 msgid "Countries"
 msgstr ""
-
-#: View/Countries/index.ctp:18
-#: View/Countries/view.ctp:57
-#: View/Notes/index.ctp:30
-#: View/Rols/index.ctp:22
-#: View/Rols/view.ctp:81
-#: View/States/index.ctp:22
-#: View/States/view.ctp:78
-#: View/Users/view.ctp:105
-msgid "View"
-msgstr "Ver"
-
-#: View/Countries/index.ctp:19
-#: View/Countries/view.ctp:58
-#: View/Notes/index.ctp:31
-#: View/Rols/index.ctp:23
-#: View/Rols/view.ctp:82
-#: View/States/index.ctp:23
-#: View/States/view.ctp:79
-#: View/Users/view.ctp:106
-msgid "Edit"
-msgstr "Editar"
-
-#: View/Countries/index.ctp:28
-#: View/Notes/index.ctp:41
-#: View/Notes/inicio.ctp:101
-#: View/Rols/index.ctp:32
-#: View/States/index.ctp:32
-#: View/Users/index.ctp:50
-msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
-msgstr "Página {:page} de {:pages}, mostrando {:current} de un total de {:count}, empezando en {:start} y terminando en {:end}"
-
-#: View/Countries/index.ctp:33
-#: View/Notes/index.ctp:47
-#: View/Notes/inicio.ctp:107
-#: View/Rols/index.ctp:37
-#: View/States/index.ctp:37
-#: View/Users/index.ctp:56
-msgid "previous"
-msgstr "anterior"
-
-#: View/Countries/index.ctp:35
-#: View/Notes/index.ctp:49
-#: View/Notes/inicio.ctp:109
-#: View/Rols/index.ctp:39
-#: View/States/index.ctp:39
-#: View/Users/index.ctp:58
-msgid "next"
-msgstr "próximo"
 
 #: View/Countries/index.ctp:42
 #: View/Countries/view.ctp:32
@@ -299,37 +736,6 @@ msgstr ""
 msgid "Country"
 msgstr ""
 
-#: View/Countries/view.ctp:4;42
-#: View/Notes/view.ctp:41
-#: View/Rols/view.ctp:4;52
-#: View/States/view.ctp:4;49
-#: View/Users/view.ctp:4;86
-msgid "Id"
-msgstr ""
-
-#: View/Countries/view.ctp:9;43
-#: View/Rols/view.ctp:9;55
-#: View/States/view.ctp:9;52
-#: View/Users/view.ctp:19
-msgid "Name"
-msgstr "Nombres"
-
-#: View/Countries/view.ctp:14;44
-#: View/Notes/view.ctp:61
-#: View/Rols/view.ctp:24;60
-#: View/States/view.ctp:14;57
-#: View/Users/view.ctp:44;90
-msgid "Created"
-msgstr "Creado"
-
-#: View/Countries/view.ctp:19;45
-#: View/Notes/view.ctp:66
-#: View/Rols/view.ctp:29;61
-#: View/States/view.ctp:19;58
-#: View/Users/view.ctp:49;91
-msgid "Modified"
-msgstr "Modificado"
-
 #: View/Countries/view.ctp:30
 msgid "Delete Country"
 msgstr ""
@@ -342,21 +748,46 @@ msgstr ""
 msgid "Country Id"
 msgstr ""
 
+#: View/Elements/modal_login.ctp:7;48
+#: View/Layouts/default.ctp:62
+msgid "Login"
+msgstr "Ingresar"
+
+#: View/Elements/modal_login.ctp:12;17
+#: View/Users/login.ctp:9;14
+msgid "Nombre de Usuario"
+msgstr ""
+
+#: View/Elements/modal_login.ctp:25;30
+#: View/Users/login.ctp:22;27
+msgid "Contraseña"
+msgstr ""
+
+#: View/Elements/modal_login.ctp:42
+msgid "Close"
+msgstr "Cerrar"
+
+#: View/Elements/modal_register.ctp:7;56
+#: View/Layouts/default.ctp:66
+msgid "Register"
+msgstr "Registro"
+
+#: View/Elements/navbar_admin.ctp:63
+msgid "List Slider"
+msgstr "Listar Sliders"
+
+#: View/Elements/navbar_admin.ctp:64
+#: View/Sliders/add.ctp:3
+msgid "Add Slider"
+msgstr "Nuevo Slider"
+
+#: View/Elements/navbar_admin.ctp:67
+msgid "Add Banners"
+msgstr "Nuevo Banner"
+
 #: View/Notes/add.ctp:10
 msgid "Add Note"
 msgstr "Nueva Nota"
-
-#: View/Notes/add.ctp:19
-#: View/Notes/edit.ctp:17
-#: View/Notes/view.ctp:46
-#: View/Users/view.ctp:87
-msgid "Title"
-msgstr "Título"
-
-#: View/Notes/add.ctp:24
-#: View/Notes/edit.ctp:22
-msgid "Note title (max.: 50 characters)"
-msgstr ""
 
 #: View/Notes/add.ctp:33
 #: View/Notes/edit.ctp:31
@@ -365,42 +796,23 @@ msgstr "Bajada"
 
 #: View/Notes/add.ctp:38
 #: View/Notes/edit.ctp:36
-#: View/Notes/view.ctp:51
 #: View/Users/view.ctp:88
 msgid "Description"
 msgstr "Descripción"
 
-#: View/Notes/add.ctp:46;51
-#: View/Notes/edit.ctp:44;57
-#: View/Notes/view.ctp:56
-#: View/Users/view.ctp:89
-msgid "Image"
-msgstr "Imagen"
-
 #: View/Notes/add.ctp:59;64
-#: View/Notes/edit.ctp:67;72
+#: View/Notes/edit.ctp:68;73
 msgid "Resume"
 msgstr "Resumen"
 
 #: View/Notes/add.ctp:71;76
-#: View/Notes/edit.ctp:79;84
+#: View/Notes/edit.ctp:80;85
 msgid "Body"
 msgstr "Cuerpo"
-
-#: View/Notes/add.ctp:84
-#: View/Notes/edit.ctp:92
-#: View/Users/login.ctp:36
-msgid "Aceptar"
-msgstr ""
 
 #: View/Notes/edit.ctp:7
 msgid "Edit Note"
 msgstr "Editar Nota"
-
-#: View/Notes/edit.ctp:49
-#, fuzzy
-msgid "No image"
-msgstr "Imagen"
 
 #: View/Notes/index.ctp:3
 #: View/Users/add.ctp:70
@@ -409,15 +821,9 @@ msgstr "Imagen"
 msgid "List Notes"
 msgstr "Lista de Notas"
 
-#: View/Notes/inicio.ctp:87
-#, fuzzy
+#: View/Notes/inicio.ctp:29
 msgid "No Title"
-msgstr "Título"
-
-#: View/Notes/view.ctp:71
-#: View/Users/view.ctp:2
-msgid "User"
-msgstr "Usuario"
+msgstr "Sin Título"
 
 #: View/Rols/add.ctp:4
 msgid "Add Rol"
@@ -431,33 +837,6 @@ msgstr ""
 #: View/Users/view.ctp:73
 msgid "List Rols"
 msgstr ""
-
-#: View/Rols/add.ctp:18
-#: View/Rols/edit.ctp:20
-#: View/Rols/index.ctp:47
-#: View/Rols/view.ctp:43
-#: View/States/add.ctp:19
-#: View/States/edit.ctp:21
-#: View/States/index.ctp:49
-#: View/States/view.ctp:40
-#: View/Users/add.ctp:65
-#: View/Users/edit.ctp:25
-#: View/Users/index.ctp:3
-#: View/Users/view.ctp:71
-msgid "List Users"
-msgstr "Listar Usuarios"
-
-#: View/Rols/add.ctp:19
-#: View/Rols/edit.ctp:21
-#: View/Rols/index.ctp:48
-#: View/Rols/view.ctp:44;92
-#: View/States/add.ctp:20
-#: View/States/edit.ctp:22
-#: View/States/index.ctp:50
-#: View/States/view.ctp:41;89
-#: View/Users/view.ctp:72
-msgid "New User"
-msgstr "Nuevo Usuario"
 
 #: View/Rols/edit.ctp:4
 #: View/Rols/view.ctp:39
@@ -483,7 +862,7 @@ msgstr ""
 
 #: View/Rols/view.ctp:14
 msgid "Observation"
-msgstr ""
+msgstr "Observación"
 
 #: View/Rols/view.ctp:19
 msgid "Weight"
@@ -544,6 +923,18 @@ msgstr ""
 msgid "State Id"
 msgstr ""
 
+#: View/Sliders/edit.ctp:7
+msgid "Edit Slider"
+msgstr "Editar Slider"
+
+#: View/Sliders/edit.ctp:22
+msgid "Slider title (max.: 50 characters)"
+msgstr "Título del Slider  (máx.: 50 caracteres)"
+
+#: View/Sliders/index.ctp:3
+msgid "List Sliders"
+msgstr "Listar Sliders"
+
 #: View/States/add.ctp:4
 msgid "Add State"
 msgstr "Agregar Provincia"
@@ -581,14 +972,6 @@ msgstr "Nueva Nota"
 msgid "Edit User"
 msgstr "Editar Usuario"
 
-#: View/Users/login.ctp:9;14
-msgid "Nombre de Usuario"
-msgstr ""
-
-#: View/Users/login.ctp:22;27
-msgid "Contraseña"
-msgstr ""
-
 #: View/Users/view.ctp:70
 msgid "Delete User"
 msgstr "Eliminar Usuario"
@@ -597,53 +980,62 @@ msgstr "Eliminar Usuario"
 msgid "Related Notes"
 msgstr ""
 
-#: View/Users/view.ctp:92
-msgid "User Id"
-msgstr "Id de usuario"
-
-#: Model/Country.php:validation
-#: for field name Model/Note.php:validation
-#: title
-#: Model/Rol.php:validation
-#: name;validation observation
+#: Model/Banner.php:validation
+#: for field title;validation link
+#: Model/Bannercategory.php:validation
+#: name Model/Country.php:validation
+#: Model/Note.php:validation
+#: title Model/Rol.php:validation
+#: name;validation
+#: observation Model/Slider.php:validation
 #: Model/State.php:validation
 #: Model/User.php:validation
-#: username;validation
-#: password;validation lastname
+#: username;validation password;validation lastname
 msgid "notEmpty"
 msgstr "No Vacío"
 
-#: Model/Note.php:validation
-#: for field image
+#: Model/Banner.php:validation
+#: for field image Model/Note.php:validation
+#: Model/Slider.php:validation
 msgid "Debe ingresar una imagen."
 msgstr ""
 
-#: Model/Note.php:validation
-#: for field image
+#: Model/Banner.php:validation
+#: for field image Model/Note.php:validation
+#: Model/Slider.php:validation
 msgid "Ingrese una extensión válida."
 msgstr ""
 
-#: Model/Note.php:validation
-#: for field image
-msgid "El tamaño del archivo es damasiado grande."
-msgstr ""
-
-#: Model/Note.php:validation
-#: for field image
+#: Model/Banner.php:validation
+#: for field image Model/Note.php:validation
+#: Model/Slider.php:validation
 msgid "Verifique la extensión del archivo o el tamaño."
 msgstr ""
 
-#: Model/Note.php:validation
+#: Model/Banner.php:validation
+#: for field published
+msgid "boolean"
+msgstr "booleano"
+
+#: Model/Banner.php:validation
 #: for field user_id
+#: Model/Bannercategory.php:validation
+#: Model/BannersBannercategory.php:validation
+#: banner_id
+#: Model/Note.php:validation
+#: Model/Slider.php:validation
 msgid "uuid"
 msgstr ""
 
+#: Model/BannersBannercategory.php:validation
+#: for field bannercategory_id
 #: Model/Rol.php:validation
-#: for field weight Model/State.php:validation
-#: country_id Model/User.php:validation
+#: weight Model/State.php:validation
+#: country_id
+#: Model/User.php:validation
 #: rol_id
 msgid "numeric"
-msgstr ""
+msgstr "numérico"
 
 #: Model/User.php:validation
 #: for field email
