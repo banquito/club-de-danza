@@ -68,6 +68,14 @@ class PagesController extends AppController {
 		if (!empty($path[$count - 1])) {
 			$title_for_layout = Inflector::humanize($path[$count - 1]);
 		}
+		if ($page == 'inicio') {
+			
+			$items = $this->requestAction(array('controller' => 'sliders', 'action' => 'getItems')
+				, array('named' => array('category' => 1))
+			);
+			$this->set(compact('items'));
+			// debug($items);
+		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 
 		try {

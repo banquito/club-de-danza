@@ -15,19 +15,19 @@ echo $this->Html->css('pages/inicio', array('inline' => false));
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner">
 		<div class="item active">
-			<?php echo $this->Html->image('slider/01.jpg', array('class' => 'image-center')); ?>
+			<?php echo $this->Html->image('sliders/01.jpg', array('class' => 'image-center')); ?>
 			<div class="carousel-caption ">
                 <h3>TÍTULO</h3>
             </div>
 		</div>
 		<div class="item">
-			<?php echo $this->Html->image('slider/01.jpg', array('class' => 'image-center')); ?>
+			<?php echo $this->Html->image('sliders/01.jpg', array('class' => 'image-center')); ?>
 			<div class="carousel-caption ">
                 <h3>TÍTULO</h3>
             </div>
 		</div>
 		<div class="item">
-			<?php echo $this->Html->image('slider/01.jpg', array('class' => 'image-center')); ?>
+			<?php echo $this->Html->image('sliders/01.jpg', array('class' => 'image-center')); ?>
 			<div class="carousel-caption ">
                 <h3>TÍTULO</h3>
             </div>

@@ -38,6 +38,10 @@
 	Router::connect('/proximamente', array('controller' => 'pages', 'action' => 'display', 'proximamente'));
 	Router::connect('/registro', array('controller' => 'users', 'action' => 'add'));
 	
+	Router::connect('/sliders/nuevo', array('controller' => 'sliders', 'action' => 'add'));
+	Router::connect('/sliders/editar/*', array('controller' => 'sliders', 'action' => 'edit'));
+	Router::connect('/sliders/ver/*', array('controller' => 'sliders', 'action' => 'view'));
+	
 	Router::connect('/usuarios/listar', array('controller' => 'users', 'action' => 'index'));
 
 /**

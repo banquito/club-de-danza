@@ -60,7 +60,8 @@ if((strpos($this->params->url, 'notes') !== FALSE) || (strpos($this->params->url
 					</a>
 
 					<ul class="dropdown-menu pull-right">
-						<li><a href="/slider">Slider</a></li>
+						<li><a href="/sliders"><?php echo __('List Slider'); ?></a></li>
+						<li><a href="/sliders/nuevo"><?php echo __('Add Slider'); ?></a></li>
 						<li class="divider"></li>
 						<li><a href="/usuarios/listar">Listar Usuarios</a></li>
 					</ul>

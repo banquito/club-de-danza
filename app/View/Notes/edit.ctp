@@ -40,6 +40,8 @@ echo $this->Html->css('notes/edit', '', array('inline'=>FALSE));
 					?>
 				</div>
 			</div>
+
+			<!-- Imagen -->
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Image'); ?></label>
 				<div class="col-sm-8">

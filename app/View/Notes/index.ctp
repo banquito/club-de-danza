@@ -20,7 +20,7 @@
 			<tbody>
 				<?php foreach ($notes as $note): ?>
 					<tr>
-						<td><?php echo h($note['Note']['created']); ?>&nbsp;</td>
+						<td><?php echo $this -> Time -> format('d-m-Y', h($note['Note']['created'])); ?>&nbsp;</td>
 						<td><?php echo h($note['Note']['title']); ?>&nbsp;</td>
 						<td><?php echo h($note['Note']['description']); ?>&nbsp;</td>
 						<td>
@@ -44,9 +44,9 @@
 		</p>
 		<div class="paging text-center">
 			<?php
-				echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-				echo $this->Paginator->numbers(array('separator' => ''));
-				echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+				echo $this->Paginator->prev('< ' . __('previous') . ' ', array(), null, array('class' => 'prev disabled'));
+				echo $this->Paginator->numbers(array('separator' => ' | '));
+				echo $this->Paginator->next(' ' . __('next') . ' >', array(), null, array('class' => 'next disabled'));
 			?>
 		</div>
 	</div>

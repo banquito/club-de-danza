@@ -15,6 +15,7 @@ class NotesController extends AppController {
  * @var array
  */
 	public $components = array('Paginator');
+	public $helpers = array('Time');
 
 	public $paginate = array(
 		'limit' => 9,
@@ -26,6 +27,48 @@ class NotesController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow('inicio');
+	}
+
+
+
+/**
+ * add method
+ *
+ * @return void
+ */
+	public function add() {
+		if ($this->request->is('post')) {
+			$note = $this->request->data;
+			$image = '';
+
+			# Se setea el usuario creador de la nota = usuario logeado
+			$note['Note']['user_id'] = AuthComponent::user('id');
+			
+			# Se verifica si se subió una imagen y se setea la imagen
+			if (isset($note['Note']['image']['name']) && ($note['Note']['image']['name'] != '')) {
+				$imageName = $note['Note']['image']['name'];
+				$uploadDir = IMAGES_URL . 'notes/';
+				$uploadFile = $uploadDir . $imageName;
+				
+				if (!move_uploaded_file($note['Note']['image']['tmp_name'], $uploadFile)) {
+					$this -> Session -> setFlash(__('The image could not be saved. Please, verify the file.'));
+					return $this -> redirect(array('action' => 'add', $note));
+				}
+				
+				$image = $imageName;
+			}
+
+
+			$note['Note']['image'] = $image;
+
+			$this->Note->create();
+			if ($this->Note->save($note)) {
+				$this->Session->setFlash(__('The note has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The note could not be saved. Please, try again.'));
+			}
+		}
 	}
 
 /**
@@ -87,45 +130,6 @@ class NotesController extends AppController {
 		$this->set('note', $this->Note->find('first', $options));
 	}
 
-/**
- * add method
- *
- * @return void
- */
-	public function add() {
-		if ($this->request->is('post')) {
-			$note = $this->request->data;
-			$image = '';
-
-			# Se setea el usuario creador de la nota = usuario logeado
-			$note['Note']['user_id'] = AuthComponent::user('id');
-			
-			# Se verifica si se subió una imagen y se setea la imagen
-			if (isset($note['Note']['image']['name']) && ($note['Note']['image']['name'] != '')) {
-				$imageName = $note['Note']['image']['name'];
-				$uploadDir = IMAGES_URL . 'notes/';
-				$uploadFile = $uploadDir . $imageName;
-				
-				if (!move_uploaded_file($note['Note']['image']['tmp_name'], $uploadFile)) {
-					$this -> Session -> setFlash(__('The image could not be saved. Please, verify the file.'));
-					return $this -> redirect(array('action' => 'add', $note));
-				}
-				
-				$image = $imageName;
-			}
-
-
-			$note['Note']['image'] = $image;
-
-			$this->Note->create();
-			if ($this->Note->save($note)) {
-				$this->Session->setFlash(__('The note has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The note could not be saved. Please, try again.'));
-			}
-		}
-	}
 
 /**
  * edit method

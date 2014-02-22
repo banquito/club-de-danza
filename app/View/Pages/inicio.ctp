@@ -4,31 +4,21 @@
 <div id="slider-home" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#slider-home" data-slide-to="0" class="active"></li>
-        <li data-target="#slider-home" data-slide-to="1"></li>
-        <li data-target="#slider-home" data-slide-to="2"></li>
+        <?php foreach ($items as $key => $item): ?>
+            <li data-target="#slider-home" data-slide-to="<?php echo $key; ?>" class="<?php echo ($key == 0) ? 'active' : ''; ?>"></li>
+        <?php endforeach; ?>
     </ol>
     
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-        <div class="item active">
-            <?php echo $this->Html->image('slider/01.jpg', array('class' => 'image-center')); ?>
-            <div class="carousel-caption ">
-                <h3>TÍTULO</h3>
+        <?php foreach ($items as $key => $item): ?>
+            <div class="item<?php echo ($key == 0) ? ' active' : ''; ?>">
+                <?php echo $this->Html->image('sliders/' . $item['Slider']['image'], array('class' => 'image-center')); ?>
+                <div class="carousel-caption ">
+                    <h3><a href="#"><?php echo $item['Slider']['title']; ?></a></h3>
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <?php echo $this->Html->image('slider/01.jpg', array('class' => 'image-center')); ?>
-            <div class="carousel-caption ">
-                <h3>TÍTULO</h3>
-            </div>
-        </div>
-        <div class="item">
-            <?php echo $this->Html->image('slider/01.jpg', array('class' => 'image-center')); ?>
-            <div class="carousel-caption ">
-                <h3>TÍTULO</h3>
-            </div>
-        </div>
+        <?php endforeach; ?>
     </div>
 
     <!-- Controls -->
