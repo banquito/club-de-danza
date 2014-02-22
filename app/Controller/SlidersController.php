@@ -16,6 +16,10 @@ class SlidersController extends AppController {
 	public $components = array('Paginator');
 	public $helpers = array('Time');
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this -> Auth -> allow('getItems');
+	}
 
 
 /**
