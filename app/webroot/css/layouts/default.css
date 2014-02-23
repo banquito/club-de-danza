@@ -68,7 +68,7 @@ a.btn-vermas img {
 
 /* line 50, ../../sass/_cajas.sass */
 .thumbnail-vermas {
-  background-image: url('/img/layouts/vermas.png?1392606152');
+  background-image: url('/img/layouts/vermas.png?1393088704');
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -169,7 +169,7 @@ h3 {
 
 /* line 27, ../../sass/layouts/default.sass */
 header nav {
-  background-image: url('/img/layouts/backheader.jpg?1392776911');
+  background-image: url('/img/layouts/backheader.jpg?1393088704');
 }
 /* line 30, ../../sass/layouts/default.sass */
 header nav.navbar {
@@ -237,33 +237,44 @@ li > a.menu-button {
 }
 
 /* line 75, ../../sass/layouts/default.sass */
+.nav.redes-sociales a {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+/* line 79, ../../sass/layouts/default.sass */
 .row-login {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
   text-transform: uppercase;
-  background-color: #dd104c;
   color: white;
   margin-bottom: 18px;
-  margin-left: auto;
+  margin-left: 7px;
   margin-top: -40px;
   position: fixed;
+  width: 199px;
   z-index: 100;
 }
-/* line 86, ../../sass/layouts/default.sass */
+/* line 90, ../../sass/layouts/default.sass */
 .row-login a, .row-login a:visited {
   color: white;
 }
-/* line 89, ../../sass/layouts/default.sass */
+/* line 93, ../../sass/layouts/default.sass */
 .row-login a:hover {
   color: #feccda;
 }
 
-/* line 92, ../../sass/layouts/default.sass */
+/* line 96, ../../sass/layouts/default.sass */
+.col-login {
+  background-color: #dd104c;
+}
+
+/* line 99, ../../sass/layouts/default.sass */
 .row-header-h1 {
   margin-bottom: 20px;
 }
 
-/* line 95, ../../sass/layouts/default.sass */
+/* line 102, ../../sass/layouts/default.sass */
 .row-redes-sociales {
   background-color: #dd104c;
   color: white;
@@ -273,17 +284,17 @@ li > a.menu-button {
   position: fixed;
   z-index: 100;
 }
-/* line 104, ../../sass/layouts/default.sass */
+/* line 111, ../../sass/layouts/default.sass */
 .row-redes-sociales a, .row-redes-sociales a:visited {
   color: white;
 }
 
-/* line 107, ../../sass/layouts/default.sass */
+/* line 114, ../../sass/layouts/default.sass */
 #container {
   margin-top: 90px;
 }
 
-/* line 110, ../../sass/layouts/default.sass */
+/* line 117, ../../sass/layouts/default.sass */
 #container-h1 {
   height: 0;
   width: 80px;

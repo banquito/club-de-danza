@@ -12,6 +12,7 @@
 			<?php echo $this->Html->image('layouts/clubdedanza.png'); ?>
 			</a>
 		</div>
+
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
@@ -35,6 +36,25 @@
 				</li>
 				<li>
 					<a href="/proximamente" class="menu-button">Artistas</a>
+				</li>
+			</ul>
+
+			<!-- Redes Sociales -->
+			<ul class="nav navbar-nav pull-right redes-sociales">
+				<li>
+					<a href="#" class="btn">
+					<i class="fa fa-envelope"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="btn">
+					<i class="fa fa-facebook-square"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="btn">
+					<i class="fa fa-twitter-square"></i>
+					</a>
 				</li>
 			</ul>
 		</div><!-- /.navbar-collapse -->

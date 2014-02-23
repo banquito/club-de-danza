@@ -47,7 +47,7 @@
 					
 					<!-- Login Buttons -->
 					<div class="row row-login">
-						<div class="col-sm-12 text-center">
+						<div class="col-sm-5 col-login text-center">
 							<?php if(AuthComponent::user('id')): ?>
 								<?php
 								echo $this -> Html -> link(AuthComponent::user('name')
@@ -55,30 +55,20 @@
 									, array('class' => "btn btn-xs")
 								);
 								?>
-								|
-								<a href="/logout" class="btn btn-xs">Salir</a>
 							<?php else: ?>
 								<a href="#" class="btn btn-xs" data-toggle="modal" data-target="#modalLogin">
 									<?php echo __('Login') ?>
 								</a>
-								|
-								<a href="/registro" class="btn btn-xs" data-toggle="modal" data-target="#modalRegister">
+							<?php endif; ?>
+						</div>
+						<div class="col-sm-5 col-sm-offset-2 col-login text-center">
+							<?php if(AuthComponent::user('id')): ?>
+								<a href="/logout" class="btn btn-xs">Salir</a>
+							<?php else: ?>
+								<a href="#" class="btn btn-xs" data-toggle="modal" data-target="#modalRegister">
 									<?php echo __('Register') ?>
 								</a>
 							<?php endif; ?>
-						</div>
-					</div>
-
-					<!-- Redes Sociales -->
-					<div class="row row-redes-sociales">
-						<div class="col-sm-12 text-center">
-							<a href="#" class="btn btn-xs">
-								<i class="fa fa-facebook-square"></i>
-							</a>
-							|
-							<a href="#" class="btn btn-xs">
-								<i class="fa fa-twitter-square"></i>
-							</a>
 						</div>
 					</div>
 
