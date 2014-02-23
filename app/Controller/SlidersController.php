@@ -154,7 +154,7 @@ class SlidersController extends AppController {
 				$slider['Slider']['image'] = $imageName;
 			
 			} else {
-				$slider['Slider']['image'] = $this -> Slider -> read('image', $id);
+				$slider['Slider']['image'] = $this -> Slider -> field('image', array('id'=>$id));
 			}
 
 			if ($this->Slider->save($slider)) {

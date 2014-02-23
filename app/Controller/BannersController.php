@@ -120,10 +120,7 @@ class BannersController extends AppController {
 			
 			} else {
 				$banner['Banner']['image'] = $this -> Banner -> field('image', array('id'=>$id));
-				debug($banner['Banner']['image'], $showHtml = null, $showFrom = true);
 			}
-
-
 
 			if ($this->Banner->save($banner)) {
 				$this->Session->setFlash(__('The banner has been saved.'));

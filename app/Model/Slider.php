@@ -34,11 +34,11 @@ class Slider extends AppModel {
 				'on'		=>  'create',
 				'message'	=>  'Ingrese una extensión válida.',
 			),
-			'tipoDeArchivoUpdate'	=> array(
-				 'rule'		=>  array('extension', array('gif', 'jpeg', 'png', 'jpg')),
-				 'on'		=> 'update',
-				 'message'	=>  'Verifique la extensión del archivo o el tamaño.',
-			),
+			// 'tipoDeArchivoUpdate'	=> array(
+			// 	 'rule'		=>  array('extension', array('gif', 'jpeg', 'png', 'jpg')),
+			// 	 'on'		=> 'update',
+			// 	 'message'	=>  'Verifique la extensión del archivo o el tamaño.',
+			// ),
 		),
 		'link' => array(
 			'notEmpty' => array(

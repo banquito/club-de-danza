@@ -167,6 +167,9 @@ class NotesController extends AppController {
 				}
 				
 				$note['Note']['image'] = $imageName;
+
+			} else {
+				$note['Note']['image'] = $this -> Note -> field('image', array('id'=>$id));
 			}
 
 			if ($this->Note->save($note)) {
