@@ -84,6 +84,9 @@ echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>f
 				<div class="col-sm-offset-4 col-sm-2">
 					<button type="submit" class="btn btn-default"><?php echo __('Aceptar'); ?></button>
 				</div>
+				<div class="col-sm-offset-4 col-sm-2">
+					<a href="/notas/listar" class="btn btn-default"><?php echo __('Cancelar'); ?></a>
+				</div>
 			</div>
 		<?php echo $this->Form->end() ?>
 	</div>
