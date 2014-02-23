@@ -26,7 +26,7 @@ class NotesController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('inicio');
+		$this->Auth->allow('inicio', 'view');
 	}
 
 
