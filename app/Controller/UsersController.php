@@ -102,6 +102,13 @@ public function login() {
 			$rolId = $this->User->Rol->field('id', array('weight' => User::ARTISTA));
 			$user['User']['rol_id'] = $rolId;
 			
+			debug($user, $showHtml = null, $showFrom = true);
+
+			if(isset($user['User']['birthday'])):
+				$birthday = DateTime::createFromFormat('d/m/Y', $user['User']['birthday']);
+				$user['User']['birthday'] = $birthday->format('Y-m-d H:i:s');
+			endif;
+
 			# Se crea el usuario y se lo autorregistra
 			$this->User->create();
 			if ($this->User->save($user)) {
