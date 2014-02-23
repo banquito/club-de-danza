@@ -12,7 +12,10 @@
             <div class="item<?php echo ($key == 0) ? ' active' : ''; ?>">
                 <?php echo $this->Html->image('sliders/' . $item['Slider']['image'], array('class' => 'image-center')); ?>
                 <div class="carousel-caption">
-                    <h3><a href="#"><?php echo $item['Slider']['title']; ?></a></h3>
+                    <h3>
+                        <?php $sliderLink = (isset($item['Slider']['link']) && $item['Slider']['link'] != '') ? $item['Slider']['link'] : '#'; ?>
+                        <a href="<?php echo $sliderLink; ?>"><?php echo $item['Slider']['title']; ?></a>
+                    </h3>
                 </div>
             </div>
         <?php endforeach; ?>
