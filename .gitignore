@@ -7,6 +7,10 @@ app/[Cc]onfig/core.php
 app/[Cc]onfig/database.php
 !empty
 
+app/webroot/img/banners/*
+app/webroot/img/notes/*
+app/webroot/img/sliders/*
+
 # User specific & automatically generated files #
 #################################################
 /app/Config/database.php
