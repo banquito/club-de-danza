@@ -18,7 +18,7 @@ class NotesController extends AppController {
 	public $helpers = array('Time');
 
 	public $paginate = array(
-		'limit' => 9,
+		'limit' => 15,
 		'order' => array(
 			'Note.created' => 'DESC'
 		)
