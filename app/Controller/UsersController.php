@@ -104,7 +104,7 @@ public function login() {
 			
 			debug($user, $showHtml = null, $showFrom = true);
 
-			if(isset($user['User']['birthday'])):
+			if(isset($user['User']['birthday']) && !empty($user['User']['birthday'])):
 				$birthday = DateTime::createFromFormat('d/m/Y', $user['User']['birthday']);
 				$user['User']['birthday'] = $birthday->format('Y-m-d H:i:s');
 			endif;
