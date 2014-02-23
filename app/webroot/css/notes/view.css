@@ -1,0 +1,20 @@
+/* line 1, ../../sass/notes/view.sass */
+.notes-body {
+  font-family: arial, sans-serif;
+  line-height: 1.48em;
+  text-align: justify;
+}
+
+/* line 6, ../../sass/notes/view.sass */
+.notes-description {
+  font-family: georgia, "times new roman", times, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 11, ../../sass/notes/view.sass */
+.notes-resume {
+  font-family: georgia, "times new roman", times, serif;
+  font-weight: normal;
+  line-height: 1.2em;
+}
