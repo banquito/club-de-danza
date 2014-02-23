@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-02-22 19:50-0300\n"
+"POT-Creation-Date: 2014-02-23 19:58-0300\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "The banners bannercategory could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/BannersController.php:42;99;154;174;179
+#: Controller/BannersController.php:42;99;151;171;176
 msgid "Invalid banner"
 msgstr ""
 
@@ -64,19 +64,19 @@ msgstr ""
 msgid "The image could not be saved. Please, verify the file."
 msgstr ""
 
-#: Controller/BannersController.php:79;129
+#: Controller/BannersController.php:79;126
 msgid "The banner has been saved."
 msgstr ""
 
-#: Controller/BannersController.php:82;133
+#: Controller/BannersController.php:82;130
 msgid "The banner could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/BannersController.php:158
+#: Controller/BannersController.php:155
 msgid "The banner has been deleted."
 msgstr ""
 
-#: Controller/BannersController.php:160
+#: Controller/BannersController.php:157
 msgid "The banner could not be deleted. Please, try again."
 msgstr ""
 
@@ -100,23 +100,23 @@ msgstr ""
 msgid "The country could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/NotesController.php:66;173
+#: Controller/NotesController.php:66;176
 msgid "The note has been saved."
 msgstr ""
 
-#: Controller/NotesController.php:69;176
+#: Controller/NotesController.php:69;179
 msgid "The note could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/NotesController.php:132;148;198
+#: Controller/NotesController.php:132;148;201
 msgid "Invalid note"
 msgstr ""
 
-#: Controller/NotesController.php:202
+#: Controller/NotesController.php:205
 msgid "The note has been deleted."
 msgstr ""
 
-#: Controller/NotesController.php:204
+#: Controller/NotesController.php:207
 msgid "The note could not be deleted. Please, try again."
 msgstr ""
 
@@ -184,23 +184,23 @@ msgstr ""
 msgid "Invalid username or password, try again"
 msgstr ""
 
-#: Controller/UsersController.php:88;133;161
+#: Controller/UsersController.php:88;140;168
 msgid "Invalid user"
 msgstr ""
 
-#: Controller/UsersController.php:116;140
+#: Controller/UsersController.php:123;147
 msgid "The user could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/UsersController.php:137
+#: Controller/UsersController.php:144
 msgid "The user has been saved."
 msgstr ""
 
-#: Controller/UsersController.php:165
+#: Controller/UsersController.php:172
 msgid "The user has been deleted."
 msgstr ""
 
-#: Controller/UsersController.php:167
+#: Controller/UsersController.php:174
 msgid "The user could not be deleted. Please, try again."
 msgstr ""
 
@@ -214,12 +214,11 @@ msgstr ""
 #: View/BannersBannercategories/edit.ctp:11
 #: View/Countries/add.ctp:9
 #: View/Countries/edit.ctp:10
-#: View/Elements/modal_register.ctp:53
 #: View/Rols/add.ctp:11
 #: View/Rols/edit.ctp:12
 #: View/States/add.ctp:10
 #: View/States/edit.ctp:11
-#: View/Users/add.ctp:59
+#: View/Users/add.ctp:66
 #: View/Users/edit.ctp:18
 msgid "Submit"
 msgstr ""
@@ -248,7 +247,7 @@ msgstr ""
 #: View/States/edit.ctp:14
 #: View/States/index.ctp:10;44
 #: View/States/view.ctp:32;61
-#: View/Users/add.ctp:62
+#: View/Users/add.ctp:69
 #: View/Users/edit.ctp:21
 #: View/Users/index.ctp:18
 #: View/Users/view.ctp:67;93
@@ -279,7 +278,7 @@ msgstr ""
 #: View/States/edit.ctp:21
 #: View/States/index.ctp:49
 #: View/States/view.ctp:40
-#: View/Users/add.ctp:65
+#: View/Users/add.ctp:72
 #: View/Users/edit.ctp:25
 #: View/Users/index.ctp:3
 #: View/Users/view.ctp:71
@@ -424,7 +423,7 @@ msgstr ""
 #: View/BannersBannercategories/index.ctp:32
 #: View/Countries/index.ctp:28
 #: View/Notes/index.ctp:41
-#: View/Notes/inicio.ctp:42
+#: View/Notes/inicio.ctp:47
 #: View/Rols/index.ctp:32
 #: View/Sliders/index.ctp:37
 #: View/States/index.ctp:32
@@ -437,7 +436,7 @@ msgstr ""
 #: View/BannersBannercategories/index.ctp:37
 #: View/Countries/index.ctp:33
 #: View/Notes/index.ctp:47
-#: View/Notes/inicio.ctp:48
+#: View/Notes/inicio.ctp:53
 #: View/Rols/index.ctp:37
 #: View/Sliders/index.ctp:43
 #: View/States/index.ctp:37
@@ -450,7 +449,7 @@ msgstr ""
 #: View/BannersBannercategories/index.ctp:39
 #: View/Countries/index.ctp:35
 #: View/Notes/index.ctp:49
-#: View/Notes/inicio.ctp:50
+#: View/Notes/inicio.ctp:55
 #: View/Rols/index.ctp:39
 #: View/Sliders/index.ctp:45
 #: View/States/index.ctp:39
@@ -525,8 +524,8 @@ msgstr ""
 #: View/Banners/add.ctp:12
 #: View/Banners/edit.ctp:17
 #: View/Banners/view.ctp:35
-#: View/Notes/add.ctp:19
-#: View/Notes/edit.ctp:17
+#: View/Notes/add.ctp:20
+#: View/Notes/edit.ctp:18
 #: View/Sliders/add.ctp:12
 #: View/Sliders/edit.ctp:17
 #: View/Users/view.ctp:87
@@ -537,8 +536,8 @@ msgstr ""
 #: View/Banners/add.ctp:26;31
 #: View/Banners/edit.ctp:33;46
 #: View/Banners/view.ctp:40
-#: View/Notes/add.ctp:46;51
-#: View/Notes/edit.ctp:46;59
+#: View/Notes/add.ctp:47;52
+#: View/Notes/edit.ctp:47;60
 #: View/Sliders/add.ctp:26;31
 #: View/Sliders/edit.ctp:33;46
 #: View/Users/view.ctp:89
@@ -574,8 +573,8 @@ msgid "Add Banner"
 msgstr ""
 
 #: View/Banners/add.ctp:17
-#: View/Notes/add.ctp:24
-#: View/Notes/edit.ctp:22
+#: View/Notes/add.ctp:25
+#: View/Notes/edit.ctp:23
 #: View/Sliders/add.ctp:17
 msgid "Note title (max.: 50 characters)"
 msgstr ""
@@ -588,12 +587,21 @@ msgstr ""
 #: View/Banners/add.ctp:76
 #: View/Banners/edit.ctp:93
 #: View/Elements/modal_login.ctp:39
-#: View/Notes/add.ctp:84
-#: View/Notes/edit.ctp:93
+#: View/Notes/add.ctp:85
+#: View/Notes/edit.ctp:95
 #: View/Sliders/add.ctp:64
 #: View/Sliders/edit.ctp:80
 #: View/Users/login.ctp:36
 msgid "Aceptar"
+msgstr ""
+
+#: View/Banners/add.ctp:79
+#: View/Banners/edit.ctp:96
+#: View/Notes/add.ctp:88
+#: View/Notes/edit.ctp:98
+#: View/Sliders/add.ctp:67
+#: View/Sliders/edit.ctp:83
+msgid "Cancelar"
 msgstr ""
 
 #: View/Banners/edit.ctp:7
@@ -606,7 +614,7 @@ msgid "Banner title (max.: 50 characters)"
 msgstr ""
 
 #: View/Banners/edit.ctp:38
-#: View/Notes/edit.ctp:51
+#: View/Notes/edit.ctp:52
 #: View/Sliders/edit.ctp:38
 msgid "No image"
 msgstr ""
@@ -692,7 +700,7 @@ msgstr ""
 #: View/States/add.ctp:16
 #: View/States/edit.ctp:18
 #: View/States/view.ctp:36
-#: View/Users/add.ctp:68
+#: View/Users/add.ctp:75
 #: View/Users/edit.ctp:28
 #: View/Users/view.ctp:75
 msgid "List States"
@@ -704,7 +712,7 @@ msgstr ""
 #: View/Countries/view.ctp:34;68
 #: View/States/index.ctp:46
 #: View/States/view.ctp:37
-#: View/Users/add.ctp:69
+#: View/Users/add.ctp:76
 #: View/Users/edit.ctp:29
 #: View/Users/view.ctp:76
 msgid "New State"
@@ -745,8 +753,8 @@ msgstr ""
 msgid "Country Id"
 msgstr ""
 
-#: View/Elements/modal_login.ctp:7;48
-#: View/Layouts/default.ctp:62
+#: View/Elements/modal_login.ctp:7
+#: View/Layouts/default.ctp:60
 msgid "Login"
 msgstr ""
 
@@ -764,9 +772,13 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: View/Elements/modal_register.ctp:7;56
-#: View/Layouts/default.ctp:66
+#: View/Elements/modal_register.ctp:12
+#: View/Layouts/default.ctp:69
 msgid "Register"
+msgstr ""
+
+#: View/Elements/modal_register.ctp:64
+msgid "Create User"
 msgstr ""
 
 #: View/Elements/navbar_admin.ctp:63
@@ -782,43 +794,43 @@ msgstr ""
 msgid "Add Banners"
 msgstr ""
 
-#: View/Notes/add.ctp:10
+#: View/Notes/add.ctp:11
 msgid "Add Note"
 msgstr ""
 
-#: View/Notes/add.ctp:33
-#: View/Notes/edit.ctp:31
+#: View/Notes/add.ctp:34
+#: View/Notes/edit.ctp:32
 msgid "Short Description"
 msgstr ""
 
-#: View/Notes/add.ctp:38
-#: View/Notes/edit.ctp:36
+#: View/Notes/add.ctp:39
+#: View/Notes/edit.ctp:37
 #: View/Users/view.ctp:88
 msgid "Description"
 msgstr ""
 
-#: View/Notes/add.ctp:59;64
-#: View/Notes/edit.ctp:68;73
+#: View/Notes/add.ctp:60;65
+#: View/Notes/edit.ctp:70;75
 msgid "Resume"
 msgstr ""
 
-#: View/Notes/add.ctp:71;76
-#: View/Notes/edit.ctp:80;85
+#: View/Notes/add.ctp:72;77
+#: View/Notes/edit.ctp:82;87
 msgid "Body"
 msgstr ""
 
-#: View/Notes/edit.ctp:7
+#: View/Notes/edit.ctp:8
 msgid "Edit Note"
 msgstr ""
 
 #: View/Notes/index.ctp:3
-#: View/Users/add.ctp:70
+#: View/Users/add.ctp:77
 #: View/Users/edit.ctp:30
 #: View/Users/view.ctp:77
 msgid "List Notes"
 msgstr ""
 
-#: View/Notes/inicio.ctp:29
+#: View/Notes/inicio.ctp:31
 msgid "No Title"
 msgstr ""
 
@@ -829,7 +841,7 @@ msgstr ""
 #: View/Rols/add.ctp:17
 #: View/Rols/edit.ctp:19
 #: View/Rols/view.ctp:41
-#: View/Users/add.ctp:66
+#: View/Users/add.ctp:73
 #: View/Users/edit.ctp:26
 #: View/Users/view.ctp:73
 msgid "List Rols"
@@ -846,7 +858,7 @@ msgstr ""
 
 #: View/Rols/index.ctp:46
 #: View/Rols/view.ctp:42
-#: View/Users/add.ctp:67
+#: View/Users/add.ctp:74
 #: View/Users/edit.ctp:27
 #: View/Users/view.ctp:74
 msgid "New Rol"
@@ -954,11 +966,11 @@ msgstr ""
 msgid "Delete State"
 msgstr ""
 
-#: View/Users/add.ctp:8
+#: View/Users/add.ctp:9
 msgid "Add User"
 msgstr ""
 
-#: View/Users/add.ctp:71
+#: View/Users/add.ctp:78
 #: View/Users/edit.ctp:31
 #: View/Users/view.ctp:78;116
 msgid "New Note"
@@ -998,12 +1010,6 @@ msgstr ""
 #: Model/Note.php:validation for field image
 #: Model/Slider.php:validation for field image
 msgid "Ingrese una extensión válida."
-msgstr ""
-
-#: Model/Banner.php:validation for field image
-#: Model/Note.php:validation for field image
-#: Model/Slider.php:validation for field image
-msgid "Verifique la extensión del archivo o el tamaño."
 msgstr ""
 
 #: Model/Banner.php:validation for field published

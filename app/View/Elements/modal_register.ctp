@@ -61,7 +61,7 @@ echo $this->Html->script(array('vendors/moment.min', 'vendors/bootstrap-datetime
 							<?php echo $this->Form->input('email', array('class'=>'form-control', 'label'=>FALSE)); ?>
 						</div>
 					</div>
-				<?php echo $this->Form->end(__('Submit')); ?>
+				<?php echo $this->Form->end(__('Create User')); ?>
 			</div>
 		</div>
 	</div>
