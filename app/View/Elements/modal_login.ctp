@@ -44,9 +44,6 @@
 					</div>
 				<?php echo $this->Form->end() ?>
 			</div>
-			<!-- <div class="modal-footer">
-				<button type="button" class="btn btn-primary"><?php echo __('Login') ?></button>
-			</div> -->
 		</div>
 	</div>
 </div>

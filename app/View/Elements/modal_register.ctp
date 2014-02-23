@@ -7,7 +7,7 @@
 				<h4 class="modal-title" id="registerTitle"><?php echo __('Register') ?></h4>
 			</div>
 			<div class="modal-body">
-				<?php echo $this->Form->create('User', array('action' => 'add', 'class' => 'form-horizontal')); ?>
+				<?php echo $this->Form->create('User', array('action' => 'add', 'class' => 'form-horizontal', 'role' => 'form')); ?>
 					<div class="form-group">
 						<label for="username" class="col-sm-3 control-label">Nombre de Usuario</label>
 						<div class="col-sm-9">
@@ -52,9 +52,6 @@
 					</div>
 				<?php echo $this->Form->end(__('Submit')); ?>
 			</div>
-			<!-- <div class="modal-footer">
-				<button type="button" class="btn btn-primary"><?php echo __('Register') ?></button>
-			</div> -->
 		</div>
 	</div>
 </div>
