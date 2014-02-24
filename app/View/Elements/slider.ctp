@@ -10,10 +10,12 @@
     <div class="carousel-inner">
         <?php foreach ($items as $key => $item): ?>
             <div class="item<?php echo ($key == 0) ? ' active' : ''; ?>">
-                <?php echo $this->Html->image('sliders/' . $item['Slider']['image'], array('class' => 'image-center')); ?>
+                <?php $sliderLink = (isset($item['Slider']['link']) && $item['Slider']['link'] != '') ? $item['Slider']['link'] : '#'; ?>
+                <a href="<?php echo $sliderLink; ?>">
+                    <?php echo $this->Html->image('sliders/' . $item['Slider']['image'], array('class' => 'image-center')); ?>
+                </a>
                 <div class="carousel-caption">
                     <h3>
-                        <?php $sliderLink = (isset($item['Slider']['link']) && $item['Slider']['link'] != '') ? $item['Slider']['link'] : '#'; ?>
                         <a href="<?php echo $sliderLink; ?>"><?php echo $item['Slider']['title']; ?></a>
                     </h3>
                 </div>
