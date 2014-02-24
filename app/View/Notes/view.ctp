@@ -1,14 +1,14 @@
 <?php $this->Html->css('notes/view', '', array('inline'=>FALSE)); ?>
 
+<div class="row">
+	<div class="col-sm-12">
+		<p class="notes-description"><?php echo h($note['Note']['description']); ?></p>
+	</div>
+</div>
 <div class="row row-header-h1">
 	<div class="col-sm-12">
 		<h1><?php echo h($note['Note']['title']); ?></h1>
 		<div></div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-12">
-		<p class="notes-description"><?php echo h($note['Note']['description']); ?></p>
 	</div>
 </div>
 <div class="row">

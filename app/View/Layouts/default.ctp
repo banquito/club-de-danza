@@ -8,8 +8,10 @@
 		echo $this->Html->meta('icon');
 		echo $this->Html->css(array('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
 			, 'vendors/bootstrap.min'
+			, 'vendors/bootstrap-datetimepicker.min'
 			, 'layouts/default'
 		));
+
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		?>
@@ -106,9 +108,11 @@
 		<!-- Scripts -->
 		<?php echo $this->element('sql_dump'); ?>
 		<?php
-		echo $this->Html->script(array(
-			'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
-			'//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'
+		echo $this->Html->script(array('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
+			, '//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'
+			, 'vendors/moment.min'
+			, 'vendors/bootstrap-datetimepicker'
+			, 'vendors/locales/bootstrap-datetimepicker.es'
 		));
 		echo $this->fetch('script');
 		?>
