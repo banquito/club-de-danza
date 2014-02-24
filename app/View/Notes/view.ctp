@@ -12,8 +12,8 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-sm-8">
-		<p class="notes-resume"><?php echo $note['Note']['resume']; ?></p>
+	<div class="col-sm-8 notes-resume">
+		<p><?php echo $note['Note']['resume']; ?></p>
 	</div>
 	<div class="col-sm-4">
 		<?php $image = '/' . IMAGES_URL . ($note['Note']['image'] ? 'notes/'.$note['Note']['image'] : 'layouts/sinfoto.jpg'); ?>
@@ -21,7 +21,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-sm-12">
-		<p class="notes-body"><?php echo $note['Note']['body']; ?></p>
+	<div class="col-sm-12 notes-body">
+		<p><?php echo $note['Note']['body']; ?></p>
 	</div>
 </div>
