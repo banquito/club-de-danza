@@ -10,6 +10,9 @@ App::uses('AppModel', 'Model');
 class User extends AppModel {
 	const ARTISTA = '100';
 	const ADMIN = '500';
+	const FEMENINO = '0';
+	const MASCULINO = '1';
+	const OTRO = '2';
 
 /**
  * Validation rules
