@@ -8,11 +8,10 @@
 /* line 6, ../../sass/notes/view.sass */
 .notes-description {
   font-family: georgia, "times new roman", times, serif;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
-/* line 11, ../../sass/notes/view.sass */
+/* line 10, ../../sass/notes/view.sass */
 .notes-resume {
   font-family: georgia, "times new roman", times, serif;
   font-weight: normal;
