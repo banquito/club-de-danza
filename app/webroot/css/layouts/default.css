@@ -128,6 +128,11 @@ a.btn-vermas img {
 }
 
 @font-face {
+  font-family: "Fagono";
+  src: url('/css/fonts/fagono.ttf') format('truetype');
+}
+
+@font-face {
   font-family: "YanoneKaffeesatz-Regular";
   src: url('/css/fonts/YanoneKaffeesatz-Regular.otf') format('opentype');
 }
@@ -152,39 +157,40 @@ footer > .navbar {
 
 /* line 12, ../../sass/layouts/default.sass */
 h1 {
-  background-color: #dd104c;
-  color: white;
-  font-family: "Univers Condensed Bold";
-  font-size: 1.3em;
+  background-color: white;
+  color: #a00f34;
+  font-family: "Fagono";
+  font-size: 28px;
+  line-height: 34px;
   margin: 0;
   padding: 10px 15px 0;
   text-transform: uppercase;
 }
-/* line 21, ../../sass/layouts/default.sass */
+/* line 22, ../../sass/layouts/default.sass */
 h1 ~ div {
   width: 212px;
   border-top: 10px solid #dd104c;
   border-right: 10px solid transparent;
 }
 
-/* line 26, ../../sass/layouts/default.sass */
+/* line 27, ../../sass/layouts/default.sass */
 h3 {
   font-size: 1em;
   margin-top: 5px;
   text-align: left;
 }
 
-/* line 32, ../../sass/layouts/default.sass */
+/* line 33, ../../sass/layouts/default.sass */
 header nav {
   background-image: url('/img/layouts/backheader.jpg?1393088704');
 }
-/* line 35, ../../sass/layouts/default.sass */
+/* line 36, ../../sass/layouts/default.sass */
 header nav.navbar {
   margin-bottom: 40px;
   border-bottom-color: #dd104c;
 }
 
-/* line 39, ../../sass/layouts/default.sass */
+/* line 40, ../../sass/layouts/default.sass */
 li > a.menu-button {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
@@ -193,32 +199,32 @@ li > a.menu-button {
   padding-right: 7px;
 }
 
-/* line 45, ../../sass/layouts/default.sass */
+/* line 46, ../../sass/layouts/default.sass */
 .actions > a {
   color: #ca94aa;
 }
-/* line 48, ../../sass/layouts/default.sass */
+/* line 49, ../../sass/layouts/default.sass */
 .actions > a:hover {
   color: #dd104c;
 }
 
-/* line 51, ../../sass/layouts/default.sass */
+/* line 52, ../../sass/layouts/default.sass */
 .carousel-control .glyphicon-chevron-left {
   margin-left: -4px;
 }
 
-/* line 54, ../../sass/layouts/default.sass */
+/* line 55, ../../sass/layouts/default.sass */
 .carousel-inner {
   box-shadow: 0 0 5px 5px #cccccc;
   margin-bottom: 20px;
 }
-/* line 58, ../../sass/layouts/default.sass */
+/* line 59, ../../sass/layouts/default.sass */
 .carousel-inner .item {
   height: 194px;
   min-height: 194px;
   max-height: 194px;
 }
-/* line 63, ../../sass/layouts/default.sass */
+/* line 64, ../../sass/layouts/default.sass */
 .carousel-inner a {
   color: white;
   font-family: "Homenaje";
@@ -226,28 +232,28 @@ li > a.menu-button {
   text-transform: uppercase;
 }
 
-/* line 69, ../../sass/layouts/default.sass */
+/* line 70, ../../sass/layouts/default.sass */
 .bootstrap-datetimepicker-widget {
   z-index: 2000;
 }
 
-/* line 72, ../../sass/layouts/default.sass */
+/* line 73, ../../sass/layouts/default.sass */
 .navbar-brand {
   height: auto;
 }
 
-/* line 75, ../../sass/layouts/default.sass */
+/* line 76, ../../sass/layouts/default.sass */
 .navbar-default .navbar-nav > li > a:hover, .thumbnail p:hover {
   color: #dd104c;
 }
 
-/* line 78, ../../sass/layouts/default.sass */
+/* line 79, ../../sass/layouts/default.sass */
 .nav.redes-sociales a {
   padding-left: 7px;
   padding-right: 7px;
 }
 
-/* line 82, ../../sass/layouts/default.sass */
+/* line 83, ../../sass/layouts/default.sass */
 .row-login {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
@@ -260,26 +266,26 @@ li > a.menu-button {
   width: 199px;
   z-index: 100;
 }
-/* line 93, ../../sass/layouts/default.sass */
+/* line 94, ../../sass/layouts/default.sass */
 .row-login a, .row-login a:visited {
   color: white;
 }
-/* line 96, ../../sass/layouts/default.sass */
+/* line 97, ../../sass/layouts/default.sass */
 .row-login a:hover {
   color: #feccda;
 }
 
-/* line 99, ../../sass/layouts/default.sass */
+/* line 100, ../../sass/layouts/default.sass */
 .col-login {
   background-color: #dd104c;
 }
 
-/* line 102, ../../sass/layouts/default.sass */
+/* line 103, ../../sass/layouts/default.sass */
 .row-header-h1 {
   margin-bottom: 20px;
 }
 
-/* line 105, ../../sass/layouts/default.sass */
+/* line 106, ../../sass/layouts/default.sass */
 .row-redes-sociales {
   background-color: #dd104c;
   color: white;
@@ -289,17 +295,17 @@ li > a.menu-button {
   position: fixed;
   z-index: 100;
 }
-/* line 114, ../../sass/layouts/default.sass */
+/* line 115, ../../sass/layouts/default.sass */
 .row-redes-sociales a, .row-redes-sociales a:visited {
   color: white;
 }
 
-/* line 117, ../../sass/layouts/default.sass */
+/* line 118, ../../sass/layouts/default.sass */
 #container {
   margin-top: 90px;
 }
 
-/* line 120, ../../sass/layouts/default.sass */
+/* line 121, ../../sass/layouts/default.sass */
 #container-h1 {
   height: 0;
   width: 80px;
