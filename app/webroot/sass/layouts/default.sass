@@ -4,6 +4,11 @@ a:hover
 	color: $login
 	text-decoration: none
 
+footer > .navbar
+	font-size: 0.83em
+	margin-bottom: 0
+	padding-top: 14px
+
 h1
 	background-color: $login
 	color: $white
@@ -31,10 +36,11 @@ header
 			margin-bottom: 40px
 			border-bottom-color: $login
 
-footer > .navbar
-	font-size: 0.83em
-	margin-bottom: 0
-	padding-top: 14px
+li > a.menu-button
+	+navfont
+
+	padding-left: 7px
+	padding-right: 7px
 
 .actions > a
 	color: $link-action
@@ -60,11 +66,8 @@ footer > .navbar
 		font-size: 1.2em
 		text-transform: uppercase
 
-li > a.menu-button
-	+navfont
-
-	padding-left: 7px
-	padding-right: 7px
+.bootstrap-datetimepicker-widget
+	z-index: 2000
 
 .navbar-brand
 	height: auto
