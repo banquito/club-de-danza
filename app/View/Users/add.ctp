@@ -30,13 +30,13 @@ echo $this->Html->script(array('users/add'), array('inline'=>FALSE));
 			<div class="form-group">
 				<label for="name" class="col-sm-3 control-label"><?php echo __('Name'); ?></label>
 				<div class="col-sm-9">
-					<?php echo $this->Form->input('name', array('class'=>'form-control', 'label'=>FALSE, 'value'=>'a@a.com')); ?>
+					<?php echo $this->Form->input('name', array('class'=>'form-control', 'label'=>FALSE)); ?>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="lastname" class="col-sm-3 control-label"><?php echo __('Lastname'); ?></label>
 				<div class="col-sm-9">
-					<?php echo $this->Form->input('lastname', array('class'=>'form-control', 'label'=>FALSE, 'value'=>'a@a.com')); ?>
+					<?php echo $this->Form->input('lastname', array('class'=>'form-control', 'label'=>FALSE)); ?>
 				</div>
 			</div>
 			<div class="form-group">

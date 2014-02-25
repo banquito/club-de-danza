@@ -32,6 +32,10 @@
 	Router::connect('/banners/nuevo', array('controller' => 'banners', 'action' => 'add'));
 	Router::connect('/banners/editar/*', array('controller' => 'banners', 'action' => 'edit'));
 	Router::connect('/banners/ver/*', array('controller' => 'banners', 'action' => 'view'));
+
+	# Confirmación de Correo
+	Router::connect('/confirmacion/*', array('controller' => 'users', 'action' => 'confirm'));
+	Router::connect('/confirmatucorreo', array('controller' => 'pages', 'action' => 'display', 'confirmatucorreo'));
 	
 	# Notas
 	Router::connect('/notas', array('controller' => 'notes', 'action' => 'inicio'));

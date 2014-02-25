@@ -17,8 +17,78 @@ class UsersController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('add', 'logout');
+		$this->Auth->allow('add', 'confirm', 'logout');
 		// $this->Auth->allow('*');
+	}
+
+/**
+ * add method
+ *
+ * @return void
+ */
+	public function add() {
+		if ($this->request->is('post')) {
+			$user = $this->request->data;
+			$rolId = $this->User->Rol->field('id', array('weight' => User::ARTISTA));
+			$user['User']['rol_id'] = $rolId;
+			
+			if(isset($user['User']['birthday']) && !empty($user['User']['birthday'])):
+				$birthday = DateTime::createFromFormat('d/m/Y', $user['User']['birthday']);
+				$user['User']['birthday'] = $birthday->format('Y-m-d H:i:s');
+			endif;
+
+			# Se crea el usuario y se lo autorregistra
+			$this->User->create();
+			if ($this->User->save($user)) {
+				$to = $user['User']['email'];
+				$subject = 'Club de Danza :: Confirma tu correo';
+				$message = 'Confirma tu correo haciendo clic en el siguiente enlace: ' . Router::fullBaseUrl() . '/confirmacion/' . $this->User->id;
+				$additional_headers = '';
+				$additional_parameters = '';
+
+				mail($to, $subject, $message, $additional_headers, $additional_parameters);
+				return $this->redirect('/confirmatucorreo');
+				// $id = $this->User->id;
+		  //       $user['User'] = array_merge(
+		  //           $user['User'],
+		  //           array('id' => $id)
+		  //       );
+		  //       $this->Auth->login($user['User']);
+				// return $this->redirect($this->referer());
+			} else {
+				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+			}
+		}
+
+		$states = $this->User->State->find('list');
+		$this->set(compact('states'));
+	}
+
+
+/**
+ * confirm method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function confirm($id = null) {
+		if (!$this->User->exists($id)) {
+			throw new NotFoundException(__('Invalid user'));
+		}
+		$user = $this->User->read(null, $id);
+
+		# Se verifica que el usuario no haya sido confirmado previamente,
+		# es una especie de medida de seguridad para que no se loguee cualquiera
+		# con cualquier ID
+		if(!$user['User']['confirmed']) {
+			$this->User->id = $id;
+			$this->User->saveField('confirmed', TRUE);
+			
+			$this->Auth->login($user['User']);
+			return $this->redirect('/');
+		}
+		$this->redirect('/logout');
 	}
 
 /**
@@ -39,11 +109,23 @@ public function login() {
 		// $this -> layout = 'login';
 
 		if ($this->request->is('post')) {
-			if ($this->Auth->login()) {
-				$this->redirect($this->Auth->redirect());
-			} else {
-				$this->Session->setFlash(__('Invalid username or password, try again'));
+			if (isset($this->request->data['User'])) {
+				$user = $this->request->data['User'];
+				$confirmed = $this->User->field('confirmed', array('username' => $user['username']));
+
+				if($confirmed) {
+					if ($this->Auth->login()) {
+						$this->redirect($this->Auth->redirect());
+					}
+				}
 			}
+			$this->Session->setFlash(__('Invalid username or password, try again'));
+			$this->redirect('/');
+			// if ($this->Auth->login()) {
+			// 	$this->redirect($this->Auth->redirect());
+			// } else {
+			// 	$this->Session->setFlash(__('Invalid username or password, try again'));
+			// }
 		}
 	}
 
@@ -92,43 +174,6 @@ public function login() {
 		}
 		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 		$this->set('user', $this->User->find('first', $options));
-	}
-
-/**
- * add method
- *
- * @return void
- */
-	public function add() {
-		if ($this->request->is('post')) {
-			$user = $this->request->data;
-			$rolId = $this->User->Rol->field('id', array('weight' => User::ARTISTA));
-			$user['User']['rol_id'] = $rolId;
-			
-			debug($user, $showHtml = null, $showFrom = true);
-
-			if(isset($user['User']['birthday']) && !empty($user['User']['birthday'])):
-				$birthday = DateTime::createFromFormat('d/m/Y', $user['User']['birthday']);
-				$user['User']['birthday'] = $birthday->format('Y-m-d H:i:s');
-			endif;
-
-			# Se crea el usuario y se lo autorregistra
-			$this->User->create();
-			if ($this->User->save($user)) {
-				$id = $this->User->id;
-		        $user['User'] = array_merge(
-		            $user['User'],
-		            array('id' => $id)
-		        );
-		        $this->Auth->login($user['User']);
-				return $this->redirect($this->referer());
-			} else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
-			}
-		}
-
-		$states = $this->User->State->find('list');
-		$this->set(compact('states'));
 	}
 
 /**
