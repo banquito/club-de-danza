@@ -1,7 +1,6 @@
 <div class="row row-header-h1">
 	<div class="col-sm-12">
 		<h1><?php echo h($banner['Banner']['title']); ?></h1>
-		<div></div>
 	</div>
 </div>
 <div class="row">

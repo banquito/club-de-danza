@@ -6,7 +6,6 @@ echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>f
 <div class="row row-header-h1">
 	<div class="col-sm-12">
 		<h1><?php echo __('Edit Note'); ?></h1>
-		<div></div>
 	</div>
 </div>
 

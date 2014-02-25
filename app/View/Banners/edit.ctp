@@ -5,7 +5,6 @@ echo $this->Html->css('banners/edit', '', array('inline'=>FALSE));
 <div class="row row-header-h1">
 	<div class="col-sm-12">
 		<h1><?php echo __('Edit Banner'); ?></h1>
-		<div></div>
 	</div>
 </div>
 
