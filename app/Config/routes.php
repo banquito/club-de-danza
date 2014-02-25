@@ -48,6 +48,7 @@
 	Router::connect('/sliders/ver/*', array('controller' => 'sliders', 'action' => 'view'));
 	
 	Router::connect('/usuarios/listar', array('controller' => 'users', 'action' => 'index'));
+	Router::connect('/perfil/*', array('controller' => 'users', 'action' => 'view'));
 
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
