@@ -33,7 +33,11 @@ class UsersController extends AppController {
 			$user['User']['rol_id'] = $rolId;
 			
 			if(isset($user['User']['birthday']) && !empty($user['User']['birthday'])):
-				$birthday = DateTime::createFromFormat('d/m/Y', $user['User']['birthday']);
+				// $birthday = DateTime::createFromFormat('d/m/Y', $user['User']['birthday']); # PHP >= 5.3
+				# PHP 5.2
+				$birthday = strptime($user['User']['birthday'], '%d/%m/%Y');
+				$birthday = sprintf('%04d-%02d-%02d', $birthday['tm_year'] + 1900, $birthday['tm_mon'] + 1, $birthday['tm_mday']);
+				$birthday = new DateTime($birthday);
 				$user['User']['birthday'] = $birthday->format('Y-m-d H:i:s');
 			endif;
 
