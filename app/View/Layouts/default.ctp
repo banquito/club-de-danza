@@ -21,11 +21,11 @@
 		<script src="../../assets/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body data-ng-app="App">
 		<header>
 			<?php 
 			$user = AuthComponent::user();
-			if($user['Rol']['weight'] >= User::ADMIN):
+			if(isset($user['Rol']) && $user['Rol']['weight'] >= User::ADMIN):
 				echo $this -> element('navbar_admin');
 			else:
 				echo $this -> element('navbar');
@@ -113,6 +113,10 @@
 			, 'vendors/moment.min'
 			, 'vendors/bootstrap-datetimepicker'
 			, 'vendors/locales/bootstrap-datetimepicker.es'
+			, 'layouts/default'
+			, 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js'
+			, 'angular/app'
+			, 'angular/controllers/users_controller'
 		));
 		echo $this->fetch('script');
 		?>
