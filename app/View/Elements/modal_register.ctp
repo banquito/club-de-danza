@@ -73,6 +73,21 @@ echo $this->Html->script(array('users/add'), array('inline'=>FALSE));
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="email" class="col-sm-3 control-label"><?php echo __('Captcha'); ?></label>
+						<div class="col-sm-9">
+							<?php
+							# Se carga la librería del catpcha
+							// require_once('recaptchalib.php');
+							App::import('Vendor', 'recaptchalib', array('file' => 'recaptchalib.php'));
+							
+							// $publickey = "your_public_key"; // you got this from the signup page
+							$publickey = "6LeWP-8SAAAAAMIaV0hZZai_g88inVru8I9wDQTf"; // you got this from the signup page
+							
+							echo recaptcha_get_html($publickey);
+							?>
+						</div>
+					</div>
+					<div class="form-group">
 						<div class="col-sm-2 col-sm-offset-3">
 							<button type="submit"><?php echo __('Create User') ?></button>
 						</div>

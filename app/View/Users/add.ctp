@@ -45,7 +45,7 @@ echo $this->Html->script(array('users/add'), array('inline'=>FALSE));
 					<?php 
 					echo $this->Form->input('gender', array('class'=>'form-control'
 						, 'label' => FALSE
-					    , 'options' => array('Femenino', 'Masculino', 'Otro')
+						, 'options' => array('Femenino', 'Masculino', 'Otro')
 					));
 					?>
 				</div>
@@ -54,11 +54,11 @@ echo $this->Html->script(array('users/add'), array('inline'=>FALSE));
 				<label for="birthday" class="col-sm-3 control-label"><?php echo __('Birthday'); ?></label>
 				<div class="col-sm-9">
 					<div class='input-group date' id='datetimepicker10'>
-		                <span class="input-group-addon">
-		                	<span data-icon-element="" class="fa fa-calendar"></span>
-		                </span>
-		                <input type='text' class="form-control" data-ng-keydown="birthdayKeydown($event)" name="data[User][birthday]" />
-		            </div>
+						<span class="input-group-addon">
+							<span data-icon-element="" class="fa fa-calendar"></span>
+						</span>
+						<input type='text' class="form-control" data-ng-keydown="birthdayKeydown($event)" name="data[User][birthday]" />
+					</div>
 					<?php //echo $this->Form->input('birthday', array('class'=>'form-control', 'label'=>FALSE)); ?>
 				</div>
 			</div>
@@ -74,10 +74,25 @@ echo $this->Html->script(array('users/add'), array('inline'=>FALSE));
 				</div>
 			</div>
 			<div class="form-group">
-				<div class="col-sm-2 col-sm-offset-3">
+				<label for="email" class="col-sm-3 control-label"><?php echo __('Captcha'); ?></label>
+				<div class="col-sm-9">
+					<?php
+					# Se carga la librería del catpcha
+					// require_once('recaptchalib.php');
+					App::import('Vendor', 'recaptchalib', array('file' => 'recaptchalib.php'));
+					
+					// $publickey = "your_public_key"; // you got this from the signup page
+					$publickey = "6LeWP-8SAAAAAMIaV0hZZai_g88inVru8I9wDQTf"; // you got this from the signup page
+					
+					echo recaptcha_get_html($publickey);
+					?>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-3 col-sm-offset-3">
 					<button type="submit"><?php echo __('Create User') ?></button>
 				</div>
-				<div class="col-sm-7 alert alert-danger" data-ng-show="errorMessage" data-ng-cloak>
+				<div class="col-sm-6 alert alert-danger" data-ng-show="errorMessage" data-ng-cloak>
 					<span data-ng-bind="errorMessage"></span>
 				</div>
 			</div>

@@ -28,6 +28,31 @@ class UsersController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+			debug($this->request->data);
+			
+			# Se carga la librería del catpcha
+			// require_once('recaptchalib.php');
+			App::import('Vendor', 'extras', array('file' => 'extras.php'));
+			App::import('Vendor', 'recaptchalib', array('file' => 'recaptchalib.php'));
+
+			$privatekey = PRIVATE_KEY;
+			$recaptcha_challenge_field = $this->request->data['recaptcha_challenge_field'];
+			$recaptcha_response_field = $this->request->data['recaptcha_response_field'];
+			
+			$resp = recaptcha_check_answer($privatekey
+				, $_SERVER["REMOTE_ADDR"]
+				, $recaptcha_challenge_field
+				, $recaptcha_response_field
+			);
+
+			if (!$resp->is_valid) {
+				// What happens when the CAPTCHA was entered incorrectly
+				// die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
+				// 	 "(reCAPTCHA said: " . $resp->error . ")");
+				$this->Session->setFlash(__('The reCAPTCHA wasn\'t entered correctly. Go back and try it again.'));
+				$this->redirect('/');
+			}
+
 			$user = $this->request->data;
 			$rolId = $this->User->Rol->field('id', array('weight' => User::ARTISTA));
 			$user['User']['rol_id'] = $rolId;
@@ -50,15 +75,11 @@ class UsersController extends AppController {
 				$additional_headers = '';
 				$additional_parameters = '';
 
+				# Se envía el correo de confirmación
 				mail($to, $subject, $message, $additional_headers, $additional_parameters);
+
+				# Se envía al usuario a un mensaje de confirmación
 				return $this->redirect('/confirmatucorreo');
-				// $id = $this->User->id;
-		  //       $user['User'] = array_merge(
-		  //           $user['User'],
-		  //           array('id' => $id)
-		  //       );
-		  //       $this->Auth->login($user['User']);
-				// return $this->redirect($this->referer());
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}
