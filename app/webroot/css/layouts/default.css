@@ -254,22 +254,29 @@ li > a.menu-button {
 }
 
 /* line 79, ../../sass/layouts/default.sass */
+.flash-failure {
+  position: fixed;
+  right: 0;
+  z-index: 2000;
+}
+
+/* line 84, ../../sass/layouts/default.sass */
 .navbar-brand {
   height: auto;
 }
 
-/* line 82, ../../sass/layouts/default.sass */
+/* line 87, ../../sass/layouts/default.sass */
 .navbar-default .navbar-nav > li > a:hover {
   color: #dd104c;
 }
 
-/* line 85, ../../sass/layouts/default.sass */
+/* line 90, ../../sass/layouts/default.sass */
 .nav.redes-sociales a {
   padding-left: 7px;
   padding-right: 7px;
 }
 
-/* line 89, ../../sass/layouts/default.sass */
+/* line 94, ../../sass/layouts/default.sass */
 .row-login {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
@@ -282,21 +289,21 @@ li > a.menu-button {
   width: 199px;
   z-index: 100;
 }
-/* line 100, ../../sass/layouts/default.sass */
+/* line 105, ../../sass/layouts/default.sass */
 .row-login a, .row-login a:visited {
   color: white;
 }
-/* line 103, ../../sass/layouts/default.sass */
+/* line 108, ../../sass/layouts/default.sass */
 .row-login a:hover {
   color: #feccda;
 }
 
-/* line 108, ../../sass/layouts/default.sass */
+/* line 113, ../../sass/layouts/default.sass */
 .row-header-h1 {
   margin-bottom: 20px;
 }
 
-/* line 111, ../../sass/layouts/default.sass */
+/* line 116, ../../sass/layouts/default.sass */
 .row-redes-sociales {
   background-color: #dd104c;
   color: white;
@@ -306,17 +313,17 @@ li > a.menu-button {
   position: fixed;
   z-index: 100;
 }
-/* line 120, ../../sass/layouts/default.sass */
+/* line 125, ../../sass/layouts/default.sass */
 .row-redes-sociales a, .row-redes-sociales a:visited {
   color: white;
 }
 
-/* line 123, ../../sass/layouts/default.sass */
+/* line 128, ../../sass/layouts/default.sass */
 #container {
   margin-top: 90px;
 }
 
-/* line 126, ../../sass/layouts/default.sass */
+/* line 131, ../../sass/layouts/default.sass */
 #container-h1 {
   height: 0;
   width: 80px;

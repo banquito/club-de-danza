@@ -28,7 +28,6 @@ class UsersController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			debug($this->request->data);
 			
 			# Se carga la librería del catpcha
 			// require_once('recaptchalib.php');

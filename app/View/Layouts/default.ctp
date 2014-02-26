@@ -33,13 +33,14 @@
 			?>
 
 		</header>
+		
+		<?php echo $this->Session->flash('flash', array('element' => 'failure')); ?>
 
 		<div id="container" class="container">
 			<div class="row">
 				
 				<!-- Contenido -->
 				<section id="content" class="col-sm-9">
-					<?php //echo $this->Session->flash(); ?>
 					<?php echo $this->fetch('content'); ?>
 				</section>
 				
