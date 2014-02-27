@@ -7,6 +7,8 @@ app/[Cc]onfig/core.php
 app/[Cc]onfig/database.php
 !empty
 
+/backups
+
 app/Vendor/extras.php
 
 app/webroot/img/banners/*
