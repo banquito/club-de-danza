@@ -68,7 +68,7 @@ a.btn-vermas img {
 
 /* line 52, ../../sass/_cajas.sass */
 .thumbnail-vermas {
-  background-image: url('/img/layouts/vermas.png?1393088704');
+  background-image: url('/img/layouts/vermas.png?1393415468');
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -193,7 +193,7 @@ h3 {
 
 /* line 36, ../../sass/layouts/default.sass */
 header nav {
-  background-image: url('/img/layouts/backheader.jpg?1393088704');
+  background-image: url('/img/layouts/backheader.jpg?1393415468');
 }
 /* line 39, ../../sass/layouts/default.sass */
 header nav.navbar {
@@ -263,20 +263,25 @@ li > a.menu-button {
 /* line 84, ../../sass/layouts/default.sass */
 .navbar-brand {
   height: auto;
+  padding-top: 11px;
 }
 
-/* line 87, ../../sass/layouts/default.sass */
+/* line 88, ../../sass/layouts/default.sass */
 .navbar-default .navbar-nav > li > a:hover {
   color: #dd104c;
 }
 
-/* line 90, ../../sass/layouts/default.sass */
+/* line 91, ../../sass/layouts/default.sass */
 .nav.redes-sociales a {
   padding-left: 7px;
   padding-right: 7px;
 }
+/* line 95, ../../sass/layouts/default.sass */
+.nav.redes-sociales a .fa {
+  vertical-align: top;
+}
 
-/* line 94, ../../sass/layouts/default.sass */
+/* line 98, ../../sass/layouts/default.sass */
 .row-login {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
@@ -289,21 +294,21 @@ li > a.menu-button {
   width: 199px;
   z-index: 100;
 }
-/* line 105, ../../sass/layouts/default.sass */
+/* line 109, ../../sass/layouts/default.sass */
 .row-login a, .row-login a:visited {
   color: white;
 }
-/* line 108, ../../sass/layouts/default.sass */
+/* line 112, ../../sass/layouts/default.sass */
 .row-login a:hover {
   color: #feccda;
 }
 
-/* line 113, ../../sass/layouts/default.sass */
+/* line 117, ../../sass/layouts/default.sass */
 .row-header-h1 {
   margin-bottom: 20px;
 }
 
-/* line 116, ../../sass/layouts/default.sass */
+/* line 120, ../../sass/layouts/default.sass */
 .row-redes-sociales {
   background-color: #dd104c;
   color: white;
@@ -313,17 +318,17 @@ li > a.menu-button {
   position: fixed;
   z-index: 100;
 }
-/* line 125, ../../sass/layouts/default.sass */
+/* line 129, ../../sass/layouts/default.sass */
 .row-redes-sociales a, .row-redes-sociales a:visited {
   color: white;
 }
 
-/* line 128, ../../sass/layouts/default.sass */
+/* line 132, ../../sass/layouts/default.sass */
 #container {
   margin-top: 90px;
 }
 
-/* line 131, ../../sass/layouts/default.sass */
+/* line 135, ../../sass/layouts/default.sass */
 #container-h1 {
   height: 0;
   width: 80px;
