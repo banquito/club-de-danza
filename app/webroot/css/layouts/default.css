@@ -225,76 +225,52 @@ li > a.menu-button {
 }
 
 /* line 58, ../../sass/layouts/default.sass */
-.carousel-control .glyphicon-chevron-left {
-  margin-left: -4px;
-}
-
-/* line 61, ../../sass/layouts/default.sass */
-.carousel-inner {
-  box-shadow: 0 0 5px 5px #cccccc;
-  margin-bottom: 20px;
-}
-/* line 65, ../../sass/layouts/default.sass */
-.carousel-inner .item {
-  height: 194px;
-  min-height: 194px;
-  max-height: 194px;
-}
-/* line 70, ../../sass/layouts/default.sass */
-.carousel-inner a {
-  color: white;
-  font-family: "Homenaje";
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-
-/* line 76, ../../sass/layouts/default.sass */
 .col-login {
   background-color: #dd104c;
 }
 
-/* line 79, ../../sass/layouts/default.sass */
+/* line 61, ../../sass/layouts/default.sass */
 .flash-failure {
   position: fixed;
   right: 0;
   z-index: 2000;
 }
 
-/* line 84, ../../sass/layouts/default.sass */
+/* line 66, ../../sass/layouts/default.sass */
 .navbar-brand {
   height: auto;
   padding-top: 12px;
 }
 
-/* line 88, ../../sass/layouts/default.sass */
+/* line 70, ../../sass/layouts/default.sass */
 .navbar-default .navbar-nav > li > a:hover {
   color: #dd104c;
 }
 
-/* line 91, ../../sass/layouts/default.sass */
+/* line 73, ../../sass/layouts/default.sass */
 .nav.redes-sociales a {
   padding-left: 7px;
   padding-right: 7px;
 }
-/* line 95, ../../sass/layouts/default.sass */
+/* line 77, ../../sass/layouts/default.sass */
 .nav.redes-sociales a .fa {
   vertical-align: top;
 }
-/* line 98, ../../sass/layouts/default.sass */
+/* line 80, ../../sass/layouts/default.sass */
 .nav.redes-sociales a.stack {
   padding-bottom: 10px;
   padding-top: 10px;
 }
-/* line 102, ../../sass/layouts/default.sass */
+/* line 84, ../../sass/layouts/default.sass */
 .nav.redes-sociales a.stack.facebook:hover {
   color: #3b5998;
 }
-/* line 105, ../../sass/layouts/default.sass */
+/* line 87, ../../sass/layouts/default.sass */
 .nav.redes-sociales a.stack.twitter:hover {
   color: #55acee;
 }
 
-/* line 108, ../../sass/layouts/default.sass */
+/* line 90, ../../sass/layouts/default.sass */
 .row-login {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
@@ -302,26 +278,26 @@ li > a.menu-button {
   color: white;
   margin-bottom: 18px;
   margin-left: 7px;
-  margin-top: -40px;
+  margin-top: -20px;
   position: fixed;
   width: 199px;
   z-index: 100;
 }
-/* line 119, ../../sass/layouts/default.sass */
+/* line 101, ../../sass/layouts/default.sass */
 .row-login a, .row-login a:visited {
   color: white;
 }
-/* line 122, ../../sass/layouts/default.sass */
+/* line 104, ../../sass/layouts/default.sass */
 .row-login a:hover {
   color: #feccda;
 }
 
-/* line 127, ../../sass/layouts/default.sass */
+/* line 109, ../../sass/layouts/default.sass */
 .row-header-h1 {
   margin-bottom: 20px;
 }
 
-/* line 130, ../../sass/layouts/default.sass */
+/* line 112, ../../sass/layouts/default.sass */
 .row-redes-sociales {
   background-color: #dd104c;
   color: white;
@@ -331,17 +307,17 @@ li > a.menu-button {
   position: fixed;
   z-index: 100;
 }
-/* line 139, ../../sass/layouts/default.sass */
+/* line 121, ../../sass/layouts/default.sass */
 .row-redes-sociales a, .row-redes-sociales a:visited {
   color: white;
 }
 
-/* line 142, ../../sass/layouts/default.sass */
+/* line 124, ../../sass/layouts/default.sass */
 #container {
-  margin-top: 90px;
+  margin-top: 70px;
 }
 
-/* line 145, ../../sass/layouts/default.sass */
+/* line 127, ../../sass/layouts/default.sass */
 #container-h1 {
   height: 0;
   width: 80px;

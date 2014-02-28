@@ -30,3 +30,27 @@
   opacity: 0.9;
   width: 50%;
 }
+
+/* line 30, ../../sass/_carrousel.sass */
+.carousel-control .glyphicon-chevron-left {
+  margin-left: -4px;
+}
+
+/* line 33, ../../sass/_carrousel.sass */
+.carousel-inner {
+  box-shadow: 0 0 5px 5px #cccccc;
+  margin-bottom: 20px;
+}
+/* line 37, ../../sass/_carrousel.sass */
+.carousel-inner .item {
+  height: 252px;
+  min-height: 252px;
+  max-height: 252px;
+}
+/* line 42, ../../sass/_carrousel.sass */
+.carousel-inner a {
+  color: white;
+  font-family: "Homenaje";
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
