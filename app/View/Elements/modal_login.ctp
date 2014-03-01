@@ -9,12 +9,12 @@
 			<div class="modal-body">
 				<?php echo $this->Form->create('User', array('action' => 'login', 'class' => 'form-horizontal', 'role' => 'form')) ?>
 					<div class="form-group">
-						<label for="inputEmail3" class="col-sm-4 control-label"><?php echo __('Nombre de Usuario'); ?></label>
+						<label for="inputEmail3" class="col-sm-4 control-label"><?php echo __('Email'); ?></label>
 						<div class="col-sm-4">
-							<?php	echo $this->Form->input('username', array(
+							<?php	echo $this->Form->input('email', array(
 								'class' => 'form-control',
 								'label' => false,
-								'placeholder' => __('Nombre de Usuario'),
+								'placeholder' => __('Email'),
 								'required' => 'required',
 								'type' => 'text'
 							));
@@ -22,12 +22,12 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-4 control-label"><?php echo __('Contraseña'); ?></label>
+						<label for="inputPassword3" class="col-sm-4 control-label"><?php echo __('Password'); ?></label>
 						<div class="col-sm-4">
 							<?php echo $this->Form->input('password', array(
 								'class' => 'form-control',
 								'label' => false,
-								'placeholder' => __('Contraseña'),
+								'placeholder' => __('Password'),
 								'required' => 'required',
 								'type' => 'password'
 							));
@@ -36,7 +36,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-4 col-sm-2">
-							<button type="submit" class="btn btn-default"><?php echo __('Aceptar'); ?></button>
+							<button type="submit" class="btn btn-default"><?php echo __('Accept'); ?></button>
 						</div>
 						<div class="col-sm-2">
 							<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Close') ?></button>

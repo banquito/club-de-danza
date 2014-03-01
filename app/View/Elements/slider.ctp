@@ -24,6 +24,10 @@
     </div>
 
     <!-- Controls -->
-    <a class="left carousel-control" href="#slider-home" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
-    <a class="right carousel-control" href="#slider-home" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+    <a class="left carousel-control" href="#slider-home" data-slide="prev">
+        <span class="fa fa-angle-left fa-2x"></span>
+    </a>
+    <a class="right carousel-control" href="#slider-home" data-slide="next">
+        <span class="fa fa-angle-right fa-2x"></span>
+    </a>
 </div>

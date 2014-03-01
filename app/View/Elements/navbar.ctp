@@ -47,13 +47,19 @@
 					</a>
 				</li>
 				<li>
-					<a href="#" class="btn">
-					<i class="fa fa-facebook-square"></i>
+					<a href="#" class="btn stack twitter">
+						<span class="fa-stack">
+							<i class="fa fa-stack-2x fa-circle"></i>
+							<i class="fa fa-stack-1x fa-twitter fa-inverse"></i>
+						</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="btn">
-					<i class="fa fa-twitter-square"></i>
+					<a href="#" class="btn stack facebook">
+						<span class="fa-stack">
+							<i class="fa fa-stack-2x fa-circle"></i>
+							<i class="fa fa-stack-1x fa-facebook fa-inverse"></i>
+						</span>
 					</a>
 				</li>
 			</ul>
