@@ -21,33 +21,43 @@
 
 /* line 20, ../../sass/_carrousel.sass */
 .carousel-caption {
-  background-color: #dd104c;
+  background-color: rgba(221, 16, 76, 0.8);
   bottom: 0;
   color: white;
-  height: 30%;
+  height: 20%;
   left: 0;
   padding: 3px 5px;
   opacity: 0.9;
   width: 50%;
 }
 
-/* line 30, ../../sass/_carrousel.sass */
-.carousel-control .glyphicon-chevron-left {
-  margin-left: -4px;
+/* line 31, ../../sass/_carrousel.sass */
+.carousel-control > .fa {
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+}
+/* line 36, ../../sass/_carrousel.sass */
+.carousel-control > .fa.fa-angle-left {
+  left: 5px;
+}
+/* line 39, ../../sass/_carrousel.sass */
+.carousel-control > .fa.fa-angle-right {
+  right: 5px;
 }
 
-/* line 33, ../../sass/_carrousel.sass */
+/* line 44, ../../sass/_carrousel.sass */
 .carousel-inner {
-  box-shadow: 0 0 5px 5px #cccccc;
+  box-shadow: 0 0 2px 2px #cccccc;
   margin-bottom: 20px;
 }
-/* line 37, ../../sass/_carrousel.sass */
+/* line 48, ../../sass/_carrousel.sass */
 .carousel-inner .item {
   height: 252px;
   min-height: 252px;
   max-height: 252px;
 }
-/* line 42, ../../sass/_carrousel.sass */
+/* line 53, ../../sass/_carrousel.sass */
 .carousel-inner a {
   color: white;
   font-family: "Homenaje";

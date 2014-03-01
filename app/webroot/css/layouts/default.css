@@ -23,11 +23,11 @@ a.btn-vermas img {
 }
 /* line 18, ../../sass/_cajas.sass */
 .row-banner img {
-  height: 150px;
+  height: 200px;
 }
 /* line 21, ../../sass/_cajas.sass */
 .row-banner img.banner-large {
-  height: 300px;
+  height: 400px;
 }
 
 /* line 24, ../../sass/_cajas.sass */
@@ -43,7 +43,7 @@ a.btn-vermas img {
 /* line 31, ../../sass/_cajas.sass */
 .thumbnail-horizontal {
   display: table;
-  width: 440px;
+  width: 454px;
 }
 /* line 35, ../../sass/_cajas.sass */
 .thumbnail-horizontal .caption-vermas {
@@ -71,19 +71,20 @@ a.btn-vermas img {
   background-image: url('/img/layouts/vermas.png?1393415468');
   background-repeat: no-repeat;
   background-position: bottom right;
+  background-size: 12%;
 }
 
-/* line 58, ../../sass/_cajas.sass */
+/* line 59, ../../sass/_cajas.sass */
 .thumbnail-vertical {
   display: table;
   width: 100%;
 }
-/* line 62, ../../sass/_cajas.sass */
+/* line 63, ../../sass/_cajas.sass */
 .thumbnail-vertical .caption-vermas {
   display: table-row;
   height: 72%;
 }
-/* line 66, ../../sass/_cajas.sass */
+/* line 67, ../../sass/_cajas.sass */
 .thumbnail-vertical .img-vertical {
   height: 100%;
   max-height: 135px;
@@ -91,7 +92,7 @@ a.btn-vermas img {
   padding-bottom: 2px;
   vertical-align: middle;
 }
-/* line 73, ../../sass/_cajas.sass */
+/* line 74, ../../sass/_cajas.sass */
 .thumbnail-vertical img {
   max-height: 135px;
   margin-bottom: auto;
@@ -99,7 +100,7 @@ a.btn-vermas img {
   max-width: 100%;
 }
 
-/* line 80, ../../sass/_cajas.sass */
+/* line 81, ../../sass/_cajas.sass */
 .title-vermas {
   color: #dd104c;
   font-family: "Fagono";
@@ -108,12 +109,12 @@ a.btn-vermas img {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 88, ../../sass/_cajas.sass */
+/* line 89, ../../sass/_cajas.sass */
 .title-vermas:hover {
   color: #a00f34;
 }
 
-/* line 91, ../../sass/_cajas.sass */
+/* line 92, ../../sass/_cajas.sass */
 #text-nota4 {
   height: 100%;
 }
