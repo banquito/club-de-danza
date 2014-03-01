@@ -9,6 +9,7 @@ app/[Cc]onfig/database.php
 
 app/Vendor/extras.php
 
+app/webroot/.sass-cache/*
 app/webroot/img/banners/*
 app/webroot/img/notes/*
 app/webroot/img/sliders/*
