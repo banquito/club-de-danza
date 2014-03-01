@@ -43,6 +43,11 @@ class AppController extends Controller {
 			'loginRedirect' => '/',
 			'logoutRedirect' => '/',
 			'authorize' => array('Controller'),
+			'authenticate' => array(
+				'Form' => array(
+					'fields' => array('username' => 'email')
+				)
+			)
 		),
 	);
 

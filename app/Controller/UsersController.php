@@ -135,7 +135,7 @@ public function login() {
 		if ($this->request->is('post')) {
 			if (isset($this->request->data['User'])) {
 				$user = $this->request->data['User'];
-				$confirmed = $this->User->field('confirmed', array('username' => $user['username']));
+				$confirmed = $this->User->field('confirmed', array('email' => $user['email']));
 
 				if($confirmed) {
 					if ($this->Auth->login()) {
