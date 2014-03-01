@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-02-26 19:23-0300\n"
+"POT-Creation-Date: 2014-02-28 21:47-0300\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -180,31 +180,31 @@ msgstr ""
 msgid "The state could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/UsersController.php:52
+#: Controller/UsersController.php:51
 msgid "The reCAPTCHA wasn't entered correctly. Go back and try it again."
 msgstr ""
 
-#: Controller/UsersController.php:84;220
+#: Controller/UsersController.php:83;219
 msgid "The user could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/UsersController.php:102;198;213;241
+#: Controller/UsersController.php:101;197;212;240
 msgid "Invalid user"
 msgstr ""
 
-#: Controller/UsersController.php:147
+#: Controller/UsersController.php:146
 msgid "Invalid username or password, try again"
 msgstr ""
 
-#: Controller/UsersController.php:217
+#: Controller/UsersController.php:216
 msgid "The user has been saved."
 msgstr ""
 
-#: Controller/UsersController.php:245
+#: Controller/UsersController.php:244
 msgid "The user has been deleted."
 msgstr ""
 
-#: Controller/UsersController.php:247
+#: Controller/UsersController.php:246
 msgid "The user could not be deleted. Please, try again."
 msgstr ""
 
@@ -592,12 +592,10 @@ msgstr ""
 
 #: View/Banners/add.ctp:75
 #: View/Banners/edit.ctp:92
-#: View/Elements/modal_login.ctp:39
 #: View/Notes/add.ctp:84
 #: View/Notes/edit.ctp:94
 #: View/Sliders/add.ctp:63
 #: View/Sliders/edit.ctp:79
-#: View/Users/login.ctp:36
 msgid "Aceptar"
 msgstr ""
 
@@ -758,18 +756,35 @@ msgid "Country Id"
 msgstr ""
 
 #: View/Elements/modal_login.ctp:7
-#: View/Layouts/default.ctp:66
+#: View/Layouts/default.ctp:63
 msgid "Login"
 msgstr ""
 
 #: View/Elements/modal_login.ctp:12;17
+#: View/Elements/modal_register.ctp:70
+#: View/Rols/view.ctp:59
+#: View/States/view.ctp:56
+#: View/Users/add.ctp:66
+#: View/Users/admin_view.ctp:41
 #: View/Users/login.ctp:9;14
-msgid "Nombre de Usuario"
+#: View/Users/view.ctp:34
+msgid "Email"
 msgstr ""
 
 #: View/Elements/modal_login.ctp:25;30
+#: View/Elements/modal_register.ctp:23
+#: View/Rols/view.ctp:54
+#: View/States/view.ctp:51
+#: View/Users/add.ctp:19
+#: View/Users/admin_view.ctp:16
 #: View/Users/login.ctp:22;27
-msgid "Contraseña"
+#: View/Users/view.ctp:9
+msgid "Password"
+msgstr ""
+
+#: View/Elements/modal_login.ctp:39
+#: View/Users/login.ctp:36
+msgid "Accept"
 msgstr ""
 
 #: View/Elements/modal_login.ctp:42
@@ -777,7 +792,7 @@ msgid "Close"
 msgstr ""
 
 #: View/Elements/modal_register.ctp:12
-#: View/Layouts/default.ctp:75
+#: View/Layouts/default.ctp:72
 msgid "Register"
 msgstr ""
 
@@ -788,15 +803,6 @@ msgstr ""
 #: View/Users/admin_view.ctp:11
 #: View/Users/view.ctp:4
 msgid "Username"
-msgstr ""
-
-#: View/Elements/modal_register.ctp:23
-#: View/Rols/view.ctp:54
-#: View/States/view.ctp:51
-#: View/Users/add.ctp:19
-#: View/Users/admin_view.ctp:16
-#: View/Users/view.ctp:9
-msgid "Password"
 msgstr ""
 
 #: View/Elements/modal_register.ctp:29
@@ -829,15 +835,6 @@ msgstr ""
 #: View/Users/admin_view.ctp:36
 #: View/Users/view.ctp:29
 msgid "Birthday"
-msgstr ""
-
-#: View/Elements/modal_register.ctp:70
-#: View/Rols/view.ctp:59
-#: View/States/view.ctp:56
-#: View/Users/add.ctp:66
-#: View/Users/admin_view.ctp:41
-#: View/Users/view.ctp:34
-msgid "Email"
 msgstr ""
 
 #: View/Elements/modal_register.ctp:76
@@ -1067,5 +1064,9 @@ msgstr ""
 
 #: Model/User.php:validation for field email
 msgid "email"
+msgstr ""
+
+#: Model/User.php:validation for field email
+msgid "Email alredy registered"
 msgstr ""
 
