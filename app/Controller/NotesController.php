@@ -24,12 +24,47 @@ class NotesController extends AppController {
 		)
 	);
 
+	/*************************************************************************************************************************
+	* Autentication
+	**************************************************************************************************************************/
+
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow('inicio', 'view');
 	}
 
+	public function isAuthorized($user) {
+		$artist = array('index');
+		$admin = array('add', 'delete', 'edit', 'index');
 
+		// All artist users can index posts
+		if (in_array($this->action, $artist)) {
+			return true;
+		}
+
+		// // The owner of a post can edit and delete it
+		// if (in_array($this->action, array('edit', 'delete'))) {
+			// $postId = $this->request->params['pass'][0];
+			// if ($this->Post->isOwnedBy($postId, $user['id'])) {
+				// return true;
+			// }
+		// }
+
+		// $user = AuthComponent::user();  # creo que está demás...
+
+		# Usuario administrador(500) y superiores
+		if ($user['Rol']['weight'] >= User::ADMIN) {
+			if (in_array($this->action, $admin)) {
+				return true;
+			}
+		}
+
+		return parent::isAuthorized($user);
+	}
+
+	/*************************************************************************************************************************
+	* /autentication
+	**************************************************************************************************************************/
 
 /**
  * add method
@@ -91,34 +126,7 @@ class NotesController extends AppController {
 		$this->set('notes', $this->Paginator->paginate());
 	}
 
-	public function isAuthorized($user) {
-		$registered = array('index');
-		$admin = array('add', 'delete', 'edit', 'index');
-
-		// All registered users can index posts
-		if (in_array($this->action, $registered)) {
-			return true;
-		}
-
-		// // The owner of a post can edit and delete it
-		// if (in_array($this->action, array('edit', 'delete'))) {
-			// $postId = $this->request->params['pass'][0];
-			// if ($this->Post->isOwnedBy($postId, $user['id'])) {
-				// return true;
-			// }
-		// }
-
-		// $user = AuthComponent::user();  # creo que está demás...
-
-		# Usuario administrador(500) y superiores
-		if ($user['Rol']['weight'] >= User::ADMIN) {
-			if (in_array($this->action, $admin)) {
-				return true;
-			}
-		}
-
-		return parent::isAuthorized($user);
-	}
+	
 
 /**
  * view method

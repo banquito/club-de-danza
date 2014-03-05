@@ -36,7 +36,7 @@ echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>f
 						'class' => 'form-control',
 						'label' => false,
 						'placeholder' => __('Description'),
-						'required' => 'required',
+						// 'required' => 'required',
 					));
 					?>
 				</div>

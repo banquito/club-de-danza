@@ -35,7 +35,7 @@ if((strpos($this->params->url, 'notes') !== FALSE) || (strpos($this->params->url
 					</ul>
 				</li>
 				<li>
-					<a href="#" class="menu-button">Audiciones y Convocatorias</a>
+					<a href="/audiciones" class="menu-button">Audiciones y Convocatorias</a>
 				</li>
 				<li>
 					<a href="#" class="menu-button">Clasificados</a>

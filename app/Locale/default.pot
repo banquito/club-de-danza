@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-02-28 21:47-0300\n"
+"POT-Creation-Date: 2014-03-04 22:36-0300\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -13,6 +13,73 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/AuditionsController.php:107
+#: Controller/BannersController.php:68;115
+#: Controller/NotesController.php:89;173
+#: Controller/SlidersController.php:45;150
+msgid "The image could not be saved. Please, verify the file."
+msgstr ""
+
+#: Controller/AuditionsController.php:119;167
+msgid "The audition has been saved."
+msgstr ""
+
+#: Controller/AuditionsController.php:122;170
+msgid "The audition could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/AuditionsController.php:142;163;216
+msgid "Invalid audition"
+msgstr ""
+
+#: Controller/AuditionsController.php:146
+msgid "The audition has been deleted."
+msgstr ""
+
+#: Controller/AuditionsController.php:148
+msgid "The audition could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/AuditionsDancestylesController.php:37;73;102
+msgid "Invalid auditions dancestyle"
+msgstr ""
+
+#: Controller/AuditionsDancestylesController.php:52;77
+msgid "The auditions dancestyle has been saved."
+msgstr ""
+
+#: Controller/AuditionsDancestylesController.php:55;80
+msgid "The auditions dancestyle could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/AuditionsDancestylesController.php:106
+msgid "The auditions dancestyle has been deleted."
+msgstr ""
+
+#: Controller/AuditionsDancestylesController.php:108
+msgid "The auditions dancestyle could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/AuditionsProfessionsController.php:37;73;102
+msgid "Invalid auditions profession"
+msgstr ""
+
+#: Controller/AuditionsProfessionsController.php:52;77
+msgid "The auditions profession has been saved."
+msgstr ""
+
+#: Controller/AuditionsProfessionsController.php:55;80
+msgid "The auditions profession could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/AuditionsProfessionsController.php:106
+msgid "The auditions profession has been deleted."
+msgstr ""
+
+#: Controller/AuditionsProfessionsController.php:108
+msgid "The auditions profession could not be deleted. Please, try again."
+msgstr ""
 
 #: Controller/BannercategoriesController.php:37;72;100
 msgid "Invalid bannercategory"
@@ -58,12 +125,6 @@ msgstr ""
 msgid "Invalid banner"
 msgstr ""
 
-#: Controller/BannersController.php:68;115
-#: Controller/NotesController.php:54;165
-#: Controller/SlidersController.php:45;150
-msgid "The image could not be saved. Please, verify the file."
-msgstr ""
-
 #: Controller/BannersController.php:79;126
 msgid "The banner has been saved."
 msgstr ""
@@ -100,24 +161,64 @@ msgstr ""
 msgid "The country could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/NotesController.php:66;176
+#: Controller/DancestylesController.php:37;72;100
+msgid "Invalid dancestyle"
+msgstr ""
+
+#: Controller/DancestylesController.php:52;76
+msgid "The dancestyle has been saved."
+msgstr ""
+
+#: Controller/DancestylesController.php:55;79
+msgid "The dancestyle could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/DancestylesController.php:104
+msgid "The dancestyle has been deleted."
+msgstr ""
+
+#: Controller/DancestylesController.php:106
+msgid "The dancestyle could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/NotesController.php:101;184
 msgid "The note has been saved."
 msgstr ""
 
-#: Controller/NotesController.php:69;179
+#: Controller/NotesController.php:104;187
 msgid "The note could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/NotesController.php:132;148;201
+#: Controller/NotesController.php:140;156;209
 msgid "Invalid note"
 msgstr ""
 
-#: Controller/NotesController.php:205
+#: Controller/NotesController.php:213
 msgid "The note has been deleted."
 msgstr ""
 
-#: Controller/NotesController.php:207
+#: Controller/NotesController.php:215
 msgid "The note could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ProfessionsController.php:37;72;100
+msgid "Invalid profession"
+msgstr ""
+
+#: Controller/ProfessionsController.php:52;76
+msgid "The profession has been saved."
+msgstr ""
+
+#: Controller/ProfessionsController.php:55;79
+msgid "The profession could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ProfessionsController.php:104
+msgid "The profession has been deleted."
+msgstr ""
+
+#: Controller/ProfessionsController.php:106
+msgid "The profession could not be deleted. Please, try again."
 msgstr ""
 
 #: Controller/RolsController.php:42;74;99
@@ -208,16 +309,206 @@ msgstr ""
 msgid "The user could not be deleted. Please, try again."
 msgstr ""
 
-#: View/Bannercategories/add.ctp:4
-msgid "Add Bannercategory"
+#: View/Auditions/add.ctp:11;298
+msgid "Add Audition"
 msgstr ""
 
+#: View/Auditions/add.ctp:19
+#: View/Auditions/view.ctp:57
+#: View/Bannercategories/view.ctp:50
+#: View/Banners/add.ctp:11
+#: View/Banners/edit.ctp:16
+#: View/Banners/view.ctp:34
+#: View/Dancestyles/view.ctp:50
+#: View/Notes/add.ctp:19
+#: View/Notes/edit.ctp:17
+#: View/Professions/view.ctp:50
+#: View/Sliders/add.ctp:11
+#: View/Sliders/edit.ctp:16
+#: View/Users/admin_view.ctp:89
+msgid "Title"
+msgstr ""
+
+#: View/Auditions/add.ctp:24
+msgid "Audition title"
+msgstr ""
+
+#: View/Auditions/add.ctp:33;38
+#: View/Auditions/view.ctp:62
+#: View/Dancestyles/view.ctp:51
+#: View/Notes/add.ctp:38
+#: View/Notes/edit.ctp:36
+#: View/Professions/view.ctp:51
+#: View/Users/admin_view.ctp:90
+msgid "Description"
+msgstr ""
+
+#: View/Auditions/add.ctp:45;50
+#: View/Auditions/view.ctp:67
+#: View/Bannercategories/view.ctp:51
+#: View/Banners/add.ctp:25;30
+#: View/Banners/edit.ctp:32;45
+#: View/Banners/view.ctp:39
+#: View/Dancestyles/view.ctp:52
+#: View/Notes/add.ctp:46;51
+#: View/Notes/edit.ctp:46;59
+#: View/Professions/view.ctp:52
+#: View/Sliders/add.ctp:25;30
+#: View/Sliders/edit.ctp:32;45
+#: View/Users/admin_view.ctp:91
+msgid "Image"
+msgstr ""
+
+#: View/Auditions/add.ctp:58;63
+#: View/Auditions/view.ctp:72
+#: View/Dancestyles/view.ctp:53
+#: View/Professions/view.ctp:53
+msgid "Company"
+msgstr ""
+
+#: View/Auditions/add.ctp:70
+#: View/Auditions/view.ctp:77
+#: View/Dancestyles/view.ctp:54
+#: View/Elements/modal_register.ctp:47
+#: View/Professions/view.ctp:54
+#: View/Rols/view.ctp:57
+#: View/States/view.ctp:54
+#: View/Users/add.ctp:43
+#: View/Users/admin_view.ctp:31
+#: View/Users/view.ctp:24
+msgid "Gender"
+msgstr ""
+
+#: View/Auditions/add.ctp:81;86
+msgid "Age start"
+msgstr ""
+
+#: View/Auditions/add.ctp:93;98
+msgid "Age end"
+msgstr ""
+
+#: View/Auditions/add.ctp:105;115
+msgid "Audition date"
+msgstr ""
+
+#: View/Auditions/add.ctp:124;129
+#: View/Auditions/view.ctp:97
+#: View/Dancestyles/view.ctp:58
+#: View/Professions/view.ctp:58
+msgid "Street"
+msgstr ""
+
+#: View/Auditions/add.ctp:136;141
+#: View/Auditions/view.ctp:102
+#: View/Dancestyles/view.ctp:59
+#: View/Professions/view.ctp:59
+msgid "Floor"
+msgstr ""
+
+#: View/Auditions/add.ctp:148;153
+#: View/Auditions/view.ctp:107
+#: View/Dancestyles/view.ctp:60
+#: View/Professions/view.ctp:60
+msgid "Department"
+msgstr ""
+
+#: View/Auditions/add.ctp:160;170
+msgid "Inscription start"
+msgstr ""
+
+#: View/Auditions/add.ctp:179;189
+msgid "Inscription end"
+msgstr ""
+
+#: View/Auditions/add.ctp:198;203
+msgid "Inscription place"
+msgstr ""
+
+#: View/Auditions/add.ctp:210;215
+#: View/Auditions/view.ctp:127
+#: View/Dancestyles/view.ctp:64
+#: View/Professions/view.ctp:64
+msgid "Website"
+msgstr ""
+
+#: View/Auditions/add.ctp:222;227
+#: View/Auditions/view.ctp:132
+#: View/Dancestyles/view.ctp:65
+#: View/Elements/modal_login.ctp:12;17
+#: View/Elements/modal_register.ctp:70
+#: View/Professions/view.ctp:65
+#: View/Rols/view.ctp:59
+#: View/States/view.ctp:56
+#: View/Users/add.ctp:66
+#: View/Users/admin_view.ctp:41
+#: View/Users/login.ctp:9;14
+#: View/Users/view.ctp:34
+msgid "Email"
+msgstr ""
+
+#: View/Auditions/add.ctp:234;239
+#: View/Auditions/view.ctp:137
+#: View/Dancestyles/view.ctp:66
+#: View/Professions/view.ctp:66
+msgid "Phone"
+msgstr ""
+
+#: View/Auditions/add.ctp:246;251
+#: View/Auditions/view.ctp:152
+#: View/States/view.ctp:2
+#: View/Users/admin_view.ctp:61
+#: View/Users/view.ctp:44
+msgid "State"
+msgstr ""
+
+#: View/Auditions/add.ctp:258;263
+#: View/AuditionsDancestyles/view.ctp:24
+#: View/Dancestyles/view.ctp:2
+msgid "Dancestyle"
+msgstr ""
+
+#: View/Auditions/add.ctp:270;275
+#: View/AuditionsProfessions/view.ctp:24
+#: View/Professions/view.ctp:2
+msgid "Profession"
+msgstr ""
+
+#: View/Auditions/add.ctp:283
+#: View/Banners/add.ctp:75
+#: View/Banners/edit.ctp:92
+#: View/Notes/add.ctp:84
+#: View/Notes/edit.ctp:94
+#: View/Sliders/add.ctp:63
+#: View/Sliders/edit.ctp:79
+msgid "Aceptar"
+msgstr ""
+
+#: View/Auditions/add.ctp:286
+#: View/Banners/add.ctp:78
+#: View/Banners/edit.ctp:95
+#: View/Notes/add.ctp:87
+#: View/Notes/edit.ctp:97
+#: View/Sliders/add.ctp:66
+#: View/Sliders/edit.ctp:82
+msgid "Cancelar"
+msgstr ""
+
+#: View/Auditions/add.ctp:322
+#: View/Auditions/edit.ctp:30
+#: View/AuditionsDancestyles/add.ctp:11
+#: View/AuditionsDancestyles/edit.ctp:12
+#: View/AuditionsProfessions/add.ctp:11
+#: View/AuditionsProfessions/edit.ctp:12
 #: View/Bannercategories/add.ctp:11
 #: View/Bannercategories/edit.ctp:12
 #: View/BannersBannercategories/add.ctp:10
 #: View/BannersBannercategories/edit.ctp:11
 #: View/Countries/add.ctp:9
 #: View/Countries/edit.ctp:10
+#: View/Dancestyles/add.ctp:11
+#: View/Dancestyles/edit.ctp:12
+#: View/Professions/add.ctp:11
+#: View/Professions/edit.ctp:12
 #: View/Rols/add.ctp:11
 #: View/Rols/edit.ctp:12
 #: View/States/add.ctp:10
@@ -226,6 +517,22 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
+#: View/Auditions/edit.ctp:4
+#: View/Auditions/view.ctp:167
+msgid "Edit Audition"
+msgstr ""
+
+#: View/Auditions/edit.ctp:33
+#: View/Auditions/index.ctp:27;80
+#: View/Auditions/view.ctp:165;191;226
+#: View/AuditionsDancestyles/add.ctp:14
+#: View/AuditionsDancestyles/edit.ctp:15
+#: View/AuditionsDancestyles/index.ctp:11;50
+#: View/AuditionsDancestyles/view.ctp:37
+#: View/AuditionsProfessions/add.ctp:14
+#: View/AuditionsProfessions/edit.ctp:15
+#: View/AuditionsProfessions/index.ctp:11;50
+#: View/AuditionsProfessions/view.ctp:37
 #: View/Bannercategories/add.ctp:14
 #: View/Bannercategories/edit.ctp:15
 #: View/Bannercategories/index.ctp:10;44
@@ -240,7 +547,15 @@ msgstr ""
 #: View/Countries/edit.ctp:13
 #: View/Countries/index.ctp:9;40
 #: View/Countries/view.ctp:27;47
+#: View/Dancestyles/add.ctp:14
+#: View/Dancestyles/edit.ctp:15
+#: View/Dancestyles/index.ctp:10;44
+#: View/Dancestyles/view.ctp:32;71
 #: View/Notes/index.ctp:16
+#: View/Professions/add.ctp:14
+#: View/Professions/edit.ctp:15
+#: View/Professions/index.ctp:10;44
+#: View/Professions/view.ctp:32;71
 #: View/Rols/add.ctp:14
 #: View/Rols/edit.ctp:15
 #: View/Rols/index.ctp:11;44
@@ -256,22 +571,156 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: View/Bannercategories/add.ctp:17
-#: View/Bannercategories/edit.ctp:19
-#: View/Bannercategories/view.ctp:36
-#: View/Banners/view.ctp:80
-#: View/BannersBannercategories/add.ctp:19
-#: View/BannersBannercategories/edit.ctp:21
-#: View/BannersBannercategories/index.ctp:49
-#: View/BannersBannercategories/view.ctp:40
-msgid "List Bannercategories"
+#: View/Auditions/edit.ctp:36
+#: View/Auditions/index.ctp:60
+#: View/Auditions/view.ctp:203;238
+#: View/AuditionsDancestyles/edit.ctp:18
+#: View/AuditionsDancestyles/index.ctp:30
+#: View/AuditionsProfessions/edit.ctp:18
+#: View/AuditionsProfessions/index.ctp:30
+#: View/Bannercategories/edit.ctp:18
+#: View/Bannercategories/index.ctp:24
+#: View/Bannercategories/view.ctp:72
+#: View/Banners/index.ctp:26
+#: View/Banners/view.ctp:106
+#: View/BannersBannercategories/edit.ctp:17
+#: View/BannersBannercategories/index.ctp:24
+#: View/Countries/edit.ctp:16
+#: View/Countries/index.ctp:20
+#: View/Countries/view.ctp:59
+#: View/Dancestyles/edit.ctp:18
+#: View/Dancestyles/index.ctp:24
+#: View/Dancestyles/view.ctp:100
+#: View/Notes/index.ctp:31
+#: View/Professions/edit.ctp:18
+#: View/Professions/index.ctp:24
+#: View/Professions/view.ctp:100
+#: View/Rols/edit.ctp:18
+#: View/Rols/index.ctp:24
+#: View/Rols/view.ctp:83
+#: View/Sliders/index.ctp:26
+#: View/States/edit.ctp:17
+#: View/States/index.ctp:24
+#: View/States/view.ctp:80
+#: View/Users/admin_view.ctp:109
+#: View/Users/edit.ctp:24
+msgid "Delete"
 msgstr ""
 
+#: View/Auditions/edit.ctp:36
+#: View/Auditions/index.ctp:60
+#: View/Auditions/view.ctp:168;203;238
+#: View/AuditionsDancestyles/edit.ctp:18
+#: View/AuditionsDancestyles/index.ctp:30
+#: View/AuditionsDancestyles/view.ctp:40
+#: View/AuditionsProfessions/edit.ctp:18
+#: View/AuditionsProfessions/index.ctp:30
+#: View/AuditionsProfessions/view.ctp:40
+#: View/Bannercategories/edit.ctp:18
+#: View/Bannercategories/index.ctp:24
+#: View/Bannercategories/view.ctp:35;72
+#: View/Banners/index.ctp:26
+#: View/Banners/view.ctp:75;106
+#: View/BannersBannercategories/edit.ctp:17
+#: View/BannersBannercategories/index.ctp:24
+#: View/BannersBannercategories/view.ctp:35
+#: View/Countries/edit.ctp:16
+#: View/Countries/index.ctp:20
+#: View/Countries/view.ctp:30;59
+#: View/Dancestyles/edit.ctp:18
+#: View/Dancestyles/index.ctp:24
+#: View/Dancestyles/view.ctp:35;100
+#: View/Notes/index.ctp:31
+#: View/Professions/edit.ctp:18
+#: View/Professions/index.ctp:24
+#: View/Professions/view.ctp:35;100
+#: View/Rols/edit.ctp:18
+#: View/Rols/index.ctp:24
+#: View/Rols/view.ctp:40;83
+#: View/Sliders/index.ctp:26
+#: View/States/edit.ctp:17
+#: View/States/index.ctp:24
+#: View/States/view.ctp:35;80
+#: View/Users/admin_view.ctp:72;109
+#: View/Users/edit.ctp:24
+#: View/Users/index.ctp:37
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/Auditions/edit.ctp:37
+#: View/Auditions/view.ctp:169
+#: View/AuditionsDancestyles/add.ctp:18
+#: View/AuditionsDancestyles/edit.ctp:20
+#: View/AuditionsDancestyles/index.ctp:53
+#: View/AuditionsDancestyles/view.ctp:43
+#: View/AuditionsProfessions/add.ctp:18
+#: View/AuditionsProfessions/edit.ctp:20
+#: View/AuditionsProfessions/index.ctp:53
+#: View/AuditionsProfessions/view.ctp:43
+#: View/Dancestyles/add.ctp:20
+#: View/Dancestyles/edit.ctp:22
+#: View/Dancestyles/index.ctp:49
+#: View/Dancestyles/view.ctp:40
+#: View/Professions/add.ctp:20
+#: View/Professions/edit.ctp:22
+#: View/Professions/index.ctp:49
+#: View/Professions/view.ctp:40
+msgid "List Auditions"
+msgstr ""
+
+#: View/Auditions/edit.ctp:38
+#: View/Auditions/index.ctp:83
+#: View/Auditions/view.ctp:171
+#: View/Countries/add.ctp:16
+#: View/Countries/edit.ctp:18
+#: View/Countries/index.ctp:43
+#: View/Countries/view.ctp:33
+#: View/States/add.ctp:16
+#: View/States/edit.ctp:18
+#: View/States/view.ctp:36
+#: View/Users/admin_view.ctp:77
+#: View/Users/edit.ctp:28
+msgid "List States"
+msgstr ""
+
+#: View/Auditions/edit.ctp:39
+#: View/Auditions/index.ctp:84
+#: View/Auditions/view.ctp:172
+#: View/Countries/add.ctp:17
+#: View/Countries/edit.ctp:19
+#: View/Countries/index.ctp:44
+#: View/Countries/view.ctp:34;68
+#: View/States/index.ctp:46
+#: View/States/view.ctp:37
+#: View/Users/admin_view.ctp:78
+#: View/Users/edit.ctp:29
+msgid "New State"
+msgstr ""
+
+#: View/Auditions/edit.ctp:40
+#: View/Auditions/index.ctp:85
+#: View/Auditions/view.ctp:173
+#: View/AuditionsDancestyles/add.ctp:22
+#: View/AuditionsDancestyles/edit.ctp:24
+#: View/AuditionsDancestyles/index.ctp:57
+#: View/AuditionsDancestyles/view.ctp:47
+#: View/AuditionsProfessions/add.ctp:22
+#: View/AuditionsProfessions/edit.ctp:24
+#: View/AuditionsProfessions/index.ctp:57
+#: View/AuditionsProfessions/view.ctp:47
 #: View/Bannercategories/add.ctp:18
 #: View/Bannercategories/edit.ctp:20
 #: View/Bannercategories/index.ctp:47
 #: View/Bannercategories/view.ctp:38
 #: View/Banners/view.ctp:78
+#: View/Dancestyles/add.ctp:18
+#: View/Dancestyles/edit.ctp:20
+#: View/Dancestyles/index.ctp:47
+#: View/Dancestyles/view.ctp:38
+#: View/Professions/add.ctp:18
+#: View/Professions/edit.ctp:20
+#: View/Professions/index.ctp:47
+#: View/Professions/view.ctp:38
 #: View/Rols/add.ctp:18
 #: View/Rols/edit.ctp:20
 #: View/Rols/index.ctp:47
@@ -286,11 +735,30 @@ msgstr ""
 msgid "List Users"
 msgstr ""
 
+#: View/Auditions/edit.ctp:41
+#: View/Auditions/index.ctp:86
+#: View/Auditions/view.ctp:174
+#: View/AuditionsDancestyles/add.ctp:23
+#: View/AuditionsDancestyles/edit.ctp:25
+#: View/AuditionsDancestyles/index.ctp:58
+#: View/AuditionsDancestyles/view.ctp:48
+#: View/AuditionsProfessions/add.ctp:23
+#: View/AuditionsProfessions/edit.ctp:25
+#: View/AuditionsProfessions/index.ctp:58
+#: View/AuditionsProfessions/view.ctp:48
 #: View/Bannercategories/add.ctp:19
 #: View/Bannercategories/edit.ctp:21
 #: View/Bannercategories/index.ctp:48
 #: View/Bannercategories/view.ctp:39
 #: View/Banners/view.ctp:79
+#: View/Dancestyles/add.ctp:19
+#: View/Dancestyles/edit.ctp:21
+#: View/Dancestyles/index.ctp:48
+#: View/Dancestyles/view.ctp:39
+#: View/Professions/add.ctp:19
+#: View/Professions/edit.ctp:21
+#: View/Professions/index.ctp:48
+#: View/Professions/view.ctp:39
 #: View/Rols/add.ctp:19
 #: View/Rols/edit.ctp:21
 #: View/Rols/index.ctp:48
@@ -301,6 +769,402 @@ msgstr ""
 #: View/States/view.ctp:41;89
 #: View/Users/admin_view.ctp:74
 msgid "New User"
+msgstr ""
+
+#: View/Auditions/edit.ctp:42
+#: View/Auditions/index.ctp:87
+#: View/Auditions/view.ctp:175
+#: View/AuditionsDancestyles/add.ctp:20
+#: View/AuditionsDancestyles/edit.ctp:22
+#: View/AuditionsDancestyles/index.ctp:55
+#: View/AuditionsDancestyles/view.ctp:45
+#: View/Dancestyles/add.ctp:17
+#: View/Dancestyles/edit.ctp:19
+#: View/Dancestyles/view.ctp:36
+msgid "List Dancestyles"
+msgstr ""
+
+#: View/Auditions/edit.ctp:43
+#: View/Auditions/index.ctp:88
+#: View/Auditions/view.ctp:176;212
+#: View/AuditionsDancestyles/add.ctp:21
+#: View/AuditionsDancestyles/edit.ctp:23
+#: View/AuditionsDancestyles/index.ctp:56
+#: View/AuditionsDancestyles/view.ctp:46
+#: View/Dancestyles/index.ctp:46
+#: View/Dancestyles/view.ctp:37
+msgid "New Dancestyle"
+msgstr ""
+
+#: View/Auditions/edit.ctp:44
+#: View/Auditions/index.ctp:89
+#: View/Auditions/view.ctp:177
+#: View/AuditionsProfessions/add.ctp:20
+#: View/AuditionsProfessions/edit.ctp:22
+#: View/AuditionsProfessions/index.ctp:55
+#: View/AuditionsProfessions/view.ctp:45
+#: View/Professions/add.ctp:17
+#: View/Professions/edit.ctp:19
+#: View/Professions/view.ctp:36
+msgid "List Professions"
+msgstr ""
+
+#: View/Auditions/edit.ctp:45
+#: View/Auditions/index.ctp:90
+#: View/Auditions/view.ctp:178;247
+#: View/AuditionsProfessions/add.ctp:21
+#: View/AuditionsProfessions/edit.ctp:23
+#: View/AuditionsProfessions/index.ctp:56
+#: View/AuditionsProfessions/view.ctp:46
+#: View/Professions/index.ctp:46
+#: View/Professions/view.ctp:37
+msgid "New Profession"
+msgstr ""
+
+#: View/Auditions/index.ctp:2
+msgid "Auditions"
+msgstr ""
+
+#: View/Auditions/index.ctp:58
+#: View/Auditions/view.ctp:201;236
+#: View/AuditionsDancestyles/index.ctp:28
+#: View/AuditionsProfessions/index.ctp:28
+#: View/Bannercategories/index.ctp:22
+#: View/Bannercategories/view.ctp:70
+#: View/Banners/index.ctp:24
+#: View/Banners/view.ctp:104
+#: View/BannersBannercategories/index.ctp:22
+#: View/Countries/index.ctp:18
+#: View/Countries/view.ctp:57
+#: View/Dancestyles/index.ctp:22
+#: View/Dancestyles/view.ctp:98
+#: View/Notes/index.ctp:29
+#: View/Professions/index.ctp:22
+#: View/Professions/view.ctp:98
+#: View/Rols/index.ctp:22
+#: View/Rols/view.ctp:81
+#: View/Sliders/index.ctp:24
+#: View/States/index.ctp:22
+#: View/States/view.ctp:78
+#: View/Users/admin_view.ctp:107
+msgid "View"
+msgstr ""
+
+#: View/Auditions/index.ctp:59
+#: View/Auditions/view.ctp:202;237
+#: View/AuditionsDancestyles/index.ctp:29
+#: View/AuditionsProfessions/index.ctp:29
+#: View/Bannercategories/index.ctp:23
+#: View/Bannercategories/view.ctp:71
+#: View/Banners/index.ctp:25
+#: View/Banners/view.ctp:105
+#: View/BannersBannercategories/index.ctp:23
+#: View/Countries/index.ctp:19
+#: View/Countries/view.ctp:58
+#: View/Dancestyles/index.ctp:23
+#: View/Dancestyles/view.ctp:99
+#: View/Notes/index.ctp:30
+#: View/Professions/index.ctp:23
+#: View/Professions/view.ctp:99
+#: View/Rols/index.ctp:23
+#: View/Rols/view.ctp:82
+#: View/Sliders/index.ctp:25
+#: View/States/index.ctp:23
+#: View/States/view.ctp:79
+#: View/Users/admin_view.ctp:108
+msgid "Edit"
+msgstr ""
+
+#: View/Auditions/index.ctp:68
+#: View/AuditionsDancestyles/index.ctp:38
+#: View/AuditionsProfessions/index.ctp:38
+#: View/Bannercategories/index.ctp:32
+#: View/Banners/index.ctp:36
+#: View/BannersBannercategories/index.ctp:32
+#: View/Countries/index.ctp:28
+#: View/Dancestyles/index.ctp:32
+#: View/Notes/index.ctp:40
+#: View/Notes/inicio.ctp:47
+#: View/Professions/index.ctp:32
+#: View/Rols/index.ctp:32
+#: View/Sliders/index.ctp:36
+#: View/States/index.ctp:32
+#: View/Users/index.ctp:49
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: View/Auditions/index.ctp:73
+#: View/AuditionsDancestyles/index.ctp:43
+#: View/AuditionsProfessions/index.ctp:43
+#: View/Bannercategories/index.ctp:37
+#: View/Banners/index.ctp:42
+#: View/BannersBannercategories/index.ctp:37
+#: View/Countries/index.ctp:33
+#: View/Dancestyles/index.ctp:37
+#: View/Notes/index.ctp:46
+#: View/Notes/inicio.ctp:53
+#: View/Professions/index.ctp:37
+#: View/Rols/index.ctp:37
+#: View/Sliders/index.ctp:42
+#: View/States/index.ctp:37
+#: View/Users/index.ctp:55
+msgid "previous"
+msgstr ""
+
+#: View/Auditions/index.ctp:75
+#: View/AuditionsDancestyles/index.ctp:45
+#: View/AuditionsProfessions/index.ctp:45
+#: View/Bannercategories/index.ctp:39
+#: View/Banners/index.ctp:44
+#: View/BannersBannercategories/index.ctp:39
+#: View/Countries/index.ctp:35
+#: View/Dancestyles/index.ctp:39
+#: View/Notes/index.ctp:48
+#: View/Notes/inicio.ctp:55
+#: View/Professions/index.ctp:39
+#: View/Rols/index.ctp:39
+#: View/Sliders/index.ctp:44
+#: View/States/index.ctp:39
+#: View/Users/index.ctp:57
+msgid "next"
+msgstr ""
+
+#: View/Auditions/index.ctp:82
+#: View/Auditions/view.ctp:170
+#: View/AuditionsDancestyles/add.ctp:19
+#: View/AuditionsDancestyles/edit.ctp:21
+#: View/AuditionsDancestyles/index.ctp:54
+#: View/AuditionsDancestyles/view.ctp:44
+#: View/AuditionsProfessions/add.ctp:19
+#: View/AuditionsProfessions/edit.ctp:21
+#: View/AuditionsProfessions/index.ctp:54
+#: View/AuditionsProfessions/view.ctp:44
+#: View/Dancestyles/add.ctp:21
+#: View/Dancestyles/edit.ctp:23
+#: View/Dancestyles/index.ctp:50
+#: View/Dancestyles/view.ctp:41;109
+#: View/Professions/add.ctp:21
+#: View/Professions/edit.ctp:23
+#: View/Professions/index.ctp:50
+#: View/Professions/view.ctp:41;109
+msgid "New Audition"
+msgstr ""
+
+#: View/Auditions/view.ctp:52;186;221
+#: View/AuditionsDancestyles/view.ctp:4
+#: View/AuditionsProfessions/view.ctp:4
+#: View/Bannercategories/view.ctp:4;49
+#: View/Banners/view.ctp:29;89
+#: View/BannersBannercategories/view.ctp:4
+#: View/Countries/view.ctp:4;42
+#: View/Dancestyles/view.ctp:4;49
+#: View/Professions/view.ctp:4;49
+#: View/Rols/view.ctp:4;52
+#: View/States/view.ctp:4;49
+#: View/Users/admin_view.ctp:6;88
+msgid "Id"
+msgstr ""
+
+#: View/Auditions/view.ctp:82
+#: View/Dancestyles/view.ctp:55
+#: View/Professions/view.ctp:55
+msgid "Age-start"
+msgstr ""
+
+#: View/Auditions/view.ctp:87
+#: View/Dancestyles/view.ctp:56
+#: View/Professions/view.ctp:56
+msgid "Age-end"
+msgstr ""
+
+#: View/Auditions/view.ctp:92
+#: View/Dancestyles/view.ctp:57
+#: View/Professions/view.ctp:57
+msgid "Audition-date"
+msgstr ""
+
+#: View/Auditions/view.ctp:112
+msgid "Inscription-start"
+msgstr ""
+
+#: View/Auditions/view.ctp:117
+#: View/Dancestyles/view.ctp:62
+#: View/Professions/view.ctp:62
+msgid "Inscription-end"
+msgstr ""
+
+#: View/Auditions/view.ctp:122
+#: View/Dancestyles/view.ctp:63
+#: View/Professions/view.ctp:63
+msgid "Inscription-place"
+msgstr ""
+
+#: View/Auditions/view.ctp:142;188;223
+#: View/AuditionsDancestyles/view.ctp:9
+#: View/AuditionsProfessions/view.ctp:9
+#: View/Bannercategories/view.ctp:14;54
+#: View/Banners/view.ctp:54;91
+#: View/BannersBannercategories/view.ctp:19
+#: View/Countries/view.ctp:14;44
+#: View/Dancestyles/view.ctp:14;67
+#: View/Professions/view.ctp:14;67
+#: View/Rols/view.ctp:24;60
+#: View/States/view.ctp:14;57
+#: View/Users/admin_view.ctp:46;92
+#: View/Users/view.ctp:39
+msgid "Created"
+msgstr ""
+
+#: View/Auditions/view.ctp:147;189;224
+#: View/AuditionsDancestyles/view.ctp:14
+#: View/AuditionsProfessions/view.ctp:14
+#: View/Bannercategories/view.ctp:19;55
+#: View/Banners/view.ctp:59;92
+#: View/BannersBannercategories/view.ctp:24
+#: View/Countries/view.ctp:19;45
+#: View/Dancestyles/view.ctp:19;68
+#: View/Professions/view.ctp:19;68
+#: View/Rols/view.ctp:29;61
+#: View/States/view.ctp:19;58
+#: View/Users/admin_view.ctp:51;93
+msgid "Modified"
+msgstr ""
+
+#: View/Auditions/view.ctp:157
+#: View/AuditionsDancestyles/view.ctp:29
+#: View/AuditionsProfessions/view.ctp:29
+#: View/Bannercategories/view.ctp:24
+#: View/Banners/view.ctp:64
+#: View/Dancestyles/view.ctp:24
+#: View/Professions/view.ctp:24
+#: View/Users/admin_view.ctp:4
+#: View/Users/view.ctp:2
+msgid "User"
+msgstr ""
+
+#: View/Auditions/view.ctp:168
+msgid "Delete Audition"
+msgstr ""
+
+#: View/Auditions/view.ctp:182
+msgid "Related Dancestyles"
+msgstr ""
+
+#: View/Auditions/view.ctp:187;222
+#: View/Bannercategories/view.ctp:9
+#: View/Banners/view.ctp:90
+#: View/Countries/view.ctp:9;43
+#: View/Dancestyles/view.ctp:9
+#: View/Elements/modal_register.ctp:35
+#: View/Professions/view.ctp:9
+#: View/Rols/view.ctp:9;55
+#: View/States/view.ctp:9;52
+#: View/Users/add.ctp:31
+#: View/Users/admin_view.ctp:21
+#: View/Users/view.ctp:14
+msgid "Name"
+msgstr ""
+
+#: View/Auditions/view.ctp:190;225
+#: View/Bannercategories/view.ctp:56
+#: View/Banners/view.ctp:93
+#: View/Dancestyles/view.ctp:70
+#: View/Professions/view.ctp:70
+#: View/Users/admin_view.ctp:94
+msgid "User Id"
+msgstr ""
+
+#: View/Auditions/view.ctp:217
+msgid "Related Professions"
+msgstr ""
+
+#: View/AuditionsDancestyles/add.ctp:4
+msgid "Add Auditions Dancestyle"
+msgstr ""
+
+#: View/AuditionsDancestyles/add.ctp:17
+#: View/AuditionsDancestyles/edit.ctp:19
+#: View/AuditionsDancestyles/view.ctp:41
+msgid "List Auditions Dancestyles"
+msgstr ""
+
+#: View/AuditionsDancestyles/edit.ctp:4
+#: View/AuditionsDancestyles/view.ctp:39
+msgid "Edit Auditions Dancestyle"
+msgstr ""
+
+#: View/AuditionsDancestyles/index.ctp:2
+msgid "Auditions Dancestyles"
+msgstr ""
+
+#: View/AuditionsDancestyles/index.ctp:52
+#: View/AuditionsDancestyles/view.ctp:42
+msgid "New Auditions Dancestyle"
+msgstr ""
+
+#: View/AuditionsDancestyles/view.ctp:2
+msgid "Auditions Dancestyle"
+msgstr ""
+
+#: View/AuditionsDancestyles/view.ctp:19
+#: View/AuditionsProfessions/view.ctp:19
+msgid "Audition"
+msgstr ""
+
+#: View/AuditionsDancestyles/view.ctp:40
+msgid "Delete Auditions Dancestyle"
+msgstr ""
+
+#: View/AuditionsProfessions/add.ctp:4
+msgid "Add Auditions Profession"
+msgstr ""
+
+#: View/AuditionsProfessions/add.ctp:17
+#: View/AuditionsProfessions/edit.ctp:19
+#: View/AuditionsProfessions/view.ctp:41
+msgid "List Auditions Professions"
+msgstr ""
+
+#: View/AuditionsProfessions/edit.ctp:4
+#: View/AuditionsProfessions/view.ctp:39
+msgid "Edit Auditions Profession"
+msgstr ""
+
+#: View/AuditionsProfessions/index.ctp:2
+msgid "Auditions Professions"
+msgstr ""
+
+#: View/AuditionsProfessions/index.ctp:52
+#: View/AuditionsProfessions/view.ctp:42
+msgid "New Auditions Profession"
+msgstr ""
+
+#: View/AuditionsProfessions/view.ctp:2
+msgid "Auditions Profession"
+msgstr ""
+
+#: View/AuditionsProfessions/view.ctp:40
+msgid "Delete Auditions Profession"
+msgstr ""
+
+#: View/Auditionsearches/index.ctp:22
+#: View/Notes/inicio.ctp:31
+msgid "No Title"
+msgstr ""
+
+#: View/Bannercategories/add.ctp:4
+msgid "Add Bannercategory"
+msgstr ""
+
+#: View/Bannercategories/add.ctp:17
+#: View/Bannercategories/edit.ctp:19
+#: View/Bannercategories/view.ctp:36
+#: View/Banners/view.ctp:80
+#: View/BannersBannercategories/add.ctp:19
+#: View/BannersBannercategories/edit.ctp:21
+#: View/BannersBannercategories/index.ctp:49
+#: View/BannersBannercategories/view.ctp:40
+msgid "List Bannercategories"
 msgstr ""
 
 #: View/Bannercategories/add.ctp:20
@@ -333,129 +1197,8 @@ msgstr ""
 msgid "Edit Bannercategory"
 msgstr ""
 
-#: View/Bannercategories/edit.ctp:18
-#: View/Bannercategories/index.ctp:24
-#: View/Bannercategories/view.ctp:72
-#: View/Banners/index.ctp:26
-#: View/Banners/view.ctp:106
-#: View/BannersBannercategories/edit.ctp:17
-#: View/BannersBannercategories/index.ctp:24
-#: View/Countries/edit.ctp:16
-#: View/Countries/index.ctp:20
-#: View/Countries/view.ctp:59
-#: View/Notes/index.ctp:31
-#: View/Rols/edit.ctp:18
-#: View/Rols/index.ctp:24
-#: View/Rols/view.ctp:83
-#: View/Sliders/index.ctp:26
-#: View/States/edit.ctp:17
-#: View/States/index.ctp:24
-#: View/States/view.ctp:80
-#: View/Users/admin_view.ctp:109
-#: View/Users/edit.ctp:24
-msgid "Delete"
-msgstr ""
-
-#: View/Bannercategories/edit.ctp:18
-#: View/Bannercategories/index.ctp:24
-#: View/Bannercategories/view.ctp:35;72
-#: View/Banners/index.ctp:26
-#: View/Banners/view.ctp:75;106
-#: View/BannersBannercategories/edit.ctp:17
-#: View/BannersBannercategories/index.ctp:24
-#: View/BannersBannercategories/view.ctp:35
-#: View/Countries/edit.ctp:16
-#: View/Countries/index.ctp:20
-#: View/Countries/view.ctp:30;59
-#: View/Notes/index.ctp:31
-#: View/Rols/edit.ctp:18
-#: View/Rols/index.ctp:24
-#: View/Rols/view.ctp:40;83
-#: View/Sliders/index.ctp:26
-#: View/States/edit.ctp:17
-#: View/States/index.ctp:24
-#: View/States/view.ctp:35;80
-#: View/Users/admin_view.ctp:72;109
-#: View/Users/edit.ctp:24
-#: View/Users/index.ctp:37
-msgid "Are you sure you want to delete # %s?"
-msgstr ""
-
 #: View/Bannercategories/index.ctp:2
 msgid "Bannercategories"
-msgstr ""
-
-#: View/Bannercategories/index.ctp:22
-#: View/Bannercategories/view.ctp:70
-#: View/Banners/index.ctp:24
-#: View/Banners/view.ctp:104
-#: View/BannersBannercategories/index.ctp:22
-#: View/Countries/index.ctp:18
-#: View/Countries/view.ctp:57
-#: View/Notes/index.ctp:29
-#: View/Rols/index.ctp:22
-#: View/Rols/view.ctp:81
-#: View/Sliders/index.ctp:24
-#: View/States/index.ctp:22
-#: View/States/view.ctp:78
-#: View/Users/admin_view.ctp:107
-msgid "View"
-msgstr ""
-
-#: View/Bannercategories/index.ctp:23
-#: View/Bannercategories/view.ctp:71
-#: View/Banners/index.ctp:25
-#: View/Banners/view.ctp:105
-#: View/BannersBannercategories/index.ctp:23
-#: View/Countries/index.ctp:19
-#: View/Countries/view.ctp:58
-#: View/Notes/index.ctp:30
-#: View/Rols/index.ctp:23
-#: View/Rols/view.ctp:82
-#: View/Sliders/index.ctp:25
-#: View/States/index.ctp:23
-#: View/States/view.ctp:79
-#: View/Users/admin_view.ctp:108
-msgid "Edit"
-msgstr ""
-
-#: View/Bannercategories/index.ctp:32
-#: View/Banners/index.ctp:36
-#: View/BannersBannercategories/index.ctp:32
-#: View/Countries/index.ctp:28
-#: View/Notes/index.ctp:40
-#: View/Notes/inicio.ctp:47
-#: View/Rols/index.ctp:32
-#: View/Sliders/index.ctp:36
-#: View/States/index.ctp:32
-#: View/Users/index.ctp:49
-msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
-msgstr ""
-
-#: View/Bannercategories/index.ctp:37
-#: View/Banners/index.ctp:42
-#: View/BannersBannercategories/index.ctp:37
-#: View/Countries/index.ctp:33
-#: View/Notes/index.ctp:46
-#: View/Notes/inicio.ctp:53
-#: View/Rols/index.ctp:37
-#: View/Sliders/index.ctp:42
-#: View/States/index.ctp:37
-#: View/Users/index.ctp:55
-msgid "previous"
-msgstr ""
-
-#: View/Bannercategories/index.ctp:39
-#: View/Banners/index.ctp:44
-#: View/BannersBannercategories/index.ctp:39
-#: View/Countries/index.ctp:35
-#: View/Notes/index.ctp:48
-#: View/Notes/inicio.ctp:55
-#: View/Rols/index.ctp:39
-#: View/Sliders/index.ctp:44
-#: View/States/index.ctp:39
-#: View/Users/index.ctp:57
-msgid "next"
 msgstr ""
 
 #: View/Bannercategories/index.ctp:46
@@ -468,86 +1211,12 @@ msgstr ""
 msgid "Bannercategory"
 msgstr ""
 
-#: View/Bannercategories/view.ctp:4;49
-#: View/Banners/view.ctp:29;89
-#: View/BannersBannercategories/view.ctp:4
-#: View/Countries/view.ctp:4;42
-#: View/Rols/view.ctp:4;52
-#: View/States/view.ctp:4;49
-#: View/Users/admin_view.ctp:6;88
-msgid "Id"
-msgstr ""
-
-#: View/Bannercategories/view.ctp:9
-#: View/Banners/view.ctp:90
-#: View/Countries/view.ctp:9;43
-#: View/Elements/modal_register.ctp:35
-#: View/Rols/view.ctp:9;55
-#: View/States/view.ctp:9;52
-#: View/Users/add.ctp:31
-#: View/Users/admin_view.ctp:21
-#: View/Users/view.ctp:14
-msgid "Name"
-msgstr ""
-
-#: View/Bannercategories/view.ctp:14;54
-#: View/Banners/view.ctp:54;91
-#: View/BannersBannercategories/view.ctp:19
-#: View/Countries/view.ctp:14;44
-#: View/Rols/view.ctp:24;60
-#: View/States/view.ctp:14;57
-#: View/Users/admin_view.ctp:46;92
-#: View/Users/view.ctp:39
-msgid "Created"
-msgstr ""
-
-#: View/Bannercategories/view.ctp:19;55
-#: View/Banners/view.ctp:59;92
-#: View/BannersBannercategories/view.ctp:24
-#: View/Countries/view.ctp:19;45
-#: View/Rols/view.ctp:29;61
-#: View/States/view.ctp:19;58
-#: View/Users/admin_view.ctp:51;93
-msgid "Modified"
-msgstr ""
-
-#: View/Bannercategories/view.ctp:24
-#: View/Banners/view.ctp:64
-#: View/Users/admin_view.ctp:4
-#: View/Users/view.ctp:2
-msgid "User"
-msgstr ""
-
 #: View/Bannercategories/view.ctp:35
 msgid "Delete Bannercategory"
 msgstr ""
 
 #: View/Bannercategories/view.ctp:45
 msgid "Related Banners"
-msgstr ""
-
-#: View/Bannercategories/view.ctp:50
-#: View/Banners/add.ctp:11
-#: View/Banners/edit.ctp:16
-#: View/Banners/view.ctp:34
-#: View/Notes/add.ctp:19
-#: View/Notes/edit.ctp:17
-#: View/Sliders/add.ctp:11
-#: View/Sliders/edit.ctp:16
-#: View/Users/admin_view.ctp:89
-msgid "Title"
-msgstr ""
-
-#: View/Bannercategories/view.ctp:51
-#: View/Banners/add.ctp:25;30
-#: View/Banners/edit.ctp:32;45
-#: View/Banners/view.ctp:39
-#: View/Notes/add.ctp:46;51
-#: View/Notes/edit.ctp:46;59
-#: View/Sliders/add.ctp:25;30
-#: View/Sliders/edit.ctp:32;45
-#: View/Users/admin_view.ctp:91
-msgid "Image"
 msgstr ""
 
 #: View/Bannercategories/view.ctp:52
@@ -568,12 +1237,6 @@ msgstr ""
 msgid "Published"
 msgstr ""
 
-#: View/Bannercategories/view.ctp:56
-#: View/Banners/view.ctp:93
-#: View/Users/admin_view.ctp:94
-msgid "User Id"
-msgstr ""
-
 #: View/Banners/add.ctp:3
 msgid "Add Banner"
 msgstr ""
@@ -588,24 +1251,6 @@ msgstr ""
 #: View/Banners/add.ctp:62;67
 #: View/Banners/edit.ctp:79;84
 msgid "Banner Category"
-msgstr ""
-
-#: View/Banners/add.ctp:75
-#: View/Banners/edit.ctp:92
-#: View/Notes/add.ctp:84
-#: View/Notes/edit.ctp:94
-#: View/Sliders/add.ctp:63
-#: View/Sliders/edit.ctp:79
-msgid "Aceptar"
-msgstr ""
-
-#: View/Banners/add.ctp:78
-#: View/Banners/edit.ctp:95
-#: View/Notes/add.ctp:87
-#: View/Notes/edit.ctp:97
-#: View/Sliders/add.ctp:66
-#: View/Sliders/edit.ctp:82
-msgid "Cancelar"
 msgstr ""
 
 #: View/Banners/edit.ctp:7
@@ -697,29 +1342,6 @@ msgstr ""
 msgid "List Countries"
 msgstr ""
 
-#: View/Countries/add.ctp:16
-#: View/Countries/edit.ctp:18
-#: View/Countries/index.ctp:43
-#: View/Countries/view.ctp:33
-#: View/States/add.ctp:16
-#: View/States/edit.ctp:18
-#: View/States/view.ctp:36
-#: View/Users/admin_view.ctp:77
-#: View/Users/edit.ctp:28
-msgid "List States"
-msgstr ""
-
-#: View/Countries/add.ctp:17
-#: View/Countries/edit.ctp:19
-#: View/Countries/index.ctp:44
-#: View/Countries/view.ctp:34;68
-#: View/States/index.ctp:46
-#: View/States/view.ctp:37
-#: View/Users/admin_view.ctp:78
-#: View/Users/edit.ctp:29
-msgid "New State"
-msgstr ""
-
 #: View/Countries/edit.ctp:4
 #: View/Countries/view.ctp:29
 msgid "Edit Country"
@@ -755,20 +1377,43 @@ msgstr ""
 msgid "Country Id"
 msgstr ""
 
+#: View/Dancestyles/add.ctp:4
+msgid "Add Dancestyle"
+msgstr ""
+
+#: View/Dancestyles/edit.ctp:4
+#: View/Dancestyles/view.ctp:34
+msgid "Edit Dancestyle"
+msgstr ""
+
+#: View/Dancestyles/index.ctp:2
+msgid "Dancestyles"
+msgstr ""
+
+#: View/Dancestyles/view.ctp:35
+msgid "Delete Dancestyle"
+msgstr ""
+
+#: View/Dancestyles/view.ctp:45
+#: View/Professions/view.ctp:45
+msgid "Related Auditions"
+msgstr ""
+
+#: View/Dancestyles/view.ctp:61
+#: View/Professions/view.ctp:61
+msgid "Inscription-star"
+msgstr ""
+
+#: View/Dancestyles/view.ctp:69
+#: View/Professions/view.ctp:69
+#: View/Rols/view.ctp:63
+#: View/States/view.ctp:60
+msgid "State Id"
+msgstr ""
+
 #: View/Elements/modal_login.ctp:7
 #: View/Layouts/default.ctp:63
 msgid "Login"
-msgstr ""
-
-#: View/Elements/modal_login.ctp:12;17
-#: View/Elements/modal_register.ctp:70
-#: View/Rols/view.ctp:59
-#: View/States/view.ctp:56
-#: View/Users/add.ctp:66
-#: View/Users/admin_view.ctp:41
-#: View/Users/login.ctp:9;14
-#: View/Users/view.ctp:34
-msgid "Email"
 msgstr ""
 
 #: View/Elements/modal_login.ctp:25;30
@@ -819,15 +1464,6 @@ msgstr ""
 msgid "Lastname"
 msgstr ""
 
-#: View/Elements/modal_register.ctp:47
-#: View/Rols/view.ctp:57
-#: View/States/view.ctp:54
-#: View/Users/add.ctp:43
-#: View/Users/admin_view.ctp:31
-#: View/Users/view.ctp:24
-msgid "Gender"
-msgstr ""
-
 #: View/Elements/modal_register.ctp:58
 #: View/Rols/view.ctp:58
 #: View/States/view.ctp:55
@@ -869,12 +1505,6 @@ msgstr ""
 msgid "Short Description"
 msgstr ""
 
-#: View/Notes/add.ctp:38
-#: View/Notes/edit.ctp:36
-#: View/Users/admin_view.ctp:90
-msgid "Description"
-msgstr ""
-
 #: View/Notes/add.ctp:59;64
 #: View/Notes/edit.ctp:69;74
 msgid "Resume"
@@ -895,8 +1525,21 @@ msgstr ""
 msgid "List Notes"
 msgstr ""
 
-#: View/Notes/inicio.ctp:31
-msgid "No Title"
+#: View/Professions/add.ctp:4
+msgid "Add Profession"
+msgstr ""
+
+#: View/Professions/edit.ctp:4
+#: View/Professions/view.ctp:34
+msgid "Edit Profession"
+msgstr ""
+
+#: View/Professions/index.ctp:2
+msgid "Professions"
+msgstr ""
+
+#: View/Professions/view.ctp:35
+msgid "Delete Profession"
 msgstr ""
 
 #: View/Rols/add.ctp:4
@@ -954,11 +1597,6 @@ msgstr ""
 msgid "Rol Id"
 msgstr ""
 
-#: View/Rols/view.ctp:63
-#: View/States/view.ctp:60
-msgid "State Id"
-msgstr ""
-
 #: View/Sliders/edit.ctp:7
 msgid "Edit Slider"
 msgstr ""
@@ -982,12 +1620,6 @@ msgstr ""
 
 #: View/States/index.ctp:2
 msgid "States"
-msgstr ""
-
-#: View/States/view.ctp:2
-#: View/Users/admin_view.ctp:61
-#: View/Users/view.ctp:44
-msgid "State"
 msgstr ""
 
 #: View/States/view.ctp:35
@@ -1016,15 +1648,44 @@ msgstr ""
 msgid "Related Notes"
 msgstr ""
 
+#: Model/Audition.php:validation for field title;validation for field image;validation for field company;validation for field street
 #: Model/Banner.php:validation for field title;validation for field link
 #: Model/Bannercategory.php:validation for field name
 #: Model/Country.php:validation for field name
+#: Model/Dancestyle.php:validation for field name
 #: Model/Note.php:validation for field title
+#: Model/Profession.php:validation for field name
 #: Model/Rol.php:validation for field name;validation for field observation
 #: Model/Slider.php:validation for field title;validation for field link
 #: Model/State.php:validation for field name
 #: Model/User.php:validation for field username;validation for field password;validation for field name;validation for field lastname
 msgid "notEmpty"
+msgstr ""
+
+#: Model/Audition.php:validation for field audition-date;validation for field inscription-start;validation for field inscription-end
+msgid "datetime"
+msgstr ""
+
+#: Model/Audition.php:validation for field user_id
+#: Model/AuditionsDancestyle.php:validation for field audition_id;validation for field user_id
+#: Model/AuditionsProfession.php:validation for field audition_id;validation for field user_id
+#: Model/Banner.php:validation for field user_id
+#: Model/Bannercategory.php:validation for field user_id
+#: Model/BannersBannercategory.php:validation for field banner_id
+#: Model/Dancestyle.php:validation for field user_id
+#: Model/Note.php:validation for field user_id
+#: Model/Profession.php:validation for field user_id
+#: Model/Slider.php:validation for field user_id
+msgid "uuid"
+msgstr ""
+
+#: Model/AuditionsDancestyle.php:validation for field dancestyle_id
+#: Model/AuditionsProfession.php:validation for field profession_id
+#: Model/BannersBannercategory.php:validation for field bannercategory_id
+#: Model/Rol.php:validation for field weight
+#: Model/State.php:validation for field country_id
+#: Model/User.php:validation for field rol_id
+msgid "numeric"
 msgstr ""
 
 #: Model/Banner.php:validation for field image
@@ -1041,21 +1702,6 @@ msgstr ""
 
 #: Model/Banner.php:validation for field published
 msgid "boolean"
-msgstr ""
-
-#: Model/Banner.php:validation for field user_id
-#: Model/Bannercategory.php:validation for field user_id
-#: Model/BannersBannercategory.php:validation for field banner_id
-#: Model/Note.php:validation for field user_id
-#: Model/Slider.php:validation for field user_id
-msgid "uuid"
-msgstr ""
-
-#: Model/BannersBannercategory.php:validation for field bannercategory_id
-#: Model/Rol.php:validation for field weight
-#: Model/State.php:validation for field country_id
-#: Model/User.php:validation for field rol_id
-msgid "numeric"
 msgstr ""
 
 #: Model/User.php:validation for field username

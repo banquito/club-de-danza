@@ -20,7 +20,7 @@
 					<a href="/notas" class="menu-button">Notas</a>
 				</li>
 				<li>
-					<a href="#" class="menu-button">Audiciones y Convocatorias</a>
+					<a href="/audiciones" class="menu-button">Audiciones y Convocatorias</a>
 				</li>
 				<li>
 					<a href="#" class="menu-button">Clasificados</a>
