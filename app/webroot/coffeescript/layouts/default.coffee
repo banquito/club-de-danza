@@ -1,5 +1,6 @@
 jQuery ->
-	$('#datetimepicker10').datetimepicker({
+	# $('#datetimepicker10').datetimepicker({
+	$("[id^='datetimepicker']").datetimepicker({
 		language: 'es'
 		pickTime: false
 		icons: {
@@ -9,3 +10,4 @@ jQuery ->
 			down: "fa fa-arrow-down"
 		}
 	})
+

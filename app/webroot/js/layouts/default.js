@@ -1,6 +1,6 @@
 (function() {
   jQuery(function() {
-    return $('#datetimepicker10').datetimepicker({
+    return $("[id^='datetimepicker']").datetimepicker({
       language: 'es',
       pickTime: false,
       icons: {
