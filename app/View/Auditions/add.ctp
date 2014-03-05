@@ -1,10 +1,4 @@
-<?php 
-//echo $this->Html->css('notes/add', '', array('inline'=>FALSE));
-// debug(IMAGES_URL);
-// debug(WWW_ROOT);
-// debug(WWW_ROOT . IMAGES_URL . 'notes/');
-echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false));
-?>
+<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false)); ?>
 
 <div class="row row-header-h1">
 	<div class="col-sm-12">
@@ -289,36 +283,3 @@ echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>f
 		<?php echo $this->Form->end() ?>
 	</div>
 </div>
-
-
-<!-- 
-<div class="auditions form">
-<?php echo $this->Form->create('Audition'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Audition'); ?></legend>
-	<?php
-		echo $this->Form->input('title');
-		echo $this->Form->input('description');
-		echo $this->Form->input('image');
-		echo $this->Form->input('company');
-		echo $this->Form->input('gender');
-		echo $this->Form->input('age-start');
-		echo $this->Form->input('age-end');
-		echo $this->Form->input('audition-date');
-		echo $this->Form->input('street');
-		echo $this->Form->input('floor');
-		echo $this->Form->input('department');
-		echo $this->Form->input('inscription-start');
-		echo $this->Form->input('inscription-end');
-		echo $this->Form->input('inscription-place');
-		echo $this->Form->input('website');
-		echo $this->Form->input('email');
-		echo $this->Form->input('phone');
-		echo $this->Form->input('state_id');
-		echo $this->Form->input('Dancestyle');
-		echo $this->Form->input('Profession');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
- -->

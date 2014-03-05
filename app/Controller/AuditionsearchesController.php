@@ -43,55 +43,48 @@ class AuditionsearchesController extends AppController {
 	}
 
 
+	/**
+	* Se desarrolla una lógica para independizarnos de los nombres de los Controllers
+	*/
 	public function index() {
+		$elements = array();
+		$todas = 1;
+		
+		if ($this->request->is('post')) {
+			$data = $this->request->data;
+			$todas = sizeof($data) == 0;
+			$this->set(compact('data'));
+		}
+
+
+		if(isset($data['auditions']) || $todas)
+			$elements = array_merge($elements, $this->requestAction(array('controller' => 'auditions', 'action' => 'getElements')));
+		if(isset($data['calls']) || $todas)
+			$elements = array_merge($elements, $this->requestAction(array('controller' => 'calls', 'action' => 'getElements')));
+		
+
+		# Se desarrolla una lógica para independizarnos de los nombres de los Controllers
+		foreach($elements as $key => $element):
+			$auxNames = array_keys($element);
+			$auxValues = array_values($element);
+			$name = strtolower($auxNames[0]);
+			$namePlural = $name.'s';
+			$id = $auxValues[0]['id'];
+			$image = IMAGES_URL . ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
+			$title = $auxValues[0]['title'] ? substr($auxValues[0]['title'], 0, 50) : __('No Title');
+			
+			$elements[$key] = array_merge($element
+				, array('name' => $name
+					, 'name-plural' => $namePlural
+					, 'link' => Router::url(array('controller'=>$namePlural, 'action'=>'view', $id))
+					, 'image' => $image
+					, 'title' => $title
+				)
+			);
+		endforeach;
+
+		$this->set(compact('elements', 'data'));
 		
 	}
 
-
-
-/**
- * Displays a view
- *
- * @param mixed What page to display
- * @return void
- * @throws NotFoundException When the view file could not be found
- *	or MissingViewException in debug mode.
- */
-	public function display() {
-		$path = func_get_args();
-
-		$count = count($path);
-		if (!$count) {
-			return $this->redirect('/');
-		}
-		$page = $subpage = $title_for_layout = null;
-
-		if (!empty($path[0])) {
-			$page = $path[0];
-		}
-		if (!empty($path[1])) {
-			$subpage = $path[1];
-		}
-		if (!empty($path[$count - 1])) {
-			$title_for_layout = Inflector::humanize($path[$count - 1]);
-		}
-		if ($page == 'inicio') {
-			
-			$items = $this->requestAction(array('controller' => 'sliders', 'action' => 'getItems')
-				, array('named' => array('category' => 1))
-			);
-			$this->set(compact('items'));
-			// debug($items);
-		}
-		$this->set(compact('page', 'subpage', 'title_for_layout'));
-
-		try {
-			$this->render(implode('/', $path));
-		} catch (MissingViewException $e) {
-			if (Configure::read('debug')) {
-				throw $e;
-			}
-			throw new NotFoundException();
-		}
-	}
 }

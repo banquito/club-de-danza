@@ -22,23 +22,23 @@ class AuditionsController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getAuditions', 'index');
+		$this->Auth->allow('getElements');
 	}
 
 	public function isAuthorized($user) {
 		$artist = array('add');
 		$owner = array('edit');
-		$admin = array_merge($artist, $owner, array('delete'));
+		$admin = array_merge($artist, $owner, array('delete', 'index'));
 
 		// All artist users can index posts
 		if (in_array($this->action, $artist)) {
 			return true;
 		}
 
-		// The owner of a post can edit and delete it
+		// The owner of an element can edit and delete it
 		if (in_array($this->action, $owner)) {
-			$auditionId = $this->request->params['pass'][0];
-			if ($this->Audition->isOwnedBy($auditionId, $user['id'])) {
+			$elementId = $this->request->params['pass'][0];
+			if ($this->Audition->isOwnedBy($elementId, $user['id'])) {
 				return true;
 			}
 		}
@@ -75,10 +75,10 @@ class AuditionsController extends AppController {
 			if(isset($audition['Audition']['audition-date']) && !empty($audition['Audition']['audition-date'])):
 				// $audition-date = DateTime::createFromFormat('d/m/Y', $audition['Audition']['audition-date']); # PHP >= 5.3
 				# PHP 5.2
-				$auditionDate = strptime($audition['Audition']['audition-date'], '%d/%m/%Y %H:%M');
-				$auditionDate = sprintf('%04d-%02d-%02d %02d:%02d', $auditionDate['tm_year'] + 1900, $auditionDate['tm_mon'] + 1, $auditionDate['tm_mday'], $auditionDate['tm_hour'], $auditionDate['tm_min']);
-				$auditionDate = new DateTime($auditionDate);
-				$audition['Audition']['audition-date'] = $auditionDate->format('Y-m-d H:i:s');
+				$elementDate = strptime($audition['Audition']['audition-date'], '%d/%m/%Y %H:%M');
+				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
+				$elementDate = new DateTime($elementDate);
+				$audition['Audition']['audition-date'] = $elementDate->format('Y-m-d H:i:s');
 			endif;
 			if(isset($audition['Audition']['inscription-start']) && !empty($audition['Audition']['inscription-start'])):
 				// $inscription-start = DateTime::createFromFormat('d/m/Y', $audition['Audition']['inscription-start']); # PHP >= 5.3
@@ -182,11 +182,11 @@ class AuditionsController extends AppController {
 
 
 /**
- * getAuditions method
+ * getElements method
  *
  * @return void
  */
-	public function getAuditions() {
+	public function getElements() {
 		$options['conditions'] = array('audition-date >=' => date('Y-m-d H:i'));
 		$options['fields'] = array('id', 'title', 'image');
 		$options['order'] = 'audition-date ASC';
