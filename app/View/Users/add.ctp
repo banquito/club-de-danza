@@ -53,7 +53,7 @@ echo $this->Html->script(array('users/add'), array('inline'=>FALSE));
 			<div class="form-group">
 				<label for="birthday" class="col-sm-3 control-label"><?php echo __('Birthday'); ?></label>
 				<div class="col-sm-9">
-					<div class='input-group date' id='datetimepicker10'>
+					<div class='input-group date' id='datepicker'>
 						<span class="input-group-addon">
 							<span data-icon-element="" class="fa fa-calendar"></span>
 						</span>

@@ -22,7 +22,7 @@ class AuditionsController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('index');
+		$this->Auth->allow('getAuditions', 'index');
 	}
 
 	public function isAuthorized($user) {
@@ -75,24 +75,24 @@ class AuditionsController extends AppController {
 			if(isset($audition['Audition']['audition-date']) && !empty($audition['Audition']['audition-date'])):
 				// $audition-date = DateTime::createFromFormat('d/m/Y', $audition['Audition']['audition-date']); # PHP >= 5.3
 				# PHP 5.2
-				$auditionDate = strptime($audition['Audition']['audition-date'], '%d/%m/%Y');
-				$auditionDate = sprintf('%04d-%02d-%02d', $auditionDate['tm_year'] + 1900, $auditionDate['tm_mon'] + 1, $auditionDate['tm_mday']);
+				$auditionDate = strptime($audition['Audition']['audition-date'], '%d/%m/%Y %H:%M');
+				$auditionDate = sprintf('%04d-%02d-%02d %02d:%02d', $auditionDate['tm_year'] + 1900, $auditionDate['tm_mon'] + 1, $auditionDate['tm_mday'], $auditionDate['tm_hour'], $auditionDate['tm_min']);
 				$auditionDate = new DateTime($auditionDate);
 				$audition['Audition']['audition-date'] = $auditionDate->format('Y-m-d H:i:s');
 			endif;
 			if(isset($audition['Audition']['inscription-start']) && !empty($audition['Audition']['inscription-start'])):
 				// $inscription-start = DateTime::createFromFormat('d/m/Y', $audition['Audition']['inscription-start']); # PHP >= 5.3
 				# PHP 5.2
-				$inscriptionStart = strptime($audition['Audition']['inscription-start'], '%d/%m/%Y');
-				$inscriptionStart = sprintf('%04d-%02d-%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday']);
+				$inscriptionStart = strptime($audition['Audition']['inscription-start'], '%d/%m/%Y %H:%M');
+				$inscriptionStart = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday'], $inscriptionStart['tm_hour'], $inscriptionStart['tm_min']);
 				$inscriptionStart = new DateTime($inscriptionStart);
 				$audition['Audition']['inscription-start'] = $inscriptionStart->format('Y-m-d H:i:s');
 			endif;
 			if(isset($audition['Audition']['inscription-end']) && !empty($audition['Audition']['inscription-end'])):
 				// $inscription-end = DateTime::createFromFormat('d/m/Y', $audition['Audition']['inscription-end']); # PHP >= 5.3
 				# PHP 5.2
-				$inscriptionEnd = strptime($audition['Audition']['inscription-end'], '%d/%m/%Y');
-				$inscriptionEnd = sprintf('%04d-%02d-%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday']);
+				$inscriptionEnd = strptime($audition['Audition']['inscription-end'], '%d/%m/%Y %H:%M');
+				$inscriptionEnd = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday'], $inscriptionEnd['tm_hour'], $inscriptionEnd['tm_min']);
 				$inscriptionEnd = new DateTime($inscriptionEnd);
 				$audition['Audition']['inscription-end'] = $inscriptionEnd->format('Y-m-d H:i:s');
 			endif;
