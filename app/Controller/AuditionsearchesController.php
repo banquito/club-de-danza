@@ -51,9 +51,12 @@ class AuditionsearchesController extends AppController {
 		$todas = 1;
 		
 		if ($this->request->is('post')) {
-			$data = $this->request->data;
-			$todas = sizeof($data) == 0;
-			$this->set(compact('data'));
+			if(isset($this->request->data['Auditionsearches'])) {
+				$data = $this->request->data['Auditionsearches'];
+				$todas = sizeof($data) == 0;
+				$this->set(compact('data'));
+				// $this->request->data['auditions'] = 1;
+			}
 		}
 
 

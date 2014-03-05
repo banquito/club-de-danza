@@ -2,19 +2,23 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<form action="/audiciones" method="post">
+		<?php echo $this->Form->create('Auditionsearches', array('url' => '/audiciones')) ?>
 			<div class="checkbox">
 				<label>
-					<input type="checkbox" name="data[auditions]" value="1"> Audiciones
+					<!-- <input type="checkbox" name="data[auditions]" value="1"> Audiciones -->
+					<?php echo $this->Form->checkbox('auditions', array('hiddenField' => false)) ?>
+					Audiciones
 				</label>
 			</div>
 			<div class="checkbox">
 				<label>
-					<input type="checkbox" name="data[calls]" value="1"> Convocatorias
+					<?php echo $this->Form->checkbox('calls', array('hiddenField' => false)) ?>
+					Convocatorias
+					<!-- <input type="checkbox" name="data[calls]" value="1"> Convocatorias -->
 				</label>
 			</div>
 			<button type="submit"><?php echo __('Submit') ?></button>
-		</form>
+		<?php $this->Form->end() ?>
 	</div>
 </div>
 
