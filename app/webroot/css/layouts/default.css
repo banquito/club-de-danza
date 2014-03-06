@@ -68,7 +68,7 @@ a.btn-vermas img {
 
 /* line 52, ../../sass/_cajas.sass */
 .thumbnail-vermas {
-  background-image: url('/img/layouts/vermas.png?1393415468');
+  background-image: url('/img/layouts/vermas.png?1393088704');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 12%;
@@ -178,12 +178,6 @@ h1 {
   padding: 10px 15px 0;
   text-transform: uppercase;
 }
-/* line 25, ../../sass/layouts/default.sass */
-h1 ~ div {
-  width: 212px;
-  border-top: 10px solid #dd104c;
-  border-right: 10px solid transparent;
-}
 
 /* line 30, ../../sass/layouts/default.sass */
 h3 {
@@ -194,7 +188,7 @@ h3 {
 
 /* line 36, ../../sass/layouts/default.sass */
 header nav {
-  background-image: url('/img/layouts/backheader.jpg?1393415468');
+  background-image: url('/img/layouts/backheader.jpg?1393088704');
 }
 /* line 39, ../../sass/layouts/default.sass */
 header nav.navbar {
