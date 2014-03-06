@@ -66,6 +66,8 @@ class AuditionsearchesController extends AppController {
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'calls', 'action' => 'getElements')));
 		if(isset($data['castings']) || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'castings', 'action' => 'getElements')));
+		if(isset($data['jobs']) || $todas)
+			$elements = array_merge($elements, $this->requestAction(array('controller' => 'jobs', 'action' => 'getElements')));
 		
 
 		# Se desarrolla una lógica para independizarnos de los nombres de los Controllers

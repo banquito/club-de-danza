@@ -2,13 +2,15 @@
 
 <div class="row row-header-h1">
 	<div class="col-sm-12">
-		<h1><?php echo __('Add Call'); ?></h1>
+		<h1><?php echo __('Edit Call'); ?></h1>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-sm-12">
 		<?php echo $this->Form->create('Call', array('class' => 'form-horizontal', 'role' => 'form', 'type' => 'file')) ?>
+			<?php echo $this->Form->input('id'); ?>
+			
 			<div class="form-group">
 				<label for="title" class="col-sm-4 control-label"><?php echo __('Title'); ?></label>
 				<div class="col-sm-8">
@@ -42,8 +44,8 @@
 				<div class="col-sm-8">
 					<div class="row row-image-name">
 						<div class="col-sm-12">
-							<span class="label <?php echo ($this->request->data['Audition']['image']) ? 'label-primary' : 'label-danger'; ?>">
-								<?php echo ($imageName = $this->request->data['Audition']['image']) ? $imageName : __('No image'); ?>
+							<span class="label <?php echo ($this->request->data['Call']['image']) ? 'label-primary' : 'label-danger'; ?>">
+								<?php echo ($imageName = $this->request->data['Call']['image']) ? $imageName : __('No image'); ?>
 							</span>
 						</div>
 					</div>

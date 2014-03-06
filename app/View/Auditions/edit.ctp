@@ -9,10 +9,12 @@
 <div class="row">
 	<div class="col-sm-12">
 		<?php echo $this->Form->create('Audition', array('class' => 'form-horizontal', 'role' => 'form', 'type' => 'file')) ?>
+			<?php echo $this->Form->input('id'); ?>
+			
 			<div class="form-group">
 				<label for="title" class="col-sm-4 control-label"><?php echo __('Title'); ?></label>
 				<div class="col-sm-8">
-					<?php	echo $this->Form->input('title', array(
+					<?php echo $this->Form->input('title', array(
 						'class' => 'form-control',
 						'label' => false,
 						'placeholder' => __('Audition title'),

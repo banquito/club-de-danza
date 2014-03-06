@@ -21,6 +21,12 @@
 					Castings
 				</label>
 			</div>
+			<div class="checkbox">
+				<label>
+					<?php echo $this->Form->checkbox('jobs', array('hiddenField' => false)) ?>
+					Búsquedas Laborales
+				</label>
+			</div>
 			<button type="submit"><?php echo __('Submit') ?></button>
 		<?php echo $this->Form->end() ?>
 	</div>
