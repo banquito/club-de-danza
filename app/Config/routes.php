@@ -36,6 +36,9 @@
 	Router::connect('/convocatorias/editar', array('controller' => 'calls', 'action' => 'edit'));
 	Router::connect('/convocatorias/listar', array('controller' => 'calls', 'action' => 'index'));
 	Router::connect('/convocatorias/nueva', array('controller' => 'calls', 'action' => 'add'));
+	Router::connect('/castings/editar', array('controller' => 'castings', 'action' => 'edit'));
+	Router::connect('/castings/listar', array('controller' => 'castings', 'action' => 'index'));
+	Router::connect('/castings/nuevo', array('controller' => 'castings', 'action' => 'add'));
 
 	# Banners
 	Router::connect('/banners/nuevo', array('controller' => 'banners', 'action' => 'add'));
