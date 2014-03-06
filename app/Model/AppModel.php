@@ -30,4 +30,8 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+	public function isOwnedBy($element, $user) {
+		return $this->field('id', array('id' => $element, 'user_id' => $user)) === $element;
+	}
 }

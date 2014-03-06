@@ -8,7 +8,7 @@ App::uses('AppModel', 'Model');
  * @property Note $Note
  */
 class User extends AppModel {
-	const ARTISTA = '100';
+	const ARTIST = '100';
 	const ADMIN = '500';
 	const FEMENINO = '0';
 	const MASCULINO = '1';

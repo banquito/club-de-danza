@@ -1,7 +1,13 @@
 <?php 
-$notesActive = '';
+$notesActive = $callsActive = '';
 if((strpos($this->params->url, 'notes') !== FALSE) || (strpos($this->params->url, 'notas') !== FALSE))
 	$notesActive = 'active';
+if((strpos($this->params->url, 'calls') !== FALSE) 
+	|| (strpos($this->params->url, 'convocatorias') !== FALSE)
+	|| (strpos($this->params->url, 'auditions') !== FALSE) 
+	|| (strpos($this->params->url, 'audiciones') !== FALSE))
+		$callsActive = 'active';
+
 ?>
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -34,8 +40,20 @@ if((strpos($this->params->url, 'notes') !== FALSE) || (strpos($this->params->url
 						<li><a href="/notas/listar">Listar Notas</a></li>
 					</ul>
 				</li>
-				<li>
-					<a href="/audiciones" class="menu-button">Audiciones y Convocatorias</a>
+				<li class="dropdown <?php echo $callsActive; ?>">
+					<a href="#" class="dropdown-toggle menu-button" data-toggle="dropdown">
+						Audiciones y Convocatorias <b class="caret"></b>
+					</a>
+
+					<ul class="dropdown-menu">
+						<li><a href="/audiciones">Buscar Audiciones y Convocatorias</a></li>
+						<li class="divider"></li>
+						<li><a href="/audiciones/nueva">Nueva Audición</a></li>
+						<li><a href="/audiciones/listar">Listar Audiciones</a></li>
+						<li class="divider"></li>
+						<li><a href="/convocatorias/nueva">Nueva Convocatoria</a></li>
+						<li><a href="/convocatorias/listar">Listar Convocatorias</a></li>
+					</ul>
 				</li>
 				<li>
 					<a href="#" class="menu-button">Clasificados</a>

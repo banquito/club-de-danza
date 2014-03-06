@@ -22,13 +22,13 @@ class AuditionsController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getElements');
+		$this->Auth->allow('getElements', 'view');
 	}
 
 	public function isAuthorized($user) {
-		$artist = array('add');
-		$owner = array('edit');
-		$admin = array_merge($artist, $owner, array('delete', 'index'));
+		$artist = array('add', 'index');
+		$owner = array('delete', 'edit');
+		$admin = array_merge($artist, $owner, array());
 
 		// All artist users can index posts
 		if (in_array($this->action, $artist)) {
@@ -201,7 +201,19 @@ class AuditionsController extends AppController {
  */
 	public function index() {
 		$this->Audition->recursive = 0;
-		$this->set('auditions', $this->Paginator->paginate());
+
+		$rol = AuthComponent::user('Rol');
+		if($rol) {
+			# El Admin puede ver todos los elementos, pero un usuario común sólo los propios.
+			if($rol['weight'] < User::ADMIN) {
+				$this->Paginator->settings = array(
+					'conditions' => array('Audition.user_id' => AuthComponent::user('id')),
+				);
+			}
+			$this->set('auditions', $this->Paginator->paginate());
+		} else {
+			$this->redirect('/logout');
+		}
 	}
 
 /**

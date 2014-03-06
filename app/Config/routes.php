@@ -30,6 +30,12 @@
 
 	# Audiciones y Convocatorias
 	Router::connect('/audiciones', array('controller' => 'auditionsearches', 'action' => 'index'));
+	Router::connect('/audiciones/editar', array('controller' => 'auditions', 'action' => 'edit'));
+	Router::connect('/audiciones/listar', array('controller' => 'auditions', 'action' => 'index'));
+	Router::connect('/audiciones/nueva', array('controller' => 'auditions', 'action' => 'add'));
+	Router::connect('/convocatorias/editar', array('controller' => 'calls', 'action' => 'edit'));
+	Router::connect('/convocatorias/listar', array('controller' => 'calls', 'action' => 'index'));
+	Router::connect('/convocatorias/nueva', array('controller' => 'calls', 'action' => 'add'));
 
 	# Banners
 	Router::connect('/banners/nuevo', array('controller' => 'banners', 'action' => 'add'));

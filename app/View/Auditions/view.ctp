@@ -9,12 +9,16 @@
 	<div class="col-sm-6">
 		<div class="row">
 			<div class="col-sm-12">
-				<?php echo $this->Html->image('auditions/'.$audition['Audition']['image']); ?>
+				<?php
+				echo $this->Html->image('auditions/'.$audition['Audition']['image']
+					, array('class'=>'img-responsive')
+				);
+				?>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<?php echo h($audition['Audition']['description']); ?>
+				<?php echo $audition['Audition']['description']; ?>
 			</div>
 		</div>
 	</div>

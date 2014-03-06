@@ -27,6 +27,8 @@
 			$user = AuthComponent::user();
 			if(isset($user['Rol']) && $user['Rol']['weight'] >= User::ADMIN):
 				echo $this -> element('navbar_admin');
+			elseif(isset($user['Rol']) && $user['Rol']['weight'] >= User::ARTIST):
+				echo $this -> element('navbar_artist');
 			else:
 				echo $this -> element('navbar');
 			endif;

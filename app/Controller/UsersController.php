@@ -53,7 +53,7 @@ class UsersController extends AppController {
 			}
 
 			$user = $this->request->data;
-			$rolId = $this->User->Rol->field('id', array('weight' => User::ARTISTA));
+			$rolId = $this->User->Rol->field('id', array('weight' => User::ARTIST));
 			$user['User']['rol_id'] = $rolId;
 			
 			if(isset($user['User']['birthday']) && !empty($user['User']['birthday'])):
