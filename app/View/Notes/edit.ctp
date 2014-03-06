@@ -65,6 +65,7 @@ echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>f
 					</div>
 				</div>
 			</div>
+			
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Resume'); ?></label>
 				<div class="col-sm-8">

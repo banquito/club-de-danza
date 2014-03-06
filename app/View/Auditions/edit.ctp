@@ -35,7 +35,7 @@
 					?>
 				</div>
 			</div>
-			<div class="form-group">
+			<!-- <div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Image'); ?></label>
 				<div class="col-sm-8">
 					<?php echo $this->Form->input('image', array(
@@ -47,7 +47,33 @@
 					));
 					?>
 				</div>
+			</div> -->
+			
+			<!-- Imagen -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Image'); ?></label>
+				<div class="col-sm-8">
+					<div class="row row-image-name">
+						<div class="col-sm-12">
+							<span class="label <?php echo ($this->request->data['Audition']['image']) ? 'label-primary' : 'label-danger'; ?>">
+								<?php echo ($imageName = $this->request->data['Audition']['image']) ? $imageName : __('No image'); ?>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<?php echo $this->Form->input('image', array(
+								'label' => false,
+								'placeholder' => __('Image'),
+								'required' => FALSE,
+								'type' => 'file'
+							));
+							?>
+						</div>
+					</div>
+				</div>
 			</div>
+
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Company'); ?></label>
 				<div class="col-sm-8">

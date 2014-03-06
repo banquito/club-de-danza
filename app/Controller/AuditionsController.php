@@ -163,7 +163,58 @@ class AuditionsController extends AppController {
 			throw new NotFoundException(__('Invalid audition'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Audition->save($this->request->data)) {
+			$audition = $this->request->data;
+
+			if(isset($audition['Audition']['audition-date']) && !empty($audition['Audition']['audition-date'])):
+				// $audition-date = DateTime::createFromFormat('d/m/Y', $audition['Audition']['audition-date']); # PHP >= 5.3
+				# PHP 5.2
+				$elementDate = strptime($audition['Audition']['audition-date'], '%d/%m/%Y %H:%M');
+				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
+				$elementDate = new DateTime($elementDate);
+				$audition['Audition']['audition-date'] = $elementDate->format('Y-m-d H:i:s');
+			endif;
+			if(isset($audition['Audition']['inscription-start']) && !empty($audition['Audition']['inscription-start'])):
+				// $inscription-start = DateTime::createFromFormat('d/m/Y', $audition['Audition']['inscription-start']); # PHP >= 5.3
+				# PHP 5.2
+				$inscriptionStart = strptime($audition['Audition']['inscription-start'], '%d/%m/%Y %H:%M');
+				$inscriptionStart = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday'], $inscriptionStart['tm_hour'], $inscriptionStart['tm_min']);
+				$inscriptionStart = new DateTime($inscriptionStart);
+				$audition['Audition']['inscription-start'] = $inscriptionStart->format('Y-m-d H:i:s');
+			endif;
+			if(isset($audition['Audition']['inscription-end']) && !empty($audition['Audition']['inscription-end'])):
+				// $inscription-end = DateTime::createFromFormat('d/m/Y', $audition['Audition']['inscription-end']); # PHP >= 5.3
+				# PHP 5.2
+				$inscriptionEnd = strptime($audition['Audition']['inscription-end'], '%d/%m/%Y %H:%M');
+				$inscriptionEnd = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday'], $inscriptionEnd['tm_hour'], $inscriptionEnd['tm_min']);
+				$inscriptionEnd = new DateTime($inscriptionEnd);
+				$audition['Audition']['inscription-end'] = $inscriptionEnd->format('Y-m-d H:i:s');
+			endif;
+
+			# Se verifica si se subió una imagen y se setea la imagen
+			if (isset($audition['Audition']['image']['name']) 
+					&& ($audition['Audition']['image']['name'] != '')
+					&& isset($audition['Audition']['image']['tmp_name'])
+					&& ($audition['Audition']['image']['tmp_name'] != '')) {
+				
+				$imageName = $audition['Audition']['image']['name'];
+				$uploadDir = IMAGES_URL . 'auditions/';
+				$uploadFile = $uploadDir . $imageName;
+				
+				if (!move_uploaded_file($audition['Audition']['image']['tmp_name'], $uploadFile)) {
+					$this -> Session -> setFlash(__('The image could not be saved. Please, verify the file.'));
+					return $this -> redirect(array('action' => 'add', $audition));
+				}
+				
+				$audition['Audition']['image'] = $imageName;
+
+			} else {
+				$audition['Audition']['image'] = $this -> Audition -> field('image', array('id'=>$id));
+			}
+
+
+
+
+			if ($this->Audition->save($audition)) {
 				$this->Session->setFlash(__('The audition has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
