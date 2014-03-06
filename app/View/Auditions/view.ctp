@@ -44,7 +44,7 @@
 			Desde <?php echo h($audition['Audition']['age-start']); ?> 
 			hasta <?php echo h($audition['Audition']['age-end']); ?>
 		</p>
-		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['audition-date']); ?></p>
+		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['element-date']); ?></p>
 		<p>
 			Lugar: <?php echo h($audition['Audition']['street']); ?>, 
 			piso: <?php echo h($audition['Audition']['floor']); ?>, 

@@ -72,13 +72,13 @@ class AuditionsController extends AppController {
 			# Se setea el usuario creador de la nota = usuario logeado
 			$audition['Audition']['user_id'] = AuthComponent::user('id');
 
-			if(isset($audition['Audition']['audition-date']) && !empty($audition['Audition']['audition-date'])):
-				// $audition-date = DateTime::createFromFormat('d/m/Y', $audition['Audition']['audition-date']); # PHP >= 5.3
+			if(isset($audition['Audition']['element-date']) && !empty($audition['Audition']['element-date'])):
+				// $element-date = DateTime::createFromFormat('d/m/Y', $audition['Audition']['element-date']); # PHP >= 5.3
 				# PHP 5.2
-				$elementDate = strptime($audition['Audition']['audition-date'], '%d/%m/%Y %H:%M');
+				$elementDate = strptime($audition['Audition']['element-date'], '%d/%m/%Y %H:%M');
 				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
 				$elementDate = new DateTime($elementDate);
-				$audition['Audition']['audition-date'] = $elementDate->format('Y-m-d H:i:s');
+				$audition['Audition']['element-date'] = $elementDate->format('Y-m-d H:i:s');
 			endif;
 			if(isset($audition['Audition']['inscription-start']) && !empty($audition['Audition']['inscription-start'])):
 				// $inscription-start = DateTime::createFromFormat('d/m/Y', $audition['Audition']['inscription-start']); # PHP >= 5.3
@@ -165,13 +165,13 @@ class AuditionsController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			$audition = $this->request->data;
 
-			if(isset($audition['Audition']['audition-date']) && !empty($audition['Audition']['audition-date'])):
-				// $audition-date = DateTime::createFromFormat('d/m/Y', $audition['Audition']['audition-date']); # PHP >= 5.3
+			if(isset($audition['Audition']['element-date']) && !empty($audition['Audition']['element-date'])):
+				// $element-date = DateTime::createFromFormat('d/m/Y', $audition['Audition']['element-date']); # PHP >= 5.3
 				# PHP 5.2
-				$elementDate = strptime($audition['Audition']['audition-date'], '%d/%m/%Y %H:%M');
+				$elementDate = strptime($audition['Audition']['element-date'], '%d/%m/%Y %H:%M');
 				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
 				$elementDate = new DateTime($elementDate);
-				$audition['Audition']['audition-date'] = $elementDate->format('Y-m-d H:i:s');
+				$audition['Audition']['element-date'] = $elementDate->format('Y-m-d H:i:s');
 			endif;
 			if(isset($audition['Audition']['inscription-start']) && !empty($audition['Audition']['inscription-start'])):
 				// $inscription-start = DateTime::createFromFormat('d/m/Y', $audition['Audition']['inscription-start']); # PHP >= 5.3
@@ -238,9 +238,9 @@ class AuditionsController extends AppController {
  * @return void
  */
 	public function getElements() {
-		$options['conditions'] = array('audition-date >=' => date('Y-m-d H:i'));
+		$options['conditions'] = array('element-date >=' => date('Y-m-d H:i'));
 		$options['fields'] = array('id', 'title', 'image');
-		$options['order'] = 'audition-date ASC';
+		$options['order'] = 'element-date ASC';
 		$options['recursive'] = -1;
 		return $this->Audition->find('all', $options);
 	}

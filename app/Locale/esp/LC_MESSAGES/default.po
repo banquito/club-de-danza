@@ -1671,7 +1671,7 @@ msgid "notEmpty"
 msgstr "No Vacío"
 
 #: Model/Audition.php:validation
-#: for field audition-date;validation
+#: for field element-date;validation
 #: inscription-start;validation inscription-end
 msgid "datetime"
 msgstr ""

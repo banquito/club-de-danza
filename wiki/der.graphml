@@ -431,7 +431,7 @@ company: varchar(255)
 gender: tinyint
 age-start: varchar(255)
 age-end: varchar(255)
-audition-date: date
+element-date: date
 street: varchar(255)
 floor: varchar(255)
 department: varchar(255)

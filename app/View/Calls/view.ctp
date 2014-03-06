@@ -44,7 +44,7 @@
 			Desde <?php echo h($call['Call']['age-start']); ?> 
 			hasta <?php echo h($call['Call']['age-end']); ?>
 		</p>
-		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['call-date']); ?></p>
+		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['element-date']); ?></p>
 		<p>
 			Lugar: <?php echo h($call['Call']['street']); ?>, 
 			piso: <?php echo h($call['Call']['floor']); ?>, 
@@ -108,7 +108,7 @@
 		</dd>
 		<dt><?php echo __('Call-date'); ?></dt>
 		<dd>
-			<?php echo h($call['Call']['call-date']); ?>
+			<?php echo h($call['Call']['element-date']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Street'); ?></dt>

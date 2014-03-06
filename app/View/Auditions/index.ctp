@@ -5,7 +5,7 @@
 			<tr>
 				<th><?php echo $this->Paginator->sort('title'); ?></th>
 				<th><?php echo $this->Paginator->sort('company'); ?></th>
-				<th><?php echo $this->Paginator->sort('audition-date'); ?></th>
+				<th><?php echo $this->Paginator->sort('element-date'); ?></th>
 				<th><?php echo $this->Paginator->sort('street'); ?></th>
 				<th><?php echo $this->Paginator->sort('inscription-start'); ?></th>
 				<th class="actions"><?php echo __('Actions'); ?></th>
@@ -16,7 +16,7 @@
 				<tr>
 					<td><?php echo h($audition['Audition']['title']); ?>&nbsp;</td>
 					<td><?php echo h($audition['Audition']['company']); ?>&nbsp;</td>
-					<td><?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['audition-date']); ?>&nbsp;</td>
+					<td><?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['element-date']); ?>&nbsp;</td>
 					<td><?php echo h($audition['Audition']['street']); ?>&nbsp;</td>
 					<td><?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['inscription-start']); ?>&nbsp;</td>
 					<td class="actions">

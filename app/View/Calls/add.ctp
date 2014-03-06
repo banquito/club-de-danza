@@ -103,7 +103,7 @@
 							<span data-icon-element="" class="fa fa-calendar"></span>
 						</span>
 						<!-- <input type='text' class="form-control" data-ng-keydown="birthdayKeydown($event)" name="data[User][birthday]" /> -->
-						<?php echo $this->Form->input('call-date', array(
+						<?php echo $this->Form->input('element-date', array(
 							'class' => 'form-control',
 							'label' => false,
 							'placeholder' => __('Call date'),
@@ -297,7 +297,7 @@
 		echo $this->Form->input('gender');
 		echo $this->Form->input('age-start');
 		echo $this->Form->input('age-end');
-		echo $this->Form->input('call-date');
+		echo $this->Form->input('element-date');
 		echo $this->Form->input('street');
 		echo $this->Form->input('floor');
 		echo $this->Form->input('department');

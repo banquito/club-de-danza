@@ -80,7 +80,7 @@
 			<td><?php echo $audition['gender']; ?></td>
 			<td><?php echo $audition['age-start']; ?></td>
 			<td><?php echo $audition['age-end']; ?></td>
-			<td><?php echo $audition['audition-date']; ?></td>
+			<td><?php echo $audition['element-date']; ?></td>
 			<td><?php echo $audition['street']; ?></td>
 			<td><?php echo $audition['floor']; ?></td>
 			<td><?php echo $audition['department']; ?></td>

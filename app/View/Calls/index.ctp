@@ -3,7 +3,7 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th><?php echo $this->Paginator->sort('call-date'); ?></th>
+				<th><?php echo $this->Paginator->sort('element-date'); ?></th>
 				<th><?php echo $this->Paginator->sort('title'); ?></th>
 				<th><?php echo $this->Paginator->sort('company'); ?></th>
 				<th><?php echo $this->Paginator->sort('street'); ?></th>
@@ -15,7 +15,7 @@
 		<tbody>
 			<?php foreach ($calls as $call): ?>
 				<tr>
-					<td><?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['call-date']); ?>&nbsp;</td>
+					<td><?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['element-date']); ?>&nbsp;</td>
 					<td><?php echo h($call['Call']['title']); ?>&nbsp;</td>
 					<td><?php echo h($call['Call']['company']); ?>&nbsp;</td>
 					<td><?php echo h($call['Call']['street']); ?>&nbsp;</td>

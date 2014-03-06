@@ -79,6 +79,7 @@ class AuditionsearchesController extends AppController {
 			$id = $auxValues[0]['id'];
 			$image = IMAGES_URL . ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
 			$title = $auxValues[0]['title'] ? substr($auxValues[0]['title'], 0, 50) : __('No Title');
+			$dateSort = 
 			
 			$elements[$key] = array_merge($element
 				, array('name' => $name

@@ -71,13 +71,13 @@ class CallsController extends AppController {
 			# Se setea el usuario creador de la nota = usuario logeado
 			$call['Call']['user_id'] = AuthComponent::user('id');
 
-			if(isset($call['Call']['call-date']) && !empty($call['Call']['call-date'])):
-				// $call-date = DateTime::createFromFormat('d/m/Y', $call['Call']['call-date']); # PHP >= 5.3
+			if(isset($call['Call']['element-date']) && !empty($call['Call']['element-date'])):
+				// $element-date = DateTime::createFromFormat('d/m/Y', $call['Call']['element-date']); # PHP >= 5.3
 				# PHP 5.2
-				$elementDate = strptime($call['Call']['call-date'], '%d/%m/%Y %H:%M');
+				$elementDate = strptime($call['Call']['element-date'], '%d/%m/%Y %H:%M');
 				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
 				$elementDate = new DateTime($elementDate);
-				$call['Call']['call-date'] = $elementDate->format('Y-m-d H:i:s');
+				$call['Call']['element-date'] = $elementDate->format('Y-m-d H:i:s');
 			endif;
 			if(isset($call['Call']['inscription-start']) && !empty($call['Call']['inscription-start'])):
 				// $inscription-start = DateTime::createFromFormat('d/m/Y', $call['Call']['inscription-start']); # PHP >= 5.3
@@ -165,13 +165,13 @@ class CallsController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			$call = $this->request->data;
 
-			if(isset($call['Call']['call-date']) && !empty($call['Call']['call-date'])):
-				// $call-date = DateTime::createFromFormat('d/m/Y', $call['Call']['call-date']); # PHP >= 5.3
+			if(isset($call['Call']['element-date']) && !empty($call['Call']['element-date'])):
+				// $element-date = DateTime::createFromFormat('d/m/Y', $call['Call']['element-date']); # PHP >= 5.3
 				# PHP 5.2
-				$elementDate = strptime($call['Call']['call-date'], '%d/%m/%Y %H:%M');
+				$elementDate = strptime($call['Call']['element-date'], '%d/%m/%Y %H:%M');
 				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
 				$elementDate = new DateTime($elementDate);
-				$call['Call']['call-date'] = $elementDate->format('Y-m-d H:i:s');
+				$call['Call']['element-date'] = $elementDate->format('Y-m-d H:i:s');
 			endif;
 			if(isset($call['Call']['inscription-start']) && !empty($call['Call']['inscription-start'])):
 				// $inscription-start = DateTime::createFromFormat('d/m/Y', $call['Call']['inscription-start']); # PHP >= 5.3
@@ -237,9 +237,9 @@ class CallsController extends AppController {
  * @return void
  */
 	public function getElements() {
-		$options['conditions'] = array('call-date >=' => date('Y-m-d H:i'));
+		$options['conditions'] = array('element-date >=' => date('Y-m-d H:i'));
 		$options['fields'] = array('id', 'title', 'image');
-		$options['order'] = 'call-date ASC';
+		$options['order'] = 'element-date ASC';
 		$options['recursive'] = -1;
 		return $this->Call->find('all', $options);
 	}
