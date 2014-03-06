@@ -33,12 +33,15 @@
 	Router::connect('/audiciones/editar', array('controller' => 'auditions', 'action' => 'edit'));
 	Router::connect('/audiciones/listar', array('controller' => 'auditions', 'action' => 'index'));
 	Router::connect('/audiciones/nueva', array('controller' => 'auditions', 'action' => 'add'));
-	Router::connect('/convocatorias/editar', array('controller' => 'calls', 'action' => 'edit'));
-	Router::connect('/convocatorias/listar', array('controller' => 'calls', 'action' => 'index'));
-	Router::connect('/convocatorias/nueva', array('controller' => 'calls', 'action' => 'add'));
+	Router::connect('/busquedaslaborales/editar', array('controller' => 'jobs', 'action' => 'edit'));
+	Router::connect('/busquedaslaborales/listar', array('controller' => 'jobs', 'action' => 'index'));
+	Router::connect('/busquedaslaborales/nueva', array('controller' => 'jobs', 'action' => 'add'));
 	Router::connect('/castings/editar', array('controller' => 'castings', 'action' => 'edit'));
 	Router::connect('/castings/listar', array('controller' => 'castings', 'action' => 'index'));
 	Router::connect('/castings/nuevo', array('controller' => 'castings', 'action' => 'add'));
+	Router::connect('/convocatorias/editar', array('controller' => 'calls', 'action' => 'edit'));
+	Router::connect('/convocatorias/listar', array('controller' => 'calls', 'action' => 'index'));
+	Router::connect('/convocatorias/nueva', array('controller' => 'calls', 'action' => 'add'));
 
 	# Banners
 	Router::connect('/banners/nuevo', array('controller' => 'banners', 'action' => 'add'));

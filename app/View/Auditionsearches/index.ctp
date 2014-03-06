@@ -5,7 +5,6 @@
 		<?php echo $this->Form->create('Auditionsearches', array('url' => '/audiciones')) ?>
 			<div class="checkbox">
 				<label>
-					<!-- <input type="checkbox" name="data[auditions]" value="1"> Audiciones -->
 					<?php echo $this->Form->checkbox('auditions', array('hiddenField' => false)) ?>
 					Audiciones
 				</label>
@@ -14,7 +13,12 @@
 				<label>
 					<?php echo $this->Form->checkbox('calls', array('hiddenField' => false)) ?>
 					Convocatorias
-					<!-- <input type="checkbox" name="data[calls]" value="1"> Convocatorias -->
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<?php echo $this->Form->checkbox('castings', array('hiddenField' => false)) ?>
+					Castings
 				</label>
 			</div>
 			<button type="submit"><?php echo __('Submit') ?></button>

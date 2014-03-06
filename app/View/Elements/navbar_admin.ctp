@@ -49,13 +49,16 @@ if((strpos($this->params->url, 'calls') !== FALSE)
 						<li><a href="/audiciones">Buscar Audiciones y Convocatorias</a></li>
 						<li class="divider"></li>
 						<li><a href="/audiciones/nueva">Nueva Audición</a></li>
-						<li><a href="/audiciones/listar">Listar Mis Audiciones</a></li>
+						<li><a href="/audiciones/listar">Listar Audiciones</a></li>
 						<li class="divider"></li>
 						<li><a href="/convocatorias/nueva">Nueva Convocatoria</a></li>
-						<li><a href="/convocatorias/listar">Listar Mis Convocatorias</a></li>
+						<li><a href="/convocatorias/listar">Listar Convocatorias</a></li>
 						<li class="divider"></li>
 						<li><a href="/castings/nuevo">Nuevo Casting</a></li>
-						<li><a href="/castings/listar">Listar Mis Castings</a></li>
+						<li><a href="/castings/listar">Listar Castings</a></li>
+						<li class="divider"></li>
+						<li><a href="/busquedaslaborales/nueva">Nueva Búsqueda Laboral</a></li>
+						<li><a href="/busquedaslaborales/listar">Listar Búsquedas Laborales</a></li>
 					</ul>
 				</li>
 				<li>

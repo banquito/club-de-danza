@@ -25,7 +25,21 @@
 	
 	<div class="col-sm-6">
 		<p><?php echo h($call['Call']['company']); ?></p>
-		<p><?php echo h($call['Call']['gender']); ?></p>
+		<p>
+			<?php 
+			switch ($call['Call']['gender']) {
+				case User::FEMENINO:
+					echo "Femenino";
+					break;
+				case User::MASCULINO:
+					echo "Masculino";
+					break;
+				default:
+					echo "Otro";
+					break;
+			}
+			?>
+		</p>
 		<p>
 			Desde <?php echo h($call['Call']['age-start']); ?> 
 			hasta <?php echo h($call['Call']['age-end']); ?>

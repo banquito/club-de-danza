@@ -47,6 +47,9 @@ if((strpos($this->params->url, 'calls') !== FALSE)
 						<li class="divider"></li>
 						<li><a href="/castings/nuevo">Nuevo Casting</a></li>
 						<li><a href="/castings/listar">Listar Mis Castings</a></li>
+						<li class="divider"></li>
+						<li><a href="/busquedaslaborales/nueva">Nueva Búsqueda Laboral</a></li>
+						<li><a href="/busquedaslaborales/listar">Listar Mis Búsquedas Laborales</a></li>
 					</ul>
 				</li>
 				<li>

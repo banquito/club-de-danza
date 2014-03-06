@@ -25,7 +25,21 @@
 	
 	<div class="col-sm-6">
 		<p><?php echo h($audition['Audition']['company']); ?></p>
-		<p><?php echo h($audition['Audition']['gender']); ?></p>
+		<p>
+			<?php 
+			switch ($audition['Audition']['gender']) {
+				case User::FEMENINO:
+					echo "Femenino";
+					break;
+				case User::MASCULINO:
+					echo "Masculino";
+					break;
+				default:
+					echo "Otro";
+					break;
+			}
+			?>
+		</p>
 		<p>
 			Desde <?php echo h($audition['Audition']['age-start']); ?> 
 			hasta <?php echo h($audition['Audition']['age-end']); ?>
