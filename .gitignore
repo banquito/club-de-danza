@@ -14,6 +14,7 @@ app/Vendor/extras.php
 app/webroot/.sass-cache/*
 app/webroot/img/auditions/*
 app/webroot/img/banners/*
+app/webroot/img/calls/*
 app/webroot/img/notes/*
 app/webroot/img/sliders/*
 
