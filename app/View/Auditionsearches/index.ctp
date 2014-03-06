@@ -18,7 +18,7 @@
 				</label>
 			</div>
 			<button type="submit"><?php echo __('Submit') ?></button>
-		<?php $this->Form->end() ?>
+		<?php echo $this->Form->end() ?>
 	</div>
 </div>
 
