@@ -179,8 +179,7 @@
 							'label' => false,
 							'placeholder' => __('Inscription start'),
 							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Casting']['inscription-sta
-								'])
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Casting']['inscription-start'])
 							// 'required' => 'required',
 						));
 						?>

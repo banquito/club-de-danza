@@ -10,6 +10,11 @@
         down: "fa fa-arrow-down"
       }
     });
+    $("[id$='Element-date'], [id$='Inscription-start'], [id$='Inscription-end']").on('keydown', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    });
     return $("[id^='datetimepicker']").datetimepicker({
       language: 'es',
       pickTime: true,

@@ -11,6 +11,11 @@ jQuery ->
 		}
 	})
 
+	$("[id$='Element-date'], [id$='Inscription-start'], [id$='Inscription-end']").on 'keydown', (event) ->
+		event.preventDefault()
+		event.stopPropagation()
+		false
+
 	$("[id^='datetimepicker']").datetimepicker({
 		language: 'es'
 		pickTime: true
