@@ -79,7 +79,7 @@ class AuditionsearchesController extends AppController {
 			$id = $auxValues[0]['id'];
 			$image = IMAGES_URL . ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
 			$title = $auxValues[0]['title'] ? substr($auxValues[0]['title'], 0, 50) : __('No Title');
-			$dateSort = 
+			$dateSort = $auxValues[0]['element-date'];
 			
 			$elements[$key] = array_merge($element
 				, array('name' => $name
@@ -87,9 +87,12 @@ class AuditionsearchesController extends AppController {
 					, 'link' => Router::url(array('controller'=>$namePlural, 'action'=>'view', $id))
 					, 'image' => $image
 					, 'title' => $title
+					, 'date-sort' => $dateSort
 				)
 			);
 		endforeach;
+
+		
 
 		$this->set(compact('elements', 'data'));
 		

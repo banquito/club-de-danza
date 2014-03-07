@@ -238,7 +238,7 @@ class CallsController extends AppController {
  */
 	public function getElements() {
 		$options['conditions'] = array('element-date >=' => date('Y-m-d H:i'));
-		$options['fields'] = array('id', 'title', 'image');
+		$options['fields'] = array('id', 'title', 'image', 'element-date');
 		$options['order'] = 'element-date ASC';
 		$options['recursive'] = -1;
 		return $this->Call->find('all', $options);
