@@ -135,7 +135,8 @@
 							'class' => 'form-control',
 							'label' => false,
 							'placeholder' => __('Audition date'),
-							'type' => 'text'
+							'type' => 'text',
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Audition']['element-date'])
 							// 'required' => 'required',
 						));
 						?>
@@ -190,7 +191,8 @@
 							'class' => 'form-control',
 							'label' => false,
 							'placeholder' => __('Inscription start'),
-							'type' => 'text'
+							'type' => 'text',
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Audition']['inscription-start'])
 							// 'required' => 'required',
 						));
 						?>
@@ -209,7 +211,8 @@
 							'class' => 'form-control',
 							'label' => false,
 							'placeholder' => __('Inscription end'),
-							'type' => 'text'
+							'type' => 'text',
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Audition']['inscription-end'])
 							// 'required' => 'required',
 						));
 						?>

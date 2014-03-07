@@ -122,7 +122,8 @@
 							'class' => 'form-control',
 							'label' => false,
 							'placeholder' => __('Job date'),
-							'type' => 'text'
+							'type' => 'text',
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Job']['inscription-end'])
 							// 'required' => 'required',
 						));
 						?>
@@ -177,7 +178,8 @@
 							'class' => 'form-control',
 							'label' => false,
 							'placeholder' => __('Inscription start'),
-							'type' => 'text'
+							'type' => 'text',
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Job']['inscription-end'])
 							// 'required' => 'required',
 						));
 						?>
@@ -196,7 +198,8 @@
 							'class' => 'form-control',
 							'label' => false,
 							'placeholder' => __('Inscription end'),
-							'type' => 'text'
+							'type' => 'text',
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Job']['inscription-end'])
 							// 'required' => 'required',
 						));
 						?>
