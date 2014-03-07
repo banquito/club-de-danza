@@ -123,7 +123,7 @@
 							'label' => false,
 							'placeholder' => __('Job date'),
 							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Job']['inscription-end'])
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Job']['element-date'])
 							// 'required' => 'required',
 						));
 						?>
@@ -179,7 +179,7 @@
 							'label' => false,
 							'placeholder' => __('Inscription start'),
 							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Job']['inscription-end'])
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Job']['inscription-start'])
 							// 'required' => 'required',
 						));
 						?>

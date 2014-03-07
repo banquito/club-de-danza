@@ -123,7 +123,7 @@
 							'label' => false,
 							'placeholder' => __('Casting date'),
 							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Casting']['inscription-end'])
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Casting']['element-date'])
 							// 'required' => 'required',
 						));
 						?>
@@ -179,7 +179,8 @@
 							'label' => false,
 							'placeholder' => __('Inscription start'),
 							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Casting']['inscription-end'])
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Casting']['inscription-sta
+								'])
 							// 'required' => 'required',
 						));
 						?>

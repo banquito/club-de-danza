@@ -123,7 +123,7 @@
 							'label' => false,
 							'placeholder' => __('Call date'),
 							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Call']['inscription-end'])
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Call']['element-date'])
 							// 'required' => 'required',
 						));
 						?>
@@ -179,7 +179,7 @@
 							'label' => false,
 							'placeholder' => __('Inscription start'),
 							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Call']['inscription-end'])
+							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Call']['inscription-start'])
 							// 'required' => 'required',
 						));
 						?>
