@@ -1,54 +1,54 @@
-/* line 3, ../../sass/_cajas.sass */
+/* line 3, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 a.btn-vermas {
   display: block;
 }
-/* line 6, ../../sass/_cajas.sass */
+/* line 6, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 a.btn-vermas img {
   margin-right: -9px;
 }
 
-/* line 9, ../../sass/_cajas.sass */
+/* line 9, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .caption.caption-vermas {
   padding-bottom: 0;
 }
 
-/* line 12, ../../sass/_cajas.sass */
+/* line 12, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner {
   margin-bottom: 20px;
 }
-/* line 15, ../../sass/_cajas.sass */
+/* line 15, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner div:first-child {
   margin-top: 18px;
 }
-/* line 18, ../../sass/_cajas.sass */
+/* line 18, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner img {
   height: 200px;
 }
-/* line 21, ../../sass/_cajas.sass */
+/* line 21, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner img.banner-large {
   height: 400px;
 }
 
-/* line 24, ../../sass/_cajas.sass */
+/* line 24, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail {
   height: 192px;
   max-height: 192px;
 }
-/* line 28, ../../sass/_cajas.sass */
+/* line 28, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail p:hover {
   cursor: pointer;
 }
 
-/* line 31, ../../sass/_cajas.sass */
+/* line 31, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal {
   display: table;
   width: 454px;
 }
-/* line 35, ../../sass/_cajas.sass */
+/* line 35, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal .caption-vermas {
   height: 72%;
 }
-/* line 38, ../../sass/_cajas.sass */
+/* line 38, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal .img-horizontal {
   height: 100%;
   max-height: 350px;
@@ -57,7 +57,7 @@ a.btn-vermas img {
   width: 195px;
   vertical-align: middle;
 }
-/* line 46, ../../sass/_cajas.sass */
+/* line 46, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal img {
   max-height: 178px;
   margin-bottom: auto;
@@ -65,25 +65,25 @@ a.btn-vermas img {
   max-width: 100%;
 }
 
-/* line 52, ../../sass/_cajas.sass */
+/* line 52, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vermas {
-  background-image: url('/img/layouts/vermas.png?1393415468');
+  background-image: url('/img/layouts/vermas.png?1393088704');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 12%;
 }
 
-/* line 59, ../../sass/_cajas.sass */
+/* line 59, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vertical {
   display: table;
   width: 100%;
 }
-/* line 63, ../../sass/_cajas.sass */
+/* line 63, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vertical .caption-vermas {
   display: table-row;
   height: 72%;
 }
-/* line 67, ../../sass/_cajas.sass */
+/* line 67, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vertical .img-vertical {
   height: 100%;
   max-height: 135px;
@@ -91,15 +91,15 @@ a.btn-vermas img {
   padding-bottom: 2px;
   vertical-align: middle;
 }
-/* line 74, ../../sass/_cajas.sass */
+/* line 74, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vertical img {
   max-height: 135px;
   margin-bottom: auto;
   margin-top: auto;
-  max-width: 100%;
+  max-width: 203px;
 }
 
-/* line 81, ../../sass/_cajas.sass */
+/* line 82, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .title-vermas {
   color: #dd104c;
   font-family: "Fagono";
@@ -108,22 +108,22 @@ a.btn-vermas img {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 89, ../../sass/_cajas.sass */
+/* line 90, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .title-vermas:hover {
   color: #a00f34;
 }
 
-/* line 92, ../../sass/_cajas.sass */
+/* line 93, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 #text-nota4 {
   height: 100%;
 }
 
-/* line 3, ../../sass/_carrousel.sass */
+/* line 3, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-control {
   width: 0;
 }
 
-/* line 6, ../../sass/_carrousel.sass */
+/* line 6, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-indicators {
   bottom: 0;
   left: 50%;
@@ -139,7 +139,7 @@ a.btn-vermas img {
   z-index: 15;
 }
 
-/* line 20, ../../sass/_carrousel.sass */
+/* line 20, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-caption {
   background-color: rgba(221, 16, 76, 0.8);
   bottom: 0;
@@ -151,33 +151,33 @@ a.btn-vermas img {
   width: 50%;
 }
 
-/* line 31, ../../sass/_carrousel.sass */
+/* line 31, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-control > .fa {
   display: inline-block;
   position: absolute;
   top: 40%;
 }
-/* line 36, ../../sass/_carrousel.sass */
+/* line 36, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-control > .fa.fa-angle-left {
   left: 5px;
 }
-/* line 39, ../../sass/_carrousel.sass */
+/* line 39, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-control > .fa.fa-angle-right {
   right: 5px;
 }
 
-/* line 44, ../../sass/_carrousel.sass */
+/* line 44, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-inner {
   box-shadow: 0 0 2px 2px #cccccc;
   margin-bottom: 20px;
 }
-/* line 48, ../../sass/_carrousel.sass */
+/* line 48, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-inner .item {
   height: 252px;
   min-height: 252px;
   max-height: 252px;
 }
-/* line 53, ../../sass/_carrousel.sass */
+/* line 53, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-inner a {
   color: white;
   font-family: "Homenaje";

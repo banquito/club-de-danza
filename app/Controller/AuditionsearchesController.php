@@ -92,10 +92,37 @@ class AuditionsearchesController extends AppController {
 			);
 		endforeach;
 
-		
+		function datesDesc($a, $b) {
+			// return $a;
+			// debug($b, $showHtml = null, $showFrom = true);
+			if ($a['date-sort'] == $b['date-sort']) {
+				return 0;
+			}
+			return ($a['date-sort'] > $b['date-sort']) ? -1 : 1;
+		}
+
+		usort($elements, 'datesDesc');
 
 		$this->set(compact('elements', 'data'));
 		
+	}
+
+	// // Comparison function
+	// function datesDesc($a, $b) {
+	// 	if ($a == $b) {
+	// 		return 0;
+	// 	}
+	// 	return ($a > $b) ? -1 : 1;
+	// }
+
+	// Comparison function
+	public function datesDesc($a, $b) {
+		return $a;
+		debug($b, $showHtml = null, $showFrom = true);
+		if ($a['date-sort'] == $b['date-sort']) {
+			return 0;
+		}
+		return ($a['date-sort'] > $b['date-sort']) ? -1 : 1;
 	}
 
 }

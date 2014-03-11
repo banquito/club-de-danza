@@ -1,4 +1,6 @@
 <?php //if(isset($data)) debug($data, $showHtml = null, $showFrom = true) ?>
+<?php //if(isset($elements)) debug($elements, $showHtml = null, $showFrom = true) ?>
+<?php echo $this->Html->css('pages/inicio', array('inline' => false)); ?>
 
 <div class="row">
 	<div class="col-sm-12">
