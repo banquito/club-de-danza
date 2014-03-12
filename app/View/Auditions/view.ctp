@@ -18,7 +18,7 @@
 		</div>
 	</div>
 	
-	<div class="col-sm-6">
+	<div class="col-sm-6 view-info">
 		<p><?php echo h($audition['Audition']['company']); ?></p>
 		<p>
 			<?php 

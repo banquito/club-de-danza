@@ -17,7 +17,7 @@
 		</div>
 	</div>
 	
-	<div class="col-sm-6">
+	<div class="col-sm-6 view-info">
 		<p>
 			Lugar: <?php echo h($practiceroom['Practiceroom']['street']); ?>, 
 			piso: <?php echo h($practiceroom['Practiceroom']['floor']); ?>, 
