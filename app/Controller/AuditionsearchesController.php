@@ -92,7 +92,7 @@ class AuditionsearchesController extends AppController {
 			);
 		endforeach;
 
-		function datesDesc($a, $b) {
+		function sortElements($a, $b) {
 			// return $a;
 			// debug($b, $showHtml = null, $showFrom = true);
 			if ($a['date-sort'] == $b['date-sort']) {
@@ -101,7 +101,7 @@ class AuditionsearchesController extends AppController {
 			return ($a['date-sort'] > $b['date-sort']) ? -1 : 1;
 		}
 
-		usort($elements, 'datesDesc');
+		usort($elements, 'sortElements');
 
 		$this->set(compact('elements', 'data'));
 		
@@ -116,13 +116,13 @@ class AuditionsearchesController extends AppController {
 	// }
 
 	// Comparison function
-	public function datesDesc($a, $b) {
-		return $a;
-		debug($b, $showHtml = null, $showFrom = true);
-		if ($a['date-sort'] == $b['date-sort']) {
-			return 0;
-		}
-		return ($a['date-sort'] > $b['date-sort']) ? -1 : 1;
-	}
+	// public function datesDesc($a, $b) {
+	// 	return $a;
+	// 	debug($b, $showHtml = null, $showFrom = true);
+	// 	if ($a['date-sort'] == $b['date-sort']) {
+	// 		return 0;
+	// 	}
+	// 	return ($a['date-sort'] > $b['date-sort']) ? -1 : 1;
+	// }
 
 }

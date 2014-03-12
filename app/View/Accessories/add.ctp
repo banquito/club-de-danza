@@ -169,6 +169,18 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Paid'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->input('paid', array(
+						'class' => 'form-control',
+						'label' => false,
+						// 'placeholder' => __('Paid'),
+						// 'required' => 'required',
+					));
+					?>
+				</div>
+			</div>
+			<div class="form-group">
 				<div class="col-sm-offset-4 col-sm-2">
 					<button type="submit" class="btn btn-default"><?php echo __('Aceptar'); ?></button>
 				</div>

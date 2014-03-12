@@ -3,24 +3,18 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th><?php echo $this->Paginator->sort('element-date'); ?></th>
-				<th><?php echo $this->Paginator->sort('title'); ?></th>
-				<th><?php echo $this->Paginator->sort('company'); ?></th>
+				<th><?php echo $this->Paginator->sort('name'); ?></th>
 				<th><?php echo $this->Paginator->sort('street'); ?></th>
-				<th><?php echo $this->Paginator->sort('inscription-start'); ?></th>
-				<th><?php echo $this->Paginator->sort('inscription-place'); ?></th>
+				<th><?php echo $this->Paginator->sort('phone'); ?></th>
 				<th class="actions"><?php echo __('Actions'); ?></th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php foreach ($accessories as $accessory): ?>
 				<tr>
-					<td><?php echo $this -> Time -> format('d-m-Y H:i', $accessory['Accessory']['element-date']); ?>&nbsp;</td>
-					<td><?php echo h($accessory['Accessory']['title']); ?>&nbsp;</td>
-					<td><?php echo h($accessory['Accessory']['company']); ?>&nbsp;</td>
+					<td><?php echo h($accessory['Accessory']['name']); ?>&nbsp;</td>
 					<td><?php echo h($accessory['Accessory']['street']); ?>&nbsp;</td>
-					<td><?php echo $this -> Time -> format('d-m-Y H:i', $accessory['Accessory']['inscription-start']); ?>&nbsp;</td>
-					<td><?php echo h($accessory['Accessory']['inscription-place']); ?>&nbsp;</td>
+					<td><?php echo h($accessory['Accessory']['phone']); ?>&nbsp;</td>
 					<td class="actions">
 						<?php echo $this->Html->link(__('View'), array('action' => 'view', $accessory['Accessory']['id'])); ?>
 						<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $accessory['Accessory']['id'])); ?>

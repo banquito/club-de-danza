@@ -16,11 +16,6 @@
 				?>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<?php echo $job['Job']['description']; ?>
-			</div>
-		</div>
 	</div>
 	
 	<div class="col-sm-6">
@@ -63,6 +58,12 @@
 	</div>
 </div>
 
+
+<div class="row">
+	<div class="col-sm-12">
+		<?php echo $job['Job']['description']; ?>
+	</div>
+</div>
 
 <!-- <div class="jobs view">
 <h2><?php echo __('Job'); ?></h2>

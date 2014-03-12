@@ -1,4 +1,44 @@
-<div class="accessories view">
+<div class="row">
+	<div class="col-sm-12">
+		<h1><?php echo h($accessory['Accessory']['name']); ?></h1>
+	</div>
+</div>
+
+<div class="row">
+	
+	<div class="col-sm-6">
+		<div class="row">
+			<div class="col-sm-12">
+				<?php
+				echo $this->Html->image('accessories/'.$accessory['Accessory']['image']
+					, array('class'=>'img-responsive')
+				);
+				?>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-sm-6">
+		<p>
+			Lugar: <?php echo h($accessory['Accessory']['street']); ?>, 
+			piso: <?php echo h($accessory['Accessory']['floor']); ?>, 
+			depto.: <?php echo h($accessory['Accessory']['department']); ?>
+		</p>
+		<p>
+			Contacto: <?php echo h($accessory['Accessory']['email']); ?>, 
+			<?php echo h($accessory['Accessory']['website']); ?>, 
+			<?php echo h($accessory['Accessory']['phone']); ?>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<?php echo $accessory['Accessory']['description']; ?>
+	</div>
+</div>
+
+
+<!-- <div class="accessories view">
 <h2><?php echo __('Accessory'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
@@ -133,3 +173,4 @@
 		</ul>
 	</div>
 </div>
+ -->

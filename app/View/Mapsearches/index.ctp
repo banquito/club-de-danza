@@ -4,7 +4,7 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $this->Form->create('Auditionsearches', array('url' => '/audiciones')) ?>
+		<?php echo $this->Form->create('Mapsearches', array('url' => '/mapadeladanza')) ?>
 			<div class="checkbox">
 				<label>
 					<?php echo $this->Form->checkbox('accessories', array('hiddenField' => false)) ?>
@@ -43,7 +43,7 @@
 						</div>
 						<div class="caption caption-vermas">
 							<p class="title-vermas">
-								<?php echo $element['title']; ?>
+								<?php echo $element['name']; ?>
 							</p>
 						</div>
 					</div>

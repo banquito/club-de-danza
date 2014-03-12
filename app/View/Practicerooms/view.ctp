@@ -1,4 +1,43 @@
-<div class="practicerooms view">
+<div class="row">
+	<div class="col-sm-12">
+		<h1><?php echo h($practiceroom['Practiceroom']['name']); ?></h1>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-6">
+		<div class="row">
+			<div class="col-sm-12">
+				<?php
+				echo $this->Html->image('practicerooms/'.$practiceroom['Practiceroom']['image']
+					, array('class'=>'img-responsive')
+				);
+				?>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-sm-6">
+		<p>
+			Lugar: <?php echo h($practiceroom['Practiceroom']['street']); ?>, 
+			piso: <?php echo h($practiceroom['Practiceroom']['floor']); ?>, 
+			depto.: <?php echo h($practiceroom['Practiceroom']['department']); ?>
+		</p>
+		<p>
+			Contacto: <?php echo h($practiceroom['Practiceroom']['email']); ?>, 
+			<?php echo h($practiceroom['Practiceroom']['website']); ?>, 
+			<?php echo h($practiceroom['Practiceroom']['phone']); ?>
+		</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<?php echo $practiceroom['Practiceroom']['description']; ?>
+	</div>
+</div>
+
+<!-- <div class="practicerooms view">
 <h2><?php echo __('Practiceroom'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
@@ -140,3 +179,4 @@
 		</ul>
 	</div>
 </div>
+ -->

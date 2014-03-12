@@ -1,4 +1,43 @@
-<div class="estudies view">
+<div class="row">
+	<div class="col-sm-12">
+		<h1><?php echo h($estudy['Estudy']['name']); ?></h1>
+	</div>
+</div>
+
+<div class="row">
+	
+	<div class="col-sm-6">
+		<div class="row">
+			<div class="col-sm-12">
+				<?php
+				echo $this->Html->image('estudies/'.$estudy['Estudy']['image']
+					, array('class'=>'img-responsive')
+				);
+				?>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-sm-6">
+		<p>
+			Lugar: <?php echo h($estudy['Estudy']['street']); ?>, 
+			piso: <?php echo h($estudy['Estudy']['floor']); ?>, 
+			depto.: <?php echo h($estudy['Estudy']['department']); ?>
+		</p>
+		<p>
+			Contacto: <?php echo h($estudy['Estudy']['email']); ?>, 
+			<?php echo h($estudy['Estudy']['website']); ?>, 
+			<?php echo h($estudy['Estudy']['phone']); ?>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<?php echo $estudy['Estudy']['description']; ?>
+	</div>
+</div>
+
+<!-- <div class="estudies view">
 <h2><?php echo __('Estudy'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
@@ -133,3 +172,4 @@
 		</ul>
 	</div>
 </div>
+ -->

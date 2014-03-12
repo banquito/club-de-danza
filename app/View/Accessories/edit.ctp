@@ -12,12 +12,12 @@
 			<?php echo $this->Form->input('id'); ?>
 			
 			<div class="form-group">
-				<label for="title" class="col-sm-4 control-label"><?php echo __('Title'); ?></label>
+				<label for="name" class="col-sm-4 control-label"><?php echo __('Name'); ?></label>
 				<div class="col-sm-8">
-					<?php	echo $this->Form->input('title', array(
+					<?php	echo $this->Form->input('name', array(
 						'class' => 'form-control',
 						'label' => false,
-						'placeholder' => __('Accessory title'),
+						'placeholder' => __('Accessory name'),
 						'required' => 'required',
 						'maxlength' => 50,
 						'type' => 'text'
@@ -64,70 +64,15 @@
 			</div>
 
 			<div class="form-group">
-				<label for="company" class="col-sm-4 control-label"><?php echo __('Company'); ?></label>
+				<label for="products" class="col-sm-4 control-label"><?php echo __('Products'); ?></label>
 				<div class="col-sm-8">
-					<?php echo $this->Form->input('company', array(
+					<?php echo $this->Form->input('products', array(
 						'class' => 'form-control',
 						'label' => false,
-						'placeholder' => __('Company'),
+						'placeholder' => __('Products'),
 						// 'required' => 'required',
 					));
 					?>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="gender" class="col-sm-4 control-label"><?php echo __('Gender'); ?></label>
-				<div class="col-sm-8">
-					<?php 
-					echo $this->Form->input('gender', array('class'=>'form-control'
-						, 'label' => FALSE
-						, 'options' => array('Femenino', 'Masculino', 'Otro')
-					));
-					?>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="age-start" class="col-sm-4 control-label"><?php echo __('Age start'); ?></label>
-				<div class="col-sm-8">
-					<?php echo $this->Form->input('age-start', array(
-						'class' => 'form-control',
-						'label' => false,
-						'placeholder' => __('Age start'),
-						// 'required' => 'required',
-					));
-					?>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="age-end" class="col-sm-4 control-label"><?php echo __('Age end'); ?></label>
-				<div class="col-sm-8">
-					<?php echo $this->Form->input('age-end', array(
-						'class' => 'form-control',
-						'label' => false,
-						'placeholder' => __('Age end'),
-						// 'required' => 'required',
-					));
-					?>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="element-date" class="col-sm-4 control-label"><?php echo __('Accessory date'); ?></label>
-				<div class="col-sm-8">
-					<div class='input-group date' id='datetimepickerAccessory'>
-						<span class="input-group-addon">
-							<span data-icon-element="" class="fa fa-calendar"></span>
-						</span>
-						<!-- <input type='text' class="form-control" data-ng-keydown="birthdayKeydown($event)" name="data[User][birthday]" /> -->
-						<?php echo $this->Form->input('element-date', array(
-							'class' => 'form-control',
-							'label' => false,
-							'placeholder' => __('Accessory date'),
-							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Accessory']['element-date'])
-							// 'required' => 'required',
-						));
-						?>
-					</div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -167,52 +112,12 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="inscription-start" class="col-sm-4 control-label"><?php echo __('Inscription start'); ?></label>
+				<label for="timetable" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
 				<div class="col-sm-8">
-					<div class='input-group date' id='datetimepickerInscriptionStart'>
-						<span class="input-group-addon">
-							<span data-icon-element="" class="fa fa-calendar"></span>
-						</span>
-						<!-- <input type='text' class="form-control" data-ng-keydown="birthdayKeydown($event)" name="data[User][birthday]" /> -->
-						<?php echo $this->Form->input('inscription-start', array(
-							'class' => 'form-control',
-							'label' => false,
-							'placeholder' => __('Inscription start'),
-							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Accessory']['inscription-start'])
-							// 'required' => 'required',
-						));
-						?>
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="inscription-end" class="col-sm-4 control-label"><?php echo __('Inscription end'); ?></label>
-				<div class="col-sm-8">
-					<div class='input-group date' id='datetimepickerInscriptionEnd'>
-						<span class="input-group-addon">
-							<span data-icon-element="" class="fa fa-calendar"></span>
-						</span>
-						<!-- <input type='text' class="form-control" data-ng-keydown="birthdayKeydown($event)" name="data[User][birthday]" /> -->
-						<?php echo $this->Form->input('inscription-end', array(
-							'class' => 'form-control',
-							'label' => false,
-							'placeholder' => __('Inscription end'),
-							'type' => 'text',
-							'value' => $this->Time->format('d/m/Y h:i', $this->request->data['Accessory']['inscription-end'])
-							// 'required' => 'required',
-						));
-						?>
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="inscription-place" class="col-sm-4 control-label"><?php echo __('Inscription place'); ?></label>
-				<div class="col-sm-8">
-					<?php echo $this->Form->input('inscription-place', array(
+					<?php echo $this->Form->input('timetable', array(
 						'class' => 'form-control',
 						'label' => false,
-						'placeholder' => __('Inscription place'),
+						'placeholder' => __('Timetable'),
 						// 'required' => 'required',
 					));
 					?>
@@ -279,12 +184,12 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="Profession" class="col-sm-4 control-label"><?php echo __('Profession'); ?></label>
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Paid'); ?></label>
 				<div class="col-sm-8">
-					<?php echo $this->Form->input('Profession', array(
+					<?php echo $this->Form->input('paid', array(
 						'class' => 'form-control',
 						'label' => false,
-						'placeholder' => __('Profession'),
+						// 'placeholder' => __('Paid'),
 						// 'required' => 'required',
 					));
 					?>

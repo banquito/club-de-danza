@@ -61,10 +61,10 @@ class MapsearchesController extends AppController {
 
 		if(isset($data['accessories']) || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'accessories', 'action' => 'getElements')));
-		// if(isset($data['estudies']) || $todas)
-		// 	$elements = array_merge($elements, $this->requestAction(array('controller' => 'estudies', 'action' => 'getElements')));
-		// if(isset($data['practicerooms']) || $todas)
-		// 	$elements = array_merge($elements, $this->requestAction(array('controller' => 'practicerooms', 'action' => 'getElements')));
+		if(isset($data['estudies']) || $todas)
+			$elements = array_merge($elements, $this->requestAction(array('controller' => 'estudies', 'action' => 'getElements')));
+		if(isset($data['practicerooms']) || $todas)
+			$elements = array_merge($elements, $this->requestAction(array('controller' => 'practicerooms', 'action' => 'getElements')));
 		
 
 		# Se desarrolla una lógica para independizarnos de los nombres de los Controllers
@@ -72,11 +72,11 @@ class MapsearchesController extends AppController {
 			$auxNames = array_keys($element);
 			$auxValues = array_values($element);
 			$name = strtolower($auxNames[0]);
-			$namePlural = $name.'s';
+			$namePlural = substr($name, -1, 1) == 'y' ? substr($name, 0, -1).'ies' : $name.'s';
 			$id = $auxValues[0]['id'];
 			$image = IMAGES_URL . ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
 			$name = $auxValues[0]['name'] ? substr($auxValues[0]['name'], 0, 50) : __('No Name');
-			$dateSort = $auxValues[0]['element-date'];
+			$paid = $auxValues[0]['paid'];
 			
 			$elements[$key] = array_merge($element
 				, array('name' => $name
@@ -84,40 +84,22 @@ class MapsearchesController extends AppController {
 					, 'link' => Router::url(array('controller'=>$namePlural, 'action'=>'view', $id))
 					, 'image' => $image
 					, 'name' => $name
-					, 'date-sort' => $dateSort
+					, 'paid' => $paid
 				)
 			);
 		endforeach;
 
-		function datesDesc($a, $b) {
-			if ($a['date-sort'] == $b['date-sort']) {
+		function sortElements($a, $b) {
+			if ($a['paid'] == $b['paid']) {
 				return 0;
 			}
-			return ($a['date-sort'] > $b['date-sort']) ? -1 : 1;
+			return ($a['paid'] > $b['paid']) ? -1 : 1;
 		}
 
-		usort($elements, 'datesDesc');
+		usort($elements, 'sortElements');
 
 		$this->set(compact('elements', 'data'));
 		
-	}
-
-	// // Comparison function
-	// function datesDesc($a, $b) {
-	// 	if ($a == $b) {
-	// 		return 0;
-	// 	}
-	// 	return ($a > $b) ? -1 : 1;
-	// }
-
-	// Comparison function
-	public function datesDesc($a, $b) {
-		return $a;
-		debug($b, $showHtml = null, $showFrom = true);
-		if ($a['date-sort'] == $b['date-sort']) {
-			return 0;
-		}
-		return ($a['date-sort'] > $b['date-sort']) ? -1 : 1;
 	}
 
 }

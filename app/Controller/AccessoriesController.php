@@ -222,9 +222,7 @@ class AccessoriesController extends AppController {
 			$this->request->data = $this->Accessory->find('first', $options);
 		}
 		$states = $this->Accessory->State->find('list');
-		$users = $this->Accessory->User->find('list');
 		$dancestyles = $this->Accessory->Dancestyle->find('list');
-		$professions = $this->Accessory->Profession->find('list');
 		$this->set(compact('states', 'users', 'dancestyles', 'professions'));
 	}
 
@@ -235,7 +233,7 @@ class AccessoriesController extends AppController {
  */
 	public function getElements() {
 		// $options['conditions'] = array('element-date >=' => date('Y-m-d H:i'));
-		$options['fields'] = array('id', 'name', 'image');
+		$options['fields'] = array('id', 'name', 'image', 'paid');
 		$options['order'] = array('paid' => 'DESC', 'created' => 'DESC');
 		$options['recursive'] = -1;
 		return $this->Accessory->find('all', $options);
