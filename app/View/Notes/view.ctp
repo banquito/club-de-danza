@@ -24,3 +24,9 @@
 		<p><?php echo $note['Note']['body']; ?></p>
 	</div>
 </div>
+
+<div class="row">
+	<div class="col-sm-12 notes-body">
+		<p><strong>Tags:</strong> <?php echo $note['Note']['tags']; ?></p>
+	</div>
+</div>

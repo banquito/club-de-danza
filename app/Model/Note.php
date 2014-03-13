@@ -8,6 +8,12 @@ App::uses('AppModel', 'Model');
 class Note extends AppModel {
 
 /**
+ * Behaviors
+ */
+	public $actsAs = array('Tags.Taggable');
+
+
+/**
  * Validation rules
  *
  * @var array
