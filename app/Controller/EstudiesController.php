@@ -71,30 +71,30 @@ class EstudiesController extends AppController {
 			# Se setea el usuario creador de la nota = usuario logeado
 			$estudy['Estudy']['user_id'] = AuthComponent::user('id');
 
-			if(isset($estudy['Estudy']['element-date']) && !empty($estudy['Estudy']['element-date'])):
-				// $element-date = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['element-date']); # PHP >= 5.3
-				# PHP 5.2
-				$elementDate = strptime($estudy['Estudy']['element-date'], '%d/%m/%Y %H:%M');
-				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
-				$elementDate = new DateTime($elementDate);
-				$estudy['Estudy']['element-date'] = $elementDate->format('Y-m-d H:i:s');
-			endif;
-			if(isset($estudy['Estudy']['inscription-start']) && !empty($estudy['Estudy']['inscription-start'])):
-				// $inscription-start = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['inscription-start']); # PHP >= 5.3
-				# PHP 5.2
-				$inscriptionStart = strptime($estudy['Estudy']['inscription-start'], '%d/%m/%Y %H:%M');
-				$inscriptionStart = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday'], $inscriptionStart['tm_hour'], $inscriptionStart['tm_min']);
-				$inscriptionStart = new DateTime($inscriptionStart);
-				$estudy['Estudy']['inscription-start'] = $inscriptionStart->format('Y-m-d H:i:s');
-			endif;
-			if(isset($estudy['Estudy']['inscription-end']) && !empty($estudy['Estudy']['inscription-end'])):
-				// $inscription-end = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['inscription-end']); # PHP >= 5.3
-				# PHP 5.2
-				$inscriptionEnd = strptime($estudy['Estudy']['inscription-end'], '%d/%m/%Y %H:%M');
-				$inscriptionEnd = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday'], $inscriptionEnd['tm_hour'], $inscriptionEnd['tm_min']);
-				$inscriptionEnd = new DateTime($inscriptionEnd);
-				$estudy['Estudy']['inscription-end'] = $inscriptionEnd->format('Y-m-d H:i:s');
-			endif;
+			// if(isset($estudy['Estudy']['element-date']) && !empty($estudy['Estudy']['element-date'])):
+			// 	// $element-date = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['element-date']); # PHP >= 5.3
+			// 	# PHP 5.2
+			// 	$elementDate = strptime($estudy['Estudy']['element-date'], '%d/%m/%Y %H:%M');
+			// 	$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
+			// 	$elementDate = new DateTime($elementDate);
+			// 	$estudy['Estudy']['element-date'] = $elementDate->format('Y-m-d H:i:s');
+			// endif;
+			// if(isset($estudy['Estudy']['inscription-start']) && !empty($estudy['Estudy']['inscription-start'])):
+			// 	// $inscription-start = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['inscription-start']); # PHP >= 5.3
+			// 	# PHP 5.2
+			// 	$inscriptionStart = strptime($estudy['Estudy']['inscription-start'], '%d/%m/%Y %H:%M');
+			// 	$inscriptionStart = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday'], $inscriptionStart['tm_hour'], $inscriptionStart['tm_min']);
+			// 	$inscriptionStart = new DateTime($inscriptionStart);
+			// 	$estudy['Estudy']['inscription-start'] = $inscriptionStart->format('Y-m-d H:i:s');
+			// endif;
+			// if(isset($estudy['Estudy']['inscription-end']) && !empty($estudy['Estudy']['inscription-end'])):
+			// 	// $inscription-end = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['inscription-end']); # PHP >= 5.3
+			// 	# PHP 5.2
+			// 	$inscriptionEnd = strptime($estudy['Estudy']['inscription-end'], '%d/%m/%Y %H:%M');
+			// 	$inscriptionEnd = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday'], $inscriptionEnd['tm_hour'], $inscriptionEnd['tm_min']);
+			// 	$inscriptionEnd = new DateTime($inscriptionEnd);
+			// 	$estudy['Estudy']['inscription-end'] = $inscriptionEnd->format('Y-m-d H:i:s');
+			// endif;
 
 			# Se verifica si se subió una imagen y se setea la imagen
 			if (isset($estudy['Estudy']['image']['name']) && ($estudy['Estudy']['image']['name'] != '')) {
@@ -110,12 +110,38 @@ class EstudiesController extends AppController {
 				$image = $imageName;
 			}
 
-
 			$estudy['Estudy']['image'] = $image;
 
 			$this->Estudy->create();
 			if ($this->Estudy->save($estudy)) {
 				$this->Session->setFlash(__('The estudy has been saved.'));
+
+				if (isset($estudy['Timetable']) && sizeof($estudy['Timetable']) > 0) {
+				 	foreach ($estudy['Timetable'] as $key => $timetable) {
+						
+						# Se verifica si se subió una timetable y se setea la timetable
+						if (isset($timetable['name']) && ($timetable['name'] != '')) {
+							$timetableName = $timetable['name'];
+							$uploadDir = IMAGES_URL . 'timetables/';
+							$uploadFile = $uploadDir . $timetableName;
+							
+							if (!move_uploaded_file($timetable['tmp_name'], $uploadFile)) {
+								$this -> Session -> setFlash(__('The timetable could not be saved. Please, verify the file.'));
+								return $this -> redirect(array('action' => 'add', $estudy));
+							}
+							
+					 		# Se crea la relación
+					 		$this->Estudy->Timetable->create();
+							if ($this->Estudy->Timetable->save(array('name'=>$timetableName))) {
+								$this->Estudy->EstudiesTimetable->create();
+								$this->Estudy->EstudiesTimetable->save(array('estudy_id'=>$this->Estudy->id
+									, 'timetable_id'=>$this->Estudy->Timetable->id)
+								);
+							}
+						}
+				 	}
+				}
+
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The estudy could not be saved. Please, try again.'));

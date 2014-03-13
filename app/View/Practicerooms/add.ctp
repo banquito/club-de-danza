@@ -96,24 +96,19 @@
 					?>
 				</div>
 			</div>
+
+			<!-- Timetables -->
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
 				<div id="timeTables" class="col-sm-7">
 					<input type="file" class="btn btn-default" name="data[Timetable][]">
-
-					<?php 
-					// echo $this->Form->input('timetable', array(
-					// 	'class' => 'form-control',
-					// 	'label' => false,
-					// 	'placeholder' => __('Timetable'),
-					// 	// 'required' => 'required',
-					// ));
-					?>
 				</div>
 				<div class="col-sm-1">
 					<button id="moreTimeTables" type="button" class="btn btn-default">+</button>
 				</div>
 			</div>
+
+			<!-- Website -->
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Website'); ?></label>
 				<div class="col-sm-8">

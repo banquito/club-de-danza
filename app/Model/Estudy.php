@@ -189,6 +189,19 @@ class Estudy extends AppModel {
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
+		),
+		'Timetable' => array(
+			'className' => 'Timetable',
+			'joinTable' => 'estudies_timetables',
+			'foreignKey' => 'estudy_id',
+			'associationForeignKey' => 'timetable_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
 		)
 	);
 
