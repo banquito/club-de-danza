@@ -283,6 +283,8 @@ class EstudiesController extends AppController {
 		if (!$this->Estudy->exists($id)) {
 			throw new NotFoundException(__('Invalid estudy'));
 		}
+		$this->layout = 'mapadeladanza';
+		
 		$options = array('conditions' => array('Estudy.' . $this->Estudy->primaryKey => $id));
 		$this->set('estudy', $this->Estudy->find('first', $options));
 	}

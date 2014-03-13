@@ -1,4 +1,4 @@
-<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false)); ?>
+<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit', 'mapadeladanza'), array('inline'=>false)); ?>
 
 <div class="row row-header-h1">
 	<div class="col-sm-12">
@@ -98,14 +98,20 @@
 			</div>
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
-				<div class="col-sm-8">
-					<?php echo $this->Form->input('timetable', array(
-						'class' => 'form-control',
-						'label' => false,
-						'placeholder' => __('Timetable'),
-						// 'required' => 'required',
-					));
+				<div id="timeTables" class="col-sm-7">
+					<input type="file" class="form-control" name="data[Timetable][]">
+
+					<?php 
+					// echo $this->Form->input('timetable', array(
+					// 	'class' => 'form-control',
+					// 	'label' => false,
+					// 	'placeholder' => __('Timetable'),
+					// 	// 'required' => 'required',
+					// ));
 					?>
+				</div>
+				<div class="col-sm-1">
+					<button id="moreTimeTables" type="button">+</button>
 				</div>
 			</div>
 			<div class="form-group">

@@ -1,3 +1,5 @@
+<?php //debug($practiceroom, $showHtml = null, $showFrom = true) ?>
+
 <div class="row">
 	<div class="col-sm-12">
 		<h1><?php echo h($practiceroom['Practiceroom']['name']); ?></h1>
@@ -28,6 +30,16 @@
 			<?php echo h($practiceroom['Practiceroom']['website']); ?>, 
 			<?php echo h($practiceroom['Practiceroom']['phone']); ?>
 		</p>
+		<?php if(isset($practiceroom['Timetable']) && sizeof($practiceroom['Timetable']) > 0): ?>
+			<p>
+				<?php
+				foreach ($practiceroom['Timetable'] as $key => $timetable):
+					echo $this->Html->image('timetables/'.$timetable['name']
+						, array('class' => 'img-responsive'));
+				endforeach;
+				?>
+			</p>
+		<?php endif; ?>
 	</div>
 </div>
 

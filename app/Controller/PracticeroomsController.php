@@ -71,31 +71,6 @@ class PracticeroomsController extends AppController {
 			# Se setea el usuario creador de la nota = usuario logeado
 			$practiceroom['Practiceroom']['user_id'] = AuthComponent::user('id');
 
-			if(isset($practiceroom['Practiceroom']['element-date']) && !empty($practiceroom['Practiceroom']['element-date'])):
-				// $element-date = DateTime::createFromFormat('d/m/Y', $practiceroom['Practiceroom']['element-date']); # PHP >= 5.3
-				# PHP 5.2
-				$elementDate = strptime($practiceroom['Practiceroom']['element-date'], '%d/%m/%Y %H:%M');
-				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
-				$elementDate = new DateTime($elementDate);
-				$practiceroom['Practiceroom']['element-date'] = $elementDate->format('Y-m-d H:i:s');
-			endif;
-			if(isset($practiceroom['Practiceroom']['inscription-start']) && !empty($practiceroom['Practiceroom']['inscription-start'])):
-				// $inscription-start = DateTime::createFromFormat('d/m/Y', $practiceroom['Practiceroom']['inscription-start']); # PHP >= 5.3
-				# PHP 5.2
-				$inscriptionStart = strptime($practiceroom['Practiceroom']['inscription-start'], '%d/%m/%Y %H:%M');
-				$inscriptionStart = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday'], $inscriptionStart['tm_hour'], $inscriptionStart['tm_min']);
-				$inscriptionStart = new DateTime($inscriptionStart);
-				$practiceroom['Practiceroom']['inscription-start'] = $inscriptionStart->format('Y-m-d H:i:s');
-			endif;
-			if(isset($practiceroom['Practiceroom']['inscription-end']) && !empty($practiceroom['Practiceroom']['inscription-end'])):
-				// $inscription-end = DateTime::createFromFormat('d/m/Y', $practiceroom['Practiceroom']['inscription-end']); # PHP >= 5.3
-				# PHP 5.2
-				$inscriptionEnd = strptime($practiceroom['Practiceroom']['inscription-end'], '%d/%m/%Y %H:%M');
-				$inscriptionEnd = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday'], $inscriptionEnd['tm_hour'], $inscriptionEnd['tm_min']);
-				$inscriptionEnd = new DateTime($inscriptionEnd);
-				$practiceroom['Practiceroom']['inscription-end'] = $inscriptionEnd->format('Y-m-d H:i:s');
-			endif;
-
 			# Se verifica si se subió una imagen y se setea la imagen
 			if (isset($practiceroom['Practiceroom']['image']['name']) && ($practiceroom['Practiceroom']['image']['name'] != '')) {
 				$imageName = $practiceroom['Practiceroom']['image']['name'];
@@ -110,12 +85,38 @@ class PracticeroomsController extends AppController {
 				$image = $imageName;
 			}
 
-
 			$practiceroom['Practiceroom']['image'] = $image;
 
 			$this->Practiceroom->create();
 			if ($this->Practiceroom->save($practiceroom)) {
 				$this->Session->setFlash(__('The practiceroom has been saved.'));
+				
+				if (isset($practiceroom['Timetable']) && sizeof($practiceroom['Timetable']) > 0) {
+				 	foreach ($practiceroom['Timetable'] as $key => $timetable) {
+						
+						# Se verifica si se subió una timetable y se setea la timetable
+						if (isset($timetable['name']) && ($timetable['name'] != '')) {
+							$timetableName = $timetable['name'];
+							$uploadDir = IMAGES_URL . 'timetables/';
+							$uploadFile = $uploadDir . $timetableName;
+							
+							if (!move_uploaded_file($timetable['tmp_name'], $uploadFile)) {
+								$this -> Session -> setFlash(__('The timetable could not be saved. Please, verify the file.'));
+								return $this -> redirect(array('action' => 'add', $practiceroom));
+							}
+							
+					 		# Se crea la relación
+					 		$this->Practiceroom->Timetable->create();
+							if ($this->Practiceroom->Timetable->save(array('name'=>$timetableName))) {
+								$this->Practiceroom->PracticeroomsTimetable->create();
+								$this->Practiceroom->PracticeroomsTimetable->save(array('practiceroom_id'=>$this->Practiceroom->id
+									, 'timetable_id'=>$this->Practiceroom->Timetable->id)
+								);
+							}
+						}
+				 	}
+				}
+
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The practiceroom could not be saved. Please, try again.'));
@@ -283,8 +284,11 @@ class PracticeroomsController extends AppController {
 		if (!$this->Practiceroom->exists($id)) {
 			throw new NotFoundException(__('Invalid practiceroom'));
 		}
+		$this->layout = 'mapadeladanza';
+		
 		$options = array('conditions' => array('Practiceroom.' . $this->Practiceroom->primaryKey => $id));
 		$this->set('practiceroom', $this->Practiceroom->find('first', $options));
+		// $this->set('timetables', $this->Practiceroom->Timetable->find('list'));
 	}
 
 // /**

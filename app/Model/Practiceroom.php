@@ -207,6 +207,19 @@ class Practiceroom extends AppModel {
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
+		),
+		'Timetable' => array(
+			'className' => 'Timetable',
+			'joinTable' => 'practicerooms_timetables',
+			'foreignKey' => 'practiceroom_id',
+			'associationForeignKey' => 'timetable_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
 		)
 	);
 

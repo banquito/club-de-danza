@@ -74,7 +74,7 @@ class Dancestyle extends AppModel {
 		),
 		'Accesory' => array(
 			'className' => 'Accesory',
-			'joinTable' => 'accesories_dancestyles',
+			'joinTable' => 'accessories_dancestyles',
 			'foreignKey' => 'dancestyle_id',
 			'associationForeignKey' => 'accesory_id',
 			'unique' => 'keepExisting',

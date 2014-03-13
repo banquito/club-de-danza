@@ -283,6 +283,8 @@ class AccessoriesController extends AppController {
 		if (!$this->Accessory->exists($id)) {
 			throw new NotFoundException(__('Invalid accessory'));
 		}
+		$this->layout = 'mapadeladanza';
+
 		$options = array('conditions' => array('Accessory.' . $this->Accessory->primaryKey => $id));
 		$this->set('accessory', $this->Accessory->find('first', $options));
 	}
