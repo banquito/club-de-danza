@@ -99,7 +99,7 @@
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
 				<div id="timeTables" class="col-sm-7">
-					<input type="file" class="form-control" name="data[Timetable][]">
+					<input type="file" class="btn btn-default" name="data[Timetable][]">
 
 					<?php 
 					// echo $this->Form->input('timetable', array(
@@ -111,7 +111,7 @@
 					?>
 				</div>
 				<div class="col-sm-1">
-					<button id="moreTimeTables" type="button">+</button>
+					<button id="moreTimeTables" type="button" class="btn btn-default">+</button>
 				</div>
 			</div>
 			<div class="form-group">
