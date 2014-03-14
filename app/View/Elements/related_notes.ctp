@@ -10,7 +10,7 @@ $related_notes = $this->requestAction(Router::url(array('controller' => 'notes',
             <a href="/notas/ver/<?php echo $note['Note']['id']; ?>">
                 <div class="thumbnail thumbnail-vermas thumbnail-vertical">
                     <div class="img-vertical text-center">
-                        <?php $image = IMAGES_URL . ($note['Note']['image'] ? 'notes/'.$note['Note']['image'] : 'layouts/sinfoto.jpg'); ?>
+                        <?php $image = '/' . IMAGES_URL . ($note['Note']['image'] ? 'notes/'.$note['Note']['image'] : 'layouts/sinfoto.jpg'); ?>
                         <img alt="imagen-nota" src="<?php echo $image; ?>" />
                     </div>
                     <div class="caption caption-vermas">
