@@ -1,4 +1,4 @@
-<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false)); ?>
+<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit', 'mapadeladanza'), array('inline'=>false)); ?>
 
 <div class="row row-header-h1">
 	<div class="col-sm-12">
@@ -48,18 +48,6 @@
 					?>
 				</div>
 			</div>
-			<!-- <div class="form-group">
-				<label for="image" class="col-sm-4 control-label"><?php echo __('Products'); ?></label>
-				<div class="col-sm-8">
-					<?php echo $this->Form->input('products', array(
-						'class' => 'form-control',
-						'label' => false,
-						'placeholder' => __('Products'),
-						// 'required' => 'required',
-					));
-					?>
-				</div>
-			</div> -->
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Street'); ?></label>
 				<div class="col-sm-8">
@@ -96,7 +84,7 @@
 					?>
 				</div>
 			</div>
-			<div class="form-group">
+			<!-- <div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
 				<div class="col-sm-8">
 					<?php echo $this->Form->input('timetable', array(
@@ -107,7 +95,20 @@
 					));
 					?>
 				</div>
+			</div> -->
+
+			<!-- Timetables -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
+				<div id="timeTables" class="col-sm-7">
+					<input type="file" class="btn btn-default" name="data[Timetable][]">
+				</div>
+				<div class="col-sm-1">
+					<button id="moreTimeTables" type="button" class="btn btn-default">+</button>
+				</div>
 			</div>
+
+			<!-- Website -->
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Website'); ?></label>
 				<div class="col-sm-8">

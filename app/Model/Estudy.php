@@ -105,16 +105,16 @@ class Estudy extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'timetable' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
+		// 'timetable' => array(
+		// 	'notEmpty' => array(
+		// 		'rule' => array('notEmpty'),
+		// 		//'message' => 'Your custom message here',
+		// 		//'allowEmpty' => false,
+		// 		//'required' => false,
+		// 		//'last' => false, // Stop validation after this rule
+		// 		//'on' => 'create', // Limit validation to 'create' or 'update' operations
+		// 	),
+		// ),
 		'paid' => array(
 			'boolean' => array(
 				'rule' => array('boolean'),
@@ -182,6 +182,19 @@ class Estudy extends AppModel {
 			'joinTable' => 'estudies_dancestyles',
 			'foreignKey' => 'estudy_id',
 			'associationForeignKey' => 'dancestyle_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		),
+		'Timetable' => array(
+			'className' => 'Timetable',
+			'joinTable' => 'estudies_timetables',
+			'foreignKey' => 'estudy_id',
+			'associationForeignKey' => 'timetable_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

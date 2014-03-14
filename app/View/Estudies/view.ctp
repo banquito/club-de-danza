@@ -29,6 +29,16 @@
 			<?php echo h($estudy['Estudy']['website']); ?>, 
 			<?php echo h($estudy['Estudy']['phone']); ?>
 		</p>
+		<?php if(isset($estudy['Timetable']) && sizeof($estudy['Timetable']) > 0): ?>
+			<p>
+				<?php
+				foreach ($estudy['Timetable'] as $key => $timetable):
+					echo $this->Html->image('timetables/'.$timetable['file']
+						, array('class' => 'img-responsive'));
+				endforeach;
+				?>
+			</p>
+		<?php endif; ?>
 	</div>
 </div>
 <div class="row">

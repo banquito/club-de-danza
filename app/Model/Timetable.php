@@ -33,6 +33,19 @@ class Timetable extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
+		'Estudy' => array(
+			'className' => 'Estudy',
+			'joinTable' => 'estudies_timetables',
+			'foreignKey' => 'timetable_id',
+			'associationForeignKey' => 'estudy_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		),
 		'Practiceroom' => array(
 			'className' => 'Practiceroom',
 			'joinTable' => 'practicerooms_timetables',
@@ -45,7 +58,7 @@ class Timetable extends AppModel {
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
-		)
+		),
 	);
 
 }
