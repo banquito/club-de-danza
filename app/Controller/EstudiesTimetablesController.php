@@ -15,6 +15,48 @@ class EstudiesTimetablesController extends AppController {
  */
 	public $components = array('Paginator');
 
+	
+	/*************************************************************************************************************************
+	* Autentication
+	**************************************************************************************************************************/
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow();
+	}
+
+	public function isAuthorized($user) {
+		$artist = array();
+		$owner = array('remove');
+		$admin = array_merge($artist, $owner, array());
+
+		// All artist users can index posts
+		if (in_array($this->action, $artist)) {
+			return true;
+		}
+
+		// The owner of an element can edit and delete it
+		if (in_array($this->action, $owner)) {
+			$elementId = $this->request->params['pass'][0];
+			if ($this->EstudiesTimetable->isOwnedBy($elementId, $user['id'])) {
+				return true;
+			}
+		}
+
+		# Usuario administrador(500) y superiores
+		if ($user['Rol']['weight'] >= User::ADMIN) {
+			if (in_array($this->action, $admin)) {
+				return true;
+			}
+		}
+
+		return parent::isAuthorized($user);
+	}
+
+	/*************************************************************************************************************************
+	* /autentication
+	**************************************************************************************************************************/
+
 /**
  * index method
  *
@@ -106,4 +148,28 @@ class EstudiesTimetablesController extends AppController {
 			$this->Session->setFlash(__('The estudies timetable could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
+	}
+
+
+/**
+ * remove method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function remove($id = null) {
+		$this->EstudiesTimetable->id = $id;
+		if (!$this->EstudiesTimetable->exists()) {
+			throw new NotFoundException(__('Invalid estudies timetable'));
+		}
+		$this->request->onlyAllow('get', 'delete');
+		if ($this->EstudiesTimetable->delete()) {
+			$this->Session->setFlash(__('The estudies timetable has been deleted.'));
+		} else {
+			$this->Session->setFlash(__('The estudies timetable could not be deleted. Please, try again.'));
+		}
+		return $this->redirect(array('action' => 'index'));
+	}
+
+}

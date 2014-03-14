@@ -33,7 +33,7 @@
 			<p>
 				<?php
 				foreach ($estudy['Timetable'] as $key => $timetable):
-					echo $this->Html->image('timetables/'.$timetable['name']
+					echo $this->Html->image('timetables/'.$timetable['file']
 						, array('class' => 'img-responsive'));
 				endforeach;
 				?>

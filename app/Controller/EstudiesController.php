@@ -71,31 +71,6 @@ class EstudiesController extends AppController {
 			# Se setea el usuario creador de la nota = usuario logeado
 			$estudy['Estudy']['user_id'] = AuthComponent::user('id');
 
-			// if(isset($estudy['Estudy']['element-date']) && !empty($estudy['Estudy']['element-date'])):
-			// 	// $element-date = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['element-date']); # PHP >= 5.3
-			// 	# PHP 5.2
-			// 	$elementDate = strptime($estudy['Estudy']['element-date'], '%d/%m/%Y %H:%M');
-			// 	$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
-			// 	$elementDate = new DateTime($elementDate);
-			// 	$estudy['Estudy']['element-date'] = $elementDate->format('Y-m-d H:i:s');
-			// endif;
-			// if(isset($estudy['Estudy']['inscription-start']) && !empty($estudy['Estudy']['inscription-start'])):
-			// 	// $inscription-start = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['inscription-start']); # PHP >= 5.3
-			// 	# PHP 5.2
-			// 	$inscriptionStart = strptime($estudy['Estudy']['inscription-start'], '%d/%m/%Y %H:%M');
-			// 	$inscriptionStart = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday'], $inscriptionStart['tm_hour'], $inscriptionStart['tm_min']);
-			// 	$inscriptionStart = new DateTime($inscriptionStart);
-			// 	$estudy['Estudy']['inscription-start'] = $inscriptionStart->format('Y-m-d H:i:s');
-			// endif;
-			// if(isset($estudy['Estudy']['inscription-end']) && !empty($estudy['Estudy']['inscription-end'])):
-			// 	// $inscription-end = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['inscription-end']); # PHP >= 5.3
-			// 	# PHP 5.2
-			// 	$inscriptionEnd = strptime($estudy['Estudy']['inscription-end'], '%d/%m/%Y %H:%M');
-			// 	$inscriptionEnd = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday'], $inscriptionEnd['tm_hour'], $inscriptionEnd['tm_min']);
-			// 	$inscriptionEnd = new DateTime($inscriptionEnd);
-			// 	$estudy['Estudy']['inscription-end'] = $inscriptionEnd->format('Y-m-d H:i:s');
-			// endif;
-
 			# Se verifica si se subió una imagen y se setea la imagen
 			if (isset($estudy['Estudy']['image']['name']) && ($estudy['Estudy']['image']['name'] != '')) {
 				$imageName = $estudy['Estudy']['image']['name'];
@@ -114,34 +89,37 @@ class EstudiesController extends AppController {
 
 			$this->Estudy->create();
 			if ($this->Estudy->save($estudy)) {
-				$this->Session->setFlash(__('The estudy has been saved.'));
-
+				$estudy_id = $this->Estudy->id;
+				
 				if (isset($estudy['Timetable']) && sizeof($estudy['Timetable']) > 0) {
 				 	foreach ($estudy['Timetable'] as $key => $timetable) {
 						
 						# Se verifica si se subió una timetable y se setea la timetable
 						if (isset($timetable['name']) && ($timetable['name'] != '')) {
 							$timetableName = $timetable['name'];
+							$timetableExt = pathinfo($timetable['name']);
+							$timetableExt = $timetableExt['extension'];
+							$timetableFile = $estudy_id . date("YmdHisu")  . '.' . $timetableExt;
 							$uploadDir = IMAGES_URL . 'timetables/';
-							$uploadFile = $uploadDir . $timetableName;
+							$uploadFile = $uploadDir . $timetableFile;
 							
-							if (!move_uploaded_file($timetable['tmp_name'], $uploadFile)) {
-								$this -> Session -> setFlash(__('The timetable could not be saved. Please, verify the file.'));
-								return $this -> redirect(array('action' => 'add', $estudy));
-							}
-							
-					 		# Se crea la relación
-					 		$this->Estudy->Timetable->create();
-							if ($this->Estudy->Timetable->save(array('name'=>$timetableName))) {
-								$this->Estudy->EstudiesTimetable->create();
-								$this->Estudy->EstudiesTimetable->save(array('estudy_id'=>$this->Estudy->id
-									, 'timetable_id'=>$this->Estudy->Timetable->id)
-								);
+							if (move_uploaded_file($timetable['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Estudy->Timetable->create();
+								if ($this->Estudy->Timetable->save(array('file'=>$timetableFile, 'name'=>$timetableName))) {
+									$this->Estudy->EstudiesTimetable->create();
+									$this->Estudy->EstudiesTimetable->save(array('estudy_id'=>$this->Estudy->id
+										, 'timetable_id' => $this->Estudy->Timetable->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
 							}
 						}
 				 	}
 				}
 
+				$this->Session->setFlash(__('The estudy has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The estudy could not be saved. Please, try again.'));
@@ -188,31 +166,6 @@ class EstudiesController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			$estudy = $this->request->data;
 
-			if(isset($estudy['Estudy']['element-date']) && !empty($estudy['Estudy']['element-date'])):
-				// $element-date = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['element-date']); # PHP >= 5.3
-				# PHP 5.2
-				$elementDate = strptime($estudy['Estudy']['element-date'], '%d/%m/%Y %H:%M');
-				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
-				$elementDate = new DateTime($elementDate);
-				$estudy['Estudy']['element-date'] = $elementDate->format('Y-m-d H:i:s');
-			endif;
-			if(isset($estudy['Estudy']['inscription-start']) && !empty($estudy['Estudy']['inscription-start'])):
-				// $inscription-start = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['inscription-start']); # PHP >= 5.3
-				# PHP 5.2
-				$inscriptionStart = strptime($estudy['Estudy']['inscription-start'], '%d/%m/%Y %H:%M');
-				$inscriptionStart = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday'], $inscriptionStart['tm_hour'], $inscriptionStart['tm_min']);
-				$inscriptionStart = new DateTime($inscriptionStart);
-				$estudy['Estudy']['inscription-start'] = $inscriptionStart->format('Y-m-d H:i:s');
-			endif;
-			if(isset($estudy['Estudy']['inscription-end']) && !empty($estudy['Estudy']['inscription-end'])):
-				// $inscription-end = DateTime::createFromFormat('d/m/Y', $estudy['Estudy']['inscription-end']); # PHP >= 5.3
-				# PHP 5.2
-				$inscriptionEnd = strptime($estudy['Estudy']['inscription-end'], '%d/%m/%Y %H:%M');
-				$inscriptionEnd = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday'], $inscriptionEnd['tm_hour'], $inscriptionEnd['tm_min']);
-				$inscriptionEnd = new DateTime($inscriptionEnd);
-				$estudy['Estudy']['inscription-end'] = $inscriptionEnd->format('Y-m-d H:i:s');
-			endif;
-
 			# Se verifica si se subió una imagen y se setea la imagen
 			if (isset($estudy['Estudy']['image']['name']) 
 					&& ($estudy['Estudy']['image']['name'] != '')
@@ -234,10 +187,42 @@ class EstudiesController extends AppController {
 				$estudy['Estudy']['image'] = $this -> Estudy -> field('image', array('id'=>$id));
 			}
 
-
-
+			# Para que no se eliminen los Timetables en el save:
+			$timetables = $this -> Estudy -> read(null, $id);
+			$estudy['Timetable'] = array_merge($estudy['Timetable'], $timetables['Timetable']);
 
 			if ($this->Estudy->save($estudy)) {
+				$estudy_id = $this->Estudy->id;
+
+				if (isset($estudy['Timetable']) && sizeof($estudy['Timetable']) > 0) {
+				 	foreach ($estudy['Timetable'] as $key => $timetable) {
+						
+						# Se verifica si se subió una timetable y se setea la timetable
+						if (isset($timetable['name']) && ($timetable['name'] != '') && isset($timetable['tmp_name']) && ($timetable['tmp_name'] != '')) {
+							$timetableName = $timetable['name'];
+							$timetableExt = pathinfo($timetable['name']);
+							$timetableExt = $timetableExt['extension'];
+							$timetableFile = $estudy_id . date("YmdHisu")  . '.' . $timetableExt;
+							$uploadDir = IMAGES_URL . 'timetables/';
+							$uploadFile = $uploadDir . $timetableFile;
+							
+							if (move_uploaded_file($timetable['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Estudy->Timetable->create();
+								if ($this->Estudy->Timetable->save(array('file'=>$timetableFile, 'name'=>$timetableName))) {
+									$this->Estudy->EstudiesTimetable->create();
+									$this->Estudy->EstudiesTimetable->save(array('estudy_id' => $estudy_id
+										, 'timetable_id' => $this->Estudy->Timetable->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+							
+						}
+				 	}
+				}
+
 				$this->Session->setFlash(__('The estudy has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -288,16 +273,6 @@ class EstudiesController extends AppController {
 	}
 
 
-// /**
-//  * index method
-//  *
-//  * @return void
-//  */
-// 	public function index() {
-// 		$this->Estudy->recursive = 0;
-// 		$this->set('estudies', $this->Paginator->paginate());
-// 	}
-
 /**
  * view method
  *
@@ -314,75 +289,5 @@ class EstudiesController extends AppController {
 		$options = array('conditions' => array('Estudy.' . $this->Estudy->primaryKey => $id));
 		$this->set('estudy', $this->Estudy->find('first', $options));
 	}
-
-// /**
-//  * add method
-//  *
-//  * @return void
-//  */
-// 	public function add() {
-// 		if ($this->request->is('post')) {
-// 			$this->Estudy->create();
-// 			if ($this->Estudy->save($this->request->data)) {
-// 				$this->Session->setFlash(__('The estudy has been saved.'));
-// 				return $this->redirect(array('action' => 'index'));
-// 			} else {
-// 				$this->Session->setFlash(__('The estudy could not be saved. Please, try again.'));
-// 			}
-// 		}
-// 		$states = $this->Estudy->State->find('list');
-// 		$users = $this->Estudy->User->find('list');
-// 		$dancestyles = $this->Estudy->Dancestyle->find('list');
-// 		$this->set(compact('states', 'users', 'dancestyles'));
-// 	}
-
-// /**
-//  * edit method
-//  *
-//  * @throws NotFoundException
-//  * @param string $id
-//  * @return void
-//  */
-// 	public function edit($id = null) {
-// 		if (!$this->Estudy->exists($id)) {
-// 			throw new NotFoundException(__('Invalid estudy'));
-// 		}
-// 		if ($this->request->is(array('post', 'put'))) {
-// 			if ($this->Estudy->save($this->request->data)) {
-// 				$this->Session->setFlash(__('The estudy has been saved.'));
-// 				return $this->redirect(array('action' => 'index'));
-// 			} else {
-// 				$this->Session->setFlash(__('The estudy could not be saved. Please, try again.'));
-// 			}
-// 		} else {
-// 			$options = array('conditions' => array('Estudy.' . $this->Estudy->primaryKey => $id));
-// 			$this->request->data = $this->Estudy->find('first', $options);
-// 		}
-// 		$states = $this->Estudy->State->find('list');
-// 		$users = $this->Estudy->User->find('list');
-// 		$dancestyles = $this->Estudy->Dancestyle->find('list');
-// 		$this->set(compact('states', 'users', 'dancestyles'));
-// 	}
-
-// /**
-//  * delete method
-//  *
-//  * @throws NotFoundException
-//  * @param string $id
-//  * @return void
-//  */
-// 	public function delete($id = null) {
-// 		$this->Estudy->id = $id;
-// 		if (!$this->Estudy->exists()) {
-// 			throw new NotFoundException(__('Invalid estudy'));
-// 		}
-// 		$this->request->onlyAllow('post', 'delete');
-// 		if ($this->Estudy->delete()) {
-// 			$this->Session->setFlash(__('The estudy has been deleted.'));
-// 		} else {
-// 			$this->Session->setFlash(__('The estudy could not be deleted. Please, try again.'));
-// 		}
-// 		return $this->redirect(array('action' => 'index'));
-// 	}
 
 }

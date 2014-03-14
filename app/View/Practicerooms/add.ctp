@@ -48,18 +48,6 @@
 					?>
 				</div>
 			</div>
-			<!-- <div class="form-group">
-				<label for="image" class="col-sm-4 control-label"><?php echo __('Products'); ?></label>
-				<div class="col-sm-8">
-					<?php echo $this->Form->input('products', array(
-						'class' => 'form-control',
-						'label' => false,
-						'placeholder' => __('Products'),
-						// 'required' => 'required',
-					));
-					?>
-				</div>
-			</div> -->
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Street'); ?></label>
 				<div class="col-sm-8">

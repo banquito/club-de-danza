@@ -1,3 +1,4 @@
+<?php //debug($this->request->data, $showHtml = null, $showFrom = true) ?>
 <?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false)); ?>
 
 <div class="row row-header-h1">
@@ -98,7 +99,7 @@
 					?>
 				</div>
 			</div>
-			<div class="form-group">
+			<!-- <div class="form-group">
 				<label for="timetable" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
 				<div class="col-sm-8">
 					<?php echo $this->Form->input('timetable', array(
@@ -109,7 +110,48 @@
 					));
 					?>
 				</div>
+			</div> -->
+
+			<!-- Timetables -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
+				<div class="col-sm-7">
+					<div class="row row-image-name">
+						<div class="col-sm-12">
+							<!-- <span class="label <?php //echo ($this->request->data['Practiceroom']['image']) ? 'label-primary' : 'label-danger'; ?>">
+								<?php //echo ($imageName = $this->request->data['Practiceroom']['image']) ? $imageName : __('No image'); ?>
+							</span> -->
+
+							<?php if(isset($this->request->data['Timetable']) && sizeof($this->request->data['Timetable']) > 0): ?>
+									<?php foreach ($this->request->data['Timetable'] as $key => $timetable): ?>
+										<span class="label label-primary"><?php echo $timetable['name']; ?> | 
+											<?php
+											echo $this->Html->Link('x'
+												, array('controller' => 'EstudiesTimetables'
+													, 'action' => 'remove'
+													, $timetable['EstudiesTimetable']['id']
+												)
+											);
+											?></span>
+										&nbsp;
+									<?php endforeach; ?>
+							<?php endif; ?>
+
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12" id="timeTables">
+							<input type="file" class="btn btn-default" name="data[Timetable][]">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-1">
+					<button id="moreTimeTables" type="button" class="btn btn-default">+</button>
+				</div>
 			</div>
+
+			<!-- Website -->
 			<div class="form-group">
 				<label for="website" class="col-sm-4 control-label"><?php echo __('Website'); ?></label>
 				<div class="col-sm-8">
