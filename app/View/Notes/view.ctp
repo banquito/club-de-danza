@@ -1,5 +1,12 @@
 <?php $this->Html->css('notes/view', '', array('inline'=>FALSE)); ?>
 
+<?php // Sidebar
+	$this->start('sidebar');
+	echo "Notas relacionadas";
+	// echo $this->element('sidebar/related_notes');
+	$this->end();
+?>
+
 <div class="row">
 	<div class="col-sm-12">
 		<p class="notes-description"><?php echo h($note['Note']['description']); ?></p>

@@ -77,8 +77,8 @@
 						</div>
 					</div>
 
-					<!-- Banners -->
-					<?php echo $this -> element('banners'); ?>
+					<!-- Sidebar -->
+					<?php echo $this->fetch('sidebar', $this->element('banners')); ?>
 
 				</aside>
 			</div>
