@@ -2,8 +2,7 @@
 
 <?php // Sidebar
 	$this->start('sidebar');
-	echo "Notas relacionadas";
-	// echo $this->element('sidebar/related_notes');
+	echo $this->element('related_notes',array("id" => $note['Note']['id']));
 	$this->end();
 ?>
 
