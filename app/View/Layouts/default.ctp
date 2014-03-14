@@ -95,7 +95,7 @@
 						<a href="#">Contacto</a>
 					</div>
 					<div class="col-sm-7 text-right">
-						Club de Danza - Copyright &copy; 2014 - Todos los derechos reservados
+						Club de Danza - Copyright &copy; 2014 - Todos los derechos reservados &nbsp&nbsp
 						<?php echo $this->Html->image('layouts/logofooter.png'); ?>
 					</div>
 				</div>
