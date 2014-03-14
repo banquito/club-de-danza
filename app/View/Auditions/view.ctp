@@ -16,14 +16,9 @@
 				?>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<?php echo $audition['Audition']['description']; ?>
-			</div>
-		</div>
 	</div>
 	
-	<div class="col-sm-6">
+	<div class="col-sm-6 view-info">
 		<p><?php echo h($audition['Audition']['company']); ?></p>
 		<p>
 			<?php 
@@ -60,5 +55,11 @@
 			<?php echo h($audition['Audition']['website']); ?>, 
 			<?php echo h($audition['Audition']['phone']); ?>
 		</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<?php echo $audition['Audition']['description']; ?>
 	</div>
 </div>

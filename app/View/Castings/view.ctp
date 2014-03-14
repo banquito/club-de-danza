@@ -16,14 +16,9 @@
 				?>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<?php echo $casting['Casting']['description']; ?>
-			</div>
-		</div>
 	</div>
 	
-	<div class="col-sm-6">
+	<div class="col-sm-6 view-info">
 		<p><?php echo h($casting['Casting']['company']); ?></p>
 		<p>
 			<?php 
@@ -60,6 +55,12 @@
 			<?php echo h($casting['Casting']['website']); ?>, 
 			<?php echo h($casting['Casting']['phone']); ?>
 		</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<?php echo $casting['Casting']['description']; ?>
 	</div>
 </div>
 

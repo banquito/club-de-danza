@@ -1,0 +1,334 @@
+@import url(http://fonts.googleapis.com/css?family=Homenaje);
+/* line 3, ../../sass/_cajas.sass */
+a.btn-vermas {
+  display: block;
+}
+/* line 6, ../../sass/_cajas.sass */
+a.btn-vermas img {
+  margin-right: -9px;
+}
+
+/* line 9, ../../sass/_cajas.sass */
+.caption.caption-vermas {
+  padding-bottom: 0;
+}
+
+/* line 12, ../../sass/_cajas.sass */
+.row-banner {
+  margin-bottom: 20px;
+}
+/* line 15, ../../sass/_cajas.sass */
+.row-banner div:first-child {
+  margin-top: 18px;
+}
+/* line 18, ../../sass/_cajas.sass */
+.row-banner img {
+  height: 200px;
+}
+/* line 21, ../../sass/_cajas.sass */
+.row-banner img.banner-large {
+  height: 400px;
+}
+
+/* line 24, ../../sass/_cajas.sass */
+.thumbnail {
+  height: 192px;
+  max-height: 192px;
+}
+/* line 28, ../../sass/_cajas.sass */
+.thumbnail p:hover {
+  cursor: pointer;
+}
+
+/* line 31, ../../sass/_cajas.sass */
+.thumbnail-horizontal {
+  display: table;
+  width: 454px;
+}
+/* line 35, ../../sass/_cajas.sass */
+.thumbnail-horizontal .caption-vermas {
+  height: 72%;
+}
+/* line 38, ../../sass/_cajas.sass */
+.thumbnail-horizontal .img-horizontal {
+  height: 100%;
+  max-height: 350px;
+  display: table-cell;
+  max-width: 195px;
+  width: 195px;
+  vertical-align: middle;
+}
+/* line 46, ../../sass/_cajas.sass */
+.thumbnail-horizontal img {
+  max-height: 178px;
+  margin-bottom: auto;
+  margin-top: auto;
+  max-width: 100%;
+}
+
+/* line 52, ../../sass/_cajas.sass */
+.thumbnail-vermas {
+  background-image: url('/img/layouts/vermas.png?1393088704');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 12%;
+}
+
+/* line 59, ../../sass/_cajas.sass */
+.thumbnail-vertical {
+  display: table;
+  width: 100%;
+}
+/* line 63, ../../sass/_cajas.sass */
+.thumbnail-vertical .caption-vermas {
+  display: table-row;
+  height: 72%;
+}
+/* line 67, ../../sass/_cajas.sass */
+.thumbnail-vertical .img-vertical {
+  height: 100%;
+  max-height: 135px;
+  display: table-cell;
+  padding-bottom: 2px;
+  vertical-align: middle;
+}
+/* line 74, ../../sass/_cajas.sass */
+.thumbnail-vertical img {
+  max-height: 135px;
+  margin-bottom: auto;
+  margin-top: auto;
+  max-width: 203px;
+}
+
+/* line 82, ../../sass/_cajas.sass */
+.title-vermas {
+  color: #dd104c;
+  font-family: "Fagono";
+  font-size: 1.1em;
+  padding-right: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 90, ../../sass/_cajas.sass */
+.title-vermas:hover {
+  color: #a00f34;
+}
+
+/* line 93, ../../sass/_cajas.sass */
+#text-nota4 {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url('/css/fonts/universcondensed.ttf') format('truetype'), url('/css/fonts/universcondensed.otf') format('opentype'), url('/css/fonts/universcondensed.eot') format('embedded-opentype'), url('/css/fonts/universcondensed.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Univers Condensed Bold";
+  src: url('/css/fonts/universcondensedbold.ttf') format('truetype'), url('/css/fonts/universcondensedbold.otf') format('opentype'), url('/css/fonts/universcondensedbold.eot') format('embedded-opentype'), url('/css/fonts/universcondensedbold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz-Bold";
+  src: url('/css/fonts/YanoneKaffeesatz-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Fagono";
+  src: url('/css/fonts/fagono.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz-Regular";
+  src: url('/css/fonts/YanoneKaffeesatz-Regular.otf') format('opentype');
+}
+
+/* line 1, ../../sass/_images.sass */
+.image-center {
+  margin: auto;
+}
+
+/* line 3, ../../sass/layouts/default.sass */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/* line 6, ../../sass/layouts/default.sass */
+a:hover {
+  color: #dd104c;
+  text-decoration: none;
+}
+
+/* line 10, ../../sass/layouts/default.sass */
+footer > .navbar {
+  font-size: 0.83em;
+  margin-bottom: 0;
+  padding-top: 14px;
+}
+
+/* line 15, ../../sass/layouts/default.sass */
+h1 {
+  background-color: white;
+  color: #a00f34;
+  font-family: "Fagono";
+  font-size: 28px;
+  line-height: 34px;
+  margin: 0;
+  padding: 10px 15px 0;
+  text-transform: uppercase;
+}
+
+/* line 30, ../../sass/layouts/default.sass */
+h3 {
+  font-size: 1em;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* line 36, ../../sass/layouts/default.sass */
+header nav {
+  background-image: url('/img/layouts/backheader.jpg?1393088704');
+}
+/* line 39, ../../sass/layouts/default.sass */
+header nav.navbar {
+  margin-bottom: 40px;
+  border-bottom-color: #dd104c;
+}
+
+/* line 43, ../../sass/layouts/default.sass */
+li > a.menu-button {
+  font-family: "Univers Condensed";
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+/* line 49, ../../sass/layouts/default.sass */
+.actions > a {
+  color: #ca94aa;
+}
+/* line 52, ../../sass/layouts/default.sass */
+.actions > a:hover {
+  color: #dd104c;
+}
+
+/* line 55, ../../sass/layouts/default.sass */
+.bootstrap-datetimepicker-widget {
+  z-index: 2000;
+}
+
+/* line 58, ../../sass/layouts/default.sass */
+.col-login {
+  background-color: #dd104c;
+}
+
+/* line 61, ../../sass/layouts/default.sass */
+.flash-failure {
+  position: fixed;
+  right: 0;
+  z-index: 2000;
+}
+
+/* line 66, ../../sass/layouts/default.sass */
+.navbar-brand {
+  height: auto;
+  padding-top: 12px;
+}
+
+/* line 70, ../../sass/layouts/default.sass */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #dd104c;
+}
+
+/* line 73, ../../sass/layouts/default.sass */
+.nav.redes-sociales a {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+/* line 77, ../../sass/layouts/default.sass */
+.nav.redes-sociales a .fa {
+  vertical-align: top;
+}
+/* line 80, ../../sass/layouts/default.sass */
+.nav.redes-sociales a.stack {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+/* line 84, ../../sass/layouts/default.sass */
+.nav.redes-sociales a.stack.facebook:hover {
+  color: #3b5998;
+}
+/* line 87, ../../sass/layouts/default.sass */
+.nav.redes-sociales a.stack.twitter:hover {
+  color: #55acee;
+}
+
+/* line 90, ../../sass/layouts/default.sass */
+.row-login {
+  font-family: "Univers Condensed";
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 18px;
+  margin-left: 7px;
+  margin-top: -20px;
+  position: fixed;
+  width: 199px;
+  z-index: 100;
+}
+/* line 101, ../../sass/layouts/default.sass */
+.row-login a, .row-login a:visited {
+  color: white;
+}
+/* line 104, ../../sass/layouts/default.sass */
+.row-login a:hover {
+  color: #feccda;
+}
+
+/* line 109, ../../sass/layouts/default.sass */
+.row-header-h1 {
+  margin-bottom: 20px;
+}
+
+/* line 112, ../../sass/layouts/default.sass */
+.row-redes-sociales {
+  background-color: #dd104c;
+  color: white;
+  margin-bottom: 18px;
+  margin-left: auto;
+  margin-top: -17px;
+  position: fixed;
+  z-index: 100;
+}
+/* line 121, ../../sass/layouts/default.sass */
+.row-redes-sociales a, .row-redes-sociales a:visited {
+  color: white;
+}
+
+/* line 124, ../../sass/layouts/default.sass */
+.view-info {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #dd104c;
+}
+
+/* line 129, ../../sass/layouts/default.sass */
+#container {
+  margin-top: 70px;
+}
+
+/* line 132, ../../sass/layouts/default.sass */
+#container-h1 {
+  height: 0;
+  width: 80px;
+  border-bottom: 80px solid blue;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+
+/* line 3, ../../sass/layouts/mapadeladanza.sass */
+#container {
+  min-height: 550px;
+}

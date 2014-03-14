@@ -80,6 +80,16 @@ echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>f
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="title" class="col-sm-4 control-label"><?php echo __('Tags'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->input('tags', array(
+							'type' => 'text',
+							'label' => false,
+						));
+					?>
+				</div>
+			</div>
+			<div class="form-group">
 				<div class="col-sm-offset-4 col-sm-2">
 					<button type="submit" class="btn btn-default"><?php echo __('Aceptar'); ?></button>
 				</div>

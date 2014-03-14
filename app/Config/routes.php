@@ -43,6 +43,18 @@
 	Router::connect('/convocatorias/listar', array('controller' => 'calls', 'action' => 'index'));
 	Router::connect('/convocatorias/nueva', array('controller' => 'calls', 'action' => 'add'));
 
+	# Mapa de la Danza
+	Router::connect('/mapadeladanza', array('controller' => 'mapsearches', 'action' => 'index'));
+	Router::connect('/accesorios/editar', array('controller' => 'accessories', 'action' => 'edit'));
+	Router::connect('/accesorios/listar', array('controller' => 'accessories', 'action' => 'index'));
+	Router::connect('/accesorios/nuevo', array('controller' => 'accessories', 'action' => 'add'));
+	Router::connect('/estudios/editar', array('controller' => 'estudies', 'action' => 'edit'));
+	Router::connect('/estudios/listar', array('controller' => 'estudies', 'action' => 'index'));
+	Router::connect('/estudios/nuevo', array('controller' => 'estudies', 'action' => 'add'));
+	Router::connect('/salasdeensayo/editar', array('controller' => 'practicerooms', 'action' => 'edit'));
+	Router::connect('/salasdeensayo/listar', array('controller' => 'practicerooms', 'action' => 'index'));
+	Router::connect('/salasdeensayo/nueva', array('controller' => 'practicerooms', 'action' => 'add'));
+
 	# Banners
 	Router::connect('/banners/nuevo', array('controller' => 'banners', 'action' => 'add'));
 	Router::connect('/banners/editar/*', array('controller' => 'banners', 'action' => 'edit'));

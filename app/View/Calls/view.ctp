@@ -16,14 +16,9 @@
 				?>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<?php echo $call['Call']['description']; ?>
-			</div>
-		</div>
 	</div>
 	
-	<div class="col-sm-6">
+	<div class="col-sm-6 view-info">
 		<p><?php echo h($call['Call']['company']); ?></p>
 		<p>
 			<?php 
@@ -62,6 +57,13 @@
 		</p>
 	</div>
 </div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<?php echo $call['Call']['description']; ?>
+	</div>
+</div>
+
 <!-- 
 <div class="calls view">
 <h2><?php echo __('Call'); ?></h2>
