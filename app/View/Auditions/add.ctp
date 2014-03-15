@@ -1,4 +1,4 @@
-<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false)); ?>
+<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit', 'mapadeladanza'), array('inline'=>false)); ?>
 
 <div class="row row-header-h1">
 	<div class="col-sm-12">
@@ -260,6 +260,31 @@
 					?>
 				</div>
 			</div>
+
+			<!-- Video -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Video'); ?></label>
+				<div id="videos" class="col-sm-7">
+					<input type="text" class="col-sm-6" name="data[Video][0][name]" placeholder="Nombre">
+					<input type="text" class="col-sm-6" name="data[Video][0][file]" placeholder="Video">
+				</div>
+				<div class="col-sm-1">
+					<button id="moreVideos" type="button" class="btn btn-default">+</button>
+				</div>
+			</div>
+
+			<!-- Attachment -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Attachment'); ?></label>
+				<div id="attachments" class="col-sm-7">
+					<input type="file" class="btn btn-default" name="data[Attachment][]">
+				</div>
+				<div class="col-sm-1">
+					<button id="moreAttachments" type="button" class="btn btn-default">+</button>
+				</div>
+			</div>
+			
+			<!-- Profession -->
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Profession'); ?></label>
 				<div class="col-sm-8">

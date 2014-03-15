@@ -72,11 +72,11 @@ class Dancestyle extends AppModel {
 			'offset' => '',
 			'finderQuery' => '',
 		),
-		'Accesory' => array(
-			'className' => 'Accesory',
+		'Accessory' => array(
+			'className' => 'Accessory',
 			'joinTable' => 'accessories_dancestyles',
 			'foreignKey' => 'dancestyle_id',
-			'associationForeignKey' => 'accesory_id',
+			'associationForeignKey' => 'accessory_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

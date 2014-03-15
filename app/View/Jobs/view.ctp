@@ -58,12 +58,45 @@
 	</div>
 </div>
 
-
+<!-- Descripción -->
 <div class="row">
 	<div class="col-sm-12">
 		<?php echo $job['Job']['description']; ?>
 	</div>
 </div>
+
+<!-- Attachments -->
+<?php if(isset($job['Attachment']) && sizeof($job['Attachment']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Archivos</h2>
+			<?php
+			foreach ($job['Attachment'] as $key => $attachment):
+				$fileAux = pathinfo($attachment['name']);
+				echo '<p>';
+				echo $this->Html->link($fileAux['filename']
+					, Router::url('/files/attachments/').$attachment['file']
+					, array('target' => '_blank')
+				);
+				echo '</p>';
+			endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>
+
+<!-- Videos -->
+<?php if(isset($job['Video']) && sizeof($job['Video']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<?php
+				foreach ($job['Video'] as $key => $video):
+					echo '<p class="text-center">'.$video['file'].'</p>';
+				endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>
 
 <!-- <div class="jobs view">
 <h2><?php echo __('Job'); ?></h2>

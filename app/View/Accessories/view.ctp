@@ -37,6 +37,18 @@
 	</div>
 </div>
 
+<!-- Videos -->
+<?php if(isset($accessory['Video']) && sizeof($accessory['Video']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<?php
+				foreach ($accessory['Video'] as $key => $video):
+					echo '<p class="text-center">'.$video['file'].'</p>';
+				endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>
 
 <!-- <div class="accessories view">
 <h2><?php echo __('Accessory'); ?></h2>

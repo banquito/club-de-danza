@@ -115,6 +115,55 @@ class CastingsController extends AppController {
 
 			$this->Casting->create();
 			if ($this->Casting->save($casting)) {
+				$casting_id = $this->Casting->id;
+
+				# Attachments
+				if (isset($casting['Attachment']) && sizeof($casting['Attachment']) > 0) {
+				 	foreach ($casting['Attachment'] as $key => $attachment) {
+						
+						# Se verifica si se subió una attachment y se setea la attachment
+						if (isset($attachment['name']) && ($attachment['name'] != '')) {
+							$attachmentName = $attachment['name'];
+							$attachmentExt = pathinfo($attachment['name']);
+							$attachmentExt = $attachmentExt['extension'];
+							$attachmentFile = $casting_id . date("YmdHisu")  . '.' . $attachmentExt;
+							$uploadDir = WWW_ROOT . 'files' . DS . 'attachments' . DS;
+							$uploadFile = $uploadDir . $attachmentFile;
+							
+							if (move_uploaded_file($attachment['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Casting->Attachment->create();
+								if ($this->Casting->Attachment->save(array('file'=>$attachmentFile, 'name'=>$attachmentName))) {
+									$this->Casting->AttachmentsCasting->create();
+									$this->Casting->AttachmentsCasting->save(array('casting_id'=>$this->Casting->id
+										, 'attachment_id' => $this->Casting->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+				
+				# Videos
+				if (isset($casting['Video']) && sizeof($casting['Video']) > 0) {
+				 	foreach ($casting['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Casting->Video->create();
+					 		if ($this->Casting->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Casting->CastingsVideo->create();
+					 			$this->Casting->CastingsVideo->save(array('casting_id' => $casting_id
+									, 'video_id' => $this->Casting->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+
 				$this->Session->setFlash(__('The casting has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -300,10 +349,64 @@ class CastingsController extends AppController {
 				$casting['Casting']['image'] = $this -> Casting -> field('image', array('id'=>$id));
 			}
 
-
+			# Para que no se eliminen los Videos en el save:
+			$castingAux['Video'] = $casting['Video'];
+			$casting['Video'] = '';
+			$attachments = $this -> Casting -> read(null, $id);
+			$casting['Attachment'] = array_merge($casting['Attachment'], $attachments['Attachment']);
 
 
 			if ($this->Casting->save($casting)) {
+				$casting_id = $this->Casting->id;
+				
+				# Attachments
+				if (isset($casting['Attachment']) && sizeof($casting['Attachment']) > 0) {
+				 	foreach ($casting['Attachment'] as $key => $attachment) {
+						
+						# Se verifica si se subió una attachment y se setea la attachment
+						// if (isset($attachment['name']) && ($attachment['name'] != '')) {
+						if (isset($attachment['name']) && ($attachment['name'] != '') && isset($attachment['tmp_name']) && ($attachment['tmp_name'] != '')) {
+							$attachmentName = $attachment['name'];
+							$attachmentExt = pathinfo($attachment['name']);
+							$attachmentExt = $attachmentExt['extension'];
+							$attachmentFile = $casting_id . date("YmdHisu")  . '.' . $attachmentExt;
+							$uploadDir = WWW_ROOT . 'files' . DS . 'attachments' . DS;
+							$uploadFile = $uploadDir . $attachmentFile;
+							
+							if (move_uploaded_file($attachment['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Casting->Attachment->create();
+								if ($this->Casting->Attachment->save(array('file'=>$attachmentFile, 'name'=>$attachmentName))) {
+									$this->Casting->AttachmentsCasting->create();
+									$this->Casting->AttachmentsCasting->save(array('casting_id'=>$this->Casting->id
+										, 'attachment_id' => $this->Casting->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+
+				# Videos
+				if (isset($castingAux['Video']) && sizeof($castingAux['Video']) > 0) {
+				 	foreach ($castingAux['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Casting->Video->create();
+					 		if ($this->Casting->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Casting->CastingsVideo->create();
+					 			$this->Casting->CastingsVideo->save(array('casting_id' => $casting_id
+									, 'video_id' => $this->Casting->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+				
 				$this->Session->setFlash(__('The casting has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
