@@ -30,7 +30,7 @@ class NotesController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('inicio', 'view');
+		$this->Auth->allow('inicio', 'view', 'related');
 	}
 
 	public function isAuthorized($user) {
@@ -126,7 +126,17 @@ class NotesController extends AppController {
 		$this->set('notes', $this->Paginator->paginate());
 	}
 
-	
+
+	public function related($id = null) {
+		if (!$this->Note->exists($id)) {
+			throw new NotFoundException(__('Invalid note'));
+		}
+		
+		$options['limit'] = 4;
+		$options['order'] = 'RAND()';
+		
+		return $this->Note->find('all', $options);
+	}
 
 /**
  * view method
