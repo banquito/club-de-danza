@@ -21,6 +21,9 @@ app/webroot/img/accessories/*
 app/webroot/img/estudies/*
 app/webroot/img/practicerooms/*
 app/webroot/img/timetables/*
+app/webroot/img/castings/*
+app/webroot/img/jobs/*
+app/webroot/files/attachments/*
 
 # User specific & automatically generated files #
 #################################################
