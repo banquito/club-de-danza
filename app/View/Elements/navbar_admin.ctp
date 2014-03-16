@@ -102,6 +102,8 @@ if((strpos($this->params->url, 'calls') !== FALSE)
 					</a>
 
 					<ul class="dropdown-menu pull-right">
+						<li><a href="/home/admin">Home Admin</a></li>
+						<li class="divider"></li>
 						<li><a href="/sliders"><?php echo __('List Slider'); ?></a></li>
 						<li><a href="/sliders/nuevo"><?php echo __('Add Slider'); ?></a></li>
 						<li class="divider"></li>
