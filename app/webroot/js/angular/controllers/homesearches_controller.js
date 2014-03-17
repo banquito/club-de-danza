@@ -148,6 +148,11 @@
             homesearch.title = $scope.element.name;
             $http.post('/home/admin', {
               homesearch: homesearch
+            }).success(function() {
+              $scope.caja = null;
+              $scope.section = null;
+              $scope.element = null;
+              return $scope.errorMessage = null;
             });
             return console.log(homesearch);
           } else {

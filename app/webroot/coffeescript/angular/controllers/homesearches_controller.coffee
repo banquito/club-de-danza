@@ -87,6 +87,11 @@ angular.module("App").controller 'HomesearchesController'
 				homesearch.title = $scope.element.name
 
 				$http.post('/home/admin', {homesearch})
+					.success ->
+						$scope.caja = null
+						$scope.section = null
+						$scope.element = null
+						$scope.errorMessage = null
 				
 				console.log homesearch
 			else

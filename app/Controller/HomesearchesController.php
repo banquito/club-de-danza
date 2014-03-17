@@ -122,6 +122,9 @@ class HomesearchesController extends AppController {
 					case 'castings':
 						$elements = $this->requestAction(array('controller'=>'castings', 'action'=>'getElements'));
 						break;
+					case 'jobs':
+						$elements = $this->requestAction(array('controller'=>'jobs', 'action'=>'getElements'));
+						break;
 					
 					default:
 						break;
