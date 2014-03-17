@@ -84,6 +84,7 @@
         }
       ];
       $scope.setupElements = function(data) {
+        $scope.section.elements = [];
         return angular.forEach(data, function(elem) {
           return angular.forEach(elem, function(subelem) {
             if (subelem.title != null) {

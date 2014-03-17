@@ -36,6 +36,7 @@ angular.module("App").controller 'HomesearchesController'
 
 
 	$scope.setupElements = (data) ->
+		$scope.section.elements = []
 		angular.forEach data, (elem) ->
 			angular.forEach elem, (subelem) ->
 				if subelem.title? then subelem.name = subelem.title
