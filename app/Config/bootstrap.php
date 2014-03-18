@@ -107,3 +107,8 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+/**
+ * Custom configurations
+ */
+Configure::write('Facebook.appid','1402401300026359');

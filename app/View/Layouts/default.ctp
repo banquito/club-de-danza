@@ -15,6 +15,11 @@
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		?>
+
+		<?php // Facebook metas
+			echo $this->Html->meta(array('property' => 'fb:app_id', 'content' => Configure::read('Facebook.appid')));
+		?>
+
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="../../assets/js/html5shiv.js"></script>
@@ -22,6 +27,15 @@
 		<![endif]-->
 	</head>
 	<body data-ng-app="App">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=<?php echo Configure::read('Facebook.appid') ?>";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
 		<header>
 			<?php 
 			$user = AuthComponent::user();
