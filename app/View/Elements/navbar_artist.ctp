@@ -62,7 +62,7 @@ if((strpos($this->params->url, 'calls') !== FALSE)
 					<a href="#" class="menu-button">Cartelera</a>
 				</li>
 				<li>
-					<a href="#" class="menu-button">Mapa de la Danza</a>
+					<a href="/mapadeladanza" class="menu-button">Mapa de la Danza</a>
 				</li>
 				<li>
 					<a href="/proximamente" class="menu-button">Artistas</a>
