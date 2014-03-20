@@ -46,3 +46,9 @@
 		<p><strong>Tags:</strong> <?php echo $note['Note']['tags']; ?></p>
 	</div>
 </div>
+
+<div class="row">
+	<div class="col-sm-12 notes-body">
+		<div class="fb-comments" data-href="<?php echo Router::url( $this->here, true ); ?>" data-width="698px" data-numposts="5" data-colorscheme="light"></div>
+	</div>
+</div>
