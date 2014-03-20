@@ -115,7 +115,7 @@ class Accessory extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'timetable' => array(
+		'schedule' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -192,6 +192,19 @@ class Accessory extends AppModel {
 			'joinTable' => 'accessories_dancestyles',
 			'foreignKey' => 'accessory_id',
 			'associationForeignKey' => 'dancestyle_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		),
+		'Video' => array(
+			'className' => 'Video',
+			'joinTable' => 'accessories_videos',
+			'foreignKey' => 'accessory_id',
+			'associationForeignKey' => 'video_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

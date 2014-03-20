@@ -91,6 +91,7 @@ class PracticeroomsController extends AppController {
 			if ($this->Practiceroom->save($practiceroom)) {
 				$practiceroom_id = $this->Practiceroom->id;
 				
+				# Timetables
 				if (isset($practiceroom['Timetable']) && sizeof($practiceroom['Timetable']) > 0) {
 				 	foreach ($practiceroom['Timetable'] as $key => $timetable) {
 						
@@ -106,9 +107,9 @@ class PracticeroomsController extends AppController {
 							if (move_uploaded_file($timetable['tmp_name'], $uploadFile)) {
 						 		# Se crea la relación
 						 		$this->Practiceroom->Timetable->create();
-								if ($this->Practiceroom->Timetable->save(array('file'=>$timetableFile, 'name'=>$timetableName))) {
+								if ($this->Practiceroom->Timetable->save(array('file' => $timetableFile, 'name' => $timetableName))) {
 									$this->Practiceroom->PracticeroomsTimetable->create();
-									$this->Practiceroom->PracticeroomsTimetable->save(array('practiceroom_id'=>$this->Practiceroom->id
+									$this->Practiceroom->PracticeroomsTimetable->save(array('practiceroom_id' => $practiceroom_id
 										, 'timetable_id' => $this->Practiceroom->Timetable->id
 										, 'user_id' => AuthComponent::user('id')
 										)
@@ -116,6 +117,24 @@ class PracticeroomsController extends AppController {
 								}
 							}
 						}
+				 	}
+				}
+
+				# Videos
+				if (isset($practiceroom['Video']) && sizeof($practiceroom['Video']) > 0) {
+				 	foreach ($practiceroom['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Practiceroom->Video->create();
+					 		if ($this->Practiceroom->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Practiceroom->PracticeroomsVideo->create();
+					 			$this->Practiceroom->PracticeroomsVideo->save(array('practiceroom_id' => $practiceroom_id
+									, 'video_id' => $this->Practiceroom->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
 				 	}
 				}
 
@@ -188,8 +207,11 @@ class PracticeroomsController extends AppController {
 			}
 
 			# Para que no se eliminen los Timetables en el save:
-			$timetables = $this -> Practiceroom -> read(null, $id);
-			$practiceroom['Timetable'] = array_merge($practiceroom['Timetable'], $timetables['Timetable']);
+			$practiceroomAux = $this -> Practiceroom -> read(null, $id);
+			$practiceroom['Timetable'] = array_merge($practiceroom['Timetable'], $practiceroomAux['Timetable']);
+			// $practiceroom['Video'] = array_merge($practiceroom['Video'], $practiceroomAux['Video']);
+
+			// debug($practiceroom, $showHtml = null, $showFrom = true);
 
 			if ($this->Practiceroom->save($practiceroom)) {
 				$practiceroom_id = $this->Practiceroom->id;
@@ -223,6 +245,24 @@ class PracticeroomsController extends AppController {
 							}
 							
 						}
+				 	}
+				}
+
+				# Videos
+				if (isset($practiceroom['Video']) && sizeof($practiceroom['Video']) > 0) {
+				 	foreach ($practiceroom['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Practiceroom->Video->create();
+					 		if ($this->Practiceroom->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Practiceroom->PracticeroomsVideo->create();
+					 			$this->Practiceroom->PracticeroomsVideo->save(array('practiceroom_id' => $practiceroom_id
+									, 'video_id' => $this->Practiceroom->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
 				 	}
 				}
 

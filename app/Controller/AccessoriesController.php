@@ -115,6 +115,26 @@ class AccessoriesController extends AppController {
 
 			$this->Accessory->create();
 			if ($this->Accessory->save($accessory)) {
+				$accessory_id = $this->Accessory->id;
+				
+				# Videos
+				if (isset($accessory['Video']) && sizeof($accessory['Video']) > 0) {
+				 	foreach ($accessory['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Accessory->Video->create();
+					 		if ($this->Accessory->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Accessory->AccessoriesVideo->create();
+					 			$this->Accessory->AccessoriesVideo->save(array('accessory_id' => $accessory_id
+									, 'video_id' => $this->Accessory->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+
 				$this->Session->setFlash(__('The accessory has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -162,30 +182,30 @@ class AccessoriesController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			$accessory = $this->request->data;
 
-			if(isset($accessory['Accessory']['element-date']) && !empty($accessory['Accessory']['element-date'])):
-				// $element-date = DateTime::createFromFormat('d/m/Y', $accessory['Accessory']['element-date']); # PHP >= 5.3
-				# PHP 5.2
-				$elementDate = strptime($accessory['Accessory']['element-date'], '%d/%m/%Y %H:%M');
-				$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
-				$elementDate = new DateTime($elementDate);
-				$accessory['Accessory']['element-date'] = $elementDate->format('Y-m-d H:i:s');
-			endif;
-			if(isset($accessory['Accessory']['inscription-start']) && !empty($accessory['Accessory']['inscription-start'])):
-				// $inscription-start = DateTime::createFromFormat('d/m/Y', $accessory['Accessory']['inscription-start']); # PHP >= 5.3
-				# PHP 5.2
-				$inscriptionStart = strptime($accessory['Accessory']['inscription-start'], '%d/%m/%Y %H:%M');
-				$inscriptionStart = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday'], $inscriptionStart['tm_hour'], $inscriptionStart['tm_min']);
-				$inscriptionStart = new DateTime($inscriptionStart);
-				$accessory['Accessory']['inscription-start'] = $inscriptionStart->format('Y-m-d H:i:s');
-			endif;
-			if(isset($accessory['Accessory']['inscription-end']) && !empty($accessory['Accessory']['inscription-end'])):
-				// $inscription-end = DateTime::createFromFormat('d/m/Y', $accessory['Accessory']['inscription-end']); # PHP >= 5.3
-				# PHP 5.2
-				$inscriptionEnd = strptime($accessory['Accessory']['inscription-end'], '%d/%m/%Y %H:%M');
-				$inscriptionEnd = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday'], $inscriptionEnd['tm_hour'], $inscriptionEnd['tm_min']);
-				$inscriptionEnd = new DateTime($inscriptionEnd);
-				$accessory['Accessory']['inscription-end'] = $inscriptionEnd->format('Y-m-d H:i:s');
-			endif;
+			// if(isset($accessory['Accessory']['element-date']) && !empty($accessory['Accessory']['element-date'])):
+			// 	// $element-date = DateTime::createFromFormat('d/m/Y', $accessory['Accessory']['element-date']); # PHP >= 5.3
+			// 	# PHP 5.2
+			// 	$elementDate = strptime($accessory['Accessory']['element-date'], '%d/%m/%Y %H:%M');
+			// 	$elementDate = sprintf('%04d-%02d-%02d %02d:%02d', $elementDate['tm_year'] + 1900, $elementDate['tm_mon'] + 1, $elementDate['tm_mday'], $elementDate['tm_hour'], $elementDate['tm_min']);
+			// 	$elementDate = new DateTime($elementDate);
+			// 	$accessory['Accessory']['element-date'] = $elementDate->format('Y-m-d H:i:s');
+			// endif;
+			// if(isset($accessory['Accessory']['inscription-start']) && !empty($accessory['Accessory']['inscription-start'])):
+			// 	// $inscription-start = DateTime::createFromFormat('d/m/Y', $accessory['Accessory']['inscription-start']); # PHP >= 5.3
+			// 	# PHP 5.2
+			// 	$inscriptionStart = strptime($accessory['Accessory']['inscription-start'], '%d/%m/%Y %H:%M');
+			// 	$inscriptionStart = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionStart['tm_year'] + 1900, $inscriptionStart['tm_mon'] + 1, $inscriptionStart['tm_mday'], $inscriptionStart['tm_hour'], $inscriptionStart['tm_min']);
+			// 	$inscriptionStart = new DateTime($inscriptionStart);
+			// 	$accessory['Accessory']['inscription-start'] = $inscriptionStart->format('Y-m-d H:i:s');
+			// endif;
+			// if(isset($accessory['Accessory']['inscription-end']) && !empty($accessory['Accessory']['inscription-end'])):
+			// 	// $inscription-end = DateTime::createFromFormat('d/m/Y', $accessory['Accessory']['inscription-end']); # PHP >= 5.3
+			// 	# PHP 5.2
+			// 	$inscriptionEnd = strptime($accessory['Accessory']['inscription-end'], '%d/%m/%Y %H:%M');
+			// 	$inscriptionEnd = sprintf('%04d-%02d-%02d %02d:%02d', $inscriptionEnd['tm_year'] + 1900, $inscriptionEnd['tm_mon'] + 1, $inscriptionEnd['tm_mday'], $inscriptionEnd['tm_hour'], $inscriptionEnd['tm_min']);
+			// 	$inscriptionEnd = new DateTime($inscriptionEnd);
+			// 	$accessory['Accessory']['inscription-end'] = $inscriptionEnd->format('Y-m-d H:i:s');
+			// endif;
 
 			# Se verifica si se subió una imagen y se setea la imagen
 			if (isset($accessory['Accessory']['image']['name']) 
@@ -208,10 +228,34 @@ class AccessoriesController extends AppController {
 				$accessory['Accessory']['image'] = $this -> Accessory -> field('image', array('id'=>$id));
 			}
 
-
-
+			# Para que no se eliminen los Videos en el save:
+			$accessoryAux['Video'] = $accessory['Video'];
+			$accessory['Video'] = '';
 
 			if ($this->Accessory->save($accessory)) {
+				$accessory_id = $this->Accessory->id;
+
+				# Videos
+				if (isset($accessoryAux['Video']) && sizeof($accessoryAux['Video']) > 0) {
+				 	foreach ($accessoryAux['Video'] as $key => $video) {
+				 		if(isset($video['file']) && $video['file'] != '' && isset($video['name']) && $video['name'] != '') {
+					 		debug($video, $showHtml = null, $showFrom = true);
+
+					 		# Se crea la relación
+					 		$this->Accessory->Video->create();
+					 		if ($this->Accessory->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Accessory->AccessoriesVideo->create();
+					 			$this->Accessory->AccessoriesVideo->save(array('accessory_id' => $accessory_id
+									, 'video_id' => $this->Accessory->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+
+
 				$this->Session->setFlash(__('The accessory has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -223,7 +267,7 @@ class AccessoriesController extends AppController {
 		}
 		$states = $this->Accessory->State->find('list');
 		$dancestyles = $this->Accessory->Dancestyle->find('list');
-		$this->set(compact('states', 'users', 'dancestyles', 'professions'));
+		$this->set(compact('states', 'users', 'dancestyles'));
 	}
 
 /**

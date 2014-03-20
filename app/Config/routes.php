@@ -24,9 +24,15 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'inicio'));
+	// Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'inicio'));
+	Router::connect('/', array('controller' => 'homesearches', 'action' => 'index'));
 	Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
 	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
+
+	# Home
+	Router::connect('/home/admin', array('controller' => 'homesearches', 'action' => 'admin'));
+	Router::connect('/home/getElements', array('controller' => 'homesearches', 'action' => 'getElements'));
+
 
 	# Audiciones y Convocatorias
 	Router::connect('/audiciones', array('controller' => 'auditionsearches', 'action' => 'index'));

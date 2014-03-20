@@ -128,6 +128,19 @@ class Job extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
+		'Attachment' => array(
+			'className' => 'Attachment',
+			'joinTable' => 'attachments_jobs',
+			'foreignKey' => 'job_id',
+			'associationForeignKey' => 'attachment_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		),
 		'Dancestyle' => array(
 			'className' => 'Dancestyle',
 			'joinTable' => 'jobs_dancestyles',
@@ -146,6 +159,19 @@ class Job extends AppModel {
 			'joinTable' => 'jobs_professions',
 			'foreignKey' => 'job_id',
 			'associationForeignKey' => 'profession_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		),
+		'Video' => array(
+			'className' => 'Video',
+			'joinTable' => 'jobs_videos',
+			'foreignKey' => 'job_id',
+			'associationForeignKey' => 'video_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

@@ -58,11 +58,45 @@
 	</div>
 </div>
 
+<!-- Descripción -->
 <div class="row">
 	<div class="col-sm-12">
 		<?php echo $casting['Casting']['description']; ?>
 	</div>
 </div>
+
+<!-- Attachments -->
+<?php if(isset($casting['Attachment']) && sizeof($casting['Attachment']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Archivos</h2>
+			<?php
+			foreach ($casting['Attachment'] as $key => $attachment):
+				$fileAux = pathinfo($attachment['name']);
+				echo '<p>';
+				echo $this->Html->link($fileAux['filename']
+					, Router::url('/files/attachments/').$attachment['file']
+					, array('target' => '_blank')
+				);
+				echo '</p>';
+			endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>
+
+<!-- Videos -->
+<?php if(isset($casting['Video']) && sizeof($casting['Video']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<?php
+				foreach ($casting['Video'] as $key => $video):
+					echo '<p class="text-center">'.$video['file'].'</p>';
+				endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>
 
 <!-- <div class="castings view">
 <h2><?php echo __('Casting'); ?></h2>

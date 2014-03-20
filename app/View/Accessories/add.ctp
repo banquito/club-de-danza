@@ -1,4 +1,4 @@
-<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false)); ?>
+<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit', 'mapadeladanza'), array('inline'=>false)); ?>
 
 <div class="row row-header-h1">
 	<div class="col-sm-12">
@@ -97,12 +97,12 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="image" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Schedule'); ?></label>
 				<div class="col-sm-8">
-					<?php echo $this->Form->input('timetable', array(
+					<?php echo $this->Form->input('schedule', array(
 						'class' => 'form-control',
 						'label' => false,
-						'placeholder' => __('Timetable'),
+						'placeholder' => __('Schedule'),
 						// 'required' => 'required',
 					));
 					?>
@@ -168,6 +168,19 @@
 					?>
 				</div>
 			</div>
+
+			<!-- Video -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Video'); ?></label>
+				<div id="videos" class="col-sm-7">
+					<input type="text" class="col-sm-6" name="data[Video][0][name]" placeholder="Nombre">
+					<input type="text" class="col-sm-6" name="data[Video][0][file]" placeholder="Video">
+				</div>
+				<div class="col-sm-1">
+					<button id="moreVideos" type="button" class="btn btn-default">+</button>
+				</div>
+			</div>
+			
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Paid'); ?></label>
 				<div class="col-sm-8">

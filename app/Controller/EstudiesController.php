@@ -104,8 +104,8 @@ class EstudiesController extends AppController {
 							$uploadFile = $uploadDir . $timetableFile;
 							
 							if (move_uploaded_file($timetable['tmp_name'], $uploadFile)) {
-						 		# Se crea la relación
-						 		$this->Estudy->Timetable->create();
+								# Se crea la relación
+								$this->Estudy->Timetable->create();
 								if ($this->Estudy->Timetable->save(array('file'=>$timetableFile, 'name'=>$timetableName))) {
 									$this->Estudy->EstudiesTimetable->create();
 									$this->Estudy->EstudiesTimetable->save(array('estudy_id'=>$this->Estudy->id
@@ -116,6 +116,24 @@ class EstudiesController extends AppController {
 								}
 							}
 						}
+					}
+				}
+
+				# Videos
+				if (isset($estudy['Video']) && sizeof($estudy['Video']) > 0) {
+				 	foreach ($estudy['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Estudy->Video->create();
+					 		if ($this->Estudy->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Estudy->EstudiesVideo->create();
+					 			$this->Estudy->EstudiesVideo->save(array('estudy_id' => $estudy_id
+									, 'video_id' => $this->Estudy->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
 				 	}
 				}
 
@@ -220,6 +238,24 @@ class EstudiesController extends AppController {
 							}
 							
 						}
+				 	}
+				}
+
+				# Videos
+				if (isset($estudy['Video']) && sizeof($estudy['Video']) > 0) {
+				 	foreach ($estudy['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Estudy->Video->create();
+					 		if ($this->Estudy->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Estudy->EstudiesVideo->create();
+					 			$this->Estudy->EstudiesVideo->save(array('estudy_id' => $estudy_id
+									, 'video_id' => $this->Estudy->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
 				 	}
 				}
 

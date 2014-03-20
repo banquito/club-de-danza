@@ -115,6 +115,55 @@ class CallsController extends AppController {
 
 			$this->Call->create();
 			if ($this->Call->save($call)) {
+				$call_id = $this->Call->id;
+
+				# Attachments
+				if (isset($call['Attachment']) && sizeof($call['Attachment']) > 0) {
+				 	foreach ($call['Attachment'] as $key => $attachment) {
+						
+						# Se verifica si se subió una attachment y se setea la attachment
+						if (isset($attachment['name']) && ($attachment['name'] != '')) {
+							$attachmentName = $attachment['name'];
+							$attachmentExt = pathinfo($attachment['name']);
+							$attachmentExt = $attachmentExt['extension'];
+							$attachmentFile = $call_id . date("YmdHisu")  . '.' . $attachmentExt;
+							$uploadDir = WWW_ROOT . 'files' . DS . 'attachments' . DS;
+							$uploadFile = $uploadDir . $attachmentFile;
+							
+							if (move_uploaded_file($attachment['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Call->Attachment->create();
+								if ($this->Call->Attachment->save(array('file'=>$attachmentFile, 'name'=>$attachmentName))) {
+									$this->Call->AttachmentsCall->create();
+									$this->Call->AttachmentsCall->save(array('call_id'=>$this->Call->id
+										, 'attachment_id' => $this->Call->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+			
+				# Videos
+				if (isset($call['Video']) && sizeof($call['Video']) > 0) {
+				 	foreach ($call['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Call->Video->create();
+					 		if ($this->Call->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Call->CallsVideo->create();
+					 			$this->Call->CallsVideo->save(array('call_id' => $call_id
+									, 'video_id' => $this->Call->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+
 				$this->Session->setFlash(__('The call has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -212,9 +261,63 @@ class CallsController extends AppController {
 			}
 
 
-
+			# Para que no se eliminen los Videos en el save:
+			$callAux['Video'] = $call['Video'];
+			$call['Video'] = '';
+			$attachments = $this -> Call -> read(null, $id);
+			$call['Attachment'] = array_merge($call['Attachment'], $attachments['Attachment']);
 
 			if ($this->Call->save($call)) {
+				$call_id = $this->Call->id;
+				
+				# Attachments
+				if (isset($call['Attachment']) && sizeof($call['Attachment']) > 0) {
+				 	foreach ($call['Attachment'] as $key => $attachment) {
+						
+						# Se verifica si se subió una attachment y se setea la attachment
+						// if (isset($attachment['name']) && ($attachment['name'] != '')) {
+						if (isset($attachment['name']) && ($attachment['name'] != '') && isset($attachment['tmp_name']) && ($attachment['tmp_name'] != '')) {
+							$attachmentName = $attachment['name'];
+							$attachmentExt = pathinfo($attachment['name']);
+							$attachmentExt = $attachmentExt['extension'];
+							$attachmentFile = $call_id . date("YmdHisu")  . '.' . $attachmentExt;
+							$uploadDir = WWW_ROOT . 'files' . DS . 'attachments' . DS;
+							$uploadFile = $uploadDir . $attachmentFile;
+							
+							if (move_uploaded_file($attachment['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Call->Attachment->create();
+								if ($this->Call->Attachment->save(array('file'=>$attachmentFile, 'name'=>$attachmentName))) {
+									$this->Call->AttachmentsCall->create();
+									$this->Call->AttachmentsCall->save(array('call_id'=>$this->Call->id
+										, 'attachment_id' => $this->Call->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+
+				# Videos
+				if (isset($callAux['Video']) && sizeof($callAux['Video']) > 0) {
+				 	foreach ($callAux['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Call->Video->create();
+					 		if ($this->Call->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Call->CallsVideo->create();
+					 			$this->Call->CallsVideo->save(array('call_id' => $call_id
+									, 'video_id' => $this->Call->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+				
 				$this->Session->setFlash(__('The call has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {

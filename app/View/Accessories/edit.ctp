@@ -1,4 +1,5 @@
-<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false)); ?>
+<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit', 'mapadeladanza'), array('inline'=>false)); ?>
+<?php echo $this->Html->scriptBlock('videoAux='.sizeof($this->request->data['Video'])); ?>
 
 <div class="row row-header-h1">
 	<div class="col-sm-12">
@@ -112,12 +113,12 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="timetable" class="col-sm-4 control-label"><?php echo __('Timetable'); ?></label>
+				<label for="schedule" class="col-sm-4 control-label"><?php echo __('Schedule'); ?></label>
 				<div class="col-sm-8">
-					<?php echo $this->Form->input('timetable', array(
+					<?php echo $this->Form->input('schedule', array(
 						'class' => 'form-control',
 						'label' => false,
-						'placeholder' => __('Timetable'),
+						'placeholder' => __('Schedule'),
 						// 'required' => 'required',
 					));
 					?>
@@ -183,6 +184,41 @@
 					?>
 				</div>
 			</div>
+
+			<!-- Videos -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Video'); ?></label>
+				<div class="col-sm-7">
+					<div class="row row-image-name">
+						<div class="col-sm-12">
+							<?php if(isset($this->request->data['Video']) && sizeof($this->request->data['Video']) > 0): ?>
+									<?php foreach ($this->request->data['Video'] as $key => $video): ?>
+										<span class="label label-primary"><?php echo $video['name']; ?> | 
+											<?php
+											echo $this->Html->Link('x'
+												, array('controller' => 'AccessoriesVideos'
+													, 'action' => 'remove'
+													, $video['AccessoriesVideo']['id']
+												)
+											);
+											?></span>
+										&nbsp;
+									<?php endforeach; ?>
+							<?php endif; ?>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12" id="videos">
+							<input type="text" class="col-sm-6" name="data[Video][<?php echo sizeof($this->request->data['Video']) ?>][name]" placeholder="Nombre">
+							<input type="text" class="col-sm-6" name="data[Video][<?php echo sizeof($this->request->data['Video']) ?>][file]" placeholder="Video">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-1">
+					<button id="moreVideos" type="button" class="btn btn-default">+</button>
+				</div>
+			</div>
+
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Paid'); ?></label>
 				<div class="col-sm-8">

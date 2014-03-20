@@ -58,11 +58,46 @@
 	</div>
 </div>
 
+<!-- Descripción -->
 <div class="row">
 	<div class="col-sm-12">
 		<?php echo $call['Call']['description']; ?>
 	</div>
 </div>
+
+<!-- Attachments -->
+<?php if(isset($call['Attachment']) && sizeof($call['Attachment']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Archivos</h2>
+			<?php
+			foreach ($call['Attachment'] as $key => $attachment):
+				$fileAux = pathinfo($attachment['name']);
+				echo '<p>';
+				echo $this->Html->link($fileAux['filename']
+					, Router::url('/files/attachments/').$attachment['file']
+					, array('target' => '_blank')
+				);
+				echo '</p>';
+			endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>
+
+<!-- Videos -->
+<?php if(isset($call['Video']) && sizeof($call['Video']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<?php
+				foreach ($call['Video'] as $key => $video):
+					echo '<p class="text-center">'.$video['file'].'</p>';
+				endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>
+
 
 <!-- 
 <div class="calls view">

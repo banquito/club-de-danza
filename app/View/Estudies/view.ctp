@@ -47,6 +47,19 @@
 	</div>
 </div>
 
+<!-- Videos -->
+<?php if(isset($estudy['Video']) && sizeof($estudy['Video']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<?php
+				foreach ($estudy['Video'] as $key => $video):
+					echo '<p class="text-center">'.$video['file'].'</p>';
+				endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>
+
 <!-- <div class="estudies view">
 <h2><?php echo __('Estudy'); ?></h2>
 	<dl>
