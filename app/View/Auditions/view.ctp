@@ -40,11 +40,19 @@
 			hasta <?php echo h($audition['Audition']['age-end']); ?>
 		</p>
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['element-date']); ?></p>
-		<p>
-			Lugar: <?php echo h($audition['Audition']['street']); ?>, 
-			piso: <?php echo h($audition['Audition']['floor']); ?>, 
-			depto.: <?php echo h($audition['Audition']['department']); ?>
+		
+		<p class="direccion">
+			<?php echo h($audition['Audition']['street']); ?>
+			
+			<?php if($audition['Audition']['floor'] != ''): ?>
+				, piso: <?php echo h($audition['Audition']['floor']); ?>
+			<?php endif; ?>
+			
+			<?php if($audition['Audition']['department'] != ''): ?>
+				, depto.: <?php echo h($audition['Audition']['department']); ?>
+			<?php endif; ?>
 		</p>
+		
 		<p>
 			Inscripción: desde el <?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['inscription-start']); ?>, 
 			hasta el <?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['inscription-end']); ?>, 
