@@ -19,6 +19,7 @@
 	</div>
 	
 	<div class="col-sm-6 view-info">
+		<p><?php echo h($accessory['Accessory']['products']); ?></p>
 		<p>
 			Lugar: <?php echo h($accessory['Accessory']['street']); ?>, 
 			piso: <?php echo h($accessory['Accessory']['floor']); ?>, 
