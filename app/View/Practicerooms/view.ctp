@@ -20,11 +20,19 @@
 	</div>
 	
 	<div class="col-sm-6 view-info">
-		<p>
-			Lugar: <?php echo h($practiceroom['Practiceroom']['street']); ?>, 
-			piso: <?php echo h($practiceroom['Practiceroom']['floor']); ?>, 
-			depto.: <?php echo h($practiceroom['Practiceroom']['department']); ?>
+		
+		<p class="direccion">
+			<?php echo h($practiceroom['Practiceroom']['street']); ?>
+			
+			<?php if($practiceroom['Practiceroom']['floor'] != ''): ?>
+				, piso: <?php echo h($practiceroom['Practiceroom']['floor']); ?>
+			<?php endif; ?>
+			
+			<?php if($practiceroom['Practiceroom']['department'] != ''): ?>
+				, depto.: <?php echo h($practiceroom['Practiceroom']['department']); ?>
+			<?php endif; ?>
 		</p>
+		
 		<p>
 			Contacto: <?php echo h($practiceroom['Practiceroom']['email']); ?>, 
 			<?php echo h($practiceroom['Practiceroom']['website']); ?>, 

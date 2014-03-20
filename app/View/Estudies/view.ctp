@@ -19,11 +19,19 @@
 	</div>
 	
 	<div class="col-sm-6 view-info">
-		<p>
-			Lugar: <?php echo h($estudy['Estudy']['street']); ?>, 
-			piso: <?php echo h($estudy['Estudy']['floor']); ?>, 
-			depto.: <?php echo h($estudy['Estudy']['department']); ?>
+		
+		<p class="direccion">
+			<?php echo h($estudy['Estudy']['street']); ?>
+			
+			<?php if($estudy['Estudy']['floor'] != ''): ?>
+				, piso: <?php echo h($estudy['Estudy']['floor']); ?>
+			<?php endif; ?>
+			
+			<?php if($estudy['Estudy']['department'] != ''): ?>
+				, depto.: <?php echo h($estudy['Estudy']['department']); ?>
+			<?php endif; ?>
 		</p>
+		
 		<p>
 			Contacto: <?php echo h($estudy['Estudy']['email']); ?>, 
 			<?php echo h($estudy['Estudy']['website']); ?>, 

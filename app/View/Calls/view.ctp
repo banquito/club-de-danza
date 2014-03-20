@@ -40,11 +40,19 @@
 			hasta <?php echo h($call['Call']['age-end']); ?>
 		</p>
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['element-date']); ?></p>
-		<p>
-			Lugar: <?php echo h($call['Call']['street']); ?>, 
-			piso: <?php echo h($call['Call']['floor']); ?>, 
-			depto.: <?php echo h($call['Call']['department']); ?>
+		
+		<p class="direccion">
+			<?php echo h($call['Call']['street']); ?>
+			
+			<?php if($call['Call']['floor'] != ''): ?>
+				, piso: <?php echo h($call['Call']['floor']); ?>
+			<?php endif; ?>
+			
+			<?php if($call['Call']['department'] != ''): ?>
+				, depto.: <?php echo h($call['Call']['department']); ?>
+			<?php endif; ?>
 		</p>
+		
 		<p>
 			Inscripción: desde el <?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['inscription-start']); ?>, 
 			hasta el <?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['inscription-end']); ?>, 

@@ -40,11 +40,19 @@
 			hasta <?php echo h($job['Job']['age-end']); ?>
 		</p>
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $job['Job']['element-date']); ?></p>
-		<p>
-			Lugar: <?php echo h($job['Job']['street']); ?>, 
-			piso: <?php echo h($job['Job']['floor']); ?>, 
-			depto.: <?php echo h($job['Job']['department']); ?>
+		
+		<p class="direccion">
+			<?php echo h($job['Job']['street']); ?>
+			
+			<?php if($job['Job']['floor'] != ''): ?>
+				, piso: <?php echo h($job['Job']['floor']); ?>
+			<?php endif; ?>
+			
+			<?php if($job['Job']['department'] != ''): ?>
+				, depto.: <?php echo h($job['Job']['department']); ?>
+			<?php endif; ?>
 		</p>
+		
 		<p>
 			Inscripción: desde el <?php echo $this -> Time -> format('d-m-Y H:i', $job['Job']['inscription-start']); ?>, 
 			hasta el <?php echo $this -> Time -> format('d-m-Y H:i', $job['Job']['inscription-end']); ?>, 

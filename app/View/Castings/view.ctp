@@ -40,11 +40,19 @@
 			hasta <?php echo h($casting['Casting']['age-end']); ?>
 		</p>
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $casting['Casting']['element-date']); ?></p>
-		<p>
-			Lugar: <?php echo h($casting['Casting']['street']); ?>, 
-			piso: <?php echo h($casting['Casting']['floor']); ?>, 
-			depto.: <?php echo h($casting['Casting']['department']); ?>
+		
+		<p class="direccion">
+			<?php echo h($casting['Casting']['street']); ?>
+			
+			<?php if($casting['Casting']['floor'] != ''): ?>
+				, piso: <?php echo h($casting['Casting']['floor']); ?>
+			<?php endif; ?>
+			
+			<?php if($casting['Casting']['department'] != ''): ?>
+				, depto.: <?php echo h($casting['Casting']['department']); ?>
+			<?php endif; ?>
 		</p>
+		
 		<p>
 			Inscripción: desde el <?php echo $this -> Time -> format('d-m-Y H:i', $casting['Casting']['inscription-start']); ?>, 
 			hasta el <?php echo $this -> Time -> format('d-m-Y H:i', $casting['Casting']['inscription-end']); ?>, 
