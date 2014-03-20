@@ -18,16 +18,26 @@
 		</div>
 	</div>
 	
+	<!-- Info -->
 	<div class="col-sm-6 view-info">
 		<p><?php echo h($accessory['Accessory']['products']); ?></p>
-		<p>
-			Lugar: <?php echo h($accessory['Accessory']['street']); ?>, 
-			piso: <?php echo h($accessory['Accessory']['floor']); ?>, 
-			depto.: <?php echo h($accessory['Accessory']['department']); ?>
+		
+		<p class="direccion">
+			<?php echo h($accessory['Accessory']['street']); ?>
+			
+			<?php if($accessory['Accessory']['floor'] != ''): ?>
+				, piso: <?php echo h($accessory['Accessory']['floor']); ?>
+			<?php endif; ?>
+			
+			<?php if($accessory['Accessory']['department'] != ''): ?>
+				, depto.: <?php echo h($accessory['Accessory']['department']); ?>
+			<?php endif; ?>
 		</p>
+
 		<p>
 			Horario de atención: <?php echo h($accessory['Accessory']['schedule']); ?>
 		</p>
+		
 		<p>
 			Contacto: <?php echo h($accessory['Accessory']['email']); ?>, 
 			<?php echo h($accessory['Accessory']['website']); ?>, 
