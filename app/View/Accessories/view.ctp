@@ -26,6 +26,9 @@
 			depto.: <?php echo h($accessory['Accessory']['department']); ?>
 		</p>
 		<p>
+			Horario de atención: <?php echo h($accessory['Accessory']['schedule']); ?>
+		</p>
+		<p>
 			Contacto: <?php echo h($accessory['Accessory']['email']); ?>, 
 			<?php echo h($accessory['Accessory']['website']); ?>, 
 			<?php echo h($accessory['Accessory']['phone']); ?>
