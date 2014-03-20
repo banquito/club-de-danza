@@ -115,6 +115,55 @@ class JobsController extends AppController {
 
 			$this->Job->create();
 			if ($this->Job->save($job)) {
+				$job_id = $this->Job->id;
+				
+				# Attachments
+				if (isset($job['Attachment']) && sizeof($job['Attachment']) > 0) {
+				 	foreach ($job['Attachment'] as $key => $attachment) {
+						
+						# Se verifica si se subió una attachment y se setea la attachment
+						if (isset($attachment['name']) && ($attachment['name'] != '')) {
+							$attachmentName = $attachment['name'];
+							$attachmentExt = pathinfo($attachment['name']);
+							$attachmentExt = $attachmentExt['extension'];
+							$attachmentFile = $job_id . date("YmdHisu")  . '.' . $attachmentExt;
+							$uploadDir = WWW_ROOT . 'files' . DS . 'attachments' . DS;
+							$uploadFile = $uploadDir . $attachmentFile;
+							
+							if (move_uploaded_file($attachment['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Job->Attachment->create();
+								if ($this->Job->Attachment->save(array('file'=>$attachmentFile, 'name'=>$attachmentName))) {
+									$this->Job->AttachmentsJob->create();
+									$this->Job->AttachmentsJob->save(array('job_id'=>$this->Job->id
+										, 'attachment_id' => $this->Job->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+				
+				# Videos
+				if (isset($job['Video']) && sizeof($job['Video']) > 0) {
+				 	foreach ($job['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Job->Video->create();
+					 		if ($this->Job->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Job->JobsVideo->create();
+					 			$this->Job->JobsVideo->save(array('job_id' => $job_id
+									, 'video_id' => $this->Job->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+
 				$this->Session->setFlash(__('The job has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -212,9 +261,63 @@ class JobsController extends AppController {
 			}
 
 
-
+			# Para que no se eliminen los Videos en el save:
+			$jobAux['Video'] = $job['Video'];
+			$job['Video'] = '';
+			$attachments = $this -> Job -> read(null, $id);
+			$job['Attachment'] = array_merge($job['Attachment'], $attachments['Attachment']);
 
 			if ($this->Job->save($job)) {
+				$job_id = $this->Job->id;
+				
+				# Attachments
+				if (isset($job['Attachment']) && sizeof($job['Attachment']) > 0) {
+				 	foreach ($job['Attachment'] as $key => $attachment) {
+						
+						# Se verifica si se subió una attachment y se setea la attachment
+						// if (isset($attachment['name']) && ($attachment['name'] != '')) {
+						if (isset($attachment['name']) && ($attachment['name'] != '') && isset($attachment['tmp_name']) && ($attachment['tmp_name'] != '')) {
+							$attachmentName = $attachment['name'];
+							$attachmentExt = pathinfo($attachment['name']);
+							$attachmentExt = $attachmentExt['extension'];
+							$attachmentFile = $job_id . date("YmdHisu")  . '.' . $attachmentExt;
+							$uploadDir = WWW_ROOT . 'files' . DS . 'attachments' . DS;
+							$uploadFile = $uploadDir . $attachmentFile;
+							
+							if (move_uploaded_file($attachment['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Job->Attachment->create();
+								if ($this->Job->Attachment->save(array('file'=>$attachmentFile, 'name'=>$attachmentName))) {
+									$this->Job->AttachmentsJob->create();
+									$this->Job->AttachmentsJob->save(array('job_id'=>$this->Job->id
+										, 'attachment_id' => $this->Job->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+
+				# Videos
+				if (isset($jobAux['Video']) && sizeof($jobAux['Video']) > 0) {
+				 	foreach ($jobAux['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Job->Video->create();
+					 		if ($this->Job->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Job->JobsVideo->create();
+					 			$this->Job->JobsVideo->save(array('job_id' => $job_id
+									, 'video_id' => $this->Job->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+				
 				$this->Session->setFlash(__('The job has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {

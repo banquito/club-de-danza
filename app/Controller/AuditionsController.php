@@ -116,6 +116,56 @@ class AuditionsController extends AppController {
 
 			$this->Audition->create();
 			if ($this->Audition->save($audition)) {
+				$audition_id = $this->Audition->id;
+
+				# Attachments
+				if (isset($audition['Attachment']) && sizeof($audition['Attachment']) > 0) {
+				 	foreach ($audition['Attachment'] as $key => $attachment) {
+						
+						# Se verifica si se subió una attachment y se setea la attachment
+						if (isset($attachment['name']) && ($attachment['name'] != '')) {
+							$attachmentName = $attachment['name'];
+							$attachmentExt = pathinfo($attachment['name']);
+							$attachmentExt = $attachmentExt['extension'];
+							$attachmentFile = $audition_id . date("YmdHisu")  . '.' . $attachmentExt;
+							$uploadDir = WWW_ROOT . 'files' . DS . 'attachments' . DS;
+							$uploadFile = $uploadDir . $attachmentFile;
+							
+							if (move_uploaded_file($attachment['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Audition->Attachment->create();
+								if ($this->Audition->Attachment->save(array('file'=>$attachmentFile, 'name'=>$attachmentName))) {
+									$this->Audition->AttachmentsAudition->create();
+									$this->Audition->AttachmentsAudition->save(array('audition_id'=>$this->Audition->id
+										, 'attachment_id' => $this->Audition->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+				
+				# Videos
+				if (isset($audition['Video']) && sizeof($audition['Video']) > 0) {
+				 	foreach ($audition['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Audition->Video->create();
+					 		if ($this->Audition->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Audition->AuditionsVideo->create();
+					 			$this->Audition->AuditionsVideo->save(array('audition_id' => $audition_id
+									, 'video_id' => $this->Audition->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+
+
 				$this->Session->setFlash(__('The audition has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -212,9 +262,63 @@ class AuditionsController extends AppController {
 			}
 
 
-
+			# Para que no se eliminen los Videos en el save:
+			$auditionAux['Video'] = $audition['Video'];
+			$audition['Video'] = '';
+			$attachments = $this -> Audition -> read(null, $id);
+			$audition['Attachment'] = array_merge($audition['Attachment'], $attachments['Attachment']);
 
 			if ($this->Audition->save($audition)) {
+				$audition_id = $this->Audition->id;
+				
+				# Attachments
+				if (isset($audition['Attachment']) && sizeof($audition['Attachment']) > 0) {
+				 	foreach ($audition['Attachment'] as $key => $attachment) {
+						
+						# Se verifica si se subió una attachment y se setea la attachment
+						// if (isset($attachment['name']) && ($attachment['name'] != '')) {
+						if (isset($attachment['name']) && ($attachment['name'] != '') && isset($attachment['tmp_name']) && ($attachment['tmp_name'] != '')) {
+							$attachmentName = $attachment['name'];
+							$attachmentExt = pathinfo($attachment['name']);
+							$attachmentExt = $attachmentExt['extension'];
+							$attachmentFile = $audition_id . date("YmdHisu")  . '.' . $attachmentExt;
+							$uploadDir = WWW_ROOT . 'files' . DS . 'attachments' . DS;
+							$uploadFile = $uploadDir . $attachmentFile;
+							
+							if (move_uploaded_file($attachment['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Audition->Attachment->create();
+								if ($this->Audition->Attachment->save(array('file'=>$attachmentFile, 'name'=>$attachmentName))) {
+									$this->Audition->AttachmentsAudition->create();
+									$this->Audition->AttachmentsAudition->save(array('audition_id'=>$this->Audition->id
+										, 'attachment_id' => $this->Audition->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+
+				# Videos
+				if (isset($auditionAux['Video']) && sizeof($auditionAux['Video']) > 0) {
+				 	foreach ($auditionAux['Video'] as $key => $video) {
+				 		if(isset($video['file']) && isset($video['name'])) {
+					 		# Se crea la relación
+					 		$this->Audition->Video->create();
+					 		if ($this->Audition->Video->save(array('file' => $video['file'], 'name' => $video['name']))) {
+					 			$this->Audition->AuditionsVideo->create();
+					 			$this->Audition->AuditionsVideo->save(array('audition_id' => $audition_id
+									, 'video_id' => $this->Audition->Video->id
+									, 'user_id' => AuthComponent::user('id')
+									)
+								);
+					 		}
+				 		}
+				 	}
+				}
+				
 				$this->Session->setFlash(__('The audition has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {

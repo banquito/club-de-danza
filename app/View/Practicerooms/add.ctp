@@ -157,6 +157,19 @@
 					?>
 				</div>
 			</div>
+			
+			<!-- Video -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Video'); ?></label>
+				<div id="videos" class="col-sm-7">
+					<input type="text" class="col-sm-6" name="data[Video][0][name]" placeholder="Nombre">
+					<input type="text" class="col-sm-6" name="data[Video][0][file]" placeholder="Video">
+				</div>
+				<div class="col-sm-1">
+					<button id="moreVideos" type="button" class="btn btn-default">+</button>
+				</div>
+			</div>
+
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Paid'); ?></label>
 				<div class="col-sm-8">

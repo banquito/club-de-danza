@@ -58,8 +58,44 @@
 	</div>
 </div>
 
+<!-- Descripción -->
 <div class="row">
 	<div class="col-sm-12">
+		<h2>Descripción</h2>
 		<?php echo $audition['Audition']['description']; ?>
 	</div>
 </div>
+
+<!-- Attachments -->
+<?php if(isset($audition['Attachment']) && sizeof($audition['Attachment']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Archivos</h2>
+			<?php
+			foreach ($audition['Attachment'] as $key => $attachment):
+				$fileAux = pathinfo($attachment['name']);
+				echo '<p>';
+				echo $this->Html->link($fileAux['filename']
+					, Router::url('/files/attachments/').$attachment['file']
+					, array('target' => '_blank')
+				);
+				echo '</p>';
+			endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>
+
+<!-- Videos -->
+<?php if(isset($audition['Video']) && sizeof($audition['Video']) > 0): ?>
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Videos</h2>
+			<?php
+				foreach ($audition['Video'] as $key => $video):
+					echo '<p class="text-center">'.$video['file'].'</p>';
+				endforeach;
+			?>
+		</div>
+	</div>
+<?php endif; ?>

@@ -76,16 +76,16 @@ class Call extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'state_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
+		// 'state_id' => array(
+		// 	'numeric' => array(
+		// 		'rule' => array('numeric'),
+		// 		//'message' => 'Your custom message here',
+		// 		//'allowEmpty' => false,
+		// 		//'required' => false,
+		// 		//'last' => false, // Stop validation after this rule
+		// 		//'on' => 'create', // Limit validation to 'create' or 'update' operations
+		// 	),
+		// ),
 		'user_id' => array(
 			'uuid' => array(
 				'rule' => array('uuid'),
@@ -128,6 +128,19 @@ class Call extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
+		'Attachment' => array(
+			'className' => 'Attachment',
+			'joinTable' => 'attachments_calls',
+			'foreignKey' => 'call_id',
+			'associationForeignKey' => 'attachment_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		),
 		'Dancestyle' => array(
 			'className' => 'Dancestyle',
 			'joinTable' => 'calls_dancestyles',
@@ -146,6 +159,19 @@ class Call extends AppModel {
 			'joinTable' => 'calls_professions',
 			'foreignKey' => 'call_id',
 			'associationForeignKey' => 'profession_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		),
+		'Video' => array(
+			'className' => 'Video',
+			'joinTable' => 'calls_videos',
+			'foreignKey' => 'call_id',
+			'associationForeignKey' => 'video_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

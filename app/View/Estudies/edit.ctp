@@ -1,5 +1,6 @@
 <?php //debug($this->request->data, $showHtml = null, $showFrom = true) ?>
-<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>false)); ?>
+<?php echo $this->Html->script(array('ncEditor', 'vendors/nicEdit', 'mapadeladanza'), array('inline'=>false)); ?>
+<?php echo $this->Html->scriptBlock('videoAux='.sizeof($this->request->data['Video'])); ?>
 
 <div class="row row-header-h1">
 	<div class="col-sm-12">
@@ -212,6 +213,41 @@
 					?>
 				</div>
 			</div>
+			
+			<!-- Videos -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Video'); ?></label>
+				<div class="col-sm-7">
+					<div class="row row-image-name">
+						<div class="col-sm-12">
+							<?php if(isset($this->request->data['Video']) && sizeof($this->request->data['Video']) > 0): ?>
+									<?php foreach ($this->request->data['Video'] as $key => $video): ?>
+										<span class="label label-primary"><?php echo $video['name']; ?> | 
+											<?php
+											echo $this->Html->Link('x'
+												, array('controller' => 'EstudiesVideos'
+													, 'action' => 'remove'
+													, $video['EstudiesVideo']['id']
+												)
+											);
+											?></span>
+										&nbsp;
+									<?php endforeach; ?>
+							<?php endif; ?>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12" id="videos">
+							<input type="text" class="col-sm-6" name="data[Video][<?php echo sizeof($this->request->data['Video']) ?>][name]" placeholder="Nombre">
+							<input type="text" class="col-sm-6" name="data[Video][<?php echo sizeof($this->request->data['Video']) ?>][file]" placeholder="Video">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-1">
+					<button id="moreVideos" type="button" class="btn btn-default">+</button>
+				</div>
+			</div>
+
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Paid'); ?></label>
 				<div class="col-sm-8">

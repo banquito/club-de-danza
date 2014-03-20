@@ -202,6 +202,19 @@ class Estudy extends AppModel {
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
+		),
+		'Video' => array(
+			'className' => 'Video',
+			'joinTable' => 'estudies_videos',
+			'foreignKey' => 'estudy_id',
+			'associationForeignKey' => 'video_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
 		)
 	);
 

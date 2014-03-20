@@ -128,6 +128,19 @@ class Audition extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
+		'Attachment' => array(
+			'className' => 'Attachment',
+			'joinTable' => 'attachments_auditions',
+			'foreignKey' => 'audition_id',
+			'associationForeignKey' => 'attachment_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		),
 		'Dancestyle' => array(
 			'className' => 'Dancestyle',
 			'joinTable' => 'auditions_dancestyles',
@@ -146,6 +159,19 @@ class Audition extends AppModel {
 			'joinTable' => 'auditions_professions',
 			'foreignKey' => 'audition_id',
 			'associationForeignKey' => 'profession_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		),
+		'Video' => array(
+			'className' => 'Video',
+			'joinTable' => 'auditions_videos',
+			'foreignKey' => 'audition_id',
+			'associationForeignKey' => 'video_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
