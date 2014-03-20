@@ -61,8 +61,23 @@ if((strpos($this->params->url, 'calls') !== FALSE)
 				<li>
 					<a href="#" class="menu-button">Cartelera</a>
 				</li>
-				<li>
-					<a href="/mapadeladanza" class="menu-button">Mapa de la Danza</a>
+				<li class="dropdown <?php echo $callsActive; ?>">
+					<a href="#" class="dropdown-toggle menu-button" data-toggle="dropdown">
+						Mapa de la Danza <b class="caret"></b>
+					</a>
+
+					<ul class="dropdown-menu">
+						<li><a href="/mapadeladanza">Buscar</a></li>
+						<li class="divider"></li>
+						<li><a href="/accesorios/nuevo">Nuevo Accesorio</a></li>
+						<li><a href="/accesorios/listar">Listar Accesorios</a></li>
+						<li class="divider"></li>
+						<li><a href="/estudios/nuevo">Nuevo Estudio</a></li>
+						<li><a href="/estudios/listar">Listar Estudios</a></li>
+						<li class="divider"></li>
+						<li><a href="/salasdeensayo/nueva">Nueva Sala de Ensayo</a></li>
+						<li><a href="/salasdeensayo/listar">Listar Salas de Ensayo</a></li>
+					</ul>
 				</li>
 				<li>
 					<a href="/proximamente" class="menu-button">Artistas</a>
