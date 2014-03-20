@@ -1,19 +1,31 @@
-/* line 1, ../../sass/notes/view.sass */
+/* line 3, ../../sass/notes/view.sass */
+.img-nota {
+  height: 350px;
+  width: auto;
+}
+
+/* line 7, ../../sass/notes/view.sass */
 .notes-body {
-  font-family: arial, sans-serif;
+  font-family: "goudos";
+  font-size: 14px;
   line-height: 1.48em;
+  padding-top: 15px;
   text-align: justify;
 }
 
-/* line 6, ../../sass/notes/view.sass */
+/* line 15, ../../sass/notes/view.sass */
 .notes-description {
+  color: #424242;
   font-family: georgia, "times new roman", times, serif;
+  font-size: 10px;
   text-transform: uppercase;
 }
 
-/* line 10, ../../sass/notes/view.sass */
+/* line 21, ../../sass/notes/view.sass */
 .notes-resume {
-  font-family: georgia, "times new roman", times, serif;
+  font-family: "AvenirHeavy";
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.2em;
+  padding-bottom: 10px;
 }

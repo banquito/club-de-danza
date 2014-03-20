@@ -86,7 +86,7 @@
 
 		<footer>
 			<nav class="navbar navbar-default" role="navigation">
-				<div class="container">
+				<div>
 					<div class="col-sm-5">
 						<a href="#">Sobre Club de Danza</a>
 						·
