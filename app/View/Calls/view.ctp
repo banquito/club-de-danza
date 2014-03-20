@@ -39,6 +39,16 @@
 			Desde <?php echo h($call['Call']['age-start']); ?> 
 			hasta <?php echo h($call['Call']['age-end']); ?>
 		</p>
+		
+		<?php if(sizeof($call['Dancestyle']) > 0): ?>
+			<p>
+			<?php foreach ($call['Dancestyle'] as $key => $dancestyle) {
+				if($key != 0) echo ', ';
+				echo $dancestyle['name'];
+			} ?>
+			</p>
+		<?php endif; ?>
+
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['element-date']); ?></p>
 		
 		<p class="direccion">
@@ -52,7 +62,7 @@
 				, depto.: <?php echo h($call['Call']['department']); ?>
 			<?php endif; ?>
 		</p>
-		
+
 		<p>
 			Inscripción: desde el <?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['inscription-start']); ?>, 
 			hasta el <?php echo $this -> Time -> format('d-m-Y H:i', $call['Call']['inscription-end']); ?>, 

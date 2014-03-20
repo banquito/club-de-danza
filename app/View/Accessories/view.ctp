@@ -1,3 +1,5 @@
+<?php //debug($accessory, $showHtml = null, $showFrom = true) ?>
+
 <div class="row">
 	<div class="col-sm-12">
 		<h1><?php echo h($accessory['Accessory']['name']); ?></h1>
@@ -33,6 +35,15 @@
 				, depto.: <?php echo h($accessory['Accessory']['department']); ?>
 			<?php endif; ?>
 		</p>
+
+		<?php if(sizeof($accessory['Dancestyle']) > 0): ?>
+			<p>
+			<?php foreach ($accessory['Dancestyle'] as $key => $dancestyle) {
+				if($key != 0) echo ', ';
+				echo $dancestyle['name'];
+			} ?>
+			</p>
+		<?php endif; ?>
 
 		<p>
 			Horario de atención: <?php echo h($accessory['Accessory']['schedule']); ?>

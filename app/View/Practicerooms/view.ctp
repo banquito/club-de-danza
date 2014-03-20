@@ -32,7 +32,16 @@
 				, depto.: <?php echo h($practiceroom['Practiceroom']['department']); ?>
 			<?php endif; ?>
 		</p>
-		
+
+		<?php if(sizeof($practiceroom['Dancestyle']) > 0): ?>
+			<p>
+			<?php foreach ($practiceroom['Dancestyle'] as $key => $dancestyle) {
+				if($key != 0) echo ', ';
+				echo $dancestyle['name'];
+			} ?>
+			</p>
+		<?php endif; ?>
+
 		<p>
 			Contacto: <?php echo h($practiceroom['Practiceroom']['email']); ?>, 
 			<?php echo h($practiceroom['Practiceroom']['website']); ?>, 

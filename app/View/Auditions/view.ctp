@@ -39,6 +39,16 @@
 			Desde <?php echo h($audition['Audition']['age-start']); ?> 
 			hasta <?php echo h($audition['Audition']['age-end']); ?>
 		</p>
+						
+		<?php if(sizeof($job['Dancestyle']) > 0): ?>
+			<p>
+			<?php foreach ($job['Dancestyle'] as $key => $dancestyle) {
+				if($key != 0) echo ', ';
+				echo $dancestyle['name'];
+			} ?>
+			</p>
+		<?php endif; ?>
+
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['element-date']); ?></p>
 		
 		<p class="direccion">

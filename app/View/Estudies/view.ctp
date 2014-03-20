@@ -32,6 +32,15 @@
 			<?php endif; ?>
 		</p>
 		
+		<?php if(sizeof($estudy['Dancestyle']) > 0): ?>
+			<p>
+			<?php foreach ($estudy['Dancestyle'] as $key => $dancestyle) {
+				if($key != 0) echo ', ';
+				echo $dancestyle['name'];
+			} ?>
+			</p>
+		<?php endif; ?>
+		
 		<p>
 			Contacto: <?php echo h($estudy['Estudy']['email']); ?>, 
 			<?php echo h($estudy['Estudy']['website']); ?>, 
