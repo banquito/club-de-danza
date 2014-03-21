@@ -20,6 +20,14 @@
 	
 	<div class="col-sm-6 view-info">
 		<p class="text-pink"><?php echo h($casting['Casting']['company']); ?></p>
+		<?php if(sizeof($casting['Profession']) > 0): ?>
+			<p>
+			<?php foreach ($casting['Profession'] as $key => $profession) {
+				if($key != 0) echo ', ';
+				echo $profession['name'];
+			} ?>
+			</p>
+		<?php endif; ?>
 		<p>
 			<?php 
 			switch ($casting['Casting']['gender']) {

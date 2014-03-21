@@ -20,6 +20,14 @@
 	
 	<div class="col-sm-6 view-info">
 		<p class="text-pink"><?php echo h($job['Job']['company']); ?></p>
+		<?php if(sizeof($job['Profession']) > 0): ?>
+			<p>
+			<?php foreach ($job['Profession'] as $key => $profession) {
+				if($key != 0) echo ', ';
+				echo $profession['name'];
+			} ?>
+			</p>
+		<?php endif; ?>
 		<p>
 			<?php 
 			switch ($job['Job']['gender']) {
