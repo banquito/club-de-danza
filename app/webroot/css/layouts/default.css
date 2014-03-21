@@ -338,18 +338,31 @@ li > a.menu-button {
 }
 
 /* line 135, ../../sass/layouts/default.sass */
+.text-description {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+/* line 140, ../../sass/layouts/default.sass */
+.text-pink {
+  color: #a00f34;
+  font-family: "Fagono";
+}
+
+/* line 145, ../../sass/layouts/default.sass */
 .view-info {
   border-style: solid;
   border-width: 2px;
   border-color: #dd104c;
+  padding-top: 4px;
 }
 
-/* line 140, ../../sass/layouts/default.sass */
+/* line 151, ../../sass/layouts/default.sass */
 #container {
   margin-top: 70px;
 }
 
-/* line 143, ../../sass/layouts/default.sass */
+/* line 154, ../../sass/layouts/default.sass */
 #container-h1 {
   height: 0;
   width: 80px;

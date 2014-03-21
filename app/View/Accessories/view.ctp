@@ -18,13 +18,34 @@
 				?>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="text-description">
+					<?php echo $accessory['Accessory']['description']; ?>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Videos -->
+		<?php if(isset($accessory['Video']) && sizeof($accessory['Video']) > 0): ?>
+			<div class="row">
+				<div class="col-sm-12">
+					<?php
+						foreach ($accessory['Video'] as $key => $video):
+							echo '<p class="text-center">'.$video['file'].'</p>';
+						endforeach;
+					?>
+				</div>
+			</div>
+		<?php endif; ?>
 	</div>
 	
 	<!-- Info -->
 	<div class="col-sm-6 view-info">
-		<p><?php echo h($accessory['Accessory']['products']); ?></p>
+		<p class="text-pink"><?php echo h($accessory['Accessory']['products']); ?></p>
 		
 		<p class="direccion">
+			Lugar: 
 			<?php echo h($accessory['Accessory']['street']); ?>
 			
 			<?php if($accessory['Accessory']['floor'] != ''): ?>
@@ -49,31 +70,14 @@
 			Horario de atención: <?php echo h($accessory['Accessory']['schedule']); ?>
 		</p>
 		
-		<p>
+		<p class="text-pink">
 			Contacto: <?php echo h($accessory['Accessory']['email']); ?>, 
 			<?php echo h($accessory['Accessory']['website']); ?>, 
 			<?php echo h($accessory['Accessory']['phone']); ?>
 		</p>
 	</div>
 </div>
-<div class="row">
-	<div class="col-sm-12">
-		<?php echo $accessory['Accessory']['description']; ?>
-	</div>
-</div>
 
-<!-- Videos -->
-<?php if(isset($accessory['Video']) && sizeof($accessory['Video']) > 0): ?>
-	<div class="row">
-		<div class="col-sm-12">
-			<?php
-				foreach ($accessory['Video'] as $key => $video):
-					echo '<p class="text-center">'.$video['file'].'</p>';
-				endforeach;
-			?>
-		</div>
-	</div>
-<?php endif; ?>
 
 <!-- <div class="accessories view">
 <h2><?php echo __('Accessory'); ?></h2>
