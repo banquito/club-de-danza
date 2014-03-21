@@ -69,8 +69,13 @@ class UsersController extends AppController {
 			$this->User->create();
 			if ($this->User->save($user)) {
 				$to = $user['User']['email'];
-				$subject = 'Club de Danza :: Confirma tu correo';
-				$message = 'Confirma tu correo haciendo clic en el siguiente enlace: ' . Router::fullBaseUrl() . '/confirmacion/' . $this->User->id;
+				$subject = 'Club de Danza – Confirmación de e-mail';
+				$message =  'Hola '.$user['User']['name'].','."\n\n".
+							'Hacé click en el siguiente link para completar tu registro en el Club.'."\n\n"
+							. Router::fullBaseUrl() . '/confirmacion/' . $this->User->id."\n\n"
+							.'Si el link no funciona copialo y pegalo en tu navegador.'."\n\n".
+							'Nota: Estos pasos cumplen con los requerimientos de registro en nuestro sitio, si no es este el caso, omite este mensaje.'."\n".'¡Bailemos!'."\n\n".
+							'Club de Danza'."\n".'www.clubdedanza.com';
 				$additional_headers = '';
 				$additional_parameters = '';
 

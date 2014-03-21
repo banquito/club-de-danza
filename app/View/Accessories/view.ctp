@@ -1,3 +1,5 @@
+<?php //debug($accessory, $showHtml = null, $showFrom = true) ?>
+
 <div class="row">
 	<div class="col-sm-12">
 		<h1><?php echo h($accessory['Accessory']['name']); ?></h1>
@@ -16,39 +18,66 @@
 				?>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="text-description">
+					<?php echo $accessory['Accessory']['description']; ?>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Videos -->
+		<?php if(isset($accessory['Video']) && sizeof($accessory['Video']) > 0): ?>
+			<div class="row">
+				<div class="col-sm-12">
+					<?php
+						foreach ($accessory['Video'] as $key => $video):
+							echo '<p class="text-center">'.$video['file'].'</p>';
+						endforeach;
+					?>
+				</div>
+			</div>
+		<?php endif; ?>
 	</div>
 	
+	<!-- Info -->
 	<div class="col-sm-6 view-info">
-		<p>
-			Lugar: <?php echo h($accessory['Accessory']['street']); ?>, 
-			piso: <?php echo h($accessory['Accessory']['floor']); ?>, 
-			depto.: <?php echo h($accessory['Accessory']['department']); ?>
+		<p class="text-pink"><?php echo h($accessory['Accessory']['products']); ?></p>
+		
+		<p class="direccion">
+			Lugar: 
+			<?php echo h($accessory['Accessory']['street']); ?>
+			
+			<?php if($accessory['Accessory']['floor'] != ''): ?>
+				, piso: <?php echo h($accessory['Accessory']['floor']); ?>
+			<?php endif; ?>
+			
+			<?php if($accessory['Accessory']['department'] != ''): ?>
+				, depto.: <?php echo h($accessory['Accessory']['department']); ?>
+			<?php endif; ?>
 		</p>
+
+		<?php if(sizeof($accessory['Dancestyle']) > 0): ?>
+			<p>
+			<?php foreach ($accessory['Dancestyle'] as $key => $dancestyle) {
+				if($key != 0) echo ', ';
+				echo $dancestyle['name'];
+			} ?>
+			</p>
+		<?php endif; ?>
+
 		<p>
+			Horario de atención: <?php echo h($accessory['Accessory']['schedule']); ?>
+		</p>
+		
+		<p class="text-pink">
 			Contacto: <?php echo h($accessory['Accessory']['email']); ?>, 
 			<?php echo h($accessory['Accessory']['website']); ?>, 
 			<?php echo h($accessory['Accessory']['phone']); ?>
 		</p>
 	</div>
 </div>
-<div class="row">
-	<div class="col-sm-12">
-		<?php echo $accessory['Accessory']['description']; ?>
-	</div>
-</div>
 
-<!-- Videos -->
-<?php if(isset($accessory['Video']) && sizeof($accessory['Video']) > 0): ?>
-	<div class="row">
-		<div class="col-sm-12">
-			<?php
-				foreach ($accessory['Video'] as $key => $video):
-					echo '<p class="text-center">'.$video['file'].'</p>';
-				endforeach;
-			?>
-		</div>
-	</div>
-<?php endif; ?>
 
 <!-- <div class="accessories view">
 <h2><?php echo __('Accessory'); ?></h2>

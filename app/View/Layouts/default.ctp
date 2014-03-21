@@ -100,7 +100,7 @@
 
 		<footer>
 			<nav class="navbar navbar-default" role="navigation">
-				<div class="container">
+				<div>
 					<div class="col-sm-5">
 						<a href="#">Sobre Club de Danza</a>
 						·
@@ -109,7 +109,7 @@
 						<a href="#">Contacto</a>
 					</div>
 					<div class="col-sm-7 text-right">
-						Club de Danza - Copyright &copy; 2014 - Todos los derechos reservados
+						Club de Danza - Copyright &copy; 2014 - Todos los derechos reservados &nbsp&nbsp
 						<?php echo $this->Html->image('layouts/logofooter.png'); ?>
 					</div>
 				</div>

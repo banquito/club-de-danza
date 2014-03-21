@@ -19,7 +19,7 @@
 	</div>
 	
 	<div class="col-sm-6 view-info">
-		<p><?php echo h($job['Job']['company']); ?></p>
+		<p class="text-pink"><?php echo h($job['Job']['company']); ?></p>
 		<p>
 			<?php 
 			switch ($job['Job']['gender']) {
@@ -38,13 +38,33 @@
 		<p>
 			Desde <?php echo h($job['Job']['age-start']); ?> 
 			hasta <?php echo h($job['Job']['age-end']); ?>
+			años
 		</p>
+				
+		<?php if(sizeof($job['Dancestyle']) > 0): ?>
+			<p>
+			<?php foreach ($job['Dancestyle'] as $key => $dancestyle) {
+				if($key != 0) echo ', ';
+				echo $dancestyle['name'];
+			} ?>
+			</p>
+		<?php endif; ?>
+
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $job['Job']['element-date']); ?></p>
-		<p>
-			Lugar: <?php echo h($job['Job']['street']); ?>, 
-			piso: <?php echo h($job['Job']['floor']); ?>, 
-			depto.: <?php echo h($job['Job']['department']); ?>
+		
+		<p class="direccion">
+			Lugar: 
+			<?php echo h($job['Job']['street']); ?>
+			
+			<?php if($job['Job']['floor'] != ''): ?>
+				, piso: <?php echo h($job['Job']['floor']); ?>
+			<?php endif; ?>
+			
+			<?php if($job['Job']['department'] != ''): ?>
+				, depto.: <?php echo h($job['Job']['department']); ?>
+			<?php endif; ?>
 		</p>
+		
 		<p>
 			Inscripción: desde el <?php echo $this -> Time -> format('d-m-Y H:i', $job['Job']['inscription-start']); ?>, 
 			hasta el <?php echo $this -> Time -> format('d-m-Y H:i', $job['Job']['inscription-end']); ?>, 
@@ -61,7 +81,9 @@
 <!-- Descripción -->
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $job['Job']['description']; ?>
+		<div class="text-description">
+			<?php echo $job['Job']['description']; ?>
+		</div>
 	</div>
 </div>
 

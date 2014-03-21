@@ -106,6 +106,20 @@ class NotesController extends AppController {
 		}
 	}
 
+
+/**
+ * getElements method
+ *
+ * @return void
+ */
+	public function getElements() {
+		// $options['conditions'] = array('element-date >=' => date('Y-m-d H:i'));
+		$options['fields'] = array('id', 'title', 'image');
+		$options['order'] = array('created' => 'DESC');
+		$options['recursive'] = -1;
+		return $this->Note->find('all', $options);
+	}
+
 /**
  * index method
  *
