@@ -16,66 +16,72 @@
 				?>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="text-description">
+					<?php echo $estudy['Estudy']['description']; ?>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Videos -->
+		<?php if(isset($estudy['Video']) && sizeof($estudy['Video']) > 0): ?>
+			<div class="row">
+				<div class="col-sm-12">
+					<?php
+						foreach ($estudy['Video'] as $key => $video):
+							echo '<p class="text-center">'.$video['file'].'</p>';
+						endforeach;
+					?>
+				</div>
+			</div>
+		<?php endif; ?>
 	</div>
 	
-	<div class="col-sm-6 view-info">
-		
-		<p class="direccion">
-			<?php echo h($estudy['Estudy']['street']); ?>
-			
-			<?php if($estudy['Estudy']['floor'] != ''): ?>
-				, piso: <?php echo h($estudy['Estudy']['floor']); ?>
-			<?php endif; ?>
-			
-			<?php if($estudy['Estudy']['department'] != ''): ?>
-				, depto.: <?php echo h($estudy['Estudy']['department']); ?>
-			<?php endif; ?>
-		</p>
-		
-		<?php if(sizeof($estudy['Dancestyle']) > 0): ?>
-			<p>
-			<?php foreach ($estudy['Dancestyle'] as $key => $dancestyle) {
-				if($key != 0) echo ', ';
-				echo $dancestyle['name'];
-			} ?>
+	<div class="col-sm-6">
+		<div class="view-info">
+			<p class="direccion">
+				<?php echo h($estudy['Estudy']['street']); ?>
+				
+				<?php if($estudy['Estudy']['floor'] != ''): ?>
+					, piso: <?php echo h($estudy['Estudy']['floor']); ?>
+				<?php endif; ?>
+				
+				<?php if($estudy['Estudy']['department'] != ''): ?>
+					, depto.: <?php echo h($estudy['Estudy']['department']); ?>
+				<?php endif; ?>
 			</p>
-		<?php endif; ?>
 		
-		<p>
-			Contacto: <?php echo h($estudy['Estudy']['email']); ?>, 
-			<?php echo h($estudy['Estudy']['website']); ?>, 
-			<?php echo h($estudy['Estudy']['phone']); ?>
-		</p>
-		<?php if(isset($estudy['Timetable']) && sizeof($estudy['Timetable']) > 0): ?>
+			<?php if(sizeof($estudy['Dancestyle']) > 0): ?>
+				<p>
+				<?php foreach ($estudy['Dancestyle'] as $key => $dancestyle) {
+					if($key != 0) echo ', ';
+					echo $dancestyle['name'];
+				} ?>
+				</p>
+			<?php endif; ?>
+		
 			<p>
-				<?php
-				foreach ($estudy['Timetable'] as $key => $timetable):
-					echo $this->Html->image('timetables/'.$timetable['file']
-						, array('class' => 'img-responsive'));
-				endforeach;
-				?>
+				Contacto: <?php echo h($estudy['Estudy']['email']); ?>, 
+				<?php echo h($estudy['Estudy']['website']); ?>, 
+				<?php echo h($estudy['Estudy']['phone']); ?>
 			</p>
-		<?php endif; ?>
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-12">
-		<?php echo $estudy['Estudy']['description']; ?>
+		</div>
+		<div>
+			<?php if(isset($estudy['Timetable']) && sizeof($estudy['Timetable']) > 0): ?>
+				<p>
+					<?php
+					foreach ($estudy['Timetable'] as $key => $timetable):
+						echo $this->Html->image('timetables/'.$timetable['file']
+							, array('class' => 'img-responsive'));
+					endforeach;
+					?>
+				</p>
+			<?php endif; ?>
+		</div>
 	</div>
 </div>
 
-<!-- Videos -->
-<?php if(isset($estudy['Video']) && sizeof($estudy['Video']) > 0): ?>
-	<div class="row">
-		<div class="col-sm-12">
-			<?php
-				foreach ($estudy['Video'] as $key => $video):
-					echo '<p class="text-center">'.$video['file'].'</p>';
-				endforeach;
-			?>
-		</div>
-	</div>
-<?php endif; ?>
 
 <!-- <div class="estudies view">
 <h2><?php echo __('Estudy'); ?></h2>

@@ -19,7 +19,7 @@
 	</div>
 	
 	<div class="col-sm-6 view-info">
-		<p><?php echo h($audition['Audition']['company']); ?></p>
+		<p class="text-pink"><?php echo h($audition['Audition']['company']); ?></p>
 		<p>
 			<?php 
 			switch ($audition['Audition']['gender']) {
@@ -38,11 +38,12 @@
 		<p>
 			Desde <?php echo h($audition['Audition']['age-start']); ?> 
 			hasta <?php echo h($audition['Audition']['age-end']); ?>
+			años
 		</p>
 						
-		<?php if(sizeof($job['Dancestyle']) > 0): ?>
+		<?php if(sizeof($audition['Dancestyle']) > 0): ?>
 			<p>
-			<?php foreach ($job['Dancestyle'] as $key => $dancestyle) {
+			<?php foreach ($audition['Dancestyle'] as $key => $dancestyle) {
 				if($key != 0) echo ', ';
 				echo $dancestyle['name'];
 			} ?>
@@ -52,6 +53,7 @@
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $audition['Audition']['element-date']); ?></p>
 		
 		<p class="direccion">
+			Lugar: 
 			<?php echo h($audition['Audition']['street']); ?>
 			
 			<?php if($audition['Audition']['floor'] != ''): ?>
@@ -79,8 +81,9 @@
 <!-- Descripción -->
 <div class="row">
 	<div class="col-sm-12">
-		<h2>Descripción</h2>
-		<?php echo $audition['Audition']['description']; ?>
+		<div class="text-description">
+			<?php echo $audition['Audition']['description']; ?>
+		</div>
 	</div>
 </div>
 
@@ -88,7 +91,6 @@
 <?php if(isset($audition['Attachment']) && sizeof($audition['Attachment']) > 0): ?>
 	<div class="row">
 		<div class="col-sm-12">
-			<h2>Archivos</h2>
 			<?php
 			foreach ($audition['Attachment'] as $key => $attachment):
 				$fileAux = pathinfo($attachment['name']);
@@ -108,7 +110,6 @@
 <?php if(isset($audition['Video']) && sizeof($audition['Video']) > 0): ?>
 	<div class="row">
 		<div class="col-sm-12">
-			<h2>Videos</h2>
 			<?php
 				foreach ($audition['Video'] as $key => $video):
 					echo '<p class="text-center">'.$video['file'].'</p>';

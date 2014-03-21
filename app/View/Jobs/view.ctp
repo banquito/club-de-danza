@@ -19,7 +19,7 @@
 	</div>
 	
 	<div class="col-sm-6 view-info">
-		<p><?php echo h($job['Job']['company']); ?></p>
+		<p class="text-pink"><?php echo h($job['Job']['company']); ?></p>
 		<p>
 			<?php 
 			switch ($job['Job']['gender']) {
@@ -38,6 +38,7 @@
 		<p>
 			Desde <?php echo h($job['Job']['age-start']); ?> 
 			hasta <?php echo h($job['Job']['age-end']); ?>
+			años
 		</p>
 				
 		<?php if(sizeof($job['Dancestyle']) > 0): ?>
@@ -52,6 +53,7 @@
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $job['Job']['element-date']); ?></p>
 		
 		<p class="direccion">
+			Lugar: 
 			<?php echo h($job['Job']['street']); ?>
 			
 			<?php if($job['Job']['floor'] != ''): ?>
@@ -79,7 +81,9 @@
 <!-- Descripción -->
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $job['Job']['description']; ?>
+		<div class="text-description">
+			<?php echo $job['Job']['description']; ?>
+		</div>
 	</div>
 </div>
 

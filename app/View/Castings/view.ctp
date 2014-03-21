@@ -19,7 +19,7 @@
 	</div>
 	
 	<div class="col-sm-6 view-info">
-		<p><?php echo h($casting['Casting']['company']); ?></p>
+		<p class="text-pink"><?php echo h($casting['Casting']['company']); ?></p>
 		<p>
 			<?php 
 			switch ($casting['Casting']['gender']) {
@@ -38,6 +38,7 @@
 		<p>
 			Desde <?php echo h($casting['Casting']['age-start']); ?> 
 			hasta <?php echo h($casting['Casting']['age-end']); ?>
+			años
 		</p>
 
 		<?php if(sizeof($casting['Dancestyle']) > 0): ?>
@@ -52,6 +53,7 @@
 		<p>Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $casting['Casting']['element-date']); ?></p>
 		
 		<p class="direccion">
+			Lugar:
 			<?php echo h($casting['Casting']['street']); ?>
 			
 			<?php if($casting['Casting']['floor'] != ''): ?>
@@ -79,7 +81,9 @@
 <!-- Descripción -->
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $casting['Casting']['description']; ?>
+		<div class="text-description">
+			<?php echo $casting['Casting']['description']; ?>
+		</div>
 	</div>
 </div>
 
@@ -87,7 +91,6 @@
 <?php if(isset($casting['Attachment']) && sizeof($casting['Attachment']) > 0): ?>
 	<div class="row">
 		<div class="col-sm-12">
-			<h2>Archivos</h2>
 			<?php
 			foreach ($casting['Attachment'] as $key => $attachment):
 				$fileAux = pathinfo($attachment['name']);
