@@ -4,35 +4,82 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $this->Form->create('Auditionsearches', array('url' => '/audiciones')) ?>
-			<div class="checkbox">
-				<label>
-					<?php echo $this->Form->checkbox('auditions', array('hiddenField' => false)) ?>
-					Audiciones
-				</label>
+		<?php echo $this->Form->create('Auditionsearches', array('url' => '/audiciones', 'class' => 'form-inline')) ?>
+			<div class="form-group hidden">
+				<label>Categorías</label>
+				<div class="checkbox">
+					<label>
+						<?php echo $this->Form->checkbox('auditions', array('hiddenField' => false)) ?>
+						Audiciones
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<?php echo $this->Form->checkbox('calls', array('hiddenField' => false)) ?>
+						Convocatorias
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<?php echo $this->Form->checkbox('castings', array('hiddenField' => false)) ?>
+						Castings
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<?php echo $this->Form->checkbox('jobs', array('hiddenField' => false)) ?>
+						Búsquedas Laborales
+					</label>
+				</div>
 			</div>
-			<div class="checkbox">
-				<label>
-					<?php echo $this->Form->checkbox('calls', array('hiddenField' => false)) ?>
-					Convocatorias
-				</label>
+			<div class="form-group">
+				<?php 
+					$categories = array(
+						'all' => 'Categoría',
+						'auditions' => 'Audiciones', 
+						'calls' => 'Convocatorias', 
+						'castings' => 'Castings', 
+						'jobs' => 'Búsquedas Laborales'
+					);
+					echo $this->Form->input(
+					    'Categoría',
+					    array('label' => false, 'options' => $categories, 'default' => 'all', 'class' => 'form-control')
+					);
+				?>
 			</div>
-			<div class="checkbox">
-				<label>
-					<?php echo $this->Form->checkbox('castings', array('hiddenField' => false)) ?>
-					Castings
-				</label>
+			<div class="form-group">
+				<?php 
+					$pais = array(
+						'all' => 'Pais',
+						'ar' => 'Argentina'
+					);
+					echo $this->Form->input(
+					    'Pais',
+					    array('label' => false, 'options' => $pais, 'default' => 'all', 'class' => 'form-control')
+					);
+				?>
 			</div>
-			<div class="checkbox">
-				<label>
-					<?php echo $this->Form->checkbox('jobs', array('hiddenField' => false)) ?>
-					Búsquedas Laborales
-				</label>
+			<div class="form-group">
+				<?php 
+					$pais = array(
+						'all' => 'Profesión',
+						'cantante' => 'Cantante'
+					);
+					echo $this->Form->input(
+					    'Profesión',
+					    array('label' => false, 'options' => $pais, 'default' => 'all', 'class' => 'form-control')
+					);
+				?>
 			</div>
-			<button type="submit"><?php echo __('Submit') ?></button>
+			<div class="form-group">
+				<label class="sr-only">Palabra clave</label>
+				<input type="text" class="form-control" placeholder="Palabra clave" />
+			</div>
+			<button type="submit" class="btn btn-default"><?php echo __('Submit') ?></button>
 		<?php echo $this->Form->end() ?>
 	</div>
 </div>
+<hr>
 
 <div class="row">
 	<div class="col-sm-12">
