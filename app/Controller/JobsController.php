@@ -21,7 +21,7 @@ class JobsController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getElements', 'getSalients', 'view');
+		$this->Auth->allow('getElements', 'getElementsOutOfDate', 'getSalients', 'view');
 	}
 
 	public function isAuthorized($user) {
@@ -341,6 +341,19 @@ class JobsController extends AppController {
  */
 	public function getElements() {
 		$options['conditions'] = array('element-date >=' => date('Y-m-d H:i'));
+		$options['fields'] = array('id', 'title', 'image', 'element-date');
+		$options['order'] = 'element-date ASC';
+		$options['recursive'] = -1;
+		return $this->Job->find('all', $options);
+	}
+	
+/**
+ * getElementsOutOfDate method (No Vigentes)
+ *
+ * @return void
+ */
+	public function getElementsOutOfDate() {
+		$options['conditions'] = array('element-date <' => date('Y-m-d H:i'));
 		$options['fields'] = array('id', 'title', 'image', 'element-date');
 		$options['order'] = 'element-date ASC';
 		$options['recursive'] = -1;
