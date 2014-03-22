@@ -105,11 +105,9 @@ class MapsearchesController extends AppController {
 		# Elementos Destacados
 		###
 
-		# Accesories
 		$salients = $this->requestAction(array('controller' => 'accessories', 'action' => 'getSalients'));
 		$salients = array_merge($salients, $this->requestAction(array('controller' => 'estudies', 'action' => 'getSalients')));
 		$salients = array_merge($salients, $this->requestAction(array('controller' => 'practicerooms', 'action' => 'getSalients')));
-
 
 		# Se desarrolla una lógica para independizarnos de los nombres de los Controllers
 		foreach($salients as $key => $salient):
@@ -130,7 +128,6 @@ class MapsearchesController extends AppController {
 			);
 		endforeach;
 		
-
 		# /elementosDestacados
 
 

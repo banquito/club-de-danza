@@ -1,6 +1,9 @@
 <?php //if(isset($data)) debug($data, $showHtml = null, $showFrom = true) ?>
 <?php //if(isset($elements)) debug($elements, $showHtml = null, $showFrom = true) ?>
+<?php //if(isset($salients)) debug($salients, $showHtml = null, $showFrom = true) ?>
 <?php echo $this->Html->css('pages/inicio', array('inline' => false)); ?>
+
+<h1>Búsquedas</h1>
 
 <div class="row">
 	<div class="col-sm-12">
@@ -80,6 +83,8 @@
 	</div>
 </div>
 <hr>
+
+<?php if(isset($salients) && sizeof($salients) > 0) echo $this->element('sliderSalients', array("items" => $salients)); # Slider Salients ?>
 
 <div class="row">
 	<div class="col-sm-12">

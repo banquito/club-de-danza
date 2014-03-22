@@ -1,5 +1,4 @@
 /* line 1, ../../sass/elements/slider-salients.sass */
-.thumbnail img {
-  height: 182px;
+.slide .thumbnail img {
   max-height: 182px;
 }

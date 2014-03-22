@@ -59,6 +59,9 @@ class AuditionsearchesController extends AppController {
 			}
 		}
 
+		###
+		# Elementos Buscados
+		###
 
 		if(isset($data['auditions']) || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'auditions', 'action' => 'getElements')));
@@ -103,7 +106,41 @@ class AuditionsearchesController extends AppController {
 
 		usort($elements, 'sortElements');
 
-		$this->set(compact('elements', 'data'));
+		# /elementosBuscados
+
+		###
+		# Elementos Destacados
+		###
+
+		$salients = $this->requestAction(array('controller' => 'auditions', 'action' => 'getSalients'));
+		$salients = array_merge($salients, $this->requestAction(array('controller' => 'calls', 'action' => 'getSalients')));
+		$salients = array_merge($salients, $this->requestAction(array('controller' => 'castings', 'action' => 'getSalients')));
+		$salients = array_merge($salients, $this->requestAction(array('controller' => 'jobs', 'action' => 'getSalients')));
+
+
+		# Se desarrolla una lógica para independizarnos de los nombres de los Controllers
+		foreach($salients as $key => $salient):
+			$auxNames = array_keys($salient);
+			$auxValues = array_values($salient);
+			$name = strtolower($auxNames[0]);
+			$namePlural = $name.'s';
+			$id = $auxValues[0]['id'];
+			$image = ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
+			$title = $auxValues[0]['title'] ? substr($auxValues[0]['title'], 0, 50) : __('No Title');
+			
+			$salients[$key] = array_merge($salient
+				, array('image' => $image
+					, 'link' => Router::url(array('controller'=>$namePlural, 'action'=>'view', $id))
+					, 'name-plural' => $namePlural
+					, 'name' => $name
+					, 'title' => $title
+				)
+			);
+		endforeach;
+
+		# /elementosDestacados
+
+		$this->set(compact('data', 'elements', 'salients'));
 		
 	}
 
