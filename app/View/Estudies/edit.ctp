@@ -251,11 +251,9 @@
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Paid'); ?></label>
 				<div class="col-sm-8">
-					<?php echo $this->Form->input('paid', array(
+					<?php echo $this->Form->checkbox('paid', array(
 						'class' => 'form-control',
 						'label' => false,
-						// 'placeholder' => __('Paid'),
-						// 'required' => 'required',
 					));
 					?>
 				</div>
@@ -265,7 +263,7 @@
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Salient'); ?></label>
 				<div class="col-sm-8">
-					<?php echo $this->Form->input('salient', array(
+					<?php echo $this->Form->checkbox('salient', array(
 						'class' => 'form-control',
 						'label' => false,
 					));
