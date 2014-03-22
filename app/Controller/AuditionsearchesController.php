@@ -62,7 +62,7 @@ class AuditionsearchesController extends AppController {
 		###
 		# Elementos Buscados
 		###
-
+		# Vigentes
 		if(isset($data['auditions']) || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'auditions', 'action' => 'getElements')));
 		if(isset($data['calls']) || $todas)
@@ -71,6 +71,16 @@ class AuditionsearchesController extends AppController {
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'castings', 'action' => 'getElements')));
 		if(isset($data['jobs']) || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'jobs', 'action' => 'getElements')));
+
+		# No Vigentes
+		if(isset($data['auditions']) || $todas)
+			$elements = array_merge($elements, $this->requestAction(array('controller' => 'auditions', 'action' => 'getElementsOutOfDate')));
+		if(isset($data['calls']) || $todas)
+			$elements = array_merge($elements, $this->requestAction(array('controller' => 'calls', 'action' => 'getElementsOutOfDate')));
+		if(isset($data['castings']) || $todas)
+			$elements = array_merge($elements, $this->requestAction(array('controller' => 'castings', 'action' => 'getElementsOutOfDate')));
+		if(isset($data['jobs']) || $todas)
+			$elements = array_merge($elements, $this->requestAction(array('controller' => 'jobs', 'action' => 'getElementsOutOfDate')));
 		
 
 		# Se desarrolla una lógica para independizarnos de los nombres de los Controllers
