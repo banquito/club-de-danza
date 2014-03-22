@@ -3,7 +3,7 @@
 <?php echo $this->Html->css('pages/inicio', array('inline' => false)); ?>
 
 <!-- Slider & Carrusel -->
-<?php echo $this -> element('slider'); ?>
+<?php echo $this -> element('slidernote'); ?>
 
 <!-- Título -->
 <div class="row row-header-h1">
