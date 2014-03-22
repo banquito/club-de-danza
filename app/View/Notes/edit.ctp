@@ -74,6 +74,7 @@ echo $this->Html->script(array('ncEditor', 'vendors/nicEdit'), array('inline'=>f
 						'label' => false,
 						'placeholder' => __('Resume'),
 						'required' => 'required',
+						'type' => 'text'
 					));
 					?>
 				</div>

@@ -1,3 +1,5 @@
+<?php //debug($notes, $showHtml = null, $showFrom = true) ?>
+
 <?php echo $this->Html->css('pages/inicio', array('inline' => false)); ?>
 
 <!-- Slider & Carrusel -->
@@ -29,6 +31,9 @@
 						<div class="caption caption-vermas">
 							<p class="title-vermas">
 								<?php echo ($title = $note['Note']['title']) ? substr($title, 0, 50) : __('No Title'); ?>
+							</p>
+							<p class="resume-vermas">
+								<?php echo ($resume = h($note['Note']['resume'])) ? substr($resume, 0, 50) : 'Sin Resumen'; ?>
 							</p>
 						</div>
 					</div>
