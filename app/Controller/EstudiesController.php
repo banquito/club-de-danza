@@ -91,6 +91,37 @@ class EstudiesController extends AppController {
 			if ($this->Estudy->save($estudy)) {
 				$estudy_id = $this->Estudy->id;
 				
+				# Photos
+				if (isset($estudy['Photo']) && sizeof($estudy['Photo']) > 0) {
+				 	foreach ($estudy['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							//$photoFile = $estudy_id . date("YmdHisu")  . '.' . $photoExt;
+							$photoFile = $estudy_id . md5(microtime()) . '.' . $photoExt; 
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Estudy->Photo->create();
+								if ($this->Estudy->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Estudy->EstudiesPhoto->create();
+									$this->Estudy->EstudiesPhoto->save(array('estudy_id'=>$this->Estudy->id
+										, 'photo_id' => $this->Estudy->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+				
+				# Timetable
 				if (isset($estudy['Timetable']) && sizeof($estudy['Timetable']) > 0) {
 				 	foreach ($estudy['Timetable'] as $key => $timetable) {
 						
@@ -209,9 +240,14 @@ class EstudiesController extends AppController {
 			$timetables = $this -> Estudy -> read(null, $id);
 			$estudy['Timetable'] = array_merge($estudy['Timetable'], $timetables['Timetable']);
 
+			# Para que no se eliminen las Photos en el save:
+			$photos = $this -> Estudy -> read(null, $id);
+			$estudy['Photo'] = array_merge($estudy['Photo'], $photos['Photo']);
+
 			if ($this->Estudy->save($estudy)) {
 				$estudy_id = $this->Estudy->id;
 
+				# Timetable
 				if (isset($estudy['Timetable']) && sizeof($estudy['Timetable']) > 0) {
 				 	foreach ($estudy['Timetable'] as $key => $timetable) {
 						
@@ -231,6 +267,36 @@ class EstudiesController extends AppController {
 									$this->Estudy->EstudiesTimetable->create();
 									$this->Estudy->EstudiesTimetable->save(array('estudy_id' => $estudy_id
 										, 'timetable_id' => $this->Estudy->Timetable->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+							
+						}
+				 	}
+				}
+				
+				# Photos
+				if (isset($estudy['Photo']) && sizeof($estudy['Photo']) > 0) {
+				 	foreach ($estudy['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '') && isset($photo['tmp_name']) && ($photo['tmp_name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							$photoFile = $estudy_id . md5(microtime()) . '.' . $photoExt;
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Estudy->Photo->create();
+								if ($this->Estudy->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Estudy->EstudiesPhoto->create();
+									$this->Estudy->EstudiesPhoto->save(array('estudy_id' => $estudy_id
+										, 'photo_id' => $this->Estudy->Photo->id
 										, 'user_id' => AuthComponent::user('id')
 										)
 									);

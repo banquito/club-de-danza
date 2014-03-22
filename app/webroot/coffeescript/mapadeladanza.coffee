@@ -7,6 +7,9 @@ jQuery ->
 	$('#moreAttachments').on 'click', ->
 		$('#attachments').append('<input type="file" class="btn btn-default" name="data[Attachment][]">')
 
+	$('#morePhotos').on 'click', ->
+		$('#photos').append('<input type="file" class="btn btn-default" name="data[Photo][]">')
+
 	$('#moreVideos').on 'click', ->
 		if videoAux? and videoAux > 0
 			videoAux++
