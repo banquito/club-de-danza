@@ -22,7 +22,7 @@ class AuditionsController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getElements', 'view');
+		$this->Auth->allow('getElements', 'getSalients', 'view');
 	}
 
 	public function isAuthorized($user) {
@@ -348,6 +348,20 @@ class AuditionsController extends AppController {
 		$options['recursive'] = -1;
 		return $this->Audition->find('all', $options);
 	}
+
+/**
+ * getSalients method
+ *
+ * @return void
+ */
+	public function getSalients() {
+		$options['conditions'] = array('salient' => true);
+		$options['fields'] = array('id', 'title', 'image');
+		$options['order'] = array('created' => 'DESC');
+		$options['recursive'] = -1;
+		return $this->Audition->find('all', $options);
+	}
+
 
 /**
  * index method

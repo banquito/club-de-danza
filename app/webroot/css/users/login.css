@@ -1,9 +1,9 @@
-/* line 3, ../../sass/_carrousel.sass */
+/* line 3, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-control {
   width: 0;
 }
 
-/* line 6, ../../sass/_carrousel.sass */
+/* line 6, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-indicators {
   bottom: 0;
   left: 50%;
@@ -19,7 +19,7 @@
   z-index: 15;
 }
 
-/* line 20, ../../sass/_carrousel.sass */
+/* line 20, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-caption {
   background-color: rgba(221, 16, 76, 0.8);
   bottom: 0;
@@ -31,33 +31,33 @@
   width: 50%;
 }
 
-/* line 31, ../../sass/_carrousel.sass */
+/* line 31, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-control > .fa {
   display: inline-block;
   position: absolute;
   top: 40%;
 }
-/* line 36, ../../sass/_carrousel.sass */
+/* line 36, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-control > .fa.fa-angle-left {
   left: 5px;
 }
-/* line 39, ../../sass/_carrousel.sass */
+/* line 39, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-control > .fa.fa-angle-right {
   right: 5px;
 }
 
-/* line 44, ../../sass/_carrousel.sass */
+/* line 44, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-inner {
   box-shadow: 0 0 2px 2px #cccccc;
   margin-bottom: 20px;
 }
-/* line 48, ../../sass/_carrousel.sass */
+/* line 48, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-inner .item {
   height: 252px;
   min-height: 252px;
   max-height: 252px;
 }
-/* line 53, ../../sass/_carrousel.sass */
+/* line 53, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_carrousel.sass */
 .carousel-inner a {
   color: white;
   font-family: "Homenaje";

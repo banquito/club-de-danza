@@ -58,7 +58,9 @@ class MapsearchesController extends AppController {
 			}
 		}
 
-
+		###
+		# Elementos Buscados
+		###
 		if(isset($data['accessories']) || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'accessories', 'action' => 'getElements')));
 		if(isset($data['estudies']) || $todas)
@@ -79,11 +81,10 @@ class MapsearchesController extends AppController {
 			$paid = $auxValues[0]['paid'];
 			
 			$elements[$key] = array_merge($element
-				, array('name' => $name
-					, 'name-plural' => $namePlural
+				, array('image' => $image
 					, 'link' => Router::url(array('controller'=>$namePlural, 'action'=>'view', $id))
-					, 'image' => $image
 					, 'name' => $name
+					, 'name-plural' => $namePlural
 					, 'paid' => $paid
 				)
 			);
@@ -98,7 +99,39 @@ class MapsearchesController extends AppController {
 
 		usort($elements, 'sortElements');
 
-		$this->set(compact('elements', 'data'));
+		# /elementosBuscados
+
+		###
+		# Elementos Destacados
+		###
+
+		$salients = $this->requestAction(array('controller' => 'accessories', 'action' => 'getSalients'));
+		$salients = array_merge($salients, $this->requestAction(array('controller' => 'estudies', 'action' => 'getSalients')));
+		$salients = array_merge($salients, $this->requestAction(array('controller' => 'practicerooms', 'action' => 'getSalients')));
+
+		# Se desarrolla una lógica para independizarnos de los nombres de los Controllers
+		foreach($salients as $key => $salient):
+			$auxNames = array_keys($salient);
+			$auxValues = array_values($salient);
+			$name = strtolower($auxNames[0]);
+			$namePlural = substr($name, -1, 1) == 'y' ? substr($name, 0, -1).'ies' : $name.'s';
+			$id = $auxValues[0]['id'];
+			$image = ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
+			$name = $auxValues[0]['name'] ? substr($auxValues[0]['name'], 0, 50) : __('No Name');
+			
+			$salients[$key] = array_merge($salient
+				, array('image' => $image
+					, 'link' => Router::url(array('controller'=>$namePlural, 'action'=>'view', $id))
+					, 'name-plural' => $namePlural
+					, 'title' => $name
+				)
+			);
+		endforeach;
+		
+		# /elementosDestacados
+
+
+		$this->set(compact('data', 'elements', 'salients'));
 		
 	}
 
