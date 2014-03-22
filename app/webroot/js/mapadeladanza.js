@@ -8,6 +8,9 @@
     $('#moreAttachments').on('click', function() {
       return $('#attachments').append('<input type="file" class="btn btn-default" name="data[Attachment][]">');
     });
+    $('#morePhotos').on('click', function() {
+      return $('#photos').append('<input type="file" class="btn btn-default" name="data[Photo][]">');
+    });
     return $('#moreVideos').on('click', function() {
       if ((typeof videoAux !== "undefined" && videoAux !== null) && videoAux > 0) {
         videoAux++;
