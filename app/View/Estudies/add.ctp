@@ -48,8 +48,7 @@
 					?>
 				</div>
 			</div>
-			
-			<!-- Images -->
+			<!-- Photos -->
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Photos'); ?></label>
 				<div id="photos" class="col-sm-7">
