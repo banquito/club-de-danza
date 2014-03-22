@@ -1,12 +1,14 @@
+<?php echo $this->Html->css('elements/slider-salients', array('inline' => false)); ?>
+
 <?php $sliderLink = (isset($items[0]['link']) && $items[0]['link'] != '') ? $items[0]['link'] : '#'; ?>
 <div class="row slide">
 	<div class="col-sm-12">
 		<div class="thumbnail">
-			<div class="col-sm-6">
 				<a href="<?php echo $sliderLink; ?>">
-					<?php echo $this->Html->image($items[0]['image'], array('class' => 'image-center')); ?>
+					<div class="col-sm-6">
+						<?php echo $this->Html->image($items[0]['image'], array('class' => 'image-center')); ?>
+					</div>
 				</a>
-			</div>
 			<div class="col-sm-6">
 				<a href="<?php echo $sliderLink; ?>">
 					<h4>
