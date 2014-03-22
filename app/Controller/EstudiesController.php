@@ -21,7 +21,7 @@ class EstudiesController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getElements', 'view');
+		$this->Auth->allow('getElements', 'getSalients', 'view');
 	}
 
 	public function isAuthorized($user) {
@@ -282,6 +282,19 @@ class EstudiesController extends AppController {
 		// $options['conditions'] = array('element-date >=' => date('Y-m-d H:i'));
 		$options['fields'] = array('id', 'name', 'image', 'paid');
 		$options['order'] = array('paid' => 'DESC', 'created' => 'DESC');
+		$options['recursive'] = -1;
+		return $this->Estudy->find('all', $options);
+	}
+
+/**
+ * getSalients method
+ *
+ * @return void
+ */
+	public function getSalients() {
+		$options['conditions'] = array('salient' => true);
+		$options['fields'] = array('id', 'name', 'image');
+		$options['order'] = array('created' => 'DESC');
 		$options['recursive'] = -1;
 		return $this->Estudy->find('all', $options);
 	}

@@ -194,6 +194,19 @@
 					?>
 				</div>
 			</div>
+			
+			<!-- Salient -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Salient'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->input('salient', array(
+						'class' => 'form-control',
+						'label' => false,
+					));
+					?>
+				</div>
+			</div>
+			
 			<div class="form-group">
 				<div class="col-sm-offset-4 col-sm-2">
 					<button type="submit" class="btn btn-default"><?php echo __('Aceptar'); ?></button>
