@@ -14,6 +14,46 @@
 					<h4>
 						<?php echo $items[0]['title']; ?>
 					</h4>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<?php if(isset($items[0]['products'])) ?>
+								<p class="text-pink"><?php echo h($items[0]['products']); ?></p>
+
+							<?php if(isset($items[0]['element-date']) && $items[0]['element-date']): ?>
+								<p class="text-pink">Fecha: <?php echo $this -> Time -> format('d-m-Y H:i', $items[0]['element-date']); ?></p>
+							<?php endif; ?>
+							
+							<p class="text-pink">
+								Lugar: 
+								<?php echo h($items[0]['street']); ?>
+								
+								<?php if($items[0]['floor'] != ''): ?>
+									, piso: <?php echo h($items[0]['floor']); ?>
+								<?php endif; ?>
+								
+								<?php if($items[0]['department'] != ''): ?>
+									, depto.: <?php echo h($items[0]['department']); ?>
+								<?php endif; ?>
+							</p>
+
+							<?php if(sizeof($items[0]['Dancestyle']) > 0): ?>
+								<p>
+								<?php foreach ($items[0]['Dancestyle'] as $key => $dancestyle) {
+									if($key != 0) echo ', ';
+									echo $dancestyle['name'];
+								} ?>
+								</p>
+							<?php endif; ?>
+
+							<p class="text-pink">
+								Contacto: <?php echo h($items[0]['email']); ?>, 
+								<?php echo h($items[0]['website']); ?>, 
+								<?php echo h($items[0]['phone']); ?>
+							</p>
+						</div>
+					</div>
+
 				</a>
 			</div>
 		</div>

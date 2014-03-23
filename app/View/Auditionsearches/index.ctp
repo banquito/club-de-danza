@@ -48,7 +48,7 @@
 				<label class="sr-only">Palabra clave</label>
 				<input type="text" class="form-control" placeholder="Palabra clave" />
 			</div>
-			<button type="submit" class="btn btn-default"><?php echo __('Buscar') ?></button>
+			<button type="submit" class="btn btn-default btn-sm"><i class="fa fa-search"></i> Buscar</button>
 		<?php echo $this->Form->end() ?>
 	</div>
 </div>

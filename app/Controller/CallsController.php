@@ -367,9 +367,9 @@ class CallsController extends AppController {
  */
 	public function getSalients() {
 		$options['conditions'] = array('salient' => true);
-		$options['fields'] = array('id', 'title', 'image');
-		$options['order'] = array('created' => 'DESC');
-		$options['recursive'] = -1;
+		// $options['fields'] = array('id', 'title', 'image');
+		$options['order'] = array('Call.created' => 'DESC');
+		// $options['recursive'] = -1;
 		return $this->Call->find('all', $options);
 	}
 

@@ -76,11 +76,14 @@ class UsersController extends AppController {
 							.'Si el link no funciona copialo y pegalo en tu navegador.'."\n\n".
 							'Nota: Estos pasos cumplen con los requerimientos de registro en nuestro sitio, si no es este el caso, omite este mensaje.'."\n".'¡Bailemos!'."\n\n".
 							'Club de Danza'."\n".'www.clubdedanza.com';
-				$additional_headers = '';
-				$additional_parameters = '';
+				// $additional_headers = '';
+				$additional_headers = 'From: Club de Danza <contacto@clubdedanza.com>' . "\r\n" .
+					'Reply-To: contacto@clubdedanza.com' . "\r\n" .
+					'X-Mailer: PHP/' . phpversion();
+				// $additional_parameters = '';
 
 				# Se envía el correo de confirmación
-				mail($to, $subject, $message, $additional_headers, $additional_parameters);
+				mail($to, $subject, $message, $additional_headers);
 
 				# Se envía al usuario a un mensaje de confirmación
 				return $this->redirect('/confirmatucorreo');
