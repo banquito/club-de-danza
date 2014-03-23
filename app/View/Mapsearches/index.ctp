@@ -4,29 +4,75 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $this->Form->create('Mapsearches', array('url' => '/mapadeladanza')) ?>
-			<div class="checkbox">
-				<label>
-					<?php echo $this->Form->checkbox('accessories', array('hiddenField' => false)) ?>
-					Accesorios
-				</label>
+		<?php echo $this->Form->create('Mapsearches', array('url' => '/mapadeladanza', 'class' => 'form-inline')) ?>
+			<div class="form-group hidden">
+				<div class="checkbox">
+					<label>
+						<?php echo $this->Form->checkbox('accessories', array('hiddenField' => false)) ?>
+						Accesorios
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<?php echo $this->Form->checkbox('estudies', array('hiddenField' => false)) ?>
+						Estudios
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<?php echo $this->Form->checkbox('practicerooms', array('hiddenField' => false)) ?>
+						Salas de Ensayo
+					</label>
+				</div>
 			</div>
-			<div class="checkbox">
-				<label>
-					<?php echo $this->Form->checkbox('estudies', array('hiddenField' => false)) ?>
-					Estudios
-				</label>
+			<div class="form-group">
+				<?php 
+					$categories = array(
+						'all' => 'Categoría',
+						'accessories' => 'Accesorios', 
+						'estudies' => 'Estudios', 
+						'practicerooms' => 'Salas de Ensayo'
+					);
+					echo $this->Form->input(
+					    'Categoría',
+					    array('label' => false, 'options' => $categories, 'default' => 'all', 'class' => 'form-control')
+					);
+				?>
 			</div>
-			<div class="checkbox">
-				<label>
-					<?php echo $this->Form->checkbox('practicerooms', array('hiddenField' => false)) ?>
-					Salas de Ensayo
-				</label>
+			<div class="form-group">
+				<?php 
+					$pais = array(
+						'all' => 'Pais',
+						'ar' => 'Argentina'
+					);
+					echo $this->Form->input(
+					    'Pais',
+					    array('label' => false, 'options' => $pais, 'default' => 'all', 'class' => 'form-control')
+					);
+				?>
 			</div>
-			<button type="submit"><?php echo __('Submit') ?></button>
+			<div class="form-group">
+				<?php 
+					$estilo = array(
+						'all' => 'Estilo',
+						'disco' => 'Disco',
+						'flamenco' => 'Flamenco'
+					);
+					echo $this->Form->input(
+					    'Estilo',
+					    array('label' => false, 'options' => $estilo, 'default' => 'all', 'class' => 'form-control')
+					);
+				?>
+			</div>
+			<div class="form-group">
+				<label class="sr-only">Palabra clave</label>
+				<input type="text" class="form-control" placeholder="Palabra clave" />
+			</div>
+			<button type="submit" class="btn btn-default"><?php echo __('Submit') ?></button>
 		<?php echo $this->Form->end() ?>
 	</div>
 </div>
+<hr>
 
 <div class="row">
 	<div class="col-sm-12">

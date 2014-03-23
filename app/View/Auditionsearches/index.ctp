@@ -61,13 +61,13 @@
 			</div>
 			<div class="form-group">
 				<?php 
-					$pais = array(
+					$profesion = array(
 						'all' => 'Profesión',
 						'cantante' => 'Cantante'
 					);
 					echo $this->Form->input(
 					    'Profesión',
-					    array('label' => false, 'options' => $pais, 'default' => 'all', 'class' => 'form-control')
+					    array('label' => false, 'options' => $profesion, 'default' => 'all', 'class' => 'form-control')
 					);
 				?>
 			</div>

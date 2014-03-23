@@ -135,6 +135,8 @@ class NotesController extends AppController {
 		$items = $this->requestAction(array('controller' => 'sliders', 'action' => 'getItems')
 			, array('named' => array('category' => 1))
 		);
+		
+		$this->Paginator->settings = $this->paginate;
 
 		$this->set(compact('items'));
 		$this->set('notes', $this->Paginator->paginate());

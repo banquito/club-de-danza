@@ -34,19 +34,23 @@
 				<?php endforeach; ?>
 			</tbody>
 		</table>
-		<p class="text-center">
+		<ul class="pagination">
+		  <li>
+		  	<?php echo $this->Paginator->prev('«', array('tag' => 'li'), null, array('class' => 'disabled')); ?>
+		  </li>
 			<?php
-			echo $this->Paginator->counter(array(
-			'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-			));
+				echo $this->Paginator->numbers(
+					array(
+						'currentClass' => 'active',
+						'separator' => '',
+						'tag' => 'li',
+						'currentTag' => 'span'
+					)
+				);				
 			?>
-		</p>
-		<div class="paging text-center">
-			<?php
-				echo $this->Paginator->prev('< ' . __('previous') . ' ', array(), null, array('class' => 'prev disabled'));
-				echo $this->Paginator->numbers(array('separator' => ' | '));
-				echo $this->Paginator->next(' ' . __('next') . ' >', array(), null, array('class' => 'next disabled'));
-			?>
-		</div>
+		  <li> 
+		  	<?php echo $this->Paginator->next('»', array('tag' => 'li'), null, array('class' => 'disabled')); ?>
+		  </li>
+		</ul>
 	</div>
 </div>
