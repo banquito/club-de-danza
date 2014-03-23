@@ -8,13 +8,60 @@
 
 <div class="row">
 	<div class="col-sm-6">
-		<div class="row">
+		<!--<div class="row">
 			<div class="col-sm-12">
 				<?php
 				echo $this->Html->image('practicerooms/'.$practiceroom['Practiceroom']['image']
 					, array('class'=>'img-responsive')
 				);
 				?>
+			</div>
+		</div>-->
+		<div class="row">
+			<div class="col-sm-12">
+				<?php if(isset($practiceroom['Photo']) && sizeof($practiceroom['Photo']) > 0): ?>
+					<div id="slider-photo" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+					    	<li data-target="#slider-photo" data-slide-to="0" class="active"></li>
+					    	<?php foreach ($practiceroom['Photo'] as $key => $photo): ?>
+								<li data-target="#slider-photo" data-slide-to="<?php echo ($key+1); ?>" ></li>
+							<?php endforeach; ?>
+						</ol>
+					    
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<?php echo $this->Html->image('practicerooms/'.$practiceroom['Practiceroom']['image'], array('class'=>'image-center'));?>
+					            <div class="carousel-caption">
+					            	<h3>
+					                	<a><?php echo $practiceroom['Practiceroom']['image']; ?></a>
+									</h3>
+					            </div>
+							</div>
+							<?php foreach ($practiceroom['Photo'] as $key => $photo): ?>
+								<!--<div class="item<?php echo ($key == 0) ? ' active' : ''; ?>">-->
+								<div class="item">
+									<?php echo $this->Html->image('photos/' . $photo['file'], array('class' => 'image-center')); ?>
+					                <div class="carousel-caption">
+					                    <h3>
+					                        <a><?php echo $photo['name']; ?></a>
+					                    </h3>
+					                </div>
+								</div>
+							<?php endforeach; ?>
+						</div>
+					
+						<!-- Controls -->
+						<a class="left carousel-control" href="#slider-photo" data-slide="prev">
+							<span class="fa fa-angle-left fa-2x"></span>
+						</a>
+						<a class="right carousel-control" href="#slider-photo" data-slide="next">
+							<span class="fa fa-angle-right fa-2x"></span>
+						</a>
+					</div>
+					
+				<?php endif; ?>
 			</div>
 		</div>
 		<div class="row">

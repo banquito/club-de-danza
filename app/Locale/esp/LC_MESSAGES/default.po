@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Club de Danza\n"
-"POT-Creation-Date: 2014-03-14 21:20-0300\n"
-"PO-Revision-Date: 2014-03-14 21:26-0300\n"
+"POT-Creation-Date: 2014-03-22 17:24-0300\n"
+"PO-Revision-Date: 2014-03-22 17:26-0300\n"
 "Last-Translator: Ale Prieto <aleprieto@gmail.com>\n"
 "Language-Team: Colectivo Libre <contacto@colectivolibre.com.ar>\n"
 "Language: \n"
@@ -18,29 +18,30 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: Controller/AccessoriesController.php:106;221
-#: Controller/AuditionsController.php:107;225
+#: Controller/AuditionsController.php:107;254
 #: Controller/BannersController.php:68;115
-#: Controller/CallsController.php:106;224
-#: Controller/CastingsController.php:106;313
-#: Controller/EstudiesController.php:81;198
-#: Controller/JobsController.php:106;224
-#: Controller/NotesController.php:89;173
+#: Controller/CallsController.php:106;253
+#: Controller/CastingsController.php:106;369
+#: Controller/EstudiesController.php:81;229
+#: Controller/JobsController.php:106;253
+#: Controller/NotesController.php:89;197
 #: Controller/PracticeroomsController.php:81;199
+#: Controller/SlidernotesController.php:45;150
 #: Controller/SlidersController.php:45;150
 msgid "The image could not be saved. Please, verify the file."
 msgstr "La imagen no ha sido guardado. Por favor, intente nuevamente."
 
-#: Controller/AccessoriesController.php:138;258
+#: Controller/AccessoriesController.php:138;259
 #, fuzzy
 msgid "The accessory has been saved."
 msgstr "El estilo de danza ha sido guardado"
 
-#: Controller/AccessoriesController.php:141;261
+#: Controller/AccessoriesController.php:141;262
 #, fuzzy
 msgid "The accessory could not be saved. Please, try again."
 msgstr "El estilo de danza no ha sido guardado. Por favor, intente nuevamente."
 
-#: Controller/AccessoriesController.php:159;180;327
+#: Controller/AccessoriesController.php:159;180;342
 #, fuzzy
 msgid "Invalid accessory"
 msgstr "Estilo de Danza inválido"
@@ -80,6 +81,31 @@ msgstr "El estilo de danza ha sido eliminado."
 msgid "The accessories dancestyle could not be deleted. Please, try again."
 msgstr "El estilo de danza no ha sido eliminado. Por favor, intente nuevamente."
 
+#: Controller/AccessoriesPhotosController.php:37;73;102
+#, fuzzy
+msgid "Invalid accessories photo"
+msgstr "Estilo de Danza inválido"
+
+#: Controller/AccessoriesPhotosController.php:52;77
+#, fuzzy
+msgid "The accessories photo has been saved."
+msgstr "El estilo de danza ha sido guardado"
+
+#: Controller/AccessoriesPhotosController.php:55;80
+#, fuzzy
+msgid "The accessories photo could not be saved. Please, try again."
+msgstr "El estilo de danza no ha sido guardado. Por favor, intente nuevamente."
+
+#: Controller/AccessoriesPhotosController.php:106
+#, fuzzy
+msgid "The accessories photo has been deleted."
+msgstr "El estilo de danza ha sido eliminado."
+
+#: Controller/AccessoriesPhotosController.php:108
+#, fuzzy
+msgid "The accessories photo could not be deleted. Please, try again."
+msgstr "El estilo de danza no ha sido eliminado. Por favor, intente nuevamente."
+
 #: Controller/AccessoriesVideosController.php:79;115;144
 #, fuzzy
 msgid "Invalid accessories video"
@@ -106,6 +132,10 @@ msgid "The accessories video could not be deleted. Please, try again."
 msgstr "El estilo de danza no ha sido eliminado. Por favor, intente nuevamente."
 
 #: Controller/AccessoriesVideosController.php:165
+#: Controller/AttachmentsAuditionsController.php:167
+#: Controller/AttachmentsCallsController.php:168
+#: Controller/AttachmentsCastingsController.php:168
+#: Controller/AttachmentsJobsController.php:166
 #: Controller/AuditionsVideosController.php:165
 #: Controller/CallsVideosController.php:165
 #: Controller/CastingsVideosController.php:165
@@ -118,6 +148,10 @@ msgid "Invalid practicerooms timetable"
 msgstr "Estilo de Danza inválido"
 
 #: Controller/AccessoriesVideosController.php:169
+#: Controller/AttachmentsAuditionsController.php:171
+#: Controller/AttachmentsCallsController.php:172
+#: Controller/AttachmentsCastingsController.php:172
+#: Controller/AttachmentsJobsController.php:170
 #: Controller/AuditionsVideosController.php:169
 #: Controller/CallsVideosController.php:169
 #: Controller/CastingsVideosController.php:169
@@ -130,6 +164,10 @@ msgid "The practicerooms timetable has been deleted."
 msgstr "El estilo de danza ha sido eliminado."
 
 #: Controller/AccessoriesVideosController.php:171
+#: Controller/AttachmentsAuditionsController.php:173
+#: Controller/AttachmentsCallsController.php:174
+#: Controller/AttachmentsCastingsController.php:174
+#: Controller/AttachmentsJobsController.php:172
 #: Controller/AuditionsVideosController.php:171
 #: Controller/CallsVideosController.php:171
 #: Controller/CastingsVideosController.php:171
@@ -141,23 +179,147 @@ msgstr "El estilo de danza ha sido eliminado."
 msgid "The practicerooms timetable could not be deleted. Please, try again."
 msgstr "El estilo de danza no ha sido eliminado. Por favor, intente nuevamente."
 
-#: Controller/AuditionsController.php:140;261
+#: Controller/AttachmentsAuditionsController.php:80;116;145
+#, fuzzy
+msgid "Invalid attachments audition"
+msgstr "Audición inválida"
+
+#: Controller/AttachmentsAuditionsController.php:95;120
+#, fuzzy
+msgid "The attachments audition has been saved."
+msgstr "La audición ha sido guardada"
+
+#: Controller/AttachmentsAuditionsController.php:98;123
+#, fuzzy
+msgid "The attachments audition could not be saved. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/AttachmentsAuditionsController.php:149
+#, fuzzy
+msgid "The attachments audition has been deleted."
+msgstr "La audición ha sido eliminada."
+
+#: Controller/AttachmentsAuditionsController.php:151
+#, fuzzy
+msgid "The attachments audition could not be deleted. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/AttachmentsCallsController.php:81;117;146
+#, fuzzy
+msgid "Invalid attachments call"
+msgstr "Nota inválida"
+
+#: Controller/AttachmentsCallsController.php:96;121
+#, fuzzy
+msgid "The attachments call has been saved."
+msgstr "El banner ha sido guardado"
+
+#: Controller/AttachmentsCallsController.php:99;124
+#, fuzzy
+msgid "The attachments call could not be saved. Please, try again."
+msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
+
+#: Controller/AttachmentsCallsController.php:150
+#, fuzzy
+msgid "The attachments call has been deleted."
+msgstr "El banner ha sido eliminado."
+
+#: Controller/AttachmentsCallsController.php:152
+#, fuzzy
+msgid "The attachments call could not be deleted. Please, try again."
+msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
+
+#: Controller/AttachmentsCastingsController.php:81;117;146
+#, fuzzy
+msgid "Invalid attachments casting"
+msgstr "Audición inválida"
+
+#: Controller/AttachmentsCastingsController.php:96;121
+#, fuzzy
+msgid "The attachments casting has been saved."
+msgstr "La audición ha sido guardada"
+
+#: Controller/AttachmentsCastingsController.php:99;124
+#, fuzzy
+msgid "The attachments casting could not be saved. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/AttachmentsCastingsController.php:150
+#, fuzzy
+msgid "The attachments casting has been deleted."
+msgstr "La audición ha sido eliminada."
+
+#: Controller/AttachmentsCastingsController.php:152
+#, fuzzy
+msgid "The attachments casting could not be deleted. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/AttachmentsController.php:37;74;104
+msgid "Invalid attachment"
+msgstr "Archivo inválido"
+
+#: Controller/AttachmentsController.php:52;78
+#, fuzzy
+msgid "The attachment has been saved."
+msgstr "La nota ha sido guardada"
+
+#: Controller/AttachmentsController.php:55;81
+#, fuzzy
+msgid "The attachment could not be saved. Please, try again."
+msgstr "La nota no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/AttachmentsController.php:108
+#, fuzzy
+msgid "The attachment has been deleted."
+msgstr "La nota ha sido eliminada."
+
+#: Controller/AttachmentsController.php:110
+#, fuzzy
+msgid "The attachment could not be deleted. Please, try again."
+msgstr "La nota no ha sido eliminada. Por favor, intente nuevamente."
+
+#: Controller/AttachmentsJobsController.php:79;115;144
+#, fuzzy
+msgid "Invalid attachments job"
+msgstr "Estilo de Danza inválido"
+
+#: Controller/AttachmentsJobsController.php:94;119
+#, fuzzy
+msgid "The attachments job has been saved."
+msgstr "La nota ha sido guardada"
+
+#: Controller/AttachmentsJobsController.php:97;122
+#, fuzzy
+msgid "The attachments job could not be saved. Please, try again."
+msgstr "La nota no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/AttachmentsJobsController.php:148
+#, fuzzy
+msgid "The attachments job has been deleted."
+msgstr "La nota ha sido eliminada."
+
+#: Controller/AttachmentsJobsController.php:150
+#, fuzzy
+msgid "The attachments job could not be deleted. Please, try again."
+msgstr "La nota no ha sido eliminada. Por favor, intente nuevamente."
+
+#: Controller/AuditionsController.php:169;322
 msgid "The audition has been saved."
 msgstr "La audición ha sido guardada"
 
-#: Controller/AuditionsController.php:143;264
+#: Controller/AuditionsController.php:172;325
 msgid "The audition could not be saved. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/AuditionsController.php:163;184;322
+#: Controller/AuditionsController.php:192;213;410
 msgid "Invalid audition"
 msgstr "Audición inválida"
 
-#: Controller/AuditionsController.php:167
+#: Controller/AuditionsController.php:196
 msgid "The audition has been deleted."
 msgstr "La audición ha sido eliminada."
 
-#: Controller/AuditionsController.php:169
+#: Controller/AuditionsController.php:198
 msgid "The audition could not be deleted. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
@@ -179,6 +341,31 @@ msgstr "La audición ha sido eliminada."
 
 #: Controller/AuditionsDancestylesController.php:108
 msgid "The auditions dancestyle could not be deleted. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/AuditionsPhotosController.php:37;73;102
+#, fuzzy
+msgid "Invalid auditions photo"
+msgstr "Audición inválida"
+
+#: Controller/AuditionsPhotosController.php:52;77
+#, fuzzy
+msgid "The auditions photo has been saved."
+msgstr "La audición ha sido guardada"
+
+#: Controller/AuditionsPhotosController.php:55;80
+#, fuzzy
+msgid "The auditions photo could not be saved. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/AuditionsPhotosController.php:106
+#, fuzzy
+msgid "The auditions photo has been deleted."
+msgstr "La audición ha sido eliminada."
+
+#: Controller/AuditionsPhotosController.php:108
+#, fuzzy
+msgid "The auditions photo could not be deleted. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
 #: Controller/AuditionsProfessionsController.php:37;73;102
@@ -226,8 +413,10 @@ msgstr "La audición ha sido eliminada."
 msgid "The auditions video could not be deleted. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/AuditionsearchesController.php:81
-#: View/Notes/inicio.ctp:31
+#: Controller/AuditionsearchesController.php:94;139
+#: View/Elements/related_notes.ctp:18
+#: View/Homesearches/index.ctp:26
+#: View/Notes/inicio.ctp:33
 msgid "No Title"
 msgstr "Sin Título"
 
@@ -291,27 +480,27 @@ msgstr "El banner ha sido eliminado."
 msgid "The banner could not be deleted. Please, try again."
 msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
 
-#: Controller/CallsController.php:138;260
+#: Controller/CallsController.php:167;321
 #, fuzzy
 msgid "The call has been saved."
 msgstr "El banner ha sido guardado"
 
-#: Controller/CallsController.php:141;263
+#: Controller/CallsController.php:170;324
 #, fuzzy
 msgid "The call could not be saved. Please, try again."
 msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
 
-#: Controller/CallsController.php:162;183;321
+#: Controller/CallsController.php:191;212;409
 #, fuzzy
 msgid "Invalid call"
 msgstr "Banner inválido"
 
-#: Controller/CallsController.php:166
+#: Controller/CallsController.php:195
 #, fuzzy
 msgid "The call has been deleted."
 msgstr "El banner ha sido eliminado."
 
-#: Controller/CallsController.php:168
+#: Controller/CallsController.php:197
 #, fuzzy
 msgid "The call could not be deleted. Please, try again."
 msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
@@ -340,6 +529,31 @@ msgstr "El estilo de danza ha sido eliminado."
 #, fuzzy
 msgid "The calls dancestyle could not be deleted. Please, try again."
 msgstr "El estilo de danza no ha sido eliminado. Por favor, intente nuevamente."
+
+#: Controller/CallsPhotosController.php:37;73;102
+#, fuzzy
+msgid "Invalid calls photo"
+msgstr "Profesión inválida"
+
+#: Controller/CallsPhotosController.php:52;77
+#, fuzzy
+msgid "The calls photo has been saved."
+msgstr "El banner ha sido guardado"
+
+#: Controller/CallsPhotosController.php:55;80
+#, fuzzy
+msgid "The calls photo could not be saved. Please, try again."
+msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
+
+#: Controller/CallsPhotosController.php:106
+#, fuzzy
+msgid "The calls photo has been deleted."
+msgstr "El banner ha sido eliminado."
+
+#: Controller/CallsPhotosController.php:108
+#, fuzzy
+msgid "The calls photo could not be deleted. Please, try again."
+msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
 
 #: Controller/CallsProfessionsController.php:37;73;102
 #, fuzzy
@@ -391,27 +605,27 @@ msgstr "El banner ha sido eliminado."
 msgid "The calls video could not be deleted. Please, try again."
 msgstr "El banner no ha sido guardado. Por favor, intente nuevamente."
 
-#: Controller/CastingsController.php:138;349
+#: Controller/CastingsController.php:167;437
 #, fuzzy
 msgid "The casting has been saved."
 msgstr "La audición ha sido guardada"
 
-#: Controller/CastingsController.php:141;352
+#: Controller/CastingsController.php:170;440
 #, fuzzy
 msgid "The casting could not be saved. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/CastingsController.php:206;272;378
+#: Controller/CastingsController.php:262;328;466
 #, fuzzy
 msgid "Invalid casting"
 msgstr "Audición inválida"
 
-#: Controller/CastingsController.php:382
+#: Controller/CastingsController.php:470
 #, fuzzy
 msgid "The casting has been deleted."
 msgstr "La audición ha sido eliminada."
 
-#: Controller/CastingsController.php:384
+#: Controller/CastingsController.php:472
 #, fuzzy
 msgid "The casting could not be deleted. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
@@ -439,6 +653,31 @@ msgstr "La audición ha sido eliminada."
 #: Controller/CastingsDancestylesController.php:108
 #, fuzzy
 msgid "The castings dancestyle could not be deleted. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/CastingsPhotosController.php:37;73;102
+#, fuzzy
+msgid "Invalid castings photo"
+msgstr "Audición inválida"
+
+#: Controller/CastingsPhotosController.php:52;77
+#, fuzzy
+msgid "The castings photo has been saved."
+msgstr "La audición ha sido guardada"
+
+#: Controller/CastingsPhotosController.php:55;80
+#, fuzzy
+msgid "The castings photo could not be saved. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/CastingsPhotosController.php:106
+#, fuzzy
+msgid "The castings photo has been deleted."
+msgstr "La audición ha sido eliminada."
+
+#: Controller/CastingsPhotosController.php:108
+#, fuzzy
+msgid "The castings photo could not be deleted. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
 #: Controller/CastingsProfessionsController.php:37;73;102
@@ -531,27 +770,26 @@ msgstr "El estilo de danza ha sido eliminado."
 msgid "The dancestyle could not be deleted. Please, try again."
 msgstr "El estilo de danza no ha sido eliminado. Por favor, intente nuevamente."
 
-#: Controller/EstudiesController.php:140;262
+#: Controller/EstudiesController.php:171;328
 #, fuzzy
 msgid "The estudy has been saved."
 msgstr "El estilo de danza ha sido guardado"
 
-#: Controller/EstudiesController.php:143;265
+#: Controller/EstudiesController.php:174;331
 #, fuzzy
 msgid "The estudy could not be saved. Please, try again."
 msgstr "El estilo de danza no ha sido guardado. Por favor, intente nuevamente."
 
-#: Controller/EstudiesController.php:161;182;321
-#, fuzzy
+#: Controller/EstudiesController.php:192;213;400
 msgid "Invalid estudy"
-msgstr "Estilo de Danza inválido"
+msgstr "Estudio inválido"
 
-#: Controller/EstudiesController.php:165
+#: Controller/EstudiesController.php:196
 #, fuzzy
 msgid "The estudy has been deleted."
 msgstr "El estilo de danza ha sido eliminado."
 
-#: Controller/EstudiesController.php:167
+#: Controller/EstudiesController.php:198
 #, fuzzy
 msgid "The estudy could not be deleted. Please, try again."
 msgstr "El estilo de danza no ha sido eliminado. Por favor, intente nuevamente."
@@ -579,6 +817,31 @@ msgstr "La audición ha sido eliminada."
 #: Controller/EstudiesDancestylesController.php:108
 #, fuzzy
 msgid "The estudies dancestyle could not be deleted. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/EstudiesPhotosController.php:79;115;144;165
+#, fuzzy
+msgid "Invalid estudies photo"
+msgstr "Estilo de Danza inválido"
+
+#: Controller/EstudiesPhotosController.php:94;119
+#, fuzzy
+msgid "The estudies photo has been saved."
+msgstr "La audición ha sido guardada"
+
+#: Controller/EstudiesPhotosController.php:97;122
+#, fuzzy
+msgid "The estudies photo could not be saved. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/EstudiesPhotosController.php:148;169
+#, fuzzy
+msgid "The estudies photo has been deleted."
+msgstr "La audición ha sido eliminada."
+
+#: Controller/EstudiesPhotosController.php:150;171
+#, fuzzy
+msgid "The estudies photo could not be deleted. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
 #: Controller/EstudiesTimetablesController.php:79;114;142;164
@@ -631,27 +894,26 @@ msgstr "La audición ha sido eliminada."
 msgid "The estudies video could not be deleted. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/JobsController.php:138;260
+#: Controller/JobsController.php:167;321
 #, fuzzy
 msgid "The job has been saved."
 msgstr "La nota ha sido guardada"
 
-#: Controller/JobsController.php:141;263
+#: Controller/JobsController.php:170;324
 #, fuzzy
 msgid "The job could not be saved. Please, try again."
 msgstr "La nota no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/JobsController.php:162;183;332
-#, fuzzy
+#: Controller/JobsController.php:191;212;420
 msgid "Invalid job"
-msgstr "Nota inválida"
+msgstr "Búsqueda Laboral inválida"
 
-#: Controller/JobsController.php:166
+#: Controller/JobsController.php:195
 #, fuzzy
 msgid "The job has been deleted."
 msgstr "La nota ha sido eliminada."
 
-#: Controller/JobsController.php:168
+#: Controller/JobsController.php:197
 #, fuzzy
 msgid "The job could not be deleted. Please, try again."
 msgstr "La nota no ha sido eliminada. Por favor, intente nuevamente."
@@ -680,6 +942,31 @@ msgstr "El estilo de danza ha sido eliminado."
 #, fuzzy
 msgid "The jobs dancestyle could not be deleted. Please, try again."
 msgstr "El estilo de danza no ha sido eliminado. Por favor, intente nuevamente."
+
+#: Controller/JobsPhotosController.php:37;73;102
+#, fuzzy
+msgid "Invalid jobs photo"
+msgstr "Profesión inválida"
+
+#: Controller/JobsPhotosController.php:52;77
+#, fuzzy
+msgid "The jobs photo has been saved."
+msgstr "La nota ha sido guardada"
+
+#: Controller/JobsPhotosController.php:55;80
+#, fuzzy
+msgid "The jobs photo could not be saved. Please, try again."
+msgstr "La nota no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/JobsPhotosController.php:106
+#, fuzzy
+msgid "The jobs photo has been deleted."
+msgstr "La nota ha sido eliminada."
+
+#: Controller/JobsPhotosController.php:108
+#, fuzzy
+msgid "The jobs photo could not be deleted. Please, try again."
+msgstr "La nota no ha sido eliminada. Por favor, intente nuevamente."
 
 #: Controller/JobsProfessionsController.php:37;73;102
 #, fuzzy
@@ -731,44 +1018,68 @@ msgstr "La nota ha sido eliminada."
 msgid "The jobs video could not be deleted. Please, try again."
 msgstr "La nota no ha sido eliminada. Por favor, intente nuevamente."
 
-#: Controller/MapsearchesController.php:78
+#: Controller/MapsearchesController.php:80;120
 msgid "No Name"
 msgstr "Sin nombre"
 
-#: Controller/NotesController.php:101;184
+#: Controller/NotesController.php:101;208
 msgid "The note has been saved."
 msgstr "La nota ha sido guardada"
 
-#: Controller/NotesController.php:104;187
+#: Controller/NotesController.php:104;211
 msgid "The note could not be saved. Please, try again."
 msgstr "La nota no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/NotesController.php:140;156;209
+#: Controller/NotesController.php:146;164;180;233
 msgid "Invalid note"
 msgstr "Nota inválida"
 
-#: Controller/NotesController.php:213
+#: Controller/NotesController.php:237
 msgid "The note has been deleted."
 msgstr "La nota ha sido eliminada."
 
-#: Controller/NotesController.php:215
+#: Controller/NotesController.php:239
 msgid "The note could not be deleted. Please, try again."
 msgstr "La nota no ha sido eliminada. Por favor, intente nuevamente."
 
-#: Controller/PracticeroomsController.php:141;267
+#: Controller/PhotosController.php:37;71;98
+#, fuzzy
+msgid "Invalid photo"
+msgstr "Nota inválida"
+
+#: Controller/PhotosController.php:52;75
+#, fuzzy
+msgid "The photo has been saved."
+msgstr "La nota ha sido guardada"
+
+#: Controller/PhotosController.php:55;78
+#, fuzzy
+msgid "The photo could not be saved. Please, try again."
+msgstr "La nota no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/PhotosController.php:102
+#, fuzzy
+msgid "The photo has been deleted."
+msgstr "La nota ha sido eliminada."
+
+#: Controller/PhotosController.php:104
+#, fuzzy
+msgid "The photo could not be deleted. Please, try again."
+msgstr "La nota no ha sido eliminada. Por favor, intente nuevamente."
+
+#: Controller/PracticeroomsController.php:141;269
 #, fuzzy
 msgid "The practiceroom has been saved."
 msgstr "La audición ha sido guardada"
 
-#: Controller/PracticeroomsController.php:144;270
+#: Controller/PracticeroomsController.php:144;272
 #, fuzzy
 msgid "The practiceroom could not be saved. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/PracticeroomsController.php:162;183;325
-#, fuzzy
+#: Controller/PracticeroomsController.php:162;183;340
 msgid "Invalid practiceroom"
-msgstr "Audición inválida"
+msgstr "Sala de ensayo inválida"
 
 #: Controller/PracticeroomsController.php:166
 #, fuzzy
@@ -803,6 +1114,31 @@ msgstr "La audición ha sido eliminada."
 #: Controller/PracticeroomsDancestylesController.php:108
 #, fuzzy
 msgid "The practicerooms dancestyle could not be deleted. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/PracticeroomsPhotosController.php:37;73;102
+#, fuzzy
+msgid "Invalid practicerooms photo"
+msgstr "Audición inválida"
+
+#: Controller/PracticeroomsPhotosController.php:52;77
+#, fuzzy
+msgid "The practicerooms photo has been saved."
+msgstr "La audición ha sido guardada"
+
+#: Controller/PracticeroomsPhotosController.php:55;80
+#, fuzzy
+msgid "The practicerooms photo could not be saved. Please, try again."
+msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/PracticeroomsPhotosController.php:106
+#, fuzzy
+msgid "The practicerooms photo has been deleted."
+msgstr "La audición ha sido eliminada."
+
+#: Controller/PracticeroomsPhotosController.php:108
+#, fuzzy
+msgid "The practicerooms photo could not be deleted. Please, try again."
 msgstr "La audición no ha sido guardada. Por favor, intente nuevamente."
 
 #: Controller/PracticeroomsTimetablesController.php:93;117
@@ -880,6 +1216,26 @@ msgstr ""
 msgid "The rol could not be deleted. Please, try again."
 msgstr ""
 
+#: Controller/SlidernotesController.php:56;161
+msgid "The slidernote has been saved."
+msgstr "El Slider de Nota ha sido guardado"
+
+#: Controller/SlidernotesController.php:59;164
+msgid "The slidernote could not be saved. Please, try again."
+msgstr "El Slider de Nota no ha sido guardado. Por favor, intente nuevamente."
+
+#: Controller/SlidernotesController.php:118;134;184
+msgid "Invalid slidernote"
+msgstr "Slider de Nota inválido"
+
+#: Controller/SlidernotesController.php:188
+msgid "The slidernote has been deleted."
+msgstr "El Slider de Nota ha sido eliminado."
+
+#: Controller/SlidernotesController.php:190
+msgid "The slidernote could not be deleted. Please, try again."
+msgstr "El Slider de Nota no ha sido guardado. Por favor, intente nuevamente."
+
 #: Controller/SlidersController.php:56;161
 msgid "The slider has been saved."
 msgstr "El slider ha sido guardado"
@@ -921,9 +1277,8 @@ msgid "The state could not be deleted. Please, try again."
 msgstr ""
 
 #: Controller/TimetablesController.php:37;71;98
-#, fuzzy
 msgid "Invalid timetable"
-msgstr "Nota inválida"
+msgstr "Horario inválido"
 
 #: Controller/TimetablesController.php:52;75
 #, fuzzy
@@ -949,34 +1304,33 @@ msgstr "La nota no ha sido eliminada. Por favor, intente nuevamente."
 msgid "The reCAPTCHA wasn't entered correctly. Go back and try it again."
 msgstr "El Captcha no era correcto. Por favor, intentalo de nuevo."
 
-#: Controller/UsersController.php:83;219
+#: Controller/UsersController.php:88;224
 msgid "The user could not be saved. Please, try again."
 msgstr "El usuario no ha sido guardado. Por favor, intente nuevamente."
 
-#: Controller/UsersController.php:101;197;212;240
+#: Controller/UsersController.php:106;202;217;245
 msgid "Invalid user"
 msgstr "Usuario inválido"
 
-#: Controller/UsersController.php:146
+#: Controller/UsersController.php:151
 msgid "Invalid username or password, try again"
 msgstr "Nombre de usuario o contraseña inválido, intente nuevamente"
 
-#: Controller/UsersController.php:216
+#: Controller/UsersController.php:221
 msgid "The user has been saved."
 msgstr "El usuario ha sido guardado"
 
-#: Controller/UsersController.php:244
+#: Controller/UsersController.php:249
 msgid "The user has been deleted."
 msgstr "El usuario ha sido eliminado."
 
-#: Controller/UsersController.php:246
+#: Controller/UsersController.php:251
 msgid "The user could not be deleted. Please, try again."
 msgstr "El usuario no ha sido eliminado. Por favor, intente nuevamente."
 
 #: Controller/VideosController.php:37;71;98
-#, fuzzy
 msgid "Invalid video"
-msgstr "Slider inválido"
+msgstr "Video inválido"
 
 #: Controller/VideosController.php:52;75
 #, fuzzy
@@ -998,24 +1352,26 @@ msgstr "El slider ha sido eliminado."
 msgid "The video could not be deleted. Please, try again."
 msgstr "El slider no ha sido guardado. Por favor, intente nuevamente."
 
-#: View/Accessories/add.ctp:5;212
+#: View/Accessories/add.ctp:5;223
 msgid "Add Accessory"
 msgstr "Nuevo Accesorio"
 
 #: View/Accessories/add.ctp:13
 #: View/Accessories/edit.ctp:16
-#: View/Accessories/view.ctp:61;159
+#: View/Accessories/view.ctp:90;188
+#: View/Attachments/view.ctp:9
 #: View/Bannercategories/view.ctp:9
 #: View/Banners/view.ctp:90
-#: View/Calls/view.ctp:220;255
-#: View/Castings/view.ctp:218;253
+#: View/Calls/view.ctp:271;306
+#: View/Castings/view.ctp:268;303
 #: View/Countries/view.ctp:9;43
 #: View/Dancestyles/view.ctp:9
 #: View/Elements/modal_register.ctp:35
 #: View/Estudies/add.ctp:13
 #: View/Estudies/edit.ctp:17
-#: View/Estudies/view.ctp:71;169
-#: View/Jobs/view.ctp:219;254
+#: View/Estudies/view.ctp:143;241
+#: View/Jobs/view.ctp:269;304
+#: View/Photos/view.ctp:9;48
 #: View/Practicerooms/add.ctp:13
 #: View/Practicerooms/edit.ctp:17
 #: View/Professions/view.ctp:9
@@ -1036,24 +1392,26 @@ msgstr "Nombre"
 
 #: View/Accessories/add.ctp:27;32
 #: View/Accessories/edit.ctp:30;35
-#: View/Accessories/view.ctp:66
+#: View/Accessories/view.ctp:95
+#: View/Attachments/view.ctp:55;124;193;262
 #: View/Auditions/add.ctp:27;32
 #: View/Auditions/edit.ctp:30;35
 #: View/Calls/add.ctp:27;32
 #: View/Calls/edit.ctp:30;35
-#: View/Calls/view.ctp:95
+#: View/Calls/view.ctp:146
 #: View/Castings/add.ctp:27;32
 #: View/Castings/edit.ctp:30;35
-#: View/Castings/view.ctp:93
+#: View/Castings/view.ctp:143
 #: View/Dancestyles/view.ctp:51
 #: View/Estudies/add.ctp:27;32
 #: View/Estudies/edit.ctp:31;36
-#: View/Estudies/view.ctp:76
+#: View/Estudies/view.ctp:148
 #: View/Jobs/add.ctp:27;32
 #: View/Jobs/edit.ctp:30;35
-#: View/Jobs/view.ctp:94
+#: View/Jobs/view.ctp:144
 #: View/Notes/add.ctp:38
 #: View/Notes/edit.ctp:36
+#: View/Photos/view.ctp:49
 #: View/Practicerooms/add.ctp:27;32
 #: View/Practicerooms/edit.ctp:31;36
 #: View/Professions/view.ctp:51
@@ -1065,7 +1423,8 @@ msgstr "Descripción"
 
 #: View/Accessories/add.ctp:39;44
 #: View/Accessories/edit.ctp:44;57
-#: View/Accessories/view.ctp:71
+#: View/Accessories/view.ctp:100
+#: View/Attachments/view.ctp:56;125;194;263
 #: View/Auditions/add.ctp:39;44
 #: View/Auditions/edit.ctp:42;47;57;70
 #: View/Bannercategories/view.ctp:51
@@ -1074,22 +1433,25 @@ msgstr "Descripción"
 #: View/Banners/view.ctp:39
 #: View/Calls/add.ctp:39;44
 #: View/Calls/edit.ctp:44;57
-#: View/Calls/view.ctp:100
+#: View/Calls/view.ctp:151
 #: View/Castings/add.ctp:39;44
 #: View/Castings/edit.ctp:44;57
-#: View/Castings/view.ctp:98
+#: View/Castings/view.ctp:148
 #: View/Dancestyles/view.ctp:52
 #: View/Estudies/add.ctp:39;44
 #: View/Estudies/edit.ctp:45;58
-#: View/Estudies/view.ctp:81
+#: View/Estudies/view.ctp:153
 #: View/Jobs/add.ctp:39;44
 #: View/Jobs/edit.ctp:44;57
-#: View/Jobs/view.ctp:99
+#: View/Jobs/view.ctp:149
 #: View/Notes/add.ctp:46;51
 #: View/Notes/edit.ctp:46;59
+#: View/Photos/view.ctp:50
 #: View/Practicerooms/add.ctp:39;44
 #: View/Practicerooms/edit.ctp:45;58
 #: View/Professions/view.ctp:52
+#: View/Slidernotes/add.ctp:25;30
+#: View/Slidernotes/edit.ctp:32;45
 #: View/Sliders/add.ctp:25;30
 #: View/Sliders/edit.ctp:32;45
 #: View/Timetables/view.ctp:45
@@ -1100,28 +1462,30 @@ msgstr "Imagen"
 
 #: View/Accessories/add.ctp:52;57
 #: View/Accessories/edit.ctp:68;73
-#: View/Accessories/view.ctp:76
+#: View/Accessories/view.ctp:105
 msgid "Products"
 msgstr "Productos"
 
 #: View/Accessories/add.ctp:64;69
 #: View/Accessories/edit.ctp:80;85
-#: View/Accessories/view.ctp:81
+#: View/Accessories/view.ctp:110
+#: View/Attachments/view.ctp:62;131;200;269
 #: View/Auditions/add.ctp:118;123
 #: View/Auditions/edit.ctp:148;153
 #: View/Calls/add.ctp:118;123
 #: View/Calls/edit.ctp:135;140
-#: View/Calls/view.ctp:130
+#: View/Calls/view.ctp:181
 #: View/Castings/add.ctp:118;123
 #: View/Castings/edit.ctp:135;140
-#: View/Castings/view.ctp:128
+#: View/Castings/view.ctp:178
 #: View/Dancestyles/view.ctp:58
-#: View/Estudies/add.ctp:52;57
-#: View/Estudies/edit.ctp:68;73
-#: View/Estudies/view.ctp:86
+#: View/Estudies/add.ctp:62;67
+#: View/Estudies/edit.ctp:106;111
+#: View/Estudies/view.ctp:158
 #: View/Jobs/add.ctp:118;123
 #: View/Jobs/edit.ctp:135;140
-#: View/Jobs/view.ctp:129
+#: View/Jobs/view.ctp:179
+#: View/Photos/view.ctp:51
 #: View/Practicerooms/add.ctp:52;57
 #: View/Practicerooms/edit.ctp:68;73
 #: View/Professions/view.ctp:58
@@ -1132,22 +1496,24 @@ msgstr "Dirección"
 
 #: View/Accessories/add.ctp:76;81
 #: View/Accessories/edit.ctp:92;97
-#: View/Accessories/view.ctp:86
+#: View/Accessories/view.ctp:115
+#: View/Attachments/view.ctp:63;132;201;270
 #: View/Auditions/add.ctp:130;135
 #: View/Auditions/edit.ctp:160;165
 #: View/Calls/add.ctp:130;135
 #: View/Calls/edit.ctp:147;152
-#: View/Calls/view.ctp:135
+#: View/Calls/view.ctp:186
 #: View/Castings/add.ctp:130;135
 #: View/Castings/edit.ctp:147;152
-#: View/Castings/view.ctp:133
+#: View/Castings/view.ctp:183
 #: View/Dancestyles/view.ctp:59
-#: View/Estudies/add.ctp:64;69
-#: View/Estudies/edit.ctp:80;85
-#: View/Estudies/view.ctp:91
+#: View/Estudies/add.ctp:74;79
+#: View/Estudies/edit.ctp:118;123
+#: View/Estudies/view.ctp:163
 #: View/Jobs/add.ctp:130;135
 #: View/Jobs/edit.ctp:147;152
-#: View/Jobs/view.ctp:134
+#: View/Jobs/view.ctp:184
+#: View/Photos/view.ctp:52
 #: View/Practicerooms/add.ctp:64;69
 #: View/Practicerooms/edit.ctp:80;85
 #: View/Professions/view.ctp:59
@@ -1158,22 +1524,24 @@ msgstr "Piso"
 
 #: View/Accessories/add.ctp:88;93
 #: View/Accessories/edit.ctp:104;109
-#: View/Accessories/view.ctp:91
+#: View/Accessories/view.ctp:120
+#: View/Attachments/view.ctp:64;133;202;271
 #: View/Auditions/add.ctp:142;147
 #: View/Auditions/edit.ctp:172;177
 #: View/Calls/add.ctp:142;147
 #: View/Calls/edit.ctp:159;164
-#: View/Calls/view.ctp:140
+#: View/Calls/view.ctp:191
 #: View/Castings/add.ctp:142;147
 #: View/Castings/edit.ctp:159;164
-#: View/Castings/view.ctp:138
+#: View/Castings/view.ctp:188
 #: View/Dancestyles/view.ctp:60
-#: View/Estudies/add.ctp:76;81
-#: View/Estudies/edit.ctp:92;97
-#: View/Estudies/view.ctp:96
+#: View/Estudies/add.ctp:86;91
+#: View/Estudies/edit.ctp:130;135
+#: View/Estudies/view.ctp:168
 #: View/Jobs/add.ctp:142;147
 #: View/Jobs/edit.ctp:159;164
-#: View/Jobs/view.ctp:139
+#: View/Jobs/view.ctp:189
+#: View/Photos/view.ctp:53
 #: View/Practicerooms/add.ctp:76;81
 #: View/Practicerooms/edit.ctp:92;97
 #: View/Professions/view.ctp:60
@@ -1189,22 +1557,24 @@ msgstr "Horario"
 
 #: View/Accessories/add.ctp:112;117
 #: View/Accessories/edit.ctp:128;133
-#: View/Accessories/view.ctp:96
+#: View/Accessories/view.ctp:125
+#: View/Attachments/view.ctp:68;137;206;275
 #: View/Auditions/add.ctp:204;209
 #: View/Auditions/edit.ctp:236;241
 #: View/Calls/add.ctp:204;209
 #: View/Calls/edit.ctp:223;228
-#: View/Calls/view.ctp:160
+#: View/Calls/view.ctp:211
 #: View/Castings/add.ctp:204;209
 #: View/Castings/edit.ctp:223;228
-#: View/Castings/view.ctp:158
+#: View/Castings/view.ctp:208
 #: View/Dancestyles/view.ctp:64
-#: View/Estudies/add.ctp:113;118
-#: View/Estudies/edit.ctp:157;162
-#: View/Estudies/view.ctp:101
+#: View/Estudies/add.ctp:123;128
+#: View/Estudies/edit.ctp:195;200
+#: View/Estudies/view.ctp:173
 #: View/Jobs/add.ctp:204;209
 #: View/Jobs/edit.ctp:223;228
-#: View/Jobs/view.ctp:159
+#: View/Jobs/view.ctp:209
+#: View/Photos/view.ctp:54
 #: View/Practicerooms/add.ctp:101;106
 #: View/Practicerooms/edit.ctp:145;150
 #: View/Professions/view.ctp:64
@@ -1215,24 +1585,26 @@ msgstr "Sitio Web"
 
 #: View/Accessories/add.ctp:124;129
 #: View/Accessories/edit.ctp:140;145
-#: View/Accessories/view.ctp:101
+#: View/Accessories/view.ctp:130
+#: View/Attachments/view.ctp:69;138;207;276
 #: View/Auditions/add.ctp:216;221
 #: View/Auditions/edit.ctp:248;253
 #: View/Calls/add.ctp:216;221
 #: View/Calls/edit.ctp:235;240
-#: View/Calls/view.ctp:165
+#: View/Calls/view.ctp:216
 #: View/Castings/add.ctp:216;221
 #: View/Castings/edit.ctp:235;240
-#: View/Castings/view.ctp:163
+#: View/Castings/view.ctp:213
 #: View/Dancestyles/view.ctp:65
 #: View/Elements/modal_login.ctp:12;17
 #: View/Elements/modal_register.ctp:70
-#: View/Estudies/add.ctp:125;130
-#: View/Estudies/edit.ctp:169;174
-#: View/Estudies/view.ctp:106
+#: View/Estudies/add.ctp:135;140
+#: View/Estudies/edit.ctp:207;212
+#: View/Estudies/view.ctp:178
 #: View/Jobs/add.ctp:216;221
 #: View/Jobs/edit.ctp:235;240
-#: View/Jobs/view.ctp:164
+#: View/Jobs/view.ctp:214
+#: View/Photos/view.ctp:55
 #: View/Practicerooms/add.ctp:113;118
 #: View/Practicerooms/edit.ctp:157;162
 #: View/Professions/view.ctp:65
@@ -1249,22 +1621,24 @@ msgstr "Email"
 
 #: View/Accessories/add.ctp:136;141
 #: View/Accessories/edit.ctp:152;157
-#: View/Accessories/view.ctp:106
+#: View/Accessories/view.ctp:135
+#: View/Attachments/view.ctp:70;139;208;277
 #: View/Auditions/add.ctp:228;233
 #: View/Auditions/edit.ctp:260;265
 #: View/Calls/add.ctp:228;233
 #: View/Calls/edit.ctp:247;252
-#: View/Calls/view.ctp:170
+#: View/Calls/view.ctp:221
 #: View/Castings/add.ctp:228;233
 #: View/Castings/edit.ctp:247;252
-#: View/Castings/view.ctp:168
+#: View/Castings/view.ctp:218
 #: View/Dancestyles/view.ctp:66
-#: View/Estudies/add.ctp:137;142
-#: View/Estudies/edit.ctp:181;186
-#: View/Estudies/view.ctp:111
+#: View/Estudies/add.ctp:147;152
+#: View/Estudies/edit.ctp:219;224
+#: View/Estudies/view.ctp:183
 #: View/Jobs/add.ctp:228;233
 #: View/Jobs/edit.ctp:247;252
-#: View/Jobs/view.ctp:169
+#: View/Jobs/view.ctp:219
+#: View/Photos/view.ctp:56
 #: View/Practicerooms/add.ctp:125;130
 #: View/Practicerooms/edit.ctp:169;174
 #: View/Professions/view.ctp:66
@@ -1275,21 +1649,21 @@ msgstr "Teléfono"
 
 #: View/Accessories/add.ctp:148;153
 #: View/Accessories/edit.ctp:164;169
-#: View/Accessories/view.ctp:126
+#: View/Accessories/view.ctp:155
 #: View/Auditions/add.ctp:240;245
 #: View/Auditions/edit.ctp:272;277
 #: View/Calls/add.ctp:240;245
 #: View/Calls/edit.ctp:259;264
-#: View/Calls/view.ctp:185
+#: View/Calls/view.ctp:236
 #: View/Castings/add.ctp:240;245
 #: View/Castings/edit.ctp:259;264
-#: View/Castings/view.ctp:183
-#: View/Estudies/add.ctp:149;154
-#: View/Estudies/edit.ctp:193;198
-#: View/Estudies/view.ctp:136
+#: View/Castings/view.ctp:233
+#: View/Estudies/add.ctp:159;164
+#: View/Estudies/edit.ctp:231;236
+#: View/Estudies/view.ctp:208
 #: View/Jobs/add.ctp:240;245
 #: View/Jobs/edit.ctp:259;264
-#: View/Jobs/view.ctp:184
+#: View/Jobs/view.ctp:234
 #: View/Practicerooms/add.ctp:137;142
 #: View/Practicerooms/edit.ctp:181;186
 #: View/States/view.ctp:2
@@ -1311,8 +1685,8 @@ msgstr "Provincia"
 #: View/Castings/edit.ctp:271;276
 #: View/CastingsDancestyles/view.ctp:24
 #: View/Dancestyles/view.ctp:2
-#: View/Estudies/add.ctp:161;166
-#: View/Estudies/edit.ctp:205;210
+#: View/Estudies/add.ctp:171;176
+#: View/Estudies/edit.ctp:243;248
 #: View/EstudiesDancestyles/view.ctp:24
 #: View/Jobs/add.ctp:252;257
 #: View/Jobs/edit.ctp:271;276
@@ -1335,8 +1709,8 @@ msgstr "Estilo de Danza"
 #: View/Castings/add.ctp:266
 #: View/Castings/edit.ctp:285
 #: View/CastingsVideos/view.ctp:14
-#: View/Estudies/add.ctp:175
-#: View/Estudies/edit.ctp:219
+#: View/Estudies/add.ctp:185
+#: View/Estudies/edit.ctp:257
 #: View/EstudiesVideos/view.ctp:14
 #: View/Jobs/add.ctp:266
 #: View/Jobs/edit.ctp:285
@@ -1350,10 +1724,11 @@ msgstr ""
 
 #: View/Accessories/add.ctp:185
 #: View/Accessories/edit.ctp:223
-#: View/Accessories/view.ctp:111
-#: View/Estudies/add.ctp:186
-#: View/Estudies/edit.ctp:252
-#: View/Estudies/view.ctp:121
+#: View/Accessories/view.ctp:140
+#: View/Estudies/add.ctp:196
+#: View/Estudies/edit.ctp:290
+#: View/Estudies/view.ctp:193
+#: View/Photos/view.ctp:58
 #: View/Practicerooms/add.ctp:174
 #: View/Practicerooms/edit.ctp:240
 #: View/Timetables/view.ctp:52
@@ -1361,82 +1736,121 @@ msgstr ""
 msgid "Paid"
 msgstr "Pagado"
 
-#: View/Accessories/add.ctp:198
-#: View/Accessories/edit.ctp:236
-#: View/Auditions/add.ctp:290
-#: View/Auditions/edit.ctp:344
+#: View/Accessories/add.ctp:197
+#: View/Accessories/edit.ctp:235
+#: View/Auditions/add.ctp:303
+#: View/Auditions/edit.ctp:379
+#: View/Calls/add.ctp:303
+#: View/Calls/edit.ctp:366
+#: View/Castings/add.ctp:303
+#: View/Castings/edit.ctp:366
+#: View/Estudies/add.ctp:208
+#: View/Estudies/edit.ctp:302
+#: View/Jobs/add.ctp:303
+#: View/Jobs/edit.ctp:366
+#: View/Practicerooms/add.ctp:186
+#: View/Practicerooms/edit.ctp:252
+msgid "Salient"
+msgstr "Destacado"
+
+#: View/Accessories/add.ctp:209
+#: View/Accessories/edit.ctp:247
+#: View/Auditions/add.ctp:315
+#: View/Auditions/edit.ctp:391
 #: View/Banners/add.ctp:75
 #: View/Banners/edit.ctp:92
-#: View/Calls/add.ctp:290
-#: View/Calls/edit.ctp:331
-#: View/Castings/add.ctp:290
-#: View/Castings/edit.ctp:331
-#: View/Estudies/add.ctp:199
-#: View/Estudies/edit.ctp:265
-#: View/Jobs/add.ctp:290
-#: View/Jobs/edit.ctp:331
-#: View/Notes/add.ctp:94
-#: View/Notes/edit.ctp:107
-#: View/Practicerooms/add.ctp:187
-#: View/Practicerooms/edit.ctp:253
+#: View/Calls/add.ctp:315
+#: View/Calls/edit.ctp:378
+#: View/Castings/add.ctp:315
+#: View/Castings/edit.ctp:378
+#: View/Estudies/add.ctp:220
+#: View/Estudies/edit.ctp:314
+#: View/Jobs/add.ctp:315
+#: View/Jobs/edit.ctp:378
+#: View/Notes/add.ctp:95
+#: View/Notes/edit.ctp:108
+#: View/Practicerooms/add.ctp:198
+#: View/Practicerooms/edit.ctp:264
+#: View/Slidernotes/add.ctp:63
+#: View/Slidernotes/edit.ctp:79
 #: View/Sliders/add.ctp:63
 #: View/Sliders/edit.ctp:79
 msgid "Aceptar"
 msgstr ""
 
-#: View/Accessories/add.ctp:201
-#: View/Accessories/edit.ctp:239
-#: View/Auditions/add.ctp:293
-#: View/Auditions/edit.ctp:347
+#: View/Accessories/add.ctp:212
+#: View/Accessories/edit.ctp:250
+#: View/Auditions/add.ctp:318
+#: View/Auditions/edit.ctp:394
 #: View/Banners/add.ctp:78
 #: View/Banners/edit.ctp:95
-#: View/Calls/add.ctp:293
-#: View/Calls/edit.ctp:334
-#: View/Castings/add.ctp:293
-#: View/Castings/edit.ctp:334
-#: View/Estudies/add.ctp:202
-#: View/Estudies/edit.ctp:268
-#: View/Jobs/add.ctp:293
-#: View/Jobs/edit.ctp:334
-#: View/Notes/add.ctp:97
-#: View/Notes/edit.ctp:110
-#: View/Practicerooms/add.ctp:190
-#: View/Practicerooms/edit.ctp:256
+#: View/Calls/add.ctp:318
+#: View/Calls/edit.ctp:381
+#: View/Castings/add.ctp:318
+#: View/Castings/edit.ctp:381
+#: View/Estudies/add.ctp:223
+#: View/Estudies/edit.ctp:317
+#: View/Jobs/add.ctp:318
+#: View/Jobs/edit.ctp:381
+#: View/Notes/add.ctp:98
+#: View/Notes/edit.ctp:111
+#: View/Practicerooms/add.ctp:201
+#: View/Practicerooms/edit.ctp:267
+#: View/Slidernotes/add.ctp:66
+#: View/Slidernotes/edit.ctp:82
 #: View/Sliders/add.ctp:66
 #: View/Sliders/edit.ctp:82
 msgid "Cancelar"
 msgstr ""
 
-#: View/Accessories/add.ctp:230
-#: View/Accessories/edit.ctp:270
+#: View/Accessories/add.ctp:241
+#: View/Accessories/edit.ctp:281
 #: View/AccessoriesDancestyles/add.ctp:11
 #: View/AccessoriesDancestyles/edit.ctp:12
+#: View/AccessoriesPhotos/add.ctp:11
+#: View/AccessoriesPhotos/edit.ctp:12
 #: View/AccessoriesVideos/add.ctp:11
 #: View/AccessoriesVideos/edit.ctp:12
-#: View/Auditions/edit.ctp:383
+#: View/Attachments/add.ctp:14
+#: View/Attachments/edit.ctp:15
+#: View/AttachmentsAuditions/add.ctp:11
+#: View/AttachmentsAuditions/edit.ctp:12
+#: View/AttachmentsCalls/add.ctp:11
+#: View/AttachmentsCalls/edit.ctp:12
+#: View/AttachmentsCastings/add.ctp:11
+#: View/AttachmentsCastings/edit.ctp:12
+#: View/AttachmentsJobs/add.ctp:11
+#: View/AttachmentsJobs/edit.ctp:12
+#: View/Auditions/edit.ctp:430
 #: View/AuditionsDancestyles/add.ctp:11
 #: View/AuditionsDancestyles/edit.ctp:12
+#: View/AuditionsPhotos/add.ctp:11
+#: View/AuditionsPhotos/edit.ctp:12
 #: View/AuditionsProfessions/add.ctp:11
 #: View/AuditionsProfessions/edit.ctp:12
 #: View/AuditionsVideos/add.ctp:11
 #: View/AuditionsVideos/edit.ctp:12
-#: View/Auditionsearches/index.ctp:32
+#: View/Auditionsearches/index.ctp:81
 #: View/Bannercategories/add.ctp:11
 #: View/Bannercategories/edit.ctp:12
 #: View/BannersBannercategories/add.ctp:10
 #: View/BannersBannercategories/edit.ctp:11
-#: View/Calls/add.ctp:329
-#: View/Calls/edit.ctp:371
+#: View/Calls/add.ctp:354
+#: View/Calls/edit.ctp:418
 #: View/CallsDancestyles/add.ctp:11
 #: View/CallsDancestyles/edit.ctp:12
+#: View/CallsPhotos/add.ctp:11
+#: View/CallsPhotos/edit.ctp:12
 #: View/CallsProfessions/add.ctp:11
 #: View/CallsProfessions/edit.ctp:12
 #: View/CallsVideos/add.ctp:11
 #: View/CallsVideos/edit.ctp:12
-#: View/Castings/add.ctp:329;376
-#: View/Castings/edit.ctp:371
+#: View/Castings/add.ctp:354;401
+#: View/Castings/edit.ctp:418
 #: View/CastingsDancestyles/add.ctp:11
 #: View/CastingsDancestyles/edit.ctp:12
+#: View/CastingsPhotos/add.ctp:11
+#: View/CastingsPhotos/edit.ctp:12
 #: View/CastingsProfessions/add.ctp:11
 #: View/CastingsProfessions/edit.ctp:12
 #: View/CastingsVideos/add.ctp:11
@@ -1445,27 +1859,36 @@ msgstr ""
 #: View/Countries/edit.ctp:10
 #: View/Dancestyles/add.ctp:11
 #: View/Dancestyles/edit.ctp:12
-#: View/Estudies/add.ctp:231
-#: View/Estudies/edit.ctp:298
+#: View/Estudies/add.ctp:252
+#: View/Estudies/edit.ctp:347
 #: View/EstudiesDancestyles/add.ctp:11
 #: View/EstudiesDancestyles/edit.ctp:12
+#: View/EstudiesPhotos/add.ctp:11
+#: View/EstudiesPhotos/edit.ctp:12
 #: View/EstudiesTimetables/add.ctp:10
 #: View/EstudiesTimetables/edit.ctp:11
 #: View/EstudiesVideos/add.ctp:11
 #: View/EstudiesVideos/edit.ctp:12
-#: View/Jobs/add.ctp:334
-#: View/Jobs/edit.ctp:379
+#: View/Homesearches/admin.ctp:96
+#: View/Jobs/add.ctp:359
+#: View/Jobs/edit.ctp:426
 #: View/JobsDancestyles/add.ctp:11
 #: View/JobsDancestyles/edit.ctp:12
+#: View/JobsPhotos/add.ctp:11
+#: View/JobsPhotos/edit.ctp:12
 #: View/JobsProfessions/add.ctp:11
 #: View/JobsProfessions/edit.ctp:12
 #: View/JobsVideos/add.ctp:11
 #: View/JobsVideos/edit.ctp:12
-#: View/Mapsearches/index.ctp:26
-#: View/Practicerooms/add.ctp:221
-#: View/Practicerooms/edit.ctp:289
+#: View/Mapsearches/index.ctp:28
+#: View/Photos/add.ctp:11
+#: View/Photos/edit.ctp:12
+#: View/Practicerooms/add.ctp:232
+#: View/Practicerooms/edit.ctp:300
 #: View/PracticeroomsDancestyles/add.ctp:11
 #: View/PracticeroomsDancestyles/edit.ctp:12
+#: View/PracticeroomsPhotos/add.ctp:11
+#: View/PracticeroomsPhotos/edit.ctp:12
 #: View/PracticeroomsTimetables/add.ctp:10
 #: View/PracticeroomsTimetables/edit.ctp:11
 #: View/PracticeroomsVideos/add.ctp:11
@@ -1484,24 +1907,52 @@ msgstr ""
 msgid "Submit"
 msgstr "Guardar"
 
-#: View/Accessories/add.ctp:233
-#: View/Accessories/edit.ctp:273
+#: View/Accessories/add.ctp:244
+#: View/Accessories/edit.ctp:284
 #: View/Accessories/index.ctp:9;66;113
-#: View/Accessories/view.ctp:139;163
+#: View/Accessories/view.ctp:168;192
 #: View/AccessoriesDancestyles/add.ctp:14
 #: View/AccessoriesDancestyles/edit.ctp:15
 #: View/AccessoriesDancestyles/index.ctp:11;50
 #: View/AccessoriesDancestyles/view.ctp:37
+#: View/AccessoriesPhotos/add.ctp:14
+#: View/AccessoriesPhotos/edit.ctp:15
+#: View/AccessoriesPhotos/index.ctp:11;50
+#: View/AccessoriesPhotos/view.ctp:37
 #: View/AccessoriesVideos/add.ctp:14
 #: View/AccessoriesVideos/edit.ctp:15
 #: View/AccessoriesVideos/index.ctp:11;50
 #: View/AccessoriesVideos/view.ctp:37
-#: View/Auditions/edit.ctp:386
+#: View/Attachments/add.ctp:17
+#: View/Attachments/edit.ctp:18
+#: View/Attachments/index.ctp:10;42
+#: View/Attachments/view.ctp:32;75;144;213;282
+#: View/AttachmentsAuditions/add.ctp:14
+#: View/AttachmentsAuditions/edit.ctp:15
+#: View/AttachmentsAuditions/index.ctp:11;50
+#: View/AttachmentsAuditions/view.ctp:37
+#: View/AttachmentsCalls/add.ctp:14
+#: View/AttachmentsCalls/edit.ctp:15
+#: View/AttachmentsCalls/index.ctp:11;50
+#: View/AttachmentsCalls/view.ctp:37
+#: View/AttachmentsCastings/add.ctp:14
+#: View/AttachmentsCastings/edit.ctp:15
+#: View/AttachmentsCastings/index.ctp:11;50
+#: View/AttachmentsCastings/view.ctp:37
+#: View/AttachmentsJobs/add.ctp:14
+#: View/AttachmentsJobs/edit.ctp:15
+#: View/AttachmentsJobs/index.ctp:11;50
+#: View/AttachmentsJobs/view.ctp:37
+#: View/Auditions/edit.ctp:433
 #: View/Auditions/index.ctp:11;47
 #: View/AuditionsDancestyles/add.ctp:14
 #: View/AuditionsDancestyles/edit.ctp:15
 #: View/AuditionsDancestyles/index.ctp:11;50
 #: View/AuditionsDancestyles/view.ctp:37
+#: View/AuditionsPhotos/add.ctp:14
+#: View/AuditionsPhotos/edit.ctp:15
+#: View/AuditionsPhotos/index.ctp:11;50
+#: View/AuditionsPhotos/view.ctp:37
 #: View/AuditionsProfessions/add.ctp:14
 #: View/AuditionsProfessions/edit.ctp:15
 #: View/AuditionsProfessions/index.ctp:11;50
@@ -1520,14 +1971,18 @@ msgstr "Guardar"
 #: View/BannersBannercategories/edit.ctp:14
 #: View/BannersBannercategories/index.ctp:10;44
 #: View/BannersBannercategories/view.ctp:32
-#: View/Calls/add.ctp:332
-#: View/Calls/edit.ctp:374
+#: View/Calls/add.ctp:357
+#: View/Calls/edit.ctp:421
 #: View/Calls/index.ctp:12;50
-#: View/Calls/view.ctp:198;224;259
+#: View/Calls/view.ctp:249;275;310
 #: View/CallsDancestyles/add.ctp:14
 #: View/CallsDancestyles/edit.ctp:15
 #: View/CallsDancestyles/index.ctp:11;50
 #: View/CallsDancestyles/view.ctp:37
+#: View/CallsPhotos/add.ctp:14
+#: View/CallsPhotos/edit.ctp:15
+#: View/CallsPhotos/index.ctp:11;50
+#: View/CallsPhotos/view.ctp:37
 #: View/CallsProfessions/add.ctp:14
 #: View/CallsProfessions/edit.ctp:15
 #: View/CallsProfessions/index.ctp:11;50
@@ -1536,14 +1991,18 @@ msgstr "Guardar"
 #: View/CallsVideos/edit.ctp:15
 #: View/CallsVideos/index.ctp:11;50
 #: View/CallsVideos/view.ctp:37
-#: View/Castings/add.ctp:332;379
-#: View/Castings/edit.ctp:374
+#: View/Castings/add.ctp:357;404
+#: View/Castings/edit.ctp:421
 #: View/Castings/index.ctp:12;86;139
-#: View/Castings/view.ctp:196;222;257
+#: View/Castings/view.ctp:246;272;307
 #: View/CastingsDancestyles/add.ctp:14
 #: View/CastingsDancestyles/edit.ctp:15
 #: View/CastingsDancestyles/index.ctp:11;50
 #: View/CastingsDancestyles/view.ctp:37
+#: View/CastingsPhotos/add.ctp:14
+#: View/CastingsPhotos/edit.ctp:15
+#: View/CastingsPhotos/index.ctp:11;50
+#: View/CastingsPhotos/view.ctp:37
 #: View/CastingsProfessions/add.ctp:14
 #: View/CastingsProfessions/edit.ctp:15
 #: View/CastingsProfessions/index.ctp:11;50
@@ -1560,14 +2019,18 @@ msgstr "Guardar"
 #: View/Dancestyles/edit.ctp:15
 #: View/Dancestyles/index.ctp:10;44
 #: View/Dancestyles/view.ctp:32;71
-#: View/Estudies/add.ctp:234
-#: View/Estudies/edit.ctp:301
+#: View/Estudies/add.ctp:255
+#: View/Estudies/edit.ctp:350
 #: View/Estudies/index.ctp:9;67;114
-#: View/Estudies/view.ctp:149;173
+#: View/Estudies/view.ctp:221;245
 #: View/EstudiesDancestyles/add.ctp:14
 #: View/EstudiesDancestyles/edit.ctp:15
 #: View/EstudiesDancestyles/index.ctp:11;50
 #: View/EstudiesDancestyles/view.ctp:37
+#: View/EstudiesPhotos/add.ctp:14
+#: View/EstudiesPhotos/edit.ctp:15
+#: View/EstudiesPhotos/index.ctp:11;48
+#: View/EstudiesPhotos/view.ctp:37
 #: View/EstudiesTimetables/add.ctp:13
 #: View/EstudiesTimetables/edit.ctp:14
 #: View/EstudiesTimetables/index.ctp:10;46
@@ -1576,14 +2039,18 @@ msgstr "Guardar"
 #: View/EstudiesVideos/edit.ctp:15
 #: View/EstudiesVideos/index.ctp:11;50
 #: View/EstudiesVideos/view.ctp:37
-#: View/Jobs/add.ctp:337
-#: View/Jobs/edit.ctp:382
+#: View/Jobs/add.ctp:362
+#: View/Jobs/edit.ctp:429
 #: View/Jobs/index.ctp:12;83;136
-#: View/Jobs/view.ctp:197;223;258
+#: View/Jobs/view.ctp:247;273;308
 #: View/JobsDancestyles/add.ctp:14
 #: View/JobsDancestyles/edit.ctp:15
 #: View/JobsDancestyles/index.ctp:11;50
 #: View/JobsDancestyles/view.ctp:37
+#: View/JobsPhotos/add.ctp:14
+#: View/JobsPhotos/edit.ctp:15
+#: View/JobsPhotos/index.ctp:11;50
+#: View/JobsPhotos/view.ctp:37
 #: View/JobsProfessions/add.ctp:14
 #: View/JobsProfessions/edit.ctp:15
 #: View/JobsProfessions/index.ctp:11;50
@@ -1593,13 +2060,21 @@ msgstr "Guardar"
 #: View/JobsVideos/index.ctp:11;50
 #: View/JobsVideos/view.ctp:37
 #: View/Notes/index.ctp:16
-#: View/Practicerooms/add.ctp:224
-#: View/Practicerooms/edit.ctp:292
+#: View/Photos/add.ctp:14
+#: View/Photos/edit.ctp:15
+#: View/Photos/index.ctp:10;42
+#: View/Photos/view.ctp:32;63
+#: View/Practicerooms/add.ctp:235
+#: View/Practicerooms/edit.ctp:303
 #: View/Practicerooms/index.ctp:9;68;118
 #: View/PracticeroomsDancestyles/add.ctp:14
 #: View/PracticeroomsDancestyles/edit.ctp:15
 #: View/PracticeroomsDancestyles/index.ctp:11;50
 #: View/PracticeroomsDancestyles/view.ctp:37
+#: View/PracticeroomsPhotos/add.ctp:14
+#: View/PracticeroomsPhotos/edit.ctp:15
+#: View/PracticeroomsPhotos/index.ctp:11;50
+#: View/PracticeroomsPhotos/view.ctp:37
 #: View/PracticeroomsTimetables/add.ctp:13
 #: View/PracticeroomsTimetables/edit.ctp:14
 #: View/PracticeroomsTimetables/index.ctp:10;46
@@ -1616,6 +2091,7 @@ msgstr "Guardar"
 #: View/Rols/edit.ctp:15
 #: View/Rols/index.ctp:11;44
 #: View/Rols/view.ctp:37;64
+#: View/Slidernotes/index.ctp:14
 #: View/Sliders/index.ctp:14
 #: View/States/add.ctp:13
 #: View/States/edit.ctp:14
@@ -1635,13 +2111,17 @@ msgstr "Guardar"
 msgid "Actions"
 msgstr "Acciones"
 
-#: View/Accessories/add.ctp:236
-#: View/Accessories/edit.ctp:277
-#: View/Accessories/view.ctp:143
+#: View/Accessories/add.ctp:247
+#: View/Accessories/edit.ctp:288
+#: View/Accessories/view.ctp:172
 #: View/AccessoriesDancestyles/add.ctp:18
 #: View/AccessoriesDancestyles/edit.ctp:20
 #: View/AccessoriesDancestyles/index.ctp:53
 #: View/AccessoriesDancestyles/view.ctp:43
+#: View/AccessoriesPhotos/add.ctp:18
+#: View/AccessoriesPhotos/edit.ctp:20
+#: View/AccessoriesPhotos/index.ctp:53
+#: View/AccessoriesPhotos/view.ctp:43
 #: View/AccessoriesVideos/add.ctp:18
 #: View/AccessoriesVideos/edit.ctp:20
 #: View/AccessoriesVideos/index.ctp:53
@@ -1649,34 +2129,34 @@ msgstr "Acciones"
 msgid "List Accessories"
 msgstr "Listar Accesorios"
 
-#: View/Accessories/add.ctp:237
-#: View/Accessories/edit.ctp:278
+#: View/Accessories/add.ctp:248
+#: View/Accessories/edit.ctp:289
 #: View/Accessories/index.ctp:116
-#: View/Accessories/view.ctp:145
-#: View/Auditions/edit.ctp:391
+#: View/Accessories/view.ctp:174
+#: View/Auditions/edit.ctp:438
 #: View/Auditions/index.ctp:50
-#: View/Calls/add.ctp:336
-#: View/Calls/edit.ctp:379
+#: View/Calls/add.ctp:361
+#: View/Calls/edit.ctp:426
 #: View/Calls/index.ctp:53
-#: View/Calls/view.ctp:204
-#: View/Castings/add.ctp:336;383
-#: View/Castings/edit.ctp:379
+#: View/Calls/view.ctp:255
+#: View/Castings/add.ctp:361;408
+#: View/Castings/edit.ctp:426
 #: View/Castings/index.ctp:142
-#: View/Castings/view.ctp:202
+#: View/Castings/view.ctp:252
 #: View/Countries/add.ctp:16
 #: View/Countries/edit.ctp:18
 #: View/Countries/index.ctp:43
 #: View/Countries/view.ctp:33
-#: View/Estudies/add.ctp:238
-#: View/Estudies/edit.ctp:306
+#: View/Estudies/add.ctp:259
+#: View/Estudies/edit.ctp:355
 #: View/Estudies/index.ctp:117
-#: View/Estudies/view.ctp:155
-#: View/Jobs/add.ctp:341
-#: View/Jobs/edit.ctp:387
+#: View/Estudies/view.ctp:227
+#: View/Jobs/add.ctp:366
+#: View/Jobs/edit.ctp:434
 #: View/Jobs/index.ctp:139
-#: View/Jobs/view.ctp:203
-#: View/Practicerooms/add.ctp:228
-#: View/Practicerooms/edit.ctp:297
+#: View/Jobs/view.ctp:253
+#: View/Practicerooms/add.ctp:239
+#: View/Practicerooms/edit.ctp:308
 #: View/Practicerooms/index.ctp:121
 #: View/States/add.ctp:16
 #: View/States/edit.ctp:18
@@ -1686,34 +2166,34 @@ msgstr "Listar Accesorios"
 msgid "List States"
 msgstr "Listar Provincias"
 
-#: View/Accessories/add.ctp:238
-#: View/Accessories/edit.ctp:279
+#: View/Accessories/add.ctp:249
+#: View/Accessories/edit.ctp:290
 #: View/Accessories/index.ctp:117
-#: View/Accessories/view.ctp:146
-#: View/Auditions/edit.ctp:392
+#: View/Accessories/view.ctp:175
+#: View/Auditions/edit.ctp:439
 #: View/Auditions/index.ctp:51
-#: View/Calls/add.ctp:337
-#: View/Calls/edit.ctp:380
+#: View/Calls/add.ctp:362
+#: View/Calls/edit.ctp:427
 #: View/Calls/index.ctp:54
-#: View/Calls/view.ctp:205
-#: View/Castings/add.ctp:337;384
-#: View/Castings/edit.ctp:380
+#: View/Calls/view.ctp:256
+#: View/Castings/add.ctp:362;409
+#: View/Castings/edit.ctp:427
 #: View/Castings/index.ctp:143
-#: View/Castings/view.ctp:203
+#: View/Castings/view.ctp:253
 #: View/Countries/add.ctp:17
 #: View/Countries/edit.ctp:19
 #: View/Countries/index.ctp:44
 #: View/Countries/view.ctp:34;68
-#: View/Estudies/add.ctp:239
-#: View/Estudies/edit.ctp:307
+#: View/Estudies/add.ctp:260
+#: View/Estudies/edit.ctp:356
 #: View/Estudies/index.ctp:118
-#: View/Estudies/view.ctp:156
-#: View/Jobs/add.ctp:342
-#: View/Jobs/edit.ctp:388
+#: View/Estudies/view.ctp:228
+#: View/Jobs/add.ctp:367
+#: View/Jobs/edit.ctp:435
 #: View/Jobs/index.ctp:140
-#: View/Jobs/view.ctp:204
-#: View/Practicerooms/add.ctp:229
-#: View/Practicerooms/edit.ctp:298
+#: View/Jobs/view.ctp:254
+#: View/Practicerooms/add.ctp:240
+#: View/Practicerooms/edit.ctp:309
 #: View/Practicerooms/index.ctp:122
 #: View/States/index.ctp:46
 #: View/States/view.ctp:37
@@ -1722,24 +2202,48 @@ msgstr "Listar Provincias"
 msgid "New State"
 msgstr "Nueva Provincia"
 
-#: View/Accessories/add.ctp:239
-#: View/Accessories/edit.ctp:280
+#: View/Accessories/add.ctp:250
+#: View/Accessories/edit.ctp:291
 #: View/Accessories/index.ctp:118
-#: View/Accessories/view.ctp:147
+#: View/Accessories/view.ctp:176
 #: View/AccessoriesDancestyles/add.ctp:22
 #: View/AccessoriesDancestyles/edit.ctp:24
 #: View/AccessoriesDancestyles/index.ctp:57
 #: View/AccessoriesDancestyles/view.ctp:47
+#: View/AccessoriesPhotos/add.ctp:22
+#: View/AccessoriesPhotos/edit.ctp:24
+#: View/AccessoriesPhotos/index.ctp:57
+#: View/AccessoriesPhotos/view.ctp:47
 #: View/AccessoriesVideos/add.ctp:22
 #: View/AccessoriesVideos/edit.ctp:24
 #: View/AccessoriesVideos/index.ctp:57
 #: View/AccessoriesVideos/view.ctp:47
-#: View/Auditions/edit.ctp:393
+#: View/AttachmentsAuditions/add.ctp:22
+#: View/AttachmentsAuditions/edit.ctp:24
+#: View/AttachmentsAuditions/index.ctp:57
+#: View/AttachmentsAuditions/view.ctp:47
+#: View/AttachmentsCalls/add.ctp:22
+#: View/AttachmentsCalls/edit.ctp:24
+#: View/AttachmentsCalls/index.ctp:57
+#: View/AttachmentsCalls/view.ctp:47
+#: View/AttachmentsCastings/add.ctp:22
+#: View/AttachmentsCastings/edit.ctp:24
+#: View/AttachmentsCastings/index.ctp:57
+#: View/AttachmentsCastings/view.ctp:47
+#: View/AttachmentsJobs/add.ctp:22
+#: View/AttachmentsJobs/edit.ctp:24
+#: View/AttachmentsJobs/index.ctp:57
+#: View/AttachmentsJobs/view.ctp:47
+#: View/Auditions/edit.ctp:440
 #: View/Auditions/index.ctp:52
 #: View/AuditionsDancestyles/add.ctp:22
 #: View/AuditionsDancestyles/edit.ctp:24
 #: View/AuditionsDancestyles/index.ctp:57
 #: View/AuditionsDancestyles/view.ctp:47
+#: View/AuditionsPhotos/add.ctp:22
+#: View/AuditionsPhotos/edit.ctp:24
+#: View/AuditionsPhotos/index.ctp:57
+#: View/AuditionsPhotos/view.ctp:47
 #: View/AuditionsProfessions/add.ctp:22
 #: View/AuditionsProfessions/edit.ctp:24
 #: View/AuditionsProfessions/index.ctp:57
@@ -1753,14 +2257,18 @@ msgstr "Nueva Provincia"
 #: View/Bannercategories/index.ctp:47
 #: View/Bannercategories/view.ctp:38
 #: View/Banners/view.ctp:78
-#: View/Calls/add.ctp:338
-#: View/Calls/edit.ctp:381
+#: View/Calls/add.ctp:363
+#: View/Calls/edit.ctp:428
 #: View/Calls/index.ctp:55
-#: View/Calls/view.ctp:206
+#: View/Calls/view.ctp:257
 #: View/CallsDancestyles/add.ctp:22
 #: View/CallsDancestyles/edit.ctp:24
 #: View/CallsDancestyles/index.ctp:57
 #: View/CallsDancestyles/view.ctp:47
+#: View/CallsPhotos/add.ctp:22
+#: View/CallsPhotos/edit.ctp:24
+#: View/CallsPhotos/index.ctp:57
+#: View/CallsPhotos/view.ctp:47
 #: View/CallsProfessions/add.ctp:22
 #: View/CallsProfessions/edit.ctp:24
 #: View/CallsProfessions/index.ctp:57
@@ -1769,14 +2277,18 @@ msgstr "Nueva Provincia"
 #: View/CallsVideos/edit.ctp:24
 #: View/CallsVideos/index.ctp:57
 #: View/CallsVideos/view.ctp:47
-#: View/Castings/add.ctp:338;385
-#: View/Castings/edit.ctp:381
+#: View/Castings/add.ctp:363;410
+#: View/Castings/edit.ctp:428
 #: View/Castings/index.ctp:144
-#: View/Castings/view.ctp:204
+#: View/Castings/view.ctp:254
 #: View/CastingsDancestyles/add.ctp:22
 #: View/CastingsDancestyles/edit.ctp:24
 #: View/CastingsDancestyles/index.ctp:57
 #: View/CastingsDancestyles/view.ctp:47
+#: View/CastingsPhotos/add.ctp:22
+#: View/CastingsPhotos/edit.ctp:24
+#: View/CastingsPhotos/index.ctp:57
+#: View/CastingsPhotos/view.ctp:47
 #: View/CastingsProfessions/add.ctp:22
 #: View/CastingsProfessions/edit.ctp:24
 #: View/CastingsProfessions/index.ctp:57
@@ -1789,26 +2301,34 @@ msgstr "Nueva Provincia"
 #: View/Dancestyles/edit.ctp:20
 #: View/Dancestyles/index.ctp:47
 #: View/Dancestyles/view.ctp:38
-#: View/Estudies/add.ctp:240
-#: View/Estudies/edit.ctp:308
+#: View/Estudies/add.ctp:261
+#: View/Estudies/edit.ctp:357
 #: View/Estudies/index.ctp:119
-#: View/Estudies/view.ctp:157
+#: View/Estudies/view.ctp:229
 #: View/EstudiesDancestyles/add.ctp:22
 #: View/EstudiesDancestyles/edit.ctp:24
 #: View/EstudiesDancestyles/index.ctp:57
 #: View/EstudiesDancestyles/view.ctp:47
+#: View/EstudiesPhotos/add.ctp:22
+#: View/EstudiesPhotos/edit.ctp:24
+#: View/EstudiesPhotos/index.ctp:55
+#: View/EstudiesPhotos/view.ctp:47
 #: View/EstudiesVideos/add.ctp:22
 #: View/EstudiesVideos/edit.ctp:24
 #: View/EstudiesVideos/index.ctp:57
 #: View/EstudiesVideos/view.ctp:47
-#: View/Jobs/add.ctp:343
-#: View/Jobs/edit.ctp:389
+#: View/Jobs/add.ctp:368
+#: View/Jobs/edit.ctp:436
 #: View/Jobs/index.ctp:141
-#: View/Jobs/view.ctp:205
+#: View/Jobs/view.ctp:255
 #: View/JobsDancestyles/add.ctp:22
 #: View/JobsDancestyles/edit.ctp:24
 #: View/JobsDancestyles/index.ctp:57
 #: View/JobsDancestyles/view.ctp:47
+#: View/JobsPhotos/add.ctp:22
+#: View/JobsPhotos/edit.ctp:24
+#: View/JobsPhotos/index.ctp:57
+#: View/JobsPhotos/view.ctp:47
 #: View/JobsProfessions/add.ctp:22
 #: View/JobsProfessions/edit.ctp:24
 #: View/JobsProfessions/index.ctp:57
@@ -1817,13 +2337,17 @@ msgstr "Nueva Provincia"
 #: View/JobsVideos/edit.ctp:24
 #: View/JobsVideos/index.ctp:57
 #: View/JobsVideos/view.ctp:47
-#: View/Practicerooms/add.ctp:230
-#: View/Practicerooms/edit.ctp:299
+#: View/Practicerooms/add.ctp:241
+#: View/Practicerooms/edit.ctp:310
 #: View/Practicerooms/index.ctp:123
 #: View/PracticeroomsDancestyles/add.ctp:22
 #: View/PracticeroomsDancestyles/edit.ctp:24
 #: View/PracticeroomsDancestyles/index.ctp:57
 #: View/PracticeroomsDancestyles/view.ctp:47
+#: View/PracticeroomsPhotos/add.ctp:22
+#: View/PracticeroomsPhotos/edit.ctp:24
+#: View/PracticeroomsPhotos/index.ctp:57
+#: View/PracticeroomsPhotos/view.ctp:47
 #: View/PracticeroomsVideos/add.ctp:22
 #: View/PracticeroomsVideos/edit.ctp:24
 #: View/PracticeroomsVideos/index.ctp:57
@@ -1846,24 +2370,48 @@ msgstr "Nueva Provincia"
 msgid "List Users"
 msgstr "Listar Usuarios"
 
-#: View/Accessories/add.ctp:240
-#: View/Accessories/edit.ctp:281
+#: View/Accessories/add.ctp:251
+#: View/Accessories/edit.ctp:292
 #: View/Accessories/index.ctp:119
-#: View/Accessories/view.ctp:148
+#: View/Accessories/view.ctp:177
 #: View/AccessoriesDancestyles/add.ctp:23
 #: View/AccessoriesDancestyles/edit.ctp:25
 #: View/AccessoriesDancestyles/index.ctp:58
 #: View/AccessoriesDancestyles/view.ctp:48
+#: View/AccessoriesPhotos/add.ctp:23
+#: View/AccessoriesPhotos/edit.ctp:25
+#: View/AccessoriesPhotos/index.ctp:58
+#: View/AccessoriesPhotos/view.ctp:48
 #: View/AccessoriesVideos/add.ctp:23
 #: View/AccessoriesVideos/edit.ctp:25
 #: View/AccessoriesVideos/index.ctp:58
 #: View/AccessoriesVideos/view.ctp:48
-#: View/Auditions/edit.ctp:394
+#: View/AttachmentsAuditions/add.ctp:23
+#: View/AttachmentsAuditions/edit.ctp:25
+#: View/AttachmentsAuditions/index.ctp:58
+#: View/AttachmentsAuditions/view.ctp:48
+#: View/AttachmentsCalls/add.ctp:23
+#: View/AttachmentsCalls/edit.ctp:25
+#: View/AttachmentsCalls/index.ctp:58
+#: View/AttachmentsCalls/view.ctp:48
+#: View/AttachmentsCastings/add.ctp:23
+#: View/AttachmentsCastings/edit.ctp:25
+#: View/AttachmentsCastings/index.ctp:58
+#: View/AttachmentsCastings/view.ctp:48
+#: View/AttachmentsJobs/add.ctp:23
+#: View/AttachmentsJobs/edit.ctp:25
+#: View/AttachmentsJobs/index.ctp:58
+#: View/AttachmentsJobs/view.ctp:48
+#: View/Auditions/edit.ctp:441
 #: View/Auditions/index.ctp:53
 #: View/AuditionsDancestyles/add.ctp:23
 #: View/AuditionsDancestyles/edit.ctp:25
 #: View/AuditionsDancestyles/index.ctp:58
 #: View/AuditionsDancestyles/view.ctp:48
+#: View/AuditionsPhotos/add.ctp:23
+#: View/AuditionsPhotos/edit.ctp:25
+#: View/AuditionsPhotos/index.ctp:58
+#: View/AuditionsPhotos/view.ctp:48
 #: View/AuditionsProfessions/add.ctp:23
 #: View/AuditionsProfessions/edit.ctp:25
 #: View/AuditionsProfessions/index.ctp:58
@@ -1877,14 +2425,18 @@ msgstr "Listar Usuarios"
 #: View/Bannercategories/index.ctp:48
 #: View/Bannercategories/view.ctp:39
 #: View/Banners/view.ctp:79
-#: View/Calls/add.ctp:339
-#: View/Calls/edit.ctp:382
+#: View/Calls/add.ctp:364
+#: View/Calls/edit.ctp:429
 #: View/Calls/index.ctp:56
-#: View/Calls/view.ctp:207
+#: View/Calls/view.ctp:258
 #: View/CallsDancestyles/add.ctp:23
 #: View/CallsDancestyles/edit.ctp:25
 #: View/CallsDancestyles/index.ctp:58
 #: View/CallsDancestyles/view.ctp:48
+#: View/CallsPhotos/add.ctp:23
+#: View/CallsPhotos/edit.ctp:25
+#: View/CallsPhotos/index.ctp:58
+#: View/CallsPhotos/view.ctp:48
 #: View/CallsProfessions/add.ctp:23
 #: View/CallsProfessions/edit.ctp:25
 #: View/CallsProfessions/index.ctp:58
@@ -1893,14 +2445,18 @@ msgstr "Listar Usuarios"
 #: View/CallsVideos/edit.ctp:25
 #: View/CallsVideos/index.ctp:58
 #: View/CallsVideos/view.ctp:48
-#: View/Castings/add.ctp:339;386
-#: View/Castings/edit.ctp:382
+#: View/Castings/add.ctp:364;411
+#: View/Castings/edit.ctp:429
 #: View/Castings/index.ctp:145
-#: View/Castings/view.ctp:205
+#: View/Castings/view.ctp:255
 #: View/CastingsDancestyles/add.ctp:23
 #: View/CastingsDancestyles/edit.ctp:25
 #: View/CastingsDancestyles/index.ctp:58
 #: View/CastingsDancestyles/view.ctp:48
+#: View/CastingsPhotos/add.ctp:23
+#: View/CastingsPhotos/edit.ctp:25
+#: View/CastingsPhotos/index.ctp:58
+#: View/CastingsPhotos/view.ctp:48
 #: View/CastingsProfessions/add.ctp:23
 #: View/CastingsProfessions/edit.ctp:25
 #: View/CastingsProfessions/index.ctp:58
@@ -1913,26 +2469,34 @@ msgstr "Listar Usuarios"
 #: View/Dancestyles/edit.ctp:21
 #: View/Dancestyles/index.ctp:48
 #: View/Dancestyles/view.ctp:39
-#: View/Estudies/add.ctp:241
-#: View/Estudies/edit.ctp:309
+#: View/Estudies/add.ctp:262
+#: View/Estudies/edit.ctp:358
 #: View/Estudies/index.ctp:120
-#: View/Estudies/view.ctp:158
+#: View/Estudies/view.ctp:230
 #: View/EstudiesDancestyles/add.ctp:23
 #: View/EstudiesDancestyles/edit.ctp:25
 #: View/EstudiesDancestyles/index.ctp:58
 #: View/EstudiesDancestyles/view.ctp:48
+#: View/EstudiesPhotos/add.ctp:23
+#: View/EstudiesPhotos/edit.ctp:25
+#: View/EstudiesPhotos/index.ctp:56
+#: View/EstudiesPhotos/view.ctp:48
 #: View/EstudiesVideos/add.ctp:23
 #: View/EstudiesVideos/edit.ctp:25
 #: View/EstudiesVideos/index.ctp:58
 #: View/EstudiesVideos/view.ctp:48
-#: View/Jobs/add.ctp:344
-#: View/Jobs/edit.ctp:390
+#: View/Jobs/add.ctp:369
+#: View/Jobs/edit.ctp:437
 #: View/Jobs/index.ctp:142
-#: View/Jobs/view.ctp:206
+#: View/Jobs/view.ctp:256
 #: View/JobsDancestyles/add.ctp:23
 #: View/JobsDancestyles/edit.ctp:25
 #: View/JobsDancestyles/index.ctp:58
 #: View/JobsDancestyles/view.ctp:48
+#: View/JobsPhotos/add.ctp:23
+#: View/JobsPhotos/edit.ctp:25
+#: View/JobsPhotos/index.ctp:58
+#: View/JobsPhotos/view.ctp:48
 #: View/JobsProfessions/add.ctp:23
 #: View/JobsProfessions/edit.ctp:25
 #: View/JobsProfessions/index.ctp:58
@@ -1941,13 +2505,17 @@ msgstr "Listar Usuarios"
 #: View/JobsVideos/edit.ctp:25
 #: View/JobsVideos/index.ctp:58
 #: View/JobsVideos/view.ctp:48
-#: View/Practicerooms/add.ctp:231
-#: View/Practicerooms/edit.ctp:300
+#: View/Practicerooms/add.ctp:242
+#: View/Practicerooms/edit.ctp:311
 #: View/Practicerooms/index.ctp:124
 #: View/PracticeroomsDancestyles/add.ctp:23
 #: View/PracticeroomsDancestyles/edit.ctp:25
 #: View/PracticeroomsDancestyles/index.ctp:58
 #: View/PracticeroomsDancestyles/view.ctp:48
+#: View/PracticeroomsPhotos/add.ctp:23
+#: View/PracticeroomsPhotos/edit.ctp:25
+#: View/PracticeroomsPhotos/index.ctp:58
+#: View/PracticeroomsPhotos/view.ctp:48
 #: View/PracticeroomsVideos/add.ctp:23
 #: View/PracticeroomsVideos/edit.ctp:25
 #: View/PracticeroomsVideos/index.ctp:58
@@ -1968,32 +2536,32 @@ msgstr "Listar Usuarios"
 msgid "New User"
 msgstr "Nuevo Usuario"
 
-#: View/Accessories/add.ctp:241
-#: View/Accessories/edit.ctp:282
+#: View/Accessories/add.ctp:252
+#: View/Accessories/edit.ctp:293
 #: View/Accessories/index.ctp:120
-#: View/Accessories/view.ctp:149
+#: View/Accessories/view.ctp:178
 #: View/AccessoriesDancestyles/add.ctp:20
 #: View/AccessoriesDancestyles/edit.ctp:22
 #: View/AccessoriesDancestyles/index.ctp:55
 #: View/AccessoriesDancestyles/view.ctp:45
-#: View/Auditions/edit.ctp:395
+#: View/Auditions/edit.ctp:442
 #: View/Auditions/index.ctp:54
 #: View/AuditionsDancestyles/add.ctp:20
 #: View/AuditionsDancestyles/edit.ctp:22
 #: View/AuditionsDancestyles/index.ctp:55
 #: View/AuditionsDancestyles/view.ctp:45
-#: View/Calls/add.ctp:340
-#: View/Calls/edit.ctp:383
+#: View/Calls/add.ctp:365
+#: View/Calls/edit.ctp:430
 #: View/Calls/index.ctp:57
-#: View/Calls/view.ctp:208
+#: View/Calls/view.ctp:259
 #: View/CallsDancestyles/add.ctp:20
 #: View/CallsDancestyles/edit.ctp:22
 #: View/CallsDancestyles/index.ctp:55
 #: View/CallsDancestyles/view.ctp:45
-#: View/Castings/add.ctp:340;387
-#: View/Castings/edit.ctp:383
+#: View/Castings/add.ctp:365;412
+#: View/Castings/edit.ctp:430
 #: View/Castings/index.ctp:146
-#: View/Castings/view.ctp:206
+#: View/Castings/view.ctp:256
 #: View/CastingsDancestyles/add.ctp:20
 #: View/CastingsDancestyles/edit.ctp:22
 #: View/CastingsDancestyles/index.ctp:55
@@ -2001,24 +2569,24 @@ msgstr "Nuevo Usuario"
 #: View/Dancestyles/add.ctp:17
 #: View/Dancestyles/edit.ctp:19
 #: View/Dancestyles/view.ctp:36
-#: View/Estudies/add.ctp:242
-#: View/Estudies/edit.ctp:310
+#: View/Estudies/add.ctp:263
+#: View/Estudies/edit.ctp:359
 #: View/Estudies/index.ctp:121
-#: View/Estudies/view.ctp:159
+#: View/Estudies/view.ctp:231
 #: View/EstudiesDancestyles/add.ctp:20
 #: View/EstudiesDancestyles/edit.ctp:22
 #: View/EstudiesDancestyles/index.ctp:55
 #: View/EstudiesDancestyles/view.ctp:45
-#: View/Jobs/add.ctp:345
-#: View/Jobs/edit.ctp:391
+#: View/Jobs/add.ctp:370
+#: View/Jobs/edit.ctp:438
 #: View/Jobs/index.ctp:143
-#: View/Jobs/view.ctp:207
+#: View/Jobs/view.ctp:257
 #: View/JobsDancestyles/add.ctp:20
 #: View/JobsDancestyles/edit.ctp:22
 #: View/JobsDancestyles/index.ctp:55
 #: View/JobsDancestyles/view.ctp:45
-#: View/Practicerooms/add.ctp:234
-#: View/Practicerooms/edit.ctp:303
+#: View/Practicerooms/add.ctp:245
+#: View/Practicerooms/edit.ctp:314
 #: View/Practicerooms/index.ctp:127
 #: View/PracticeroomsDancestyles/add.ctp:20
 #: View/PracticeroomsDancestyles/edit.ctp:22
@@ -2027,56 +2595,56 @@ msgstr "Nuevo Usuario"
 msgid "List Dancestyles"
 msgstr "Listar Estilos de Danza"
 
-#: View/Accessories/add.ctp:242
-#: View/Accessories/edit.ctp:283
+#: View/Accessories/add.ctp:253
+#: View/Accessories/edit.ctp:294
 #: View/Accessories/index.ctp:121
-#: View/Accessories/view.ctp:150;184
+#: View/Accessories/view.ctp:179;213
 #: View/AccessoriesDancestyles/add.ctp:21
 #: View/AccessoriesDancestyles/edit.ctp:23
 #: View/AccessoriesDancestyles/index.ctp:56
 #: View/AccessoriesDancestyles/view.ctp:46
-#: View/Auditions/edit.ctp:396
+#: View/Auditions/edit.ctp:443
 #: View/Auditions/index.ctp:55
 #: View/AuditionsDancestyles/add.ctp:21
 #: View/AuditionsDancestyles/edit.ctp:23
 #: View/AuditionsDancestyles/index.ctp:56
 #: View/AuditionsDancestyles/view.ctp:46
-#: View/Calls/add.ctp:341
-#: View/Calls/edit.ctp:384
+#: View/Calls/add.ctp:366
+#: View/Calls/edit.ctp:431
 #: View/Calls/index.ctp:58
-#: View/Calls/view.ctp:209;245
+#: View/Calls/view.ctp:260;296
 #: View/CallsDancestyles/add.ctp:21
 #: View/CallsDancestyles/edit.ctp:23
 #: View/CallsDancestyles/index.ctp:56
 #: View/CallsDancestyles/view.ctp:46
-#: View/Castings/add.ctp:341;388
-#: View/Castings/edit.ctp:384
+#: View/Castings/add.ctp:366;413
+#: View/Castings/edit.ctp:431
 #: View/Castings/index.ctp:147
-#: View/Castings/view.ctp:207;243
+#: View/Castings/view.ctp:257;293
 #: View/CastingsDancestyles/add.ctp:21
 #: View/CastingsDancestyles/edit.ctp:23
 #: View/CastingsDancestyles/index.ctp:56
 #: View/CastingsDancestyles/view.ctp:46
 #: View/Dancestyles/index.ctp:46
 #: View/Dancestyles/view.ctp:37
-#: View/Estudies/add.ctp:243
-#: View/Estudies/edit.ctp:311
+#: View/Estudies/add.ctp:264
+#: View/Estudies/edit.ctp:360
 #: View/Estudies/index.ctp:122
-#: View/Estudies/view.ctp:160;194
+#: View/Estudies/view.ctp:232;266
 #: View/EstudiesDancestyles/add.ctp:21
 #: View/EstudiesDancestyles/edit.ctp:23
 #: View/EstudiesDancestyles/index.ctp:56
 #: View/EstudiesDancestyles/view.ctp:46
-#: View/Jobs/add.ctp:346
-#: View/Jobs/edit.ctp:392
+#: View/Jobs/add.ctp:371
+#: View/Jobs/edit.ctp:439
 #: View/Jobs/index.ctp:144
-#: View/Jobs/view.ctp:208;244
+#: View/Jobs/view.ctp:258;294
 #: View/JobsDancestyles/add.ctp:21
 #: View/JobsDancestyles/edit.ctp:23
 #: View/JobsDancestyles/index.ctp:56
 #: View/JobsDancestyles/view.ctp:46
-#: View/Practicerooms/add.ctp:235
-#: View/Practicerooms/edit.ctp:304
+#: View/Practicerooms/add.ctp:246
+#: View/Practicerooms/edit.ctp:315
 #: View/Practicerooms/index.ctp:128
 #: View/PracticeroomsDancestyles/add.ctp:21
 #: View/PracticeroomsDancestyles/edit.ctp:23
@@ -2085,8 +2653,8 @@ msgstr "Listar Estilos de Danza"
 msgid "New Dancestyle"
 msgstr "Nuevo Estilo de Danza"
 
-#: View/Accessories/edit.ctp:6;251
-#: View/Accessories/view.ctp:141
+#: View/Accessories/edit.ctp:6;262
+#: View/Accessories/view.ctp:170
 msgid "Edit Accessory"
 msgstr "Editar Accesorio"
 
@@ -2099,21 +2667,37 @@ msgstr "Editar Accesorio"
 #: View/Jobs/edit.ctp:49
 #: View/Notes/edit.ctp:51
 #: View/Practicerooms/edit.ctp:50
+#: View/Slidernotes/edit.ctp:37
 #: View/Sliders/edit.ctp:37
 msgid "No image"
 msgstr "Sin Imagen"
 
-#: View/Accessories/edit.ctp:276
+#: View/Accessories/edit.ctp:287
 #: View/Accessories/index.ctp:21;93
-#: View/Accessories/view.ctp:175
+#: View/Accessories/view.ctp:204
 #: View/AccessoriesDancestyles/edit.ctp:18
 #: View/AccessoriesDancestyles/index.ctp:30
+#: View/AccessoriesPhotos/edit.ctp:18
+#: View/AccessoriesPhotos/index.ctp:30
 #: View/AccessoriesVideos/edit.ctp:18
 #: View/AccessoriesVideos/index.ctp:30
-#: View/Auditions/edit.ctp:389
+#: View/Attachments/edit.ctp:21
+#: View/Attachments/index.ctp:22
+#: View/Attachments/view.ctp:104;173;242;311
+#: View/AttachmentsAuditions/edit.ctp:18
+#: View/AttachmentsAuditions/index.ctp:30
+#: View/AttachmentsCalls/edit.ctp:18
+#: View/AttachmentsCalls/index.ctp:30
+#: View/AttachmentsCastings/edit.ctp:18
+#: View/AttachmentsCastings/index.ctp:30
+#: View/AttachmentsJobs/edit.ctp:18
+#: View/AttachmentsJobs/index.ctp:30
+#: View/Auditions/edit.ctp:436
 #: View/Auditions/index.ctp:25
 #: View/AuditionsDancestyles/edit.ctp:18
 #: View/AuditionsDancestyles/index.ctp:30
+#: View/AuditionsPhotos/edit.ctp:18
+#: View/AuditionsPhotos/index.ctp:30
 #: View/AuditionsProfessions/edit.ctp:18
 #: View/AuditionsProfessions/index.ctp:30
 #: View/AuditionsVideos/edit.ctp:18
@@ -2125,20 +2709,24 @@ msgstr "Sin Imagen"
 #: View/Banners/view.ctp:106
 #: View/BannersBannercategories/edit.ctp:17
 #: View/BannersBannercategories/index.ctp:24
-#: View/Calls/edit.ctp:377
+#: View/Calls/edit.ctp:424
 #: View/Calls/index.ctp:27
-#: View/Calls/view.ctp:236;271
+#: View/Calls/view.ctp:287;322
 #: View/CallsDancestyles/edit.ctp:18
 #: View/CallsDancestyles/index.ctp:30
+#: View/CallsPhotos/edit.ctp:18
+#: View/CallsPhotos/index.ctp:30
 #: View/CallsProfessions/edit.ctp:18
 #: View/CallsProfessions/index.ctp:30
 #: View/CallsVideos/edit.ctp:18
 #: View/CallsVideos/index.ctp:30
-#: View/Castings/edit.ctp:377
+#: View/Castings/edit.ctp:424
 #: View/Castings/index.ctp:27;119
-#: View/Castings/view.ctp:234;269
+#: View/Castings/view.ctp:284;319
 #: View/CastingsDancestyles/edit.ctp:18
 #: View/CastingsDancestyles/index.ctp:30
+#: View/CastingsPhotos/edit.ctp:18
+#: View/CastingsPhotos/index.ctp:30
 #: View/CastingsProfessions/edit.ctp:18
 #: View/CastingsProfessions/index.ctp:30
 #: View/CastingsVideos/edit.ctp:18
@@ -2149,29 +2737,38 @@ msgstr "Sin Imagen"
 #: View/Dancestyles/edit.ctp:18
 #: View/Dancestyles/index.ctp:24
 #: View/Dancestyles/view.ctp:100
-#: View/Estudies/edit.ctp:304
+#: View/Estudies/edit.ctp:353
 #: View/Estudies/index.ctp:21;94
-#: View/Estudies/view.ctp:185
+#: View/Estudies/view.ctp:257
 #: View/EstudiesDancestyles/edit.ctp:18
 #: View/EstudiesDancestyles/index.ctp:30
+#: View/EstudiesPhotos/edit.ctp:18
+#: View/EstudiesPhotos/index.ctp:28
 #: View/EstudiesTimetables/edit.ctp:17
 #: View/EstudiesTimetables/index.ctp:26
 #: View/EstudiesVideos/edit.ctp:18
 #: View/EstudiesVideos/index.ctp:30
-#: View/Jobs/edit.ctp:385
+#: View/Jobs/edit.ctp:432
 #: View/Jobs/index.ctp:27;116
-#: View/Jobs/view.ctp:235;270
+#: View/Jobs/view.ctp:285;320
 #: View/JobsDancestyles/edit.ctp:18
 #: View/JobsDancestyles/index.ctp:30
+#: View/JobsPhotos/edit.ctp:18
+#: View/JobsPhotos/index.ctp:30
 #: View/JobsProfessions/edit.ctp:18
 #: View/JobsProfessions/index.ctp:30
 #: View/JobsVideos/edit.ctp:18
 #: View/JobsVideos/index.ctp:30
 #: View/Notes/index.ctp:31
-#: View/Practicerooms/edit.ctp:295
+#: View/Photos/edit.ctp:18
+#: View/Photos/index.ctp:22
+#: View/Photos/view.ctp:86
+#: View/Practicerooms/edit.ctp:306
 #: View/Practicerooms/index.ctp:21;98
 #: View/PracticeroomsDancestyles/edit.ctp:18
 #: View/PracticeroomsDancestyles/index.ctp:30
+#: View/PracticeroomsPhotos/edit.ctp:18
+#: View/PracticeroomsPhotos/index.ctp:30
 #: View/PracticeroomsTimetables/edit.ctp:17
 #: View/PracticeroomsTimetables/index.ctp:26
 #: View/PracticeroomsVideos/edit.ctp:18
@@ -2182,6 +2779,7 @@ msgstr "Sin Imagen"
 #: View/Rols/edit.ctp:18
 #: View/Rols/index.ctp:24
 #: View/Rols/view.ctp:83
+#: View/Slidernotes/index.ctp:26
 #: View/Sliders/index.ctp:26
 #: View/States/edit.ctp:17
 #: View/States/index.ctp:24
@@ -2197,20 +2795,41 @@ msgstr "Sin Imagen"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: View/Accessories/edit.ctp:276
+#: View/Accessories/edit.ctp:287
 #: View/Accessories/index.ctp:21;93
-#: View/Accessories/view.ctp:142;175
+#: View/Accessories/view.ctp:171;204
 #: View/AccessoriesDancestyles/edit.ctp:18
 #: View/AccessoriesDancestyles/index.ctp:30
 #: View/AccessoriesDancestyles/view.ctp:40
+#: View/AccessoriesPhotos/edit.ctp:18
+#: View/AccessoriesPhotos/index.ctp:30
+#: View/AccessoriesPhotos/view.ctp:40
 #: View/AccessoriesVideos/edit.ctp:18
 #: View/AccessoriesVideos/index.ctp:30
 #: View/AccessoriesVideos/view.ctp:40
-#: View/Auditions/edit.ctp:389
+#: View/Attachments/edit.ctp:21
+#: View/Attachments/index.ctp:22
+#: View/Attachments/view.ctp:35;104;173;242;311
+#: View/AttachmentsAuditions/edit.ctp:18
+#: View/AttachmentsAuditions/index.ctp:30
+#: View/AttachmentsAuditions/view.ctp:40
+#: View/AttachmentsCalls/edit.ctp:18
+#: View/AttachmentsCalls/index.ctp:30
+#: View/AttachmentsCalls/view.ctp:40
+#: View/AttachmentsCastings/edit.ctp:18
+#: View/AttachmentsCastings/index.ctp:30
+#: View/AttachmentsCastings/view.ctp:40
+#: View/AttachmentsJobs/edit.ctp:18
+#: View/AttachmentsJobs/index.ctp:30
+#: View/AttachmentsJobs/view.ctp:40
+#: View/Auditions/edit.ctp:436
 #: View/Auditions/index.ctp:25
 #: View/AuditionsDancestyles/edit.ctp:18
 #: View/AuditionsDancestyles/index.ctp:30
 #: View/AuditionsDancestyles/view.ctp:40
+#: View/AuditionsPhotos/edit.ctp:18
+#: View/AuditionsPhotos/index.ctp:30
+#: View/AuditionsPhotos/view.ctp:40
 #: View/AuditionsProfessions/edit.ctp:18
 #: View/AuditionsProfessions/index.ctp:30
 #: View/AuditionsProfessions/view.ctp:40
@@ -2225,24 +2844,30 @@ msgstr "Eliminar"
 #: View/BannersBannercategories/edit.ctp:17
 #: View/BannersBannercategories/index.ctp:24
 #: View/BannersBannercategories/view.ctp:35
-#: View/Calls/edit.ctp:377
+#: View/Calls/edit.ctp:424
 #: View/Calls/index.ctp:27
-#: View/Calls/view.ctp:201;236;271
+#: View/Calls/view.ctp:252;287;322
 #: View/CallsDancestyles/edit.ctp:18
 #: View/CallsDancestyles/index.ctp:30
 #: View/CallsDancestyles/view.ctp:40
+#: View/CallsPhotos/edit.ctp:18
+#: View/CallsPhotos/index.ctp:30
+#: View/CallsPhotos/view.ctp:40
 #: View/CallsProfessions/edit.ctp:18
 #: View/CallsProfessions/index.ctp:30
 #: View/CallsProfessions/view.ctp:40
 #: View/CallsVideos/edit.ctp:18
 #: View/CallsVideos/index.ctp:30
 #: View/CallsVideos/view.ctp:40
-#: View/Castings/edit.ctp:377
+#: View/Castings/edit.ctp:424
 #: View/Castings/index.ctp:27;119
-#: View/Castings/view.ctp:199;234;269
+#: View/Castings/view.ctp:249;284;319
 #: View/CastingsDancestyles/edit.ctp:18
 #: View/CastingsDancestyles/index.ctp:30
 #: View/CastingsDancestyles/view.ctp:40
+#: View/CastingsPhotos/edit.ctp:18
+#: View/CastingsPhotos/index.ctp:30
+#: View/CastingsPhotos/view.ctp:40
 #: View/CastingsProfessions/edit.ctp:18
 #: View/CastingsProfessions/index.ctp:30
 #: View/CastingsProfessions/view.ctp:40
@@ -2255,24 +2880,30 @@ msgstr "Eliminar"
 #: View/Dancestyles/edit.ctp:18
 #: View/Dancestyles/index.ctp:24
 #: View/Dancestyles/view.ctp:35;100
-#: View/Estudies/edit.ctp:304
+#: View/Estudies/edit.ctp:353
 #: View/Estudies/index.ctp:21;94
-#: View/Estudies/view.ctp:152;185
+#: View/Estudies/view.ctp:224;257
 #: View/EstudiesDancestyles/edit.ctp:18
 #: View/EstudiesDancestyles/index.ctp:30
 #: View/EstudiesDancestyles/view.ctp:40
+#: View/EstudiesPhotos/edit.ctp:18
+#: View/EstudiesPhotos/index.ctp:28
+#: View/EstudiesPhotos/view.ctp:40
 #: View/EstudiesTimetables/edit.ctp:17
 #: View/EstudiesTimetables/index.ctp:26
 #: View/EstudiesTimetables/view.ctp:35
 #: View/EstudiesVideos/edit.ctp:18
 #: View/EstudiesVideos/index.ctp:30
 #: View/EstudiesVideos/view.ctp:40
-#: View/Jobs/edit.ctp:385
+#: View/Jobs/edit.ctp:432
 #: View/Jobs/index.ctp:27;116
-#: View/Jobs/view.ctp:200;235;270
+#: View/Jobs/view.ctp:250;285;320
 #: View/JobsDancestyles/edit.ctp:18
 #: View/JobsDancestyles/index.ctp:30
 #: View/JobsDancestyles/view.ctp:40
+#: View/JobsPhotos/edit.ctp:18
+#: View/JobsPhotos/index.ctp:30
+#: View/JobsPhotos/view.ctp:40
 #: View/JobsProfessions/edit.ctp:18
 #: View/JobsProfessions/index.ctp:30
 #: View/JobsProfessions/view.ctp:40
@@ -2280,11 +2911,17 @@ msgstr "Eliminar"
 #: View/JobsVideos/index.ctp:30
 #: View/JobsVideos/view.ctp:40
 #: View/Notes/index.ctp:31
-#: View/Practicerooms/edit.ctp:295
+#: View/Photos/edit.ctp:18
+#: View/Photos/index.ctp:22
+#: View/Photos/view.ctp:35;86
+#: View/Practicerooms/edit.ctp:306
 #: View/Practicerooms/index.ctp:21;98
 #: View/PracticeroomsDancestyles/edit.ctp:18
 #: View/PracticeroomsDancestyles/index.ctp:30
 #: View/PracticeroomsDancestyles/view.ctp:40
+#: View/PracticeroomsPhotos/edit.ctp:18
+#: View/PracticeroomsPhotos/index.ctp:30
+#: View/PracticeroomsPhotos/view.ctp:40
 #: View/PracticeroomsTimetables/edit.ctp:17
 #: View/PracticeroomsTimetables/index.ctp:26
 #: View/PracticeroomsTimetables/view.ctp:35
@@ -2297,6 +2934,7 @@ msgstr "Eliminar"
 #: View/Rols/edit.ctp:18
 #: View/Rols/index.ctp:24
 #: View/Rols/view.ctp:40;83
+#: View/Slidernotes/index.ctp:26
 #: View/Sliders/index.ctp:26
 #: View/States/edit.ctp:17
 #: View/States/index.ctp:24
@@ -2319,11 +2957,19 @@ msgid "Accessories"
 msgstr "Accesorios"
 
 #: View/Accessories/index.ctp:19;91
-#: View/Accessories/view.ctp:173
+#: View/Accessories/view.ctp:202
 #: View/AccessoriesDancestyles/index.ctp:28
+#: View/AccessoriesPhotos/index.ctp:28
 #: View/AccessoriesVideos/index.ctp:28
+#: View/Attachments/index.ctp:20
+#: View/Attachments/view.ctp:102;171;240;309
+#: View/AttachmentsAuditions/index.ctp:28
+#: View/AttachmentsCalls/index.ctp:28
+#: View/AttachmentsCastings/index.ctp:28
+#: View/AttachmentsJobs/index.ctp:28
 #: View/Auditions/index.ctp:23
 #: View/AuditionsDancestyles/index.ctp:28
+#: View/AuditionsPhotos/index.ctp:28
 #: View/AuditionsProfessions/index.ctp:28
 #: View/AuditionsVideos/index.ctp:28
 #: View/Bannercategories/index.ctp:22
@@ -2332,13 +2978,15 @@ msgstr "Accesorios"
 #: View/Banners/view.ctp:104
 #: View/BannersBannercategories/index.ctp:22
 #: View/Calls/index.ctp:25
-#: View/Calls/view.ctp:234;269
+#: View/Calls/view.ctp:285;320
 #: View/CallsDancestyles/index.ctp:28
+#: View/CallsPhotos/index.ctp:28
 #: View/CallsProfessions/index.ctp:28
 #: View/CallsVideos/index.ctp:28
 #: View/Castings/index.ctp:25;117
-#: View/Castings/view.ctp:232;267
+#: View/Castings/view.ctp:282;317
 #: View/CastingsDancestyles/index.ctp:28
+#: View/CastingsPhotos/index.ctp:28
 #: View/CastingsProfessions/index.ctp:28
 #: View/CastingsVideos/index.ctp:28
 #: View/Countries/index.ctp:18
@@ -2346,24 +2994,30 @@ msgstr "Accesorios"
 #: View/Dancestyles/index.ctp:22
 #: View/Dancestyles/view.ctp:98
 #: View/Estudies/index.ctp:19;92
-#: View/Estudies/view.ctp:183
+#: View/Estudies/view.ctp:255
 #: View/EstudiesDancestyles/index.ctp:28
+#: View/EstudiesPhotos/index.ctp:26
 #: View/EstudiesTimetables/index.ctp:24
 #: View/EstudiesVideos/index.ctp:28
 #: View/Jobs/index.ctp:25;114
-#: View/Jobs/view.ctp:233;268
+#: View/Jobs/view.ctp:283;318
 #: View/JobsDancestyles/index.ctp:28
+#: View/JobsPhotos/index.ctp:28
 #: View/JobsProfessions/index.ctp:28
 #: View/JobsVideos/index.ctp:28
 #: View/Notes/index.ctp:29
+#: View/Photos/index.ctp:20
+#: View/Photos/view.ctp:84
 #: View/Practicerooms/index.ctp:19;96
 #: View/PracticeroomsDancestyles/index.ctp:28
+#: View/PracticeroomsPhotos/index.ctp:28
 #: View/PracticeroomsTimetables/index.ctp:24
 #: View/PracticeroomsVideos/index.ctp:28
 #: View/Professions/index.ctp:22
 #: View/Professions/view.ctp:98
 #: View/Rols/index.ctp:22
 #: View/Rols/view.ctp:81
+#: View/Slidernotes/index.ctp:24
 #: View/Sliders/index.ctp:24
 #: View/States/index.ctp:22
 #: View/States/view.ctp:78
@@ -2376,11 +3030,19 @@ msgid "View"
 msgstr "Ver"
 
 #: View/Accessories/index.ctp:20;92
-#: View/Accessories/view.ctp:174
+#: View/Accessories/view.ctp:203
 #: View/AccessoriesDancestyles/index.ctp:29
+#: View/AccessoriesPhotos/index.ctp:29
 #: View/AccessoriesVideos/index.ctp:29
+#: View/Attachments/index.ctp:21
+#: View/Attachments/view.ctp:103;172;241;310
+#: View/AttachmentsAuditions/index.ctp:29
+#: View/AttachmentsCalls/index.ctp:29
+#: View/AttachmentsCastings/index.ctp:29
+#: View/AttachmentsJobs/index.ctp:29
 #: View/Auditions/index.ctp:24
 #: View/AuditionsDancestyles/index.ctp:29
+#: View/AuditionsPhotos/index.ctp:29
 #: View/AuditionsProfessions/index.ctp:29
 #: View/AuditionsVideos/index.ctp:29
 #: View/Bannercategories/index.ctp:23
@@ -2389,13 +3051,15 @@ msgstr "Ver"
 #: View/Banners/view.ctp:105
 #: View/BannersBannercategories/index.ctp:23
 #: View/Calls/index.ctp:26
-#: View/Calls/view.ctp:235;270
+#: View/Calls/view.ctp:286;321
 #: View/CallsDancestyles/index.ctp:29
+#: View/CallsPhotos/index.ctp:29
 #: View/CallsProfessions/index.ctp:29
 #: View/CallsVideos/index.ctp:29
 #: View/Castings/index.ctp:26;118
-#: View/Castings/view.ctp:233;268
+#: View/Castings/view.ctp:283;318
 #: View/CastingsDancestyles/index.ctp:29
+#: View/CastingsPhotos/index.ctp:29
 #: View/CastingsProfessions/index.ctp:29
 #: View/CastingsVideos/index.ctp:29
 #: View/Countries/index.ctp:19
@@ -2403,24 +3067,30 @@ msgstr "Ver"
 #: View/Dancestyles/index.ctp:23
 #: View/Dancestyles/view.ctp:99
 #: View/Estudies/index.ctp:20;93
-#: View/Estudies/view.ctp:184
+#: View/Estudies/view.ctp:256
 #: View/EstudiesDancestyles/index.ctp:29
+#: View/EstudiesPhotos/index.ctp:27
 #: View/EstudiesTimetables/index.ctp:25
 #: View/EstudiesVideos/index.ctp:29
 #: View/Jobs/index.ctp:26;115
-#: View/Jobs/view.ctp:234;269
+#: View/Jobs/view.ctp:284;319
 #: View/JobsDancestyles/index.ctp:29
+#: View/JobsPhotos/index.ctp:29
 #: View/JobsProfessions/index.ctp:29
 #: View/JobsVideos/index.ctp:29
 #: View/Notes/index.ctp:30
+#: View/Photos/index.ctp:21
+#: View/Photos/view.ctp:85
 #: View/Practicerooms/index.ctp:20;97
 #: View/PracticeroomsDancestyles/index.ctp:29
+#: View/PracticeroomsPhotos/index.ctp:29
 #: View/PracticeroomsTimetables/index.ctp:25
 #: View/PracticeroomsVideos/index.ctp:29
 #: View/Professions/index.ctp:23
 #: View/Professions/view.ctp:99
 #: View/Rols/index.ctp:23
 #: View/Rols/view.ctp:82
+#: View/Slidernotes/index.ctp:25
 #: View/Sliders/index.ctp:25
 #: View/States/index.ctp:23
 #: View/States/view.ctp:79
@@ -2434,9 +3104,16 @@ msgstr "Editar"
 
 #: View/Accessories/index.ctp:30;101
 #: View/AccessoriesDancestyles/index.ctp:38
+#: View/AccessoriesPhotos/index.ctp:38
 #: View/AccessoriesVideos/index.ctp:38
+#: View/Attachments/index.ctp:30
+#: View/AttachmentsAuditions/index.ctp:38
+#: View/AttachmentsCalls/index.ctp:38
+#: View/AttachmentsCastings/index.ctp:38
+#: View/AttachmentsJobs/index.ctp:38
 #: View/Auditions/index.ctp:34
 #: View/AuditionsDancestyles/index.ctp:38
+#: View/AuditionsPhotos/index.ctp:38
 #: View/AuditionsProfessions/index.ctp:38
 #: View/AuditionsVideos/index.ctp:38
 #: View/Bannercategories/index.ctp:32
@@ -2444,30 +3121,37 @@ msgstr "Editar"
 #: View/BannersBannercategories/index.ctp:32
 #: View/Calls/index.ctp:36
 #: View/CallsDancestyles/index.ctp:38
+#: View/CallsPhotos/index.ctp:38
 #: View/CallsProfessions/index.ctp:38
 #: View/CallsVideos/index.ctp:38
 #: View/Castings/index.ctp:36;127
 #: View/CastingsDancestyles/index.ctp:38
+#: View/CastingsPhotos/index.ctp:38
 #: View/CastingsProfessions/index.ctp:38
 #: View/CastingsVideos/index.ctp:38
 #: View/Countries/index.ctp:28
 #: View/Dancestyles/index.ctp:32
 #: View/Estudies/index.ctp:30;102
 #: View/EstudiesDancestyles/index.ctp:38
+#: View/EstudiesPhotos/index.ctp:36
 #: View/EstudiesTimetables/index.ctp:34
 #: View/EstudiesVideos/index.ctp:38
 #: View/Jobs/index.ctp:36;124
 #: View/JobsDancestyles/index.ctp:38
+#: View/JobsPhotos/index.ctp:38
 #: View/JobsProfessions/index.ctp:38
 #: View/JobsVideos/index.ctp:38
 #: View/Notes/index.ctp:40
-#: View/Notes/inicio.ctp:47
+#: View/Notes/inicio.ctp:52
+#: View/Photos/index.ctp:30
 #: View/Practicerooms/index.ctp:30;106
 #: View/PracticeroomsDancestyles/index.ctp:38
+#: View/PracticeroomsPhotos/index.ctp:38
 #: View/PracticeroomsTimetables/index.ctp:34
 #: View/PracticeroomsVideos/index.ctp:38
 #: View/Professions/index.ctp:32
 #: View/Rols/index.ctp:32
+#: View/Slidernotes/index.ctp:36
 #: View/Sliders/index.ctp:36
 #: View/States/index.ctp:32
 #: View/Timetables/index.ctp:28
@@ -2478,9 +3162,16 @@ msgstr "Página {:page} de {:pages}, mostrando {:current} de un total de {:count
 
 #: View/Accessories/index.ctp:37;106
 #: View/AccessoriesDancestyles/index.ctp:43
+#: View/AccessoriesPhotos/index.ctp:43
 #: View/AccessoriesVideos/index.ctp:43
+#: View/Attachments/index.ctp:35
+#: View/AttachmentsAuditions/index.ctp:43
+#: View/AttachmentsCalls/index.ctp:43
+#: View/AttachmentsCastings/index.ctp:43
+#: View/AttachmentsJobs/index.ctp:43
 #: View/Auditions/index.ctp:40
 #: View/AuditionsDancestyles/index.ctp:43
+#: View/AuditionsPhotos/index.ctp:43
 #: View/AuditionsProfessions/index.ctp:43
 #: View/AuditionsVideos/index.ctp:43
 #: View/Bannercategories/index.ctp:37
@@ -2488,30 +3179,37 @@ msgstr "Página {:page} de {:pages}, mostrando {:current} de un total de {:count
 #: View/BannersBannercategories/index.ctp:37
 #: View/Calls/index.ctp:43
 #: View/CallsDancestyles/index.ctp:43
+#: View/CallsPhotos/index.ctp:43
 #: View/CallsProfessions/index.ctp:43
 #: View/CallsVideos/index.ctp:43
 #: View/Castings/index.ctp:43;132
 #: View/CastingsDancestyles/index.ctp:43
+#: View/CastingsPhotos/index.ctp:43
 #: View/CastingsProfessions/index.ctp:43
 #: View/CastingsVideos/index.ctp:43
 #: View/Countries/index.ctp:33
 #: View/Dancestyles/index.ctp:37
 #: View/Estudies/index.ctp:37;107
 #: View/EstudiesDancestyles/index.ctp:43
+#: View/EstudiesPhotos/index.ctp:41
 #: View/EstudiesTimetables/index.ctp:39
 #: View/EstudiesVideos/index.ctp:43
 #: View/Jobs/index.ctp:43;129
 #: View/JobsDancestyles/index.ctp:43
+#: View/JobsPhotos/index.ctp:43
 #: View/JobsProfessions/index.ctp:43
 #: View/JobsVideos/index.ctp:43
 #: View/Notes/index.ctp:46
-#: View/Notes/inicio.ctp:53
+#: View/Notes/inicio.ctp:58
+#: View/Photos/index.ctp:35
 #: View/Practicerooms/index.ctp:37;111
 #: View/PracticeroomsDancestyles/index.ctp:43
+#: View/PracticeroomsPhotos/index.ctp:43
 #: View/PracticeroomsTimetables/index.ctp:39
 #: View/PracticeroomsVideos/index.ctp:43
 #: View/Professions/index.ctp:37
 #: View/Rols/index.ctp:37
+#: View/Slidernotes/index.ctp:42
 #: View/Sliders/index.ctp:42
 #: View/States/index.ctp:37
 #: View/Timetables/index.ctp:33
@@ -2522,9 +3220,16 @@ msgstr "anterior"
 
 #: View/Accessories/index.ctp:39;108
 #: View/AccessoriesDancestyles/index.ctp:45
+#: View/AccessoriesPhotos/index.ctp:45
 #: View/AccessoriesVideos/index.ctp:45
+#: View/Attachments/index.ctp:37
+#: View/AttachmentsAuditions/index.ctp:45
+#: View/AttachmentsCalls/index.ctp:45
+#: View/AttachmentsCastings/index.ctp:45
+#: View/AttachmentsJobs/index.ctp:45
 #: View/Auditions/index.ctp:42
 #: View/AuditionsDancestyles/index.ctp:45
+#: View/AuditionsPhotos/index.ctp:45
 #: View/AuditionsProfessions/index.ctp:45
 #: View/AuditionsVideos/index.ctp:45
 #: View/Bannercategories/index.ctp:39
@@ -2532,30 +3237,37 @@ msgstr "anterior"
 #: View/BannersBannercategories/index.ctp:39
 #: View/Calls/index.ctp:45
 #: View/CallsDancestyles/index.ctp:45
+#: View/CallsPhotos/index.ctp:45
 #: View/CallsProfessions/index.ctp:45
 #: View/CallsVideos/index.ctp:45
 #: View/Castings/index.ctp:45;134
 #: View/CastingsDancestyles/index.ctp:45
+#: View/CastingsPhotos/index.ctp:45
 #: View/CastingsProfessions/index.ctp:45
 #: View/CastingsVideos/index.ctp:45
 #: View/Countries/index.ctp:35
 #: View/Dancestyles/index.ctp:39
 #: View/Estudies/index.ctp:39;109
 #: View/EstudiesDancestyles/index.ctp:45
+#: View/EstudiesPhotos/index.ctp:43
 #: View/EstudiesTimetables/index.ctp:41
 #: View/EstudiesVideos/index.ctp:45
 #: View/Jobs/index.ctp:45;131
 #: View/JobsDancestyles/index.ctp:45
+#: View/JobsPhotos/index.ctp:45
 #: View/JobsProfessions/index.ctp:45
 #: View/JobsVideos/index.ctp:45
 #: View/Notes/index.ctp:48
-#: View/Notes/inicio.ctp:55
+#: View/Notes/inicio.ctp:60
+#: View/Photos/index.ctp:37
 #: View/Practicerooms/index.ctp:39;113
 #: View/PracticeroomsDancestyles/index.ctp:45
+#: View/PracticeroomsPhotos/index.ctp:45
 #: View/PracticeroomsTimetables/index.ctp:41
 #: View/PracticeroomsVideos/index.ctp:45
 #: View/Professions/index.ctp:39
 #: View/Rols/index.ctp:39
+#: View/Slidernotes/index.ctp:44
 #: View/Sliders/index.ctp:44
 #: View/States/index.ctp:39
 #: View/Timetables/index.ctp:35
@@ -2565,7 +3277,11 @@ msgid "next"
 msgstr "próximo"
 
 #: View/Accessories/index.ctp:115
-#: View/Accessories/view.ctp:144
+#: View/Accessories/view.ctp:173
+#: View/AccessoriesPhotos/add.ctp:19
+#: View/AccessoriesPhotos/edit.ctp:21
+#: View/AccessoriesPhotos/index.ctp:54
+#: View/AccessoriesPhotos/view.ctp:44
 #: View/AccessoriesVideos/add.ctp:19
 #: View/AccessoriesVideos/edit.ctp:21
 #: View/AccessoriesVideos/index.ctp:54
@@ -2573,39 +3289,53 @@ msgstr "próximo"
 msgid "New Accessory"
 msgstr "Nuevo Accesorio"
 
-#: View/Accessories/view.ctp:54
+#: View/Accessories/view.ctp:83
+#: View/AccessoriesPhotos/view.ctp:9
 #: View/AccessoriesVideos/view.ctp:9
 msgid "Accessory"
 msgstr "Accesorio"
 
-#: View/Accessories/view.ctp:56;158
+#: View/Accessories/view.ctp:85;187
 #: View/AccessoriesDancestyles/view.ctp:4
+#: View/AccessoriesPhotos/view.ctp:4
 #: View/AccessoriesVideos/view.ctp:4
+#: View/Attachments/view.ctp:4;53;122;191;260
+#: View/AttachmentsAuditions/view.ctp:4
+#: View/AttachmentsCalls/view.ctp:4
+#: View/AttachmentsCastings/view.ctp:4
+#: View/AttachmentsJobs/view.ctp:4
 #: View/AuditionsDancestyles/view.ctp:4
+#: View/AuditionsPhotos/view.ctp:4
 #: View/AuditionsProfessions/view.ctp:4
 #: View/AuditionsVideos/view.ctp:4
 #: View/Bannercategories/view.ctp:4;49
 #: View/Banners/view.ctp:29;89
 #: View/BannersBannercategories/view.ctp:4
-#: View/Calls/view.ctp:85;219;254
+#: View/Calls/view.ctp:136;270;305
 #: View/CallsDancestyles/view.ctp:4
+#: View/CallsPhotos/view.ctp:4
 #: View/CallsProfessions/view.ctp:4
 #: View/CallsVideos/view.ctp:4
-#: View/Castings/view.ctp:83;217;252
+#: View/Castings/view.ctp:133;267;302
 #: View/CastingsDancestyles/view.ctp:4
+#: View/CastingsPhotos/view.ctp:4
 #: View/CastingsProfessions/view.ctp:4
 #: View/CastingsVideos/view.ctp:4
 #: View/Countries/view.ctp:4;42
 #: View/Dancestyles/view.ctp:4;49
-#: View/Estudies/view.ctp:66;168
+#: View/Estudies/view.ctp:138;240
 #: View/EstudiesDancestyles/view.ctp:4
+#: View/EstudiesPhotos/view.ctp:4
 #: View/EstudiesTimetables/view.ctp:4
 #: View/EstudiesVideos/view.ctp:4
-#: View/Jobs/view.ctp:84;218;253
+#: View/Jobs/view.ctp:134;268;303
 #: View/JobsDancestyles/view.ctp:4
+#: View/JobsPhotos/view.ctp:4
 #: View/JobsProfessions/view.ctp:4
 #: View/JobsVideos/view.ctp:4
+#: View/Photos/view.ctp:4;47
 #: View/PracticeroomsDancestyles/view.ctp:4
+#: View/PracticeroomsPhotos/view.ctp:4
 #: View/PracticeroomsTimetables/view.ctp:4
 #: View/PracticeroomsVideos/view.ctp:4
 #: View/Professions/view.ctp:4;49
@@ -2617,34 +3347,47 @@ msgstr "Accesorio"
 msgid "Id"
 msgstr "Código"
 
-#: View/Accessories/view.ctp:116;160
+#: View/Accessories/view.ctp:145;189
 #: View/AccessoriesDancestyles/view.ctp:9
+#: View/AccessoriesPhotos/view.ctp:19
 #: View/AccessoriesVideos/view.ctp:19
+#: View/Attachments/view.ctp:19;71;140;209;278
+#: View/AttachmentsAuditions/view.ctp:19
+#: View/AttachmentsCalls/view.ctp:19
+#: View/AttachmentsCastings/view.ctp:19
+#: View/AttachmentsJobs/view.ctp:19
 #: View/AuditionsDancestyles/view.ctp:9
+#: View/AuditionsPhotos/view.ctp:19
 #: View/AuditionsProfessions/view.ctp:9
 #: View/AuditionsVideos/view.ctp:19
 #: View/Bannercategories/view.ctp:14;54
 #: View/Banners/view.ctp:54;91
 #: View/BannersBannercategories/view.ctp:19
-#: View/Calls/view.ctp:175;221;256
+#: View/Calls/view.ctp:226;272;307
 #: View/CallsDancestyles/view.ctp:9
+#: View/CallsPhotos/view.ctp:19
 #: View/CallsProfessions/view.ctp:9
 #: View/CallsVideos/view.ctp:19
-#: View/Castings/view.ctp:173;219;254
+#: View/Castings/view.ctp:223;269;304
 #: View/CastingsDancestyles/view.ctp:9
+#: View/CastingsPhotos/view.ctp:19
 #: View/CastingsProfessions/view.ctp:9
 #: View/CastingsVideos/view.ctp:19
 #: View/Countries/view.ctp:14;44
 #: View/Dancestyles/view.ctp:14;67
-#: View/Estudies/view.ctp:126;170
+#: View/Estudies/view.ctp:198;242
 #: View/EstudiesDancestyles/view.ctp:9
+#: View/EstudiesPhotos/view.ctp:19
 #: View/EstudiesTimetables/view.ctp:19
 #: View/EstudiesVideos/view.ctp:19
-#: View/Jobs/view.ctp:174;220;255
+#: View/Jobs/view.ctp:224;270;305
 #: View/JobsDancestyles/view.ctp:9
+#: View/JobsPhotos/view.ctp:19
 #: View/JobsProfessions/view.ctp:9
 #: View/JobsVideos/view.ctp:19
+#: View/Photos/view.ctp:19;59
 #: View/PracticeroomsDancestyles/view.ctp:9
+#: View/PracticeroomsPhotos/view.ctp:19
 #: View/PracticeroomsTimetables/view.ctp:19
 #: View/PracticeroomsVideos/view.ctp:19
 #: View/Professions/view.ctp:14;67
@@ -2657,34 +3400,47 @@ msgstr "Código"
 msgid "Created"
 msgstr "Creado"
 
-#: View/Accessories/view.ctp:121;161
+#: View/Accessories/view.ctp:150;190
 #: View/AccessoriesDancestyles/view.ctp:14
+#: View/AccessoriesPhotos/view.ctp:24
 #: View/AccessoriesVideos/view.ctp:24
+#: View/Attachments/view.ctp:24;72;141;210;279
+#: View/AttachmentsAuditions/view.ctp:24
+#: View/AttachmentsCalls/view.ctp:24
+#: View/AttachmentsCastings/view.ctp:24
+#: View/AttachmentsJobs/view.ctp:24
 #: View/AuditionsDancestyles/view.ctp:14
+#: View/AuditionsPhotos/view.ctp:24
 #: View/AuditionsProfessions/view.ctp:14
 #: View/AuditionsVideos/view.ctp:24
 #: View/Bannercategories/view.ctp:19;55
 #: View/Banners/view.ctp:59;92
 #: View/BannersBannercategories/view.ctp:24
-#: View/Calls/view.ctp:180;222;257
+#: View/Calls/view.ctp:231;273;308
 #: View/CallsDancestyles/view.ctp:14
+#: View/CallsPhotos/view.ctp:24
 #: View/CallsProfessions/view.ctp:14
 #: View/CallsVideos/view.ctp:24
-#: View/Castings/view.ctp:178;220;255
+#: View/Castings/view.ctp:228;270;305
 #: View/CastingsDancestyles/view.ctp:14
+#: View/CastingsPhotos/view.ctp:24
 #: View/CastingsProfessions/view.ctp:14
 #: View/CastingsVideos/view.ctp:24
 #: View/Countries/view.ctp:19;45
 #: View/Dancestyles/view.ctp:19;68
-#: View/Estudies/view.ctp:131;171
+#: View/Estudies/view.ctp:203;243
 #: View/EstudiesDancestyles/view.ctp:14
+#: View/EstudiesPhotos/view.ctp:24
 #: View/EstudiesTimetables/view.ctp:24
 #: View/EstudiesVideos/view.ctp:24
-#: View/Jobs/view.ctp:179;221;256
+#: View/Jobs/view.ctp:229;271;306
 #: View/JobsDancestyles/view.ctp:14
+#: View/JobsPhotos/view.ctp:24
 #: View/JobsProfessions/view.ctp:14
 #: View/JobsVideos/view.ctp:24
+#: View/Photos/view.ctp:24;60
 #: View/PracticeroomsDancestyles/view.ctp:14
+#: View/PracticeroomsPhotos/view.ctp:24
 #: View/PracticeroomsTimetables/view.ctp:24
 #: View/PracticeroomsVideos/view.ctp:24
 #: View/Professions/view.ctp:19;68
@@ -2696,31 +3452,42 @@ msgstr "Creado"
 msgid "Modified"
 msgstr "Modificado"
 
-#: View/Accessories/view.ctp:131
+#: View/Accessories/view.ctp:160
 #: View/AccessoriesDancestyles/view.ctp:29
+#: View/AccessoriesPhotos/view.ctp:29
 #: View/AccessoriesVideos/view.ctp:29
+#: View/AttachmentsAuditions/view.ctp:29
+#: View/AttachmentsCalls/view.ctp:29
+#: View/AttachmentsCastings/view.ctp:29
+#: View/AttachmentsJobs/view.ctp:29
 #: View/AuditionsDancestyles/view.ctp:29
+#: View/AuditionsPhotos/view.ctp:29
 #: View/AuditionsProfessions/view.ctp:29
 #: View/AuditionsVideos/view.ctp:29
 #: View/Bannercategories/view.ctp:24
 #: View/Banners/view.ctp:64
-#: View/Calls/view.ctp:190
+#: View/Calls/view.ctp:241
 #: View/CallsDancestyles/view.ctp:29
+#: View/CallsPhotos/view.ctp:29
 #: View/CallsProfessions/view.ctp:29
 #: View/CallsVideos/view.ctp:29
-#: View/Castings/view.ctp:188
+#: View/Castings/view.ctp:238
 #: View/CastingsDancestyles/view.ctp:29
+#: View/CastingsPhotos/view.ctp:29
 #: View/CastingsProfessions/view.ctp:29
 #: View/CastingsVideos/view.ctp:29
 #: View/Dancestyles/view.ctp:24
-#: View/Estudies/view.ctp:141
+#: View/Estudies/view.ctp:213
 #: View/EstudiesDancestyles/view.ctp:29
+#: View/EstudiesPhotos/view.ctp:29
 #: View/EstudiesVideos/view.ctp:29
-#: View/Jobs/view.ctp:189
+#: View/Jobs/view.ctp:239
 #: View/JobsDancestyles/view.ctp:29
+#: View/JobsPhotos/view.ctp:29
 #: View/JobsProfessions/view.ctp:29
 #: View/JobsVideos/view.ctp:29
 #: View/PracticeroomsDancestyles/view.ctp:29
+#: View/PracticeroomsPhotos/view.ctp:29
 #: View/PracticeroomsVideos/view.ctp:29
 #: View/Professions/view.ctp:24
 #: View/Users/admin_view.ctp:4
@@ -2728,26 +3495,28 @@ msgstr "Modificado"
 msgid "User"
 msgstr "Usuario"
 
-#: View/Accessories/view.ctp:142
+#: View/Accessories/view.ctp:171
 msgid "Delete Accessory"
 msgstr "Eliminar Accesorio"
 
-#: View/Accessories/view.ctp:154
-#: View/Calls/view.ctp:215
-#: View/Castings/view.ctp:213
-#: View/Estudies/view.ctp:164
-#: View/Jobs/view.ctp:214
+#: View/Accessories/view.ctp:183
+#: View/Calls/view.ctp:266
+#: View/Castings/view.ctp:263
+#: View/Estudies/view.ctp:236
+#: View/Jobs/view.ctp:264
 msgid "Related Dancestyles"
 msgstr "Estilos de Danza Relacionados"
 
-#: View/Accessories/view.ctp:162
+#: View/Accessories/view.ctp:191
+#: View/Attachments/view.ctp:74;143;212;281
 #: View/Bannercategories/view.ctp:56
 #: View/Banners/view.ctp:93
-#: View/Calls/view.ctp:223;258
-#: View/Castings/view.ctp:221;256
+#: View/Calls/view.ctp:274;309
+#: View/Castings/view.ctp:271;306
 #: View/Dancestyles/view.ctp:70
-#: View/Estudies/view.ctp:172
-#: View/Jobs/view.ctp:222;257
+#: View/Estudies/view.ctp:244
+#: View/Jobs/view.ctp:272;307
+#: View/Photos/view.ctp:62
 #: View/Professions/view.ctp:70
 #: View/Timetables/view.ctp:56
 #: View/Users/admin_view.ctp:94
@@ -2799,6 +3568,125 @@ msgstr "Listar Estilos de Danza"
 #: View/AccessoriesDancestyles/view.ctp:40
 #, fuzzy
 msgid "Delete Accessories Dancestyle"
+msgstr "Eliminar Estilo de Danza"
+
+#: View/AccessoriesPhotos/add.ctp:4
+#, fuzzy
+msgid "Add Accessories Photo"
+msgstr "Nuevo Estilo de Danza"
+
+#: View/AccessoriesPhotos/add.ctp:17
+#: View/AccessoriesPhotos/edit.ctp:19
+#: View/AccessoriesPhotos/view.ctp:41
+#, fuzzy
+msgid "List Accessories Photos"
+msgstr "Listar Estilos de Danza"
+
+#: View/AccessoriesPhotos/add.ctp:20
+#: View/AccessoriesPhotos/edit.ctp:22
+#: View/AccessoriesPhotos/index.ctp:55
+#: View/AccessoriesPhotos/view.ctp:45
+#: View/AuditionsPhotos/add.ctp:20
+#: View/AuditionsPhotos/edit.ctp:22
+#: View/AuditionsPhotos/index.ctp:55
+#: View/AuditionsPhotos/view.ctp:45
+#: View/CallsPhotos/add.ctp:20
+#: View/CallsPhotos/edit.ctp:22
+#: View/CallsPhotos/index.ctp:55
+#: View/CallsPhotos/view.ctp:45
+#: View/CastingsPhotos/add.ctp:20
+#: View/CastingsPhotos/edit.ctp:22
+#: View/CastingsPhotos/index.ctp:55
+#: View/CastingsPhotos/view.ctp:45
+#: View/EstudiesPhotos/add.ctp:20
+#: View/EstudiesPhotos/edit.ctp:22
+#: View/EstudiesPhotos/index.ctp:53
+#: View/EstudiesPhotos/view.ctp:45
+#: View/JobsPhotos/add.ctp:20
+#: View/JobsPhotos/edit.ctp:22
+#: View/JobsPhotos/index.ctp:55
+#: View/JobsPhotos/view.ctp:45
+#: View/Photos/add.ctp:17
+#: View/Photos/edit.ctp:19
+#: View/Photos/view.ctp:36
+#: View/PracticeroomsPhotos/add.ctp:20
+#: View/PracticeroomsPhotos/edit.ctp:22
+#: View/PracticeroomsPhotos/index.ctp:55
+#: View/PracticeroomsPhotos/view.ctp:45
+#, fuzzy
+msgid "List Photos"
+msgstr "Lista de Notas"
+
+#: View/AccessoriesPhotos/add.ctp:21
+#: View/AccessoriesPhotos/edit.ctp:23
+#: View/AccessoriesPhotos/index.ctp:56
+#: View/AccessoriesPhotos/view.ctp:46
+#: View/AuditionsPhotos/add.ctp:21
+#: View/AuditionsPhotos/edit.ctp:23
+#: View/AuditionsPhotos/index.ctp:56
+#: View/AuditionsPhotos/view.ctp:46
+#: View/CallsPhotos/add.ctp:21
+#: View/CallsPhotos/edit.ctp:23
+#: View/CallsPhotos/index.ctp:56
+#: View/CallsPhotos/view.ctp:46
+#: View/CastingsPhotos/add.ctp:21
+#: View/CastingsPhotos/edit.ctp:23
+#: View/CastingsPhotos/index.ctp:56
+#: View/CastingsPhotos/view.ctp:46
+#: View/EstudiesPhotos/add.ctp:21
+#: View/EstudiesPhotos/edit.ctp:23
+#: View/EstudiesPhotos/index.ctp:54
+#: View/EstudiesPhotos/view.ctp:46
+#: View/JobsPhotos/add.ctp:21
+#: View/JobsPhotos/edit.ctp:23
+#: View/JobsPhotos/index.ctp:56
+#: View/JobsPhotos/view.ctp:46
+#: View/Photos/index.ctp:44
+#: View/Photos/view.ctp:37
+#: View/PracticeroomsPhotos/add.ctp:21
+#: View/PracticeroomsPhotos/edit.ctp:23
+#: View/PracticeroomsPhotos/index.ctp:56
+#: View/PracticeroomsPhotos/view.ctp:46
+#, fuzzy
+msgid "New Photo"
+msgstr "Nueva Nota"
+
+#: View/AccessoriesPhotos/edit.ctp:4
+#: View/AccessoriesPhotos/view.ctp:39
+#, fuzzy
+msgid "Edit Accessories Photo"
+msgstr "Listar Estilos de Danza"
+
+#: View/AccessoriesPhotos/index.ctp:2
+#, fuzzy
+msgid "Accessories Photos"
+msgstr "Accesorios"
+
+#: View/AccessoriesPhotos/index.ctp:52
+#: View/AccessoriesPhotos/view.ctp:42
+#, fuzzy
+msgid "New Accessories Photo"
+msgstr "Nuevo Accesorio"
+
+#: View/AccessoriesPhotos/view.ctp:2
+#, fuzzy
+msgid "Accessories Photo"
+msgstr "Accesorios"
+
+#: View/AccessoriesPhotos/view.ctp:14
+#: View/AuditionsPhotos/view.ctp:14
+#: View/CallsPhotos/view.ctp:14
+#: View/CastingsPhotos/view.ctp:14
+#: View/EstudiesPhotos/view.ctp:14
+#: View/JobsPhotos/view.ctp:14
+#: View/Photos/view.ctp:2
+#: View/PracticeroomsPhotos/view.ctp:14
+msgid "Photo"
+msgstr ""
+
+#: View/AccessoriesPhotos/view.ctp:40
+#, fuzzy
+msgid "Delete Accessories Photo"
 msgstr "Eliminar Estilo de Danza"
 
 #: View/AccessoriesVideos/add.ctp:4
@@ -2907,11 +3795,349 @@ msgstr "Accesorios"
 msgid "Delete Accessories Video"
 msgstr "Eliminar Estilo de Danza"
 
-#: View/Auditions/add.ctp:5
-#: View/Auditions/edit.ctp:6
-msgid "Add Audition"
+#: View/Attachments/add.ctp:4
+#, fuzzy
+msgid "Add Attachment"
+msgstr "Agregar Provincia"
+
+#: View/Attachments/add.ctp:20
+#: View/Attachments/edit.ctp:22
+#: View/Attachments/view.ctp:36
+#: View/AttachmentsAuditions/add.ctp:20
+#: View/AttachmentsAuditions/edit.ctp:22
+#: View/AttachmentsAuditions/index.ctp:55
+#: View/AttachmentsAuditions/view.ctp:45
+#: View/AttachmentsCalls/add.ctp:20
+#: View/AttachmentsCalls/edit.ctp:22
+#: View/AttachmentsCalls/index.ctp:55
+#: View/AttachmentsCalls/view.ctp:45
+#: View/AttachmentsCastings/add.ctp:20
+#: View/AttachmentsCastings/edit.ctp:22
+#: View/AttachmentsCastings/index.ctp:55
+#: View/AttachmentsCastings/view.ctp:45
+#: View/AttachmentsJobs/add.ctp:20
+#: View/AttachmentsJobs/edit.ctp:22
+#: View/AttachmentsJobs/index.ctp:55
+#: View/AttachmentsJobs/view.ctp:45
+#, fuzzy
+msgid "List Attachments"
+msgstr "Listar Provincias"
+
+#: View/Attachments/add.ctp:21
+#: View/Attachments/edit.ctp:23
+#: View/Attachments/index.ctp:45
+#: View/Attachments/view.ctp:38
+#: View/AttachmentsAuditions/add.ctp:18
+#: View/AttachmentsAuditions/edit.ctp:20
+#: View/AttachmentsAuditions/index.ctp:53
+#: View/AttachmentsAuditions/view.ctp:43
+#: View/Auditions/edit.ctp:437
+#: View/AuditionsDancestyles/add.ctp:18
+#: View/AuditionsDancestyles/edit.ctp:20
+#: View/AuditionsDancestyles/index.ctp:53
+#: View/AuditionsDancestyles/view.ctp:43
+#: View/AuditionsPhotos/add.ctp:18
+#: View/AuditionsPhotos/edit.ctp:20
+#: View/AuditionsPhotos/index.ctp:53
+#: View/AuditionsPhotos/view.ctp:43
+#: View/AuditionsProfessions/add.ctp:18
+#: View/AuditionsProfessions/edit.ctp:20
+#: View/AuditionsProfessions/index.ctp:53
+#: View/AuditionsProfessions/view.ctp:43
+#: View/AuditionsVideos/add.ctp:18
+#: View/AuditionsVideos/edit.ctp:20
+#: View/AuditionsVideos/index.ctp:53
+#: View/AuditionsVideos/view.ctp:43
+#: View/CastingsDancestyles/add.ctp:18
+#: View/CastingsDancestyles/edit.ctp:20
+#: View/CastingsDancestyles/index.ctp:53
+#: View/CastingsDancestyles/view.ctp:43
+#: View/CastingsProfessions/add.ctp:18
+#: View/CastingsProfessions/edit.ctp:20
+#: View/CastingsProfessions/index.ctp:53
+#: View/CastingsProfessions/view.ctp:43
+#: View/Dancestyles/add.ctp:20
+#: View/Dancestyles/edit.ctp:22
+#: View/Dancestyles/index.ctp:49
+#: View/Dancestyles/view.ctp:40
+#: View/Professions/add.ctp:20
+#: View/Professions/edit.ctp:22
+#: View/Professions/index.ctp:49
+#: View/Professions/view.ctp:40
+msgid "List Auditions"
+msgstr "Listar Audiciones"
+
+#: View/Attachments/add.ctp:22
+#: View/Attachments/edit.ctp:24
+#: View/Attachments/index.ctp:46
+#: View/Attachments/view.ctp:39;113
+#: View/AttachmentsAuditions/add.ctp:19
+#: View/AttachmentsAuditions/edit.ctp:21
+#: View/AttachmentsAuditions/index.ctp:54
+#: View/AttachmentsAuditions/view.ctp:44
+#: View/Auditions/index.ctp:49
+#: View/AuditionsDancestyles/add.ctp:19
+#: View/AuditionsDancestyles/edit.ctp:21
+#: View/AuditionsDancestyles/index.ctp:54
+#: View/AuditionsDancestyles/view.ctp:44
+#: View/AuditionsPhotos/add.ctp:19
+#: View/AuditionsPhotos/edit.ctp:21
+#: View/AuditionsPhotos/index.ctp:54
+#: View/AuditionsPhotos/view.ctp:44
+#: View/AuditionsProfessions/add.ctp:19
+#: View/AuditionsProfessions/edit.ctp:21
+#: View/AuditionsProfessions/index.ctp:54
+#: View/AuditionsProfessions/view.ctp:44
+#: View/AuditionsVideos/add.ctp:19
+#: View/AuditionsVideos/edit.ctp:21
+#: View/AuditionsVideos/index.ctp:54
+#: View/AuditionsVideos/view.ctp:44
+#: View/CastingsDancestyles/add.ctp:19
+#: View/CastingsDancestyles/edit.ctp:21
+#: View/CastingsDancestyles/index.ctp:54
+#: View/CastingsDancestyles/view.ctp:44
+#: View/CastingsProfessions/add.ctp:19
+#: View/CastingsProfessions/edit.ctp:21
+#: View/CastingsProfessions/index.ctp:54
+#: View/CastingsProfessions/view.ctp:44
+#: View/Dancestyles/add.ctp:21
+#: View/Dancestyles/edit.ctp:23
+#: View/Dancestyles/index.ctp:50
+#: View/Dancestyles/view.ctp:41;109
+#: View/Professions/add.ctp:21
+#: View/Professions/edit.ctp:23
+#: View/Professions/index.ctp:50
+#: View/Professions/view.ctp:41;109
+msgid "New Audition"
 msgstr "Nueva Audición"
 
+#: View/Attachments/add.ctp:23
+#: View/Attachments/edit.ctp:25
+#: View/Attachments/index.ctp:47
+#: View/Attachments/view.ctp:40
+#: View/AttachmentsCalls/add.ctp:18
+#: View/AttachmentsCalls/edit.ctp:20
+#: View/AttachmentsCalls/index.ctp:53
+#: View/AttachmentsCalls/view.ctp:43
+#: View/Calls/add.ctp:360
+#: View/Calls/edit.ctp:425
+#: View/Calls/view.ctp:253
+#: View/CallsDancestyles/add.ctp:18
+#: View/CallsDancestyles/edit.ctp:20
+#: View/CallsDancestyles/index.ctp:53
+#: View/CallsDancestyles/view.ctp:43
+#: View/CallsPhotos/add.ctp:18
+#: View/CallsPhotos/edit.ctp:20
+#: View/CallsPhotos/index.ctp:53
+#: View/CallsPhotos/view.ctp:43
+#: View/CallsProfessions/add.ctp:18
+#: View/CallsProfessions/edit.ctp:20
+#: View/CallsProfessions/index.ctp:53
+#: View/CallsProfessions/view.ctp:43
+#: View/CallsVideos/add.ctp:18
+#: View/CallsVideos/edit.ctp:20
+#: View/CallsVideos/index.ctp:53
+#: View/CallsVideos/view.ctp:43
+msgid "List Calls"
+msgstr "Listar Convocatorias"
+
+#: View/Attachments/add.ctp:24
+#: View/Attachments/edit.ctp:26
+#: View/Attachments/index.ctp:48
+#: View/Attachments/view.ctp:41;182
+#: View/AttachmentsCalls/add.ctp:19
+#: View/AttachmentsCalls/edit.ctp:21
+#: View/AttachmentsCalls/index.ctp:54
+#: View/AttachmentsCalls/view.ctp:44
+#: View/Calls/index.ctp:52
+#: View/Calls/view.ctp:254
+#: View/CallsDancestyles/add.ctp:19
+#: View/CallsDancestyles/edit.ctp:21
+#: View/CallsDancestyles/index.ctp:54
+#: View/CallsDancestyles/view.ctp:44
+#: View/CallsPhotos/add.ctp:19
+#: View/CallsPhotos/edit.ctp:21
+#: View/CallsPhotos/index.ctp:54
+#: View/CallsPhotos/view.ctp:44
+#: View/CallsProfessions/add.ctp:19
+#: View/CallsProfessions/edit.ctp:21
+#: View/CallsProfessions/index.ctp:54
+#: View/CallsProfessions/view.ctp:44
+#: View/CallsVideos/add.ctp:19
+#: View/CallsVideos/edit.ctp:21
+#: View/CallsVideos/index.ctp:54
+#: View/CallsVideos/view.ctp:44
+msgid "New Call"
+msgstr "Nueva Convocatoria"
+
+#: View/Attachments/add.ctp:25
+#: View/Attachments/edit.ctp:27
+#: View/Attachments/index.ctp:49
+#: View/Attachments/view.ctp:42
+#: View/AttachmentsCastings/add.ctp:18
+#: View/AttachmentsCastings/edit.ctp:20
+#: View/AttachmentsCastings/index.ctp:53
+#: View/AttachmentsCastings/view.ctp:43
+#: View/Castings/add.ctp:360;407
+#: View/Castings/edit.ctp:425
+#: View/Castings/view.ctp:250
+#: View/CastingsVideos/add.ctp:18
+#: View/CastingsVideos/edit.ctp:20
+#: View/CastingsVideos/index.ctp:53
+#: View/CastingsVideos/view.ctp:43
+#: View/JobsPhotos/add.ctp:18
+#: View/JobsPhotos/edit.ctp:20
+#: View/JobsPhotos/index.ctp:53
+#: View/JobsPhotos/view.ctp:43
+msgid "List Castings"
+msgstr "Listar Castings"
+
+#: View/Attachments/add.ctp:26
+#: View/Attachments/edit.ctp:28
+#: View/Attachments/index.ctp:50
+#: View/Attachments/view.ctp:43;251
+#: View/AttachmentsCastings/add.ctp:19
+#: View/AttachmentsCastings/edit.ctp:21
+#: View/AttachmentsCastings/index.ctp:54
+#: View/AttachmentsCastings/view.ctp:44
+#: View/Castings/index.ctp:141
+#: View/Castings/view.ctp:251
+#: View/CastingsVideos/add.ctp:19
+#: View/CastingsVideos/edit.ctp:21
+#: View/CastingsVideos/index.ctp:54
+#: View/CastingsVideos/view.ctp:44
+#: View/JobsPhotos/add.ctp:19
+#: View/JobsPhotos/edit.ctp:21
+#: View/JobsPhotos/index.ctp:54
+#: View/JobsPhotos/view.ctp:44
+msgid "New Casting"
+msgstr "Nuevo Casting"
+
+#: View/Attachments/add.ctp:27
+#: View/Attachments/edit.ctp:29
+#: View/Attachments/index.ctp:51
+#: View/Attachments/view.ctp:44
+#: View/AttachmentsJobs/add.ctp:18
+#: View/AttachmentsJobs/edit.ctp:20
+#: View/AttachmentsJobs/index.ctp:53
+#: View/AttachmentsJobs/view.ctp:43
+#: View/CastingsPhotos/add.ctp:18
+#: View/CastingsPhotos/edit.ctp:20
+#: View/CastingsPhotos/index.ctp:53
+#: View/CastingsPhotos/view.ctp:43
+#: View/Jobs/add.ctp:365
+#: View/Jobs/edit.ctp:433
+#: View/Jobs/view.ctp:251
+#: View/JobsDancestyles/add.ctp:18
+#: View/JobsDancestyles/edit.ctp:20
+#: View/JobsDancestyles/index.ctp:53
+#: View/JobsDancestyles/view.ctp:43
+#: View/JobsProfessions/add.ctp:18
+#: View/JobsProfessions/edit.ctp:20
+#: View/JobsProfessions/index.ctp:53
+#: View/JobsProfessions/view.ctp:43
+#: View/JobsVideos/add.ctp:18
+#: View/JobsVideos/edit.ctp:20
+#: View/JobsVideos/index.ctp:53
+#: View/JobsVideos/view.ctp:43
+msgid "List Jobs"
+msgstr "Listar Búsqueda Laboral"
+
+#: View/Attachments/add.ctp:28
+#: View/Attachments/edit.ctp:30
+#: View/Attachments/index.ctp:52
+#: View/Attachments/view.ctp:45;320
+#: View/AttachmentsJobs/add.ctp:19
+#: View/AttachmentsJobs/edit.ctp:21
+#: View/AttachmentsJobs/index.ctp:54
+#: View/AttachmentsJobs/view.ctp:44
+#: View/CastingsPhotos/add.ctp:19
+#: View/CastingsPhotos/edit.ctp:21
+#: View/CastingsPhotos/index.ctp:54
+#: View/CastingsPhotos/view.ctp:44
+#: View/Jobs/index.ctp:138
+#: View/Jobs/view.ctp:252
+#: View/JobsDancestyles/add.ctp:19
+#: View/JobsDancestyles/edit.ctp:21
+#: View/JobsDancestyles/index.ctp:54
+#: View/JobsDancestyles/view.ctp:44
+#: View/JobsProfessions/add.ctp:19
+#: View/JobsProfessions/edit.ctp:21
+#: View/JobsProfessions/index.ctp:54
+#: View/JobsProfessions/view.ctp:44
+#: View/JobsVideos/add.ctp:19
+#: View/JobsVideos/edit.ctp:21
+#: View/JobsVideos/index.ctp:54
+#: View/JobsVideos/view.ctp:44
+msgid "New Job"
+msgstr "Nueva Búsqueda Laboral"
+
+#: View/Attachments/edit.ctp:4
+#: View/Attachments/view.ctp:34
+#, fuzzy
+msgid "Edit Attachment"
+msgstr "Editar Provincia"
+
+#: View/Attachments/index.ctp:2
+msgid "Attachments"
+msgstr "Archivos"
+
+#: View/Attachments/index.ctp:44
+#: View/Attachments/view.ctp:37
+#: View/AttachmentsAuditions/add.ctp:21
+#: View/AttachmentsAuditions/edit.ctp:23
+#: View/AttachmentsAuditions/index.ctp:56
+#: View/AttachmentsAuditions/view.ctp:46
+#: View/AttachmentsCalls/add.ctp:21
+#: View/AttachmentsCalls/edit.ctp:23
+#: View/AttachmentsCalls/index.ctp:56
+#: View/AttachmentsCalls/view.ctp:46
+#: View/AttachmentsCastings/add.ctp:21
+#: View/AttachmentsCastings/edit.ctp:23
+#: View/AttachmentsCastings/index.ctp:56
+#: View/AttachmentsCastings/view.ctp:46
+#: View/AttachmentsJobs/add.ctp:21
+#: View/AttachmentsJobs/edit.ctp:23
+#: View/AttachmentsJobs/index.ctp:56
+#: View/AttachmentsJobs/view.ctp:46
+#, fuzzy
+msgid "New Attachment"
+msgstr "Nueva Provincia"
+
+#: View/Attachments/view.ctp:2
+#: View/AttachmentsAuditions/view.ctp:14
+#: View/AttachmentsCalls/view.ctp:14
+#: View/AttachmentsCastings/view.ctp:14
+#: View/AttachmentsJobs/view.ctp:14
+#: View/Auditions/add.ctp:278
+#: View/Auditions/edit.ctp:332
+#: View/Calls/add.ctp:278
+#: View/Calls/edit.ctp:319
+#: View/Castings/add.ctp:278
+#: View/Castings/edit.ctp:319
+#: View/Jobs/add.ctp:278
+#: View/Jobs/edit.ctp:319
+msgid "Attachment"
+msgstr "Archivo"
+
+#: View/Attachments/view.ctp:14
+#: View/Photos/view.ctp:14
+#: View/Videos/view.ctp:14
+msgid "File"
+msgstr "Archivo"
+
+#: View/Attachments/view.ctp:35
+#, fuzzy
+msgid "Delete Attachment"
+msgstr "Eliminar Provincia"
+
+#: View/Attachments/view.ctp:49
+#: View/Dancestyles/view.ctp:45
+#: View/Professions/view.ctp:45
+msgid "Related Auditions"
+msgstr ""
+
+#: View/Attachments/view.ctp:54;123;192;261
 #: View/Auditions/add.ctp:13
 #: View/Auditions/edit.ctp:16
 #: View/Bannercategories/view.ctp:50
@@ -2920,57 +4146,56 @@ msgstr "Nueva Audición"
 #: View/Banners/view.ctp:34
 #: View/Calls/add.ctp:13
 #: View/Calls/edit.ctp:16
-#: View/Calls/view.ctp:90
+#: View/Calls/view.ctp:141
 #: View/Castings/add.ctp:13
 #: View/Castings/edit.ctp:16
-#: View/Castings/view.ctp:88
+#: View/Castings/view.ctp:138
 #: View/Dancestyles/view.ctp:50
 #: View/Jobs/add.ctp:13
 #: View/Jobs/edit.ctp:16
-#: View/Jobs/view.ctp:89
+#: View/Jobs/view.ctp:139
 #: View/Notes/add.ctp:19
 #: View/Notes/edit.ctp:17
 #: View/Professions/view.ctp:50
+#: View/Slidernotes/add.ctp:11
+#: View/Slidernotes/edit.ctp:16
 #: View/Sliders/add.ctp:11
 #: View/Sliders/edit.ctp:16
 #: View/Users/admin_view.ctp:89
 msgid "Title"
 msgstr "Título"
 
-#: View/Auditions/add.ctp:18
-#: View/Auditions/edit.ctp:21
-msgid "Audition title"
-msgstr "Título de la Audición"
-
+#: View/Attachments/view.ctp:57;126;195;264
 #: View/Auditions/add.ctp:52;57
 #: View/Auditions/edit.ctp:81;86
 #: View/Calls/add.ctp:52;57
 #: View/Calls/edit.ctp:68;73
-#: View/Calls/view.ctp:105
+#: View/Calls/view.ctp:156
 #: View/Castings/add.ctp:52;57
 #: View/Castings/edit.ctp:68;73
-#: View/Castings/view.ctp:103
+#: View/Castings/view.ctp:153
 #: View/Dancestyles/view.ctp:53
 #: View/Jobs/add.ctp:52;57
 #: View/Jobs/edit.ctp:68;73
-#: View/Jobs/view.ctp:104
+#: View/Jobs/view.ctp:154
 #: View/Professions/view.ctp:53
 msgid "Company"
 msgstr "Compañía o Grupo"
 
+#: View/Attachments/view.ctp:58;127;196;265
 #: View/Auditions/add.ctp:64
 #: View/Auditions/edit.ctp:93
 #: View/Calls/add.ctp:64
 #: View/Calls/edit.ctp:80
-#: View/Calls/view.ctp:110
+#: View/Calls/view.ctp:161
 #: View/Castings/add.ctp:64
 #: View/Castings/edit.ctp:80
-#: View/Castings/view.ctp:108
+#: View/Castings/view.ctp:158
 #: View/Dancestyles/view.ctp:54
 #: View/Elements/modal_register.ctp:47
 #: View/Jobs/add.ctp:64
 #: View/Jobs/edit.ctp:80
-#: View/Jobs/view.ctp:109
+#: View/Jobs/view.ctp:159
 #: View/Professions/view.ctp:54
 #: View/Rols/view.ctp:57
 #: View/States/view.ctp:54
@@ -2979,6 +4204,269 @@ msgstr "Compañía o Grupo"
 #: View/Users/view.ctp:24
 msgid "Gender"
 msgstr "Género"
+
+#: View/Attachments/view.ctp:59;128;197;266
+#: View/Calls/view.ctp:166
+#: View/Castings/view.ctp:163
+#: View/Dancestyles/view.ctp:55
+#: View/Jobs/view.ctp:164
+#: View/Professions/view.ctp:55
+msgid "Age-start"
+msgstr "Edad mínima"
+
+#: View/Attachments/view.ctp:60;129;198;267
+#: View/Calls/view.ctp:171
+#: View/Castings/view.ctp:168
+#: View/Dancestyles/view.ctp:56
+#: View/Jobs/view.ctp:169
+#: View/Professions/view.ctp:56
+msgid "Age-end"
+msgstr "Edad máxima"
+
+#: View/Attachments/view.ctp:61;130;199;268
+msgid "Element-date"
+msgstr ""
+
+#: View/Attachments/view.ctp:65;134;203;272
+#: View/Castings/view.ctp:193
+#: View/Jobs/view.ctp:194
+msgid "Inscription-start"
+msgstr "Inicio-Inscripción"
+
+#: View/Attachments/view.ctp:66;135;204;273
+#: View/Castings/view.ctp:198
+#: View/Dancestyles/view.ctp:62
+#: View/Jobs/view.ctp:199
+#: View/Professions/view.ctp:62
+msgid "Inscription-end"
+msgstr "Fin-Inscripción"
+
+#: View/Attachments/view.ctp:67;136;205;274
+#: View/Calls/view.ctp:206
+#: View/Castings/view.ctp:203
+#: View/Dancestyles/view.ctp:63
+#: View/Jobs/view.ctp:204
+#: View/Professions/view.ctp:63
+msgid "Inscription-place"
+msgstr "Lugar-Inscripción"
+
+#: View/Attachments/view.ctp:73;142;211;280
+#: View/Dancestyles/view.ctp:69
+#: View/Photos/view.ctp:61
+#: View/Professions/view.ctp:69
+#: View/Rols/view.ctp:63
+#: View/States/view.ctp:60
+#: View/Timetables/view.ctp:55
+#: View/Videos/view.ctp:60
+msgid "State Id"
+msgstr "Provincia"
+
+#: View/Attachments/view.ctp:118
+#, fuzzy
+msgid "Related Calls"
+msgstr "Eliminar Convocatoria"
+
+#: View/Attachments/view.ctp:187
+#, fuzzy
+msgid "Related Castings"
+msgstr "Eliminar Casting"
+
+#: View/Attachments/view.ctp:256
+#, fuzzy
+msgid "Related Jobs"
+msgstr "Notas Relacionadas"
+
+#: View/AttachmentsAuditions/add.ctp:4
+#, fuzzy
+msgid "Add Attachments Audition"
+msgstr "Nueva Audición"
+
+#: View/AttachmentsAuditions/add.ctp:17
+#: View/AttachmentsAuditions/edit.ctp:19
+#: View/AttachmentsAuditions/view.ctp:41
+#, fuzzy
+msgid "List Attachments Auditions"
+msgstr "Listar Audiciones"
+
+#: View/AttachmentsAuditions/edit.ctp:4
+#: View/AttachmentsAuditions/view.ctp:39
+#, fuzzy
+msgid "Edit Attachments Audition"
+msgstr "Editar Audición"
+
+#: View/AttachmentsAuditions/index.ctp:2
+#, fuzzy
+msgid "Attachments Auditions"
+msgstr "Listar Audiciones"
+
+#: View/AttachmentsAuditions/index.ctp:52
+#: View/AttachmentsAuditions/view.ctp:42
+#, fuzzy
+msgid "New Attachments Audition"
+msgstr "Nueva Audición"
+
+#: View/AttachmentsAuditions/view.ctp:2
+#, fuzzy
+msgid "Attachments Audition"
+msgstr "Nueva Audición"
+
+#: View/AttachmentsAuditions/view.ctp:9
+#: View/AuditionsDancestyles/view.ctp:19
+#: View/AuditionsPhotos/view.ctp:9
+#: View/AuditionsProfessions/view.ctp:19
+#: View/AuditionsVideos/view.ctp:9
+#: View/CastingsDancestyles/view.ctp:19
+#: View/CastingsProfessions/view.ctp:19
+msgid "Audition"
+msgstr "Audición"
+
+#: View/AttachmentsAuditions/view.ctp:40
+#, fuzzy
+msgid "Delete Attachments Audition"
+msgstr "Eliminar Audición"
+
+#: View/AttachmentsCalls/add.ctp:4
+msgid "Add Attachments Call"
+msgstr ""
+
+#: View/AttachmentsCalls/add.ctp:17
+#: View/AttachmentsCalls/edit.ctp:19
+#: View/AttachmentsCalls/view.ctp:41
+#, fuzzy
+msgid "List Attachments Calls"
+msgstr "Listar Convocatorias"
+
+#: View/AttachmentsCalls/edit.ctp:4
+#: View/AttachmentsCalls/view.ctp:39
+#, fuzzy
+msgid "Edit Attachments Call"
+msgstr "Editar Convocatoria"
+
+#: View/AttachmentsCalls/index.ctp:2
+msgid "Attachments Calls"
+msgstr ""
+
+#: View/AttachmentsCalls/index.ctp:52
+#: View/AttachmentsCalls/view.ctp:42
+msgid "New Attachments Call"
+msgstr ""
+
+#: View/AttachmentsCalls/view.ctp:2
+msgid "Attachments Call"
+msgstr ""
+
+#: View/AttachmentsCalls/view.ctp:9
+#: View/Calls/view.ctp:134
+#: View/CallsDancestyles/view.ctp:19
+#: View/CallsPhotos/view.ctp:9
+#: View/CallsProfessions/view.ctp:19
+#: View/CallsVideos/view.ctp:9
+msgid "Call"
+msgstr "Convocatoria"
+
+#: View/AttachmentsCalls/view.ctp:40
+#, fuzzy
+msgid "Delete Attachments Call"
+msgstr "Eliminar Convocatoria"
+
+#: View/AttachmentsCastings/add.ctp:4
+#, fuzzy
+msgid "Add Attachments Casting"
+msgstr "Nuevo Casting"
+
+#: View/AttachmentsCastings/add.ctp:17
+#: View/AttachmentsCastings/edit.ctp:19
+#: View/AttachmentsCastings/view.ctp:41
+#, fuzzy
+msgid "List Attachments Castings"
+msgstr "Listar Castings"
+
+#: View/AttachmentsCastings/edit.ctp:4
+#: View/AttachmentsCastings/view.ctp:39
+#, fuzzy
+msgid "Edit Attachments Casting"
+msgstr "Editar Casting"
+
+#: View/AttachmentsCastings/index.ctp:2
+#, fuzzy
+msgid "Attachments Castings"
+msgstr "Listar Castings"
+
+#: View/AttachmentsCastings/index.ctp:52
+#: View/AttachmentsCastings/view.ctp:42
+#, fuzzy
+msgid "New Attachments Casting"
+msgstr "Nuevo Casting"
+
+#: View/AttachmentsCastings/view.ctp:2
+#, fuzzy
+msgid "Attachments Casting"
+msgstr "Eliminar Casting"
+
+#: View/AttachmentsCastings/view.ctp:9
+#: View/Castings/view.ctp:131
+#: View/CastingsVideos/view.ctp:9
+#: View/JobsPhotos/view.ctp:9
+msgid "Casting"
+msgstr ""
+
+#: View/AttachmentsCastings/view.ctp:40
+#, fuzzy
+msgid "Delete Attachments Casting"
+msgstr "Eliminar Casting"
+
+#: View/AttachmentsJobs/add.ctp:4
+msgid "Add Attachments Job"
+msgstr ""
+
+#: View/AttachmentsJobs/add.ctp:17
+#: View/AttachmentsJobs/edit.ctp:19
+#: View/AttachmentsJobs/view.ctp:41
+#, fuzzy
+msgid "List Attachments Jobs"
+msgstr "Listar Búsqueda Laboral"
+
+#: View/AttachmentsJobs/edit.ctp:4
+#: View/AttachmentsJobs/view.ctp:39
+msgid "Edit Attachments Job"
+msgstr ""
+
+#: View/AttachmentsJobs/index.ctp:2
+msgid "Attachments Jobs"
+msgstr ""
+
+#: View/AttachmentsJobs/index.ctp:52
+#: View/AttachmentsJobs/view.ctp:42
+msgid "New Attachments Job"
+msgstr ""
+
+#: View/AttachmentsJobs/view.ctp:2
+msgid "Attachments Job"
+msgstr ""
+
+#: View/AttachmentsJobs/view.ctp:9
+#: View/CastingsPhotos/view.ctp:9
+#: View/Jobs/view.ctp:132
+#: View/JobsDancestyles/view.ctp:19
+#: View/JobsProfessions/view.ctp:19
+#: View/JobsVideos/view.ctp:9
+msgid "Job"
+msgstr "Trabajo"
+
+#: View/AttachmentsJobs/view.ctp:40
+#, fuzzy
+msgid "Delete Attachments Job"
+msgstr "Eliminar Accesorio"
+
+#: View/Auditions/add.ctp:5
+#: View/Auditions/edit.ctp:6
+msgid "Add Audition"
+msgstr "Nueva Audición"
+
+#: View/Auditions/add.ctp:18
+#: View/Auditions/edit.ctp:21
+msgid "Audition title"
+msgstr "Título de la Audición"
 
 #: View/Auditions/add.ctp:75;80
 #: View/Auditions/edit.ctp:104;109
@@ -3040,84 +4528,52 @@ msgstr "Fin de Inscripción"
 msgid "Inscription place"
 msgstr "Lugar de Inscripción"
 
-#: View/Auditions/add.ctp:277;282
-#: View/Auditions/edit.ctp:331;336
+#: View/Auditions/add.ctp:289;294
+#: View/Auditions/edit.ctp:365;370
 #: View/AuditionsProfessions/view.ctp:24
-#: View/Calls/add.ctp:277;282
-#: View/Calls/edit.ctp:318;323
+#: View/Calls/add.ctp:289;294
+#: View/Calls/edit.ctp:352;357
 #: View/CallsProfessions/view.ctp:24
-#: View/Castings/add.ctp:277;282
-#: View/Castings/edit.ctp:318;323
+#: View/Castings/add.ctp:289;294
+#: View/Castings/edit.ctp:352;357
 #: View/CastingsProfessions/view.ctp:24
-#: View/Jobs/add.ctp:277;282
-#: View/Jobs/edit.ctp:318;323
+#: View/Jobs/add.ctp:289;294
+#: View/Jobs/edit.ctp:352;357
 #: View/JobsProfessions/view.ctp:24
 #: View/Professions/view.ctp:2
 msgid "Profession"
 msgstr "Profesión"
 
-#: View/Auditions/edit.ctp:357
+#: View/Auditions/edit.ctp:404
 msgid "Edit Audition"
 msgstr "Editar Audición"
 
-#: View/Auditions/edit.ctp:390
-#: View/AuditionsDancestyles/add.ctp:18
-#: View/AuditionsDancestyles/edit.ctp:20
-#: View/AuditionsDancestyles/index.ctp:53
-#: View/AuditionsDancestyles/view.ctp:43
-#: View/AuditionsProfessions/add.ctp:18
-#: View/AuditionsProfessions/edit.ctp:20
-#: View/AuditionsProfessions/index.ctp:53
-#: View/AuditionsProfessions/view.ctp:43
-#: View/AuditionsVideos/add.ctp:18
-#: View/AuditionsVideos/edit.ctp:20
-#: View/AuditionsVideos/index.ctp:53
-#: View/AuditionsVideos/view.ctp:43
-#: View/CastingsDancestyles/add.ctp:18
-#: View/CastingsDancestyles/edit.ctp:20
-#: View/CastingsDancestyles/index.ctp:53
-#: View/CastingsDancestyles/view.ctp:43
-#: View/CastingsProfessions/add.ctp:18
-#: View/CastingsProfessions/edit.ctp:20
-#: View/CastingsProfessions/index.ctp:53
-#: View/CastingsProfessions/view.ctp:43
-#: View/Dancestyles/add.ctp:20
-#: View/Dancestyles/edit.ctp:22
-#: View/Dancestyles/index.ctp:49
-#: View/Dancestyles/view.ctp:40
-#: View/Professions/add.ctp:20
-#: View/Professions/edit.ctp:22
-#: View/Professions/index.ctp:49
-#: View/Professions/view.ctp:40
-msgid "List Auditions"
-msgstr "Listar Audiciones"
-
-#: View/Auditions/edit.ctp:397
+#: View/Auditions/edit.ctp:444
 #: View/Auditions/index.ctp:56
 #: View/AuditionsProfessions/add.ctp:20
 #: View/AuditionsProfessions/edit.ctp:22
 #: View/AuditionsProfessions/index.ctp:55
 #: View/AuditionsProfessions/view.ctp:45
-#: View/Calls/add.ctp:342
-#: View/Calls/edit.ctp:385
+#: View/Calls/add.ctp:367
+#: View/Calls/edit.ctp:432
 #: View/Calls/index.ctp:59
-#: View/Calls/view.ctp:210
+#: View/Calls/view.ctp:261
 #: View/CallsProfessions/add.ctp:20
 #: View/CallsProfessions/edit.ctp:22
 #: View/CallsProfessions/index.ctp:55
 #: View/CallsProfessions/view.ctp:45
-#: View/Castings/add.ctp:342;389
-#: View/Castings/edit.ctp:385
+#: View/Castings/add.ctp:367;414
+#: View/Castings/edit.ctp:432
 #: View/Castings/index.ctp:148
-#: View/Castings/view.ctp:208
+#: View/Castings/view.ctp:258
 #: View/CastingsProfessions/add.ctp:20
 #: View/CastingsProfessions/edit.ctp:22
 #: View/CastingsProfessions/index.ctp:55
 #: View/CastingsProfessions/view.ctp:45
-#: View/Jobs/add.ctp:347
-#: View/Jobs/edit.ctp:393
+#: View/Jobs/add.ctp:372
+#: View/Jobs/edit.ctp:440
 #: View/Jobs/index.ctp:145
-#: View/Jobs/view.ctp:209
+#: View/Jobs/view.ctp:259
 #: View/JobsProfessions/add.ctp:20
 #: View/JobsProfessions/edit.ctp:22
 #: View/JobsProfessions/index.ctp:55
@@ -3128,32 +4584,32 @@ msgstr "Listar Audiciones"
 msgid "List Professions"
 msgstr "Lista de Profesiones"
 
-#: View/Auditions/edit.ctp:398
+#: View/Auditions/edit.ctp:445
 #: View/Auditions/index.ctp:57
 #: View/AuditionsProfessions/add.ctp:21
 #: View/AuditionsProfessions/edit.ctp:23
 #: View/AuditionsProfessions/index.ctp:56
 #: View/AuditionsProfessions/view.ctp:46
-#: View/Calls/add.ctp:343
-#: View/Calls/edit.ctp:386
+#: View/Calls/add.ctp:368
+#: View/Calls/edit.ctp:433
 #: View/Calls/index.ctp:60
-#: View/Calls/view.ctp:211;280
+#: View/Calls/view.ctp:262;331
 #: View/CallsProfessions/add.ctp:21
 #: View/CallsProfessions/edit.ctp:23
 #: View/CallsProfessions/index.ctp:56
 #: View/CallsProfessions/view.ctp:46
-#: View/Castings/add.ctp:343;390
-#: View/Castings/edit.ctp:386
+#: View/Castings/add.ctp:368;415
+#: View/Castings/edit.ctp:433
 #: View/Castings/index.ctp:149
-#: View/Castings/view.ctp:209;278
+#: View/Castings/view.ctp:259;328
 #: View/CastingsProfessions/add.ctp:21
 #: View/CastingsProfessions/edit.ctp:23
 #: View/CastingsProfessions/index.ctp:56
 #: View/CastingsProfessions/view.ctp:46
-#: View/Jobs/add.ctp:348
-#: View/Jobs/edit.ctp:394
+#: View/Jobs/add.ctp:373
+#: View/Jobs/edit.ctp:441
 #: View/Jobs/index.ctp:146
-#: View/Jobs/view.ctp:210;279
+#: View/Jobs/view.ctp:260;329
 #: View/JobsProfessions/add.ctp:21
 #: View/JobsProfessions/edit.ctp:23
 #: View/JobsProfessions/index.ctp:56
@@ -3166,38 +4622,6 @@ msgstr "Nueva Profesión"
 #: View/Auditions/index.ctp:2
 msgid "Auditions"
 msgstr "Audiciones"
-
-#: View/Auditions/index.ctp:49
-#: View/AuditionsDancestyles/add.ctp:19
-#: View/AuditionsDancestyles/edit.ctp:21
-#: View/AuditionsDancestyles/index.ctp:54
-#: View/AuditionsDancestyles/view.ctp:44
-#: View/AuditionsProfessions/add.ctp:19
-#: View/AuditionsProfessions/edit.ctp:21
-#: View/AuditionsProfessions/index.ctp:54
-#: View/AuditionsProfessions/view.ctp:44
-#: View/AuditionsVideos/add.ctp:19
-#: View/AuditionsVideos/edit.ctp:21
-#: View/AuditionsVideos/index.ctp:54
-#: View/AuditionsVideos/view.ctp:44
-#: View/CastingsDancestyles/add.ctp:19
-#: View/CastingsDancestyles/edit.ctp:21
-#: View/CastingsDancestyles/index.ctp:54
-#: View/CastingsDancestyles/view.ctp:44
-#: View/CastingsProfessions/add.ctp:19
-#: View/CastingsProfessions/edit.ctp:21
-#: View/CastingsProfessions/index.ctp:54
-#: View/CastingsProfessions/view.ctp:44
-#: View/Dancestyles/add.ctp:21
-#: View/Dancestyles/edit.ctp:23
-#: View/Dancestyles/index.ctp:50
-#: View/Dancestyles/view.ctp:41;109
-#: View/Professions/add.ctp:21
-#: View/Professions/edit.ctp:23
-#: View/Professions/index.ctp:50
-#: View/Professions/view.ctp:41;109
-msgid "New Audition"
-msgstr "Nueva Audición"
 
 #: View/AuditionsDancestyles/add.ctp:4
 msgid "Add Auditions Dancestyle"
@@ -3227,17 +4651,48 @@ msgstr "Nuevo Estilo de Danza"
 msgid "Auditions Dancestyle"
 msgstr "Estilos de Danza"
 
-#: View/AuditionsDancestyles/view.ctp:19
-#: View/AuditionsProfessions/view.ctp:19
-#: View/AuditionsVideos/view.ctp:9
-#: View/CastingsDancestyles/view.ctp:19
-#: View/CastingsProfessions/view.ctp:19
-msgid "Audition"
-msgstr "Audición"
-
 #: View/AuditionsDancestyles/view.ctp:40
 msgid "Delete Auditions Dancestyle"
 msgstr "Eliminar Estilo de Danza"
+
+#: View/AuditionsPhotos/add.ctp:4
+#, fuzzy
+msgid "Add Auditions Photo"
+msgstr "Nueva Audición"
+
+#: View/AuditionsPhotos/add.ctp:17
+#: View/AuditionsPhotos/edit.ctp:19
+#: View/AuditionsPhotos/view.ctp:41
+#, fuzzy
+msgid "List Auditions Photos"
+msgstr "Listar Audiciones"
+
+#: View/AuditionsPhotos/edit.ctp:4
+#: View/AuditionsPhotos/view.ctp:39
+#, fuzzy
+msgid "Edit Auditions Photo"
+msgstr "Editar Audición"
+
+#: View/AuditionsPhotos/index.ctp:2
+#, fuzzy
+msgid "Auditions Photos"
+msgstr "Día de Audición"
+
+#: View/AuditionsPhotos/index.ctp:52
+#: View/AuditionsPhotos/view.ctp:42
+#, fuzzy
+msgid "New Auditions Photo"
+msgstr "Nueva Audición"
+
+#: View/AuditionsPhotos/view.ctp:2
+#, fuzzy
+msgid "Auditions Photo"
+msgstr "Audiciones"
+
+#: View/AuditionsPhotos/view.ctp:40
+#, fuzzy
+msgid "Delete Auditions Photo"
+msgstr "Eliminar Audición"
 
 #: View/AuditionsProfessions/add.ctp:4
 msgid "Add Auditions Profession"
@@ -3334,7 +4789,7 @@ msgstr "Listar Categorías de Banner"
 #: View/BannersBannercategories/edit.ctp:19
 #: View/BannersBannercategories/index.ctp:47
 #: View/BannersBannercategories/view.ctp:38
-#: View/Elements/navbar_admin.ctp:108
+#: View/Elements/navbar_admin.ctp:123
 msgid "List Banners"
 msgstr "Listar Banners"
 
@@ -3381,6 +4836,8 @@ msgstr "Banners Relacionados"
 #: View/Banners/add.ctp:38;43
 #: View/Banners/edit.ctp:55;60
 #: View/Banners/view.ctp:44
+#: View/Slidernotes/add.ctp:38;43
+#: View/Slidernotes/edit.ctp:54;59
 #: View/Sliders/add.ctp:38;43
 #: View/Sliders/edit.ctp:54;59
 msgid "Link"
@@ -3390,6 +4847,8 @@ msgstr "Enlace"
 #: View/Banners/add.ctp:51;56
 #: View/Banners/edit.ctp:68;73
 #: View/Banners/view.ctp:49
+#: View/Slidernotes/add.ctp:51;56
+#: View/Slidernotes/edit.ctp:67;72
 #: View/Sliders/add.ctp:51;56
 #: View/Sliders/edit.ctp:67;72
 msgid "Published"
@@ -3402,6 +4861,7 @@ msgstr "Agregar Banner"
 #: View/Banners/add.ctp:16
 #: View/Notes/add.ctp:24
 #: View/Notes/edit.ctp:22
+#: View/Slidernotes/add.ctp:16
 #: View/Sliders/add.ctp:16
 msgid "Note title (max.: 50 characters)"
 msgstr "Título de la Nota  (máx.: 50 caracteres)"
@@ -3480,7 +4940,7 @@ msgstr "Categoría de Banner"
 msgid "Delete Banners Bannercategory"
 msgstr "Eliminar Categoría de Banner"
 
-#: View/Calls/add.ctp:5;304
+#: View/Calls/add.ctp:5;329
 msgid "Add Call"
 msgstr "Nueva Convocatoria"
 
@@ -3494,26 +4954,8 @@ msgstr "Título de Convocatoria"
 msgid "Call date"
 msgstr "Día de Convocatoria"
 
-#: View/Calls/add.ctp:335
-#: View/Calls/edit.ctp:378
-#: View/Calls/view.ctp:202
-#: View/CallsDancestyles/add.ctp:18
-#: View/CallsDancestyles/edit.ctp:20
-#: View/CallsDancestyles/index.ctp:53
-#: View/CallsDancestyles/view.ctp:43
-#: View/CallsProfessions/add.ctp:18
-#: View/CallsProfessions/edit.ctp:20
-#: View/CallsProfessions/index.ctp:53
-#: View/CallsProfessions/view.ctp:43
-#: View/CallsVideos/add.ctp:18
-#: View/CallsVideos/edit.ctp:20
-#: View/CallsVideos/index.ctp:53
-#: View/CallsVideos/view.ctp:43
-msgid "List Calls"
-msgstr "Listar Convocatorias"
-
-#: View/Calls/edit.ctp:6;345
-#: View/Calls/view.ctp:200
+#: View/Calls/edit.ctp:6;392
+#: View/Calls/view.ctp:251
 msgid "Edit Call"
 msgstr "Editar Convocatoria"
 
@@ -3521,75 +4963,27 @@ msgstr "Editar Convocatoria"
 msgid "Calls"
 msgstr "Convocatorias"
 
-#: View/Calls/index.ctp:52
-#: View/Calls/view.ctp:203
-#: View/CallsDancestyles/add.ctp:19
-#: View/CallsDancestyles/edit.ctp:21
-#: View/CallsDancestyles/index.ctp:54
-#: View/CallsDancestyles/view.ctp:44
-#: View/CallsProfessions/add.ctp:19
-#: View/CallsProfessions/edit.ctp:21
-#: View/CallsProfessions/index.ctp:54
-#: View/CallsProfessions/view.ctp:44
-#: View/CallsVideos/add.ctp:19
-#: View/CallsVideos/edit.ctp:21
-#: View/CallsVideos/index.ctp:54
-#: View/CallsVideos/view.ctp:44
-msgid "New Call"
-msgstr "Nueva Convocatoria"
-
-#: View/Calls/view.ctp:83
-#: View/CallsDancestyles/view.ctp:19
-#: View/CallsProfessions/view.ctp:19
-#: View/CallsVideos/view.ctp:9
-msgid "Call"
-msgstr "Convocatoria"
-
-#: View/Calls/view.ctp:115
-#: View/Castings/view.ctp:113
-#: View/Dancestyles/view.ctp:55
-#: View/Jobs/view.ctp:114
-#: View/Professions/view.ctp:55
-msgid "Age-start"
-msgstr "Edad mínima"
-
-#: View/Calls/view.ctp:120
-#: View/Castings/view.ctp:118
-#: View/Dancestyles/view.ctp:56
-#: View/Jobs/view.ctp:119
-#: View/Professions/view.ctp:56
-msgid "Age-end"
-msgstr "Edad máxima"
-
-#: View/Calls/view.ctp:125
+#: View/Calls/view.ctp:176
 msgid "Call-date"
 msgstr "Día de Convocatoria"
 
-#: View/Calls/view.ctp:145
+#: View/Calls/view.ctp:196
 #, fuzzy
 msgid "Inscription-date-start"
 msgstr "Inicio-Inscripción"
 
-#: View/Calls/view.ctp:150
+#: View/Calls/view.ctp:201
 #, fuzzy
 msgid "Inscription-date-end"
 msgstr "Fin-Inscripción"
 
-#: View/Calls/view.ctp:155
-#: View/Castings/view.ctp:153
-#: View/Dancestyles/view.ctp:63
-#: View/Jobs/view.ctp:154
-#: View/Professions/view.ctp:63
-msgid "Inscription-place"
-msgstr "Lugar-Inscripción"
-
-#: View/Calls/view.ctp:201
+#: View/Calls/view.ctp:252
 msgid "Delete Call"
 msgstr "Eliminar Convocatoria"
 
-#: View/Calls/view.ctp:250
-#: View/Castings/view.ctp:248
-#: View/Jobs/view.ctp:249
+#: View/Calls/view.ctp:301
+#: View/Castings/view.ctp:298
+#: View/Jobs/view.ctp:299
 msgid "Related Professions"
 msgstr "Profesiones Relacionadas"
 
@@ -3631,6 +5025,45 @@ msgstr "Listar Estilos de Danza"
 #, fuzzy
 msgid "Delete Calls Dancestyle"
 msgstr "Eliminar Estilo de Danza"
+
+#: View/CallsPhotos/add.ctp:4
+#, fuzzy
+msgid "Add Calls Photo"
+msgstr "Lista de Profesiones"
+
+#: View/CallsPhotos/add.ctp:17
+#: View/CallsPhotos/edit.ctp:19
+#: View/CallsPhotos/view.ctp:41
+#, fuzzy
+msgid "List Calls Photos"
+msgstr "Lista de Profesiones"
+
+#: View/CallsPhotos/edit.ctp:4
+#: View/CallsPhotos/view.ctp:39
+#, fuzzy
+msgid "Edit Calls Photo"
+msgstr "Lista de Profesiones"
+
+#: View/CallsPhotos/index.ctp:2
+#, fuzzy
+msgid "Calls Photos"
+msgstr "Lista de Profesiones"
+
+#: View/CallsPhotos/index.ctp:52
+#: View/CallsPhotos/view.ctp:42
+#, fuzzy
+msgid "New Calls Photo"
+msgstr "Eliminar Profesión"
+
+#: View/CallsPhotos/view.ctp:2
+#, fuzzy
+msgid "Calls Photo"
+msgstr "Lista de Profesiones"
+
+#: View/CallsPhotos/view.ctp:40
+#, fuzzy
+msgid "Delete Calls Photo"
+msgstr "Eliminar Profesión"
 
 #: View/CallsProfessions/add.ctp:4
 #, fuzzy
@@ -3710,7 +5143,7 @@ msgstr "Día de Convocatoria"
 msgid "Delete Calls Video"
 msgstr "Eliminar"
 
-#: View/Castings/add.ctp:5;304;351
+#: View/Castings/add.ctp:5;329;376
 msgid "Add Casting"
 msgstr "Nuevo Casting"
 
@@ -3724,18 +5157,8 @@ msgstr "Título del Casting"
 msgid "Casting date"
 msgstr "Día de Casting"
 
-#: View/Castings/add.ctp:335;382
-#: View/Castings/edit.ctp:378
-#: View/Castings/view.ctp:200
-#: View/CastingsVideos/add.ctp:18
-#: View/CastingsVideos/edit.ctp:20
-#: View/CastingsVideos/index.ctp:53
-#: View/CastingsVideos/view.ctp:43
-msgid "List Castings"
-msgstr "Listar Castings"
-
-#: View/Castings/edit.ctp:6;345
-#: View/Castings/view.ctp:198
+#: View/Castings/edit.ctp:6;392
+#: View/Castings/view.ctp:248
 msgid "Edit Casting"
 msgstr "Editar Casting"
 
@@ -3743,37 +5166,11 @@ msgstr "Editar Casting"
 msgid "Castings"
 msgstr ""
 
-#: View/Castings/index.ctp:141
-#: View/Castings/view.ctp:201
-#: View/CastingsVideos/add.ctp:19
-#: View/CastingsVideos/edit.ctp:21
-#: View/CastingsVideos/index.ctp:54
-#: View/CastingsVideos/view.ctp:44
-msgid "New Casting"
-msgstr "Nuevo Casting"
-
-#: View/Castings/view.ctp:81
-#: View/CastingsVideos/view.ctp:9
-msgid "Casting"
-msgstr ""
-
-#: View/Castings/view.ctp:123
+#: View/Castings/view.ctp:173
 msgid "Casting-date"
 msgstr "Día de Casting"
 
-#: View/Castings/view.ctp:143
-#: View/Jobs/view.ctp:144
-msgid "Inscription-start"
-msgstr "Inicio-Inscripción"
-
-#: View/Castings/view.ctp:148
-#: View/Dancestyles/view.ctp:62
-#: View/Jobs/view.ctp:149
-#: View/Professions/view.ctp:62
-msgid "Inscription-end"
-msgstr "Fin-Inscripción"
-
-#: View/Castings/view.ctp:199
+#: View/Castings/view.ctp:249
 msgid "Delete Casting"
 msgstr "Eliminar Casting"
 
@@ -3815,6 +5212,45 @@ msgstr "Listar Estilos de Danza"
 #, fuzzy
 msgid "Delete Castings Dancestyle"
 msgstr "Eliminar Estilo de Danza"
+
+#: View/CastingsPhotos/add.ctp:4
+#, fuzzy
+msgid "Add Castings Photo"
+msgstr "Lista de Profesiones"
+
+#: View/CastingsPhotos/add.ctp:17
+#: View/CastingsPhotos/edit.ctp:19
+#: View/CastingsPhotos/view.ctp:41
+#, fuzzy
+msgid "List Castings Photos"
+msgstr "Lista de Profesiones"
+
+#: View/CastingsPhotos/edit.ctp:4
+#: View/CastingsPhotos/view.ctp:39
+#, fuzzy
+msgid "Edit Castings Photo"
+msgstr "Lista de Profesiones"
+
+#: View/CastingsPhotos/index.ctp:2
+#, fuzzy
+msgid "Castings Photos"
+msgstr "Lista de Profesiones"
+
+#: View/CastingsPhotos/index.ctp:52
+#: View/CastingsPhotos/view.ctp:42
+#, fuzzy
+msgid "New Castings Photo"
+msgstr "Lista de Profesiones"
+
+#: View/CastingsPhotos/view.ctp:2
+#, fuzzy
+msgid "Castings Photo"
+msgstr "Lista de Profesiones"
+
+#: View/CastingsPhotos/view.ctp:40
+#, fuzzy
+msgid "Delete Castings Photo"
+msgstr "Eliminar Provincia"
 
 #: View/CastingsProfessions/add.ctp:4
 #, fuzzy
@@ -3960,11 +5396,6 @@ msgstr "Estilos de Danza"
 msgid "Delete Dancestyle"
 msgstr "Eliminar Estilo de Danza"
 
-#: View/Dancestyles/view.ctp:45
-#: View/Professions/view.ctp:45
-msgid "Related Auditions"
-msgstr ""
-
 #: View/Dancestyles/view.ctp:57
 #: View/Professions/view.ctp:57
 msgid "Audition-date"
@@ -3975,17 +5406,8 @@ msgstr "Día de Audición"
 msgid "Inscription-star"
 msgstr "Inicio de Inscripción"
 
-#: View/Dancestyles/view.ctp:69
-#: View/Professions/view.ctp:69
-#: View/Rols/view.ctp:63
-#: View/States/view.ctp:60
-#: View/Timetables/view.ctp:55
-#: View/Videos/view.ctp:60
-msgid "State Id"
-msgstr "Provincia"
-
 #: View/Elements/modal_login.ctp:7
-#: View/Layouts/default.ctp:65
+#: View/Layouts/default.ctp:79
 #: View/Layouts/mapadeladanza.ctp:58
 msgid "Login"
 msgstr "Ingresar"
@@ -4011,7 +5433,7 @@ msgid "Close"
 msgstr "Cerrar"
 
 #: View/Elements/modal_register.ctp:12
-#: View/Layouts/default.ctp:74
+#: View/Layouts/default.ctp:88
 #: View/Layouts/mapadeladanza.ctp:67
 msgid "Register"
 msgstr "Registro"
@@ -4058,20 +5480,20 @@ msgstr "Captcha"
 msgid "Create User"
 msgstr "Crear cuenta"
 
-#: View/Elements/navbar_admin.ctp:105
+#: View/Elements/navbar_admin.ctp:117
 msgid "List Slider"
 msgstr "Listar Sliders"
 
-#: View/Elements/navbar_admin.ctp:106
+#: View/Elements/navbar_admin.ctp:118
 #: View/Sliders/add.ctp:3
 msgid "Add Slider"
 msgstr "Nuevo Slider"
 
-#: View/Elements/navbar_admin.ctp:109
+#: View/Elements/navbar_admin.ctp:124
 msgid "Add Banners"
 msgstr "Nuevo Banner"
 
-#: View/Estudies/add.ctp:5;213
+#: View/Estudies/add.ctp:5;234
 msgid "Add Estudy"
 msgstr "Nuevo Estudio"
 
@@ -4080,10 +5502,17 @@ msgstr "Nuevo Estudio"
 msgid "Estudy name"
 msgstr "Nombre del Estudio"
 
-#: View/Estudies/add.ctp:88;93;102
-#: View/Estudies/edit.ctp:104;109;118
-#: View/Estudies/view.ctp:116
+#: View/Estudies/add.ctp:53
+#: View/Estudies/edit.ctp:69
+#: View/Photos/index.ctp:2
+msgid "Photos"
+msgstr ""
+
+#: View/Estudies/add.ctp:98;103;112
+#: View/Estudies/edit.ctp:142;147;156
+#: View/Estudies/view.ctp:188
 #: View/EstudiesTimetables/view.ctp:14
+#: View/Photos/view.ctp:57
 #: View/Practicerooms/add.ctp:90
 #: View/Practicerooms/edit.ctp:106
 #: View/PracticeroomsTimetables/view.ctp:14
@@ -4091,13 +5520,17 @@ msgstr "Nombre del Estudio"
 msgid "Timetable"
 msgstr "Horario"
 
-#: View/Estudies/add.ctp:237
-#: View/Estudies/edit.ctp:305
-#: View/Estudies/view.ctp:153
+#: View/Estudies/add.ctp:258
+#: View/Estudies/edit.ctp:354
+#: View/Estudies/view.ctp:225
 #: View/EstudiesDancestyles/add.ctp:18
 #: View/EstudiesDancestyles/edit.ctp:20
 #: View/EstudiesDancestyles/index.ctp:53
 #: View/EstudiesDancestyles/view.ctp:43
+#: View/EstudiesPhotos/add.ctp:18
+#: View/EstudiesPhotos/edit.ctp:20
+#: View/EstudiesPhotos/index.ctp:51
+#: View/EstudiesPhotos/view.ctp:43
 #: View/EstudiesTimetables/add.ctp:17
 #: View/EstudiesTimetables/edit.ctp:19
 #: View/EstudiesTimetables/index.ctp:49
@@ -4106,11 +5539,19 @@ msgstr "Horario"
 #: View/EstudiesVideos/edit.ctp:20
 #: View/EstudiesVideos/index.ctp:53
 #: View/EstudiesVideos/view.ctp:43
+#: View/Photos/add.ctp:18
+#: View/Photos/edit.ctp:20
+#: View/Photos/index.ctp:45
+#: View/Photos/view.ctp:38
+#: View/PracticeroomsPhotos/add.ctp:18
+#: View/PracticeroomsPhotos/edit.ctp:20
+#: View/PracticeroomsPhotos/index.ctp:53
+#: View/PracticeroomsPhotos/view.ctp:43
 msgid "List Estudies"
 msgstr "Listar Estudios"
 
-#: View/Estudies/edit.ctp:7;279
-#: View/Estudies/view.ctp:151
+#: View/Estudies/edit.ctp:7;328
+#: View/Estudies/view.ctp:223
 msgid "Edit Estudy"
 msgstr "Editar Estudio"
 
@@ -4120,7 +5561,11 @@ msgid "Estudies"
 msgstr "Estudios"
 
 #: View/Estudies/index.ctp:116
-#: View/Estudies/view.ctp:154
+#: View/Estudies/view.ctp:226
+#: View/EstudiesPhotos/add.ctp:19
+#: View/EstudiesPhotos/edit.ctp:21
+#: View/EstudiesPhotos/index.ctp:52
+#: View/EstudiesPhotos/view.ctp:44
 #: View/EstudiesTimetables/add.ctp:18
 #: View/EstudiesTimetables/edit.ctp:20
 #: View/EstudiesTimetables/index.ctp:50
@@ -4129,16 +5574,25 @@ msgstr "Estudios"
 #: View/EstudiesVideos/edit.ctp:21
 #: View/EstudiesVideos/index.ctp:54
 #: View/EstudiesVideos/view.ctp:44
+#: View/Photos/add.ctp:19
+#: View/Photos/edit.ctp:21
+#: View/Photos/index.ctp:46
+#: View/Photos/view.ctp:39;95
+#: View/PracticeroomsPhotos/add.ctp:19
+#: View/PracticeroomsPhotos/edit.ctp:21
+#: View/PracticeroomsPhotos/index.ctp:54
+#: View/PracticeroomsPhotos/view.ctp:44
 msgid "New Estudy"
 msgstr "Nuevo Estudio"
 
-#: View/Estudies/view.ctp:64
+#: View/Estudies/view.ctp:136
 #: View/EstudiesTimetables/view.ctp:9
 #: View/EstudiesVideos/view.ctp:9
+#: View/PracticeroomsPhotos/view.ctp:9
 msgid "Estudy"
 msgstr "Estudio"
 
-#: View/Estudies/view.ctp:152
+#: View/Estudies/view.ctp:224
 msgid "Delete Estudy"
 msgstr "Eliminar Estudio"
 
@@ -4186,6 +5640,50 @@ msgstr "Editar Estilo de Danza"
 #: View/EstudiesDancestyles/view.ctp:40
 #, fuzzy
 msgid "Delete Estudies Dancestyle"
+msgstr "Eliminar Estilo de Danza"
+
+#: View/EstudiesPhotos/add.ctp:4
+#, fuzzy
+msgid "Add Estudies Photo"
+msgstr "Nuevo Estilo de Danza"
+
+#: View/EstudiesPhotos/add.ctp:17
+#: View/EstudiesPhotos/edit.ctp:19
+#: View/EstudiesPhotos/view.ctp:41
+#, fuzzy
+msgid "List Estudies Photos"
+msgstr "Listar Usuarios"
+
+#: View/EstudiesPhotos/edit.ctp:4
+#: View/EstudiesPhotos/view.ctp:39
+#, fuzzy
+msgid "Edit Estudies Photo"
+msgstr "Editar Estilo de Danza"
+
+#: View/EstudiesPhotos/index.ctp:2
+#, fuzzy
+msgid "Estudies Photos"
+msgstr "Estudios"
+
+#: View/EstudiesPhotos/index.ctp:50
+#: View/EstudiesPhotos/view.ctp:42
+#, fuzzy
+msgid "New Estudies Photo"
+msgstr "Nuevo Estudio"
+
+#: View/EstudiesPhotos/view.ctp:2
+#, fuzzy
+msgid "Estudies Photo"
+msgstr "Estudios"
+
+#: View/EstudiesPhotos/view.ctp:9
+#, fuzzy
+msgid "Practiceroom Id"
+msgstr "Sala de Ensayo"
+
+#: View/EstudiesPhotos/view.ctp:40
+#, fuzzy
+msgid "Delete Estudies Photo"
 msgstr "Eliminar Estilo de Danza"
 
 #: View/EstudiesTimetables/add.ctp:4
@@ -4293,7 +5791,7 @@ msgstr "Estudios"
 msgid "Delete Estudies Video"
 msgstr "Eliminar Estilo de Danza"
 
-#: View/Jobs/add.ctp:5;309
+#: View/Jobs/add.ctp:5;334
 msgid "Add Job"
 msgstr "Nueva Búsqueda Laboral"
 
@@ -4307,26 +5805,8 @@ msgstr "Título de Búsqueda Laboral"
 msgid "Job date"
 msgstr "Día"
 
-#: View/Jobs/add.ctp:340
-#: View/Jobs/edit.ctp:386
-#: View/Jobs/view.ctp:201
-#: View/JobsDancestyles/add.ctp:18
-#: View/JobsDancestyles/edit.ctp:20
-#: View/JobsDancestyles/index.ctp:53
-#: View/JobsDancestyles/view.ctp:43
-#: View/JobsProfessions/add.ctp:18
-#: View/JobsProfessions/edit.ctp:20
-#: View/JobsProfessions/index.ctp:53
-#: View/JobsProfessions/view.ctp:43
-#: View/JobsVideos/add.ctp:18
-#: View/JobsVideos/edit.ctp:20
-#: View/JobsVideos/index.ctp:53
-#: View/JobsVideos/view.ctp:43
-msgid "List Jobs"
-msgstr "Listar Búsqueda Laboral"
-
-#: View/Jobs/edit.ctp:6;353
-#: View/Jobs/view.ctp:199
+#: View/Jobs/edit.ctp:6;400
+#: View/Jobs/view.ctp:249
 msgid "Edit Job"
 msgstr "Editar Búsqueda Laboral"
 
@@ -4334,35 +5814,11 @@ msgstr "Editar Búsqueda Laboral"
 msgid "Jobs"
 msgstr "Trabajos"
 
-#: View/Jobs/index.ctp:138
-#: View/Jobs/view.ctp:202
-#: View/JobsDancestyles/add.ctp:19
-#: View/JobsDancestyles/edit.ctp:21
-#: View/JobsDancestyles/index.ctp:54
-#: View/JobsDancestyles/view.ctp:44
-#: View/JobsProfessions/add.ctp:19
-#: View/JobsProfessions/edit.ctp:21
-#: View/JobsProfessions/index.ctp:54
-#: View/JobsProfessions/view.ctp:44
-#: View/JobsVideos/add.ctp:19
-#: View/JobsVideos/edit.ctp:21
-#: View/JobsVideos/index.ctp:54
-#: View/JobsVideos/view.ctp:44
-msgid "New Job"
-msgstr "Nueva Búsqueda Laboral"
-
-#: View/Jobs/view.ctp:82
-#: View/JobsDancestyles/view.ctp:19
-#: View/JobsProfessions/view.ctp:19
-#: View/JobsVideos/view.ctp:9
-msgid "Job"
-msgstr "Trabajo"
-
-#: View/Jobs/view.ctp:124
+#: View/Jobs/view.ctp:174
 msgid "Job-date"
 msgstr "Día"
 
-#: View/Jobs/view.ctp:200
+#: View/Jobs/view.ctp:250
 msgid "Delete Job"
 msgstr "Eliminar Búsqueda Laboral"
 
@@ -4404,6 +5860,45 @@ msgstr "Listar Estilos de Danza"
 #, fuzzy
 msgid "Delete Jobs Dancestyle"
 msgstr "Eliminar Estilo de Danza"
+
+#: View/JobsPhotos/add.ctp:4
+#, fuzzy
+msgid "Add Jobs Photo"
+msgstr "Lista de Profesiones"
+
+#: View/JobsPhotos/add.ctp:17
+#: View/JobsPhotos/edit.ctp:19
+#: View/JobsPhotos/view.ctp:41
+#, fuzzy
+msgid "List Jobs Photos"
+msgstr "Lista de Profesiones"
+
+#: View/JobsPhotos/edit.ctp:4
+#: View/JobsPhotos/view.ctp:39
+#, fuzzy
+msgid "Edit Jobs Photo"
+msgstr "Lista de Profesiones"
+
+#: View/JobsPhotos/index.ctp:2
+#, fuzzy
+msgid "Jobs Photos"
+msgstr "Lista de Profesiones"
+
+#: View/JobsPhotos/index.ctp:52
+#: View/JobsPhotos/view.ctp:42
+#, fuzzy
+msgid "New Jobs Photo"
+msgstr "Lista de Profesiones"
+
+#: View/JobsPhotos/view.ctp:2
+#, fuzzy
+msgid "Jobs Photo"
+msgstr "Lista de Profesiones"
+
+#: View/JobsPhotos/view.ctp:40
+#, fuzzy
+msgid "Delete Jobs Photo"
+msgstr "Eliminar Profesión"
 
 #: View/JobsProfessions/add.ctp:4
 #, fuzzy
@@ -4495,13 +5990,13 @@ msgstr "Epígrafe"
 msgid "Resume"
 msgstr "Resumen"
 
-#: View/Notes/add.ctp:71;76
-#: View/Notes/edit.ctp:82;87
+#: View/Notes/add.ctp:72;77
+#: View/Notes/edit.ctp:83;88
 msgid "Body"
 msgstr "Cuerpo"
 
-#: View/Notes/add.ctp:83
-#: View/Notes/edit.ctp:95
+#: View/Notes/add.ctp:84
+#: View/Notes/edit.ctp:96
 msgid "Tags"
 msgstr ""
 
@@ -4515,7 +6010,28 @@ msgstr "Editar Nota"
 msgid "List Notes"
 msgstr "Lista de Notas"
 
-#: View/Practicerooms/add.ctp:5;202
+#: View/Photos/add.ctp:4
+#, fuzzy
+msgid "Add Photo"
+msgstr "Nueva Nota"
+
+#: View/Photos/edit.ctp:4
+#: View/Photos/view.ctp:34
+#, fuzzy
+msgid "Edit Photo"
+msgstr "Editar Nota"
+
+#: View/Photos/view.ctp:35
+#, fuzzy
+msgid "Delete Photo"
+msgstr "Eliminar Búsqueda Laboral"
+
+#: View/Photos/view.ctp:43
+#, fuzzy
+msgid "Related Estudies"
+msgstr "Usuarios Relacionados"
+
+#: View/Practicerooms/add.ctp:5;213
 msgid "Add Practiceroom"
 msgstr "Nueva Sala de Ensayo"
 
@@ -4524,8 +6040,8 @@ msgstr "Nueva Sala de Ensayo"
 msgid "Practiceroom name"
 msgstr "Nombre de Sala de Ensayo"
 
-#: View/Practicerooms/add.ctp:227
-#: View/Practicerooms/edit.ctp:296
+#: View/Practicerooms/add.ctp:238
+#: View/Practicerooms/edit.ctp:307
 #: View/PracticeroomsDancestyles/add.ctp:18
 #: View/PracticeroomsDancestyles/edit.ctp:20
 #: View/PracticeroomsDancestyles/index.ctp:53
@@ -4549,21 +6065,21 @@ msgstr "Nombre de Sala de Ensayo"
 msgid "List Practicerooms"
 msgstr "Listar Salas de Ensayo"
 
-#: View/Practicerooms/add.ctp:232
-#: View/Practicerooms/edit.ctp:301
+#: View/Practicerooms/add.ctp:243
+#: View/Practicerooms/edit.ctp:312
 #: View/Practicerooms/index.ctp:125
 #, fuzzy
 msgid "List Rooms"
 msgstr "Lista de Notas"
 
-#: View/Practicerooms/add.ctp:233
-#: View/Practicerooms/edit.ctp:302
+#: View/Practicerooms/add.ctp:244
+#: View/Practicerooms/edit.ctp:313
 #: View/Practicerooms/index.ctp:126
 #, fuzzy
 msgid "New Room"
 msgstr "Nueva Nota"
 
-#: View/Practicerooms/edit.ctp:7;269
+#: View/Practicerooms/edit.ctp:7;280
 msgid "Edit Practiceroom"
 msgstr "Editar Sala de Ensayo"
 
@@ -4637,6 +6153,45 @@ msgstr "Listar Estilos de Danza"
 #, fuzzy
 msgid "Delete Practicerooms Dancestyle"
 msgstr "Eliminar Estilo de Danza"
+
+#: View/PracticeroomsPhotos/add.ctp:4
+#, fuzzy
+msgid "Add Practicerooms Photo"
+msgstr "Nueva Sala de Ensayo"
+
+#: View/PracticeroomsPhotos/add.ctp:17
+#: View/PracticeroomsPhotos/edit.ctp:19
+#: View/PracticeroomsPhotos/view.ctp:41
+#, fuzzy
+msgid "List Practicerooms Photos"
+msgstr "Listar Banners"
+
+#: View/PracticeroomsPhotos/edit.ctp:4
+#: View/PracticeroomsPhotos/view.ctp:39
+#, fuzzy
+msgid "Edit Practicerooms Photo"
+msgstr "Editar Sala de Ensayo"
+
+#: View/PracticeroomsPhotos/index.ctp:2
+#, fuzzy
+msgid "Practicerooms Photos"
+msgstr "Salas de Ensayo"
+
+#: View/PracticeroomsPhotos/index.ctp:52
+#: View/PracticeroomsPhotos/view.ctp:42
+#, fuzzy
+msgid "New Practicerooms Photo"
+msgstr "Nueva Sala de Ensayo"
+
+#: View/PracticeroomsPhotos/view.ctp:2
+#, fuzzy
+msgid "Practicerooms Photo"
+msgstr "Salas de Ensayo"
+
+#: View/PracticeroomsPhotos/view.ctp:40
+#, fuzzy
+msgid "Delete Practicerooms Photo"
+msgstr "Eliminar Provincia"
 
 #: View/PracticeroomsTimetables/add.ctp:4
 msgid "Add Practicerooms Timetable"
@@ -4786,6 +6341,22 @@ msgstr "Usuarios Relacionados"
 msgid "Rol Id"
 msgstr ""
 
+#: View/Slidernotes/add.ctp:3
+msgid "Add Slidernote"
+msgstr "Nuevo Slider de Nota"
+
+#: View/Slidernotes/edit.ctp:7
+msgid "Edit Slidernote"
+msgstr "Editar Slider de Nota"
+
+#: View/Slidernotes/edit.ctp:21
+msgid "Slidernote title (max.: 50 characters)"
+msgstr "Título del Slider de Nota  (máx.: 50 caracteres)"
+
+#: View/Slidernotes/index.ctp:3
+msgid "List Slidernotes"
+msgstr "Listar Slider de Nota"
+
 #: View/Sliders/edit.ctp:7
 msgid "Edit Slider"
 msgstr "Editar Slider"
@@ -4877,21 +6448,29 @@ msgstr "Editar Video"
 msgid "Videos"
 msgstr ""
 
-#: View/Videos/view.ctp:14
-msgid "File"
-msgstr "Archivo"
-
 #: View/Videos/view.ctp:35
 msgid "Delete Video"
 msgstr "Eliminar Video"
 
 #: Model/AccessoriesDancestyle.php:validation
 #: for field
-#: accessories_id;validation user_id Model/AccessoriesVideo.php:validation
-#: accessory_id;validation video_id;validation Model/Accessory.php:validation
+#: accessories_id;validation user_id Model/AccessoriesPhoto.php:validation
+#: accessory_id;validation photo_id;validation
+#: Model/AccessoriesVideo.php:validation
+#: video_id;validation
+#: Model/Accessory.php:validation
+#: Model/AttachmentsAudition.php:validation
+#: audition_id;validation attachment_id;validation
+#: Model/AttachmentsCall.php:validation
+#: call_id;validation
+#: Model/AttachmentsCasting.php:validation
+#: casting_id;validation
+#: Model/AttachmentsJob.php:validation
+#: job_id;validation
 #: Model/Audition.php:validation
 #: Model/AuditionsDancestyle.php:validation
-#: audition_id;validation Model/AuditionsProfession.php:validation
+#: Model/AuditionsPhoto.php:validation
+#: Model/AuditionsProfession.php:validation
 #: Model/AuditionsVideo.php:validation
 #: Model/Banner.php:validation
 #: Model/Bannercategory.php:validation
@@ -4899,32 +6478,37 @@ msgstr "Eliminar Video"
 #: banner_id
 #: Model/Call.php:validation
 #: Model/CallsDancestyle.php:validation
-#: call_id;validation Model/CallsProfession.php:validation
+#: Model/CallsPhoto.php:validation
+#: Model/CallsProfession.php:validation
 #: Model/CallsVideo.php:validation
 #: Model/Casting.php:validation
 #: Model/CastingsDancestyle.php:validation
+#: Model/CastingsPhoto.php:validation
 #: Model/CastingsProfession.php:validation
 #: Model/CastingsVideo.php:validation
-#: casting_id;validation Model/Dancestyle.php:validation
+#: Model/Dancestyle.php:validation
 #: Model/EstudiesDancestyle.php:validation
-#: estudies_id;validation
-#: Model/EstudiesTimetable.php:validation
-#: estudy_id;validation timetable_id
+#: estudies_id;validation Model/EstudiesPhoto.php:validation
+#: estudy_id;validation Model/EstudiesTimetable.php:validation
+#: timetable_id
 #: Model/EstudiesVideo.php:validation
 #: Model/Estudy.php:validation
 #: Model/Job.php:validation
 #: Model/JobsDancestyle.php:validation
-#: job_id;validation Model/JobsProfession.php:validation
+#: Model/JobsPhoto.php:validation
+#: Model/JobsProfession.php:validation
 #: Model/JobsVideo.php:validation
 #: Model/Note.php:validation
 #: Model/Practiceroom.php:validation
 #: Model/PracticeroomsDancestyle.php:validation
 #: practicerooms_id;validation
+#: Model/PracticeroomsPhoto.php:validation
 #: Model/PracticeroomsTimetable.php:validation
 #: practiceroom_id;validation
 #: Model/PracticeroomsVideo.php:validation
 #: Model/Profession.php:validation
 #: Model/Slider.php:validation
+#: Model/Slidernote.php:validation
 msgid "uuid"
 msgstr ""
 
@@ -4956,28 +6540,33 @@ msgstr "numérico"
 #: Model/Accessory.php:validation
 #: for field name;validation image;validation
 #: products;validation street;validation website;validation phone;validation
-#: schedule Model/Audition.php:validation
-#: title;validation company;validation
-#: street Model/Banner.php:validation
-#: link Model/Bannercategory.php:validation
+#: schedule Model/Attachment.php:validation
+#: file Model/Audition.php:validation
+#: title;validation company;validation street Model/Banner.php:validation
+#: link
+#: Model/Bannercategory.php:validation
 #: name Model/Call.php:validation
 #: Model/Casting.php:validation
 #: Model/Country.php:validation
 #: Model/Dancestyle.php:validation
 #: Model/Estudy.php:validation
-#: phone Model/Job.php:validation
+#: phone
+#: Model/Job.php:validation
 #: Model/Note.php:validation
-#: title Model/Practiceroom.php:validation
+#: title
+#: Model/Photo.php:validation
+#: Model/Practiceroom.php:validation
 #: timetable
 #: Model/Profession.php:validation
 #: Model/Rol.php:validation
 #: observation
 #: Model/Slider.php:validation
+#: Model/Slidernote.php:validation
 #: Model/State.php:validation
 #: Model/Timetable.php:validation
 #: Model/User.php:validation
-#: username;validation password;validation lastname Model/Video.php:validation
-#: file
+#: username;validation password;validation lastname
+#: Model/Video.php:validation
 msgid "notEmpty"
 msgstr "No Vacío"
 
@@ -5006,12 +6595,14 @@ msgstr "fecha"
 #: Model/Banner.php:validation
 #: for field image Model/Note.php:validation
 #: Model/Slider.php:validation
+#: Model/Slidernote.php:validation
 msgid "Debe ingresar una imagen."
 msgstr ""
 
 #: Model/Banner.php:validation
 #: for field image Model/Note.php:validation
 #: Model/Slider.php:validation
+#: Model/Slidernote.php:validation
 msgid "Ingrese una extensión válida."
 msgstr ""
 

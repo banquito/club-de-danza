@@ -58,7 +58,9 @@ class MapsearchesController extends AppController {
 			}
 		}
 
-
+		###
+		# Elementos Buscados
+		###
 		if(isset($data['accessories']) || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'accessories', 'action' => 'getElements')));
 		if(isset($data['estudies']) || $todas)
@@ -79,11 +81,10 @@ class MapsearchesController extends AppController {
 			$paid = $auxValues[0]['paid'];
 			
 			$elements[$key] = array_merge($element
-				, array('name' => $name
-					, 'name-plural' => $namePlural
+				, array('image' => $image
 					, 'link' => Router::url(array('controller'=>$namePlural, 'action'=>'view', $id))
-					, 'image' => $image
 					, 'name' => $name
+					, 'name-plural' => $namePlural
 					, 'paid' => $paid
 				)
 			);
@@ -98,7 +99,56 @@ class MapsearchesController extends AppController {
 
 		usort($elements, 'sortElements');
 
-		$this->set(compact('elements', 'data'));
+		# /elementosBuscados
+
+		###
+		# Elementos Destacados
+		###
+
+		$salients = $this->requestAction(array('controller' => 'accessories', 'action' => 'getSalients'));
+		$salients = array_merge($salients, $this->requestAction(array('controller' => 'estudies', 'action' => 'getSalients')));
+		$salients = array_merge($salients, $this->requestAction(array('controller' => 'practicerooms', 'action' => 'getSalients')));
+
+		# Se desarrolla una lógica para independizarnos de los nombres de los Controllers
+		foreach($salients as $key => $salient):
+			$auxNames = array_keys($salient);
+			$auxValues = array_values($salient);
+			$name = strtolower($auxNames[0]);
+			$namePlural = substr($name, -1, 1) == 'y' ? substr($name, 0, -1).'ies' : $name.'s';
+			$id = $auxValues[0]['id'];
+			$image = ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
+			$name = $auxValues[0]['name'] ? substr($auxValues[0]['name'], 0, 50) : __('No Name');
+			$products = isset($auxValues[0]['products']) ? $auxValues[0]['products'] : null;
+			$street = isset($auxValues[0]['street']) ? $auxValues[0]['street'] : null;
+			$floor = isset($auxValues[0]['floor']) ? $auxValues[0]['floor'] : null;
+			$department = isset($auxValues[0]['department']) ? $auxValues[0]['department'] : null;
+			$website = isset($auxValues[0]['website']) ? $auxValues[0]['website'] : null;
+			$email = isset($auxValues[0]['email']) ? $auxValues[0]['email'] : null;
+			$phone = isset($auxValues[0]['phone']) ? $auxValues[0]['phone'] : null;
+			$dancestyle = isset($auxValues[0]['Dancestyle']) ? $auxValues[0]['Dancestyle'] : null;
+			
+			// array('id', 'name', 'image', 'products', 'street', 'floor', 'department', 'website', 'contact', 'email', 'phone');
+			$salients[$key] = array_merge($salient
+				, array('image' => $image
+					, 'link' => Router::url(array('controller'=>$namePlural, 'action'=>'view', $id))
+					, 'name-plural' => $namePlural
+					, 'title' => $name
+					, 'products' => $products
+					, 'street' => $street
+					, 'floor' => $floor
+					, 'department' => $department
+					, 'website' => $website
+					, 'email' => $email
+					, 'phone' => $phone
+					, 'Dancestyle' => $dancestyle
+				)
+			);
+		endforeach;
+		
+		# /elementosDestacados
+
+
+		$this->set(compact('data', 'elements', 'salients'));
 		
 	}
 

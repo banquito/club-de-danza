@@ -132,7 +132,7 @@ class NotesController extends AppController {
 
 	public function inicio() {
 		$this->Note->recursive = -1;
-		$items = $this->requestAction(array('controller' => 'sliders', 'action' => 'getItems')
+		$items = $this->requestAction(array('controller' => 'slidernotes', 'action' => 'getItems')
 			, array('named' => array('category' => 1))
 		);
 		
@@ -147,11 +147,19 @@ class NotesController extends AppController {
 		if (!$this->Note->exists($id)) {
 			throw new NotFoundException(__('Invalid note'));
 		}
-		
+
+		$current_note = $this->Note->findById($id);
+
 		$options['limit'] = 4;
 		$options['order'] = 'RAND()';
+		$options['by'] = array_map('trim',explode(",",$current_note['Note']['tags']));
+		$options['model'] = 'Note';
+
+		$conditions = array("Note.id !=" => $id);
+		$options['conditions'] = $conditions;
 		
-		return $this->Note->find('all', $options);
+		// return $this->Note->find('all', $options);
+		return $this->Note->Tagged->find('tagged', $options);
 	}
 
 /**

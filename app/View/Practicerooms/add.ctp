@@ -48,6 +48,16 @@
 					?>
 				</div>
 			</div>
+			<!-- Photos -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Photos'); ?></label>
+				<div id="photos" class="col-sm-7">
+					<input type="file" class="btn btn-default" name="data[Photo][]">
+				</div>
+				<div class="col-sm-1">
+					<button id="morePhotos" type="button" class="btn btn-default">+</button>
+				</div>
+			</div>
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Street'); ?></label>
 				<div class="col-sm-8">
@@ -173,15 +183,26 @@
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Paid'); ?></label>
 				<div class="col-sm-8">
-					<?php echo $this->Form->input('paid', array(
+					<?php echo $this->Form->checkbox('paid', array(
 						'class' => 'form-control',
 						'label' => false,
-						// 'placeholder' => __('Paid'),
-						// 'required' => 'required',
 					));
 					?>
 				</div>
 			</div>
+			
+			<!-- Salient -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Salient'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->checkbox('salient', array(
+						'class' => 'form-control',
+						'label' => false,
+					));
+					?>
+				</div>
+			</div>
+			
 			<div class="form-group">
 				<div class="col-sm-offset-4 col-sm-2">
 					<button type="submit" class="btn btn-default"><?php echo __('Aceptar'); ?></button>

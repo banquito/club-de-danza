@@ -63,7 +63,44 @@
 					</div>
 				</div>
 			</div>
+			<!-- Photos -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Photos'); ?></label>
+				<div class="col-sm-7">
+					<div class="row row-image-name">
+						<div class="col-sm-12">
+							<!-- <span class="label <?php //echo ($this->request->data['Practiceroom']['image']) ? 'label-primary' : 'label-danger'; ?>">
+								<?php //echo ($imageName = $this->request->data['Practiceroom']['image']) ? $imageName : __('No image'); ?>
+							</span> -->
 
+							<?php if(isset($this->request->data['Photo']) && sizeof($this->request->data['Photo']) > 0): ?>
+									<?php foreach ($this->request->data['Photo'] as $key => $photo): ?>
+										<span class="label label-primary"><?php echo $photo['name']; ?> | 
+											<?php
+											echo $this->Html->Link('x'
+												, array('controller' => 'CallsPhotos'
+													, 'action' => 'remove'
+													, $photo['CallsPhoto']['id']
+												)
+											);
+											?></span>
+										&nbsp;
+									<?php endforeach; ?>
+							<?php endif; ?>
+
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12" id="photos">
+							<input type="file" class="btn btn-default" name="data[Photo][]">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-1">
+					<button id="morePhotos" type="button" class="btn btn-default">+</button>
+				</div>
+			</div>
 			<div class="form-group">
 				<label for="company" class="col-sm-4 control-label"><?php echo __('Company'); ?></label>
 				<div class="col-sm-8">
@@ -360,6 +397,19 @@
 					?>
 				</div>
 			</div>
+			
+			<!-- Salient -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Salient'); ?></label>
+				<div class="col-sm-8">
+					<?php echo $this->Form->checkbox('salient', array(
+						'class' => 'form-control',
+						'label' => false,
+					));
+					?>
+				</div>
+			</div>
+			
 			<div class="form-group">
 				<div class="col-sm-offset-4 col-sm-2">
 					<button type="submit" class="btn btn-default"><?php echo __('Aceptar'); ?></button>

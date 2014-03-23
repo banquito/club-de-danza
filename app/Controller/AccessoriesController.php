@@ -21,7 +21,7 @@ class AccessoriesController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getElements', 'view');
+		$this->Auth->allow('getElements', 'getSalients', 'view');
 	}
 
 	public function isAuthorized($user) {
@@ -116,6 +116,36 @@ class AccessoriesController extends AppController {
 			$this->Accessory->create();
 			if ($this->Accessory->save($accessory)) {
 				$accessory_id = $this->Accessory->id;
+				
+				# Photos
+				if (isset($accessory['Photo']) && sizeof($accessory['Photo']) > 0) {
+				 	foreach ($accessory['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							//$photoFile = $accessory_id . date("YmdHisu")  . '.' . $photoExt;
+							$photoFile = $accessory_id . md5(microtime()) . '.' . $photoExt; 
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Accessory->Photo->create();
+								if ($this->Accessory->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Accessory->AccessoriesPhoto->create();
+									$this->Accessory->AccessoriesPhoto->save(array('accessory_id'=>$this->Accessory->id
+										, 'photo_id' => $this->Accessory->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
 				
 				# Videos
 				if (isset($accessory['Video']) && sizeof($accessory['Video']) > 0) {
@@ -232,8 +262,42 @@ class AccessoriesController extends AppController {
 			$accessoryAux['Video'] = $accessory['Video'];
 			$accessory['Video'] = '';
 
+			# Para que no se eliminen las Photos en el save:
+			$photos = $this -> Accessory -> read(null, $id);
+			$accessory['Photo'] = array_merge($accessory['Photo'], $photos['Photo']);
+
 			if ($this->Accessory->save($accessory)) {
 				$accessory_id = $this->Accessory->id;
+
+				# Photos
+				if (isset($accessory['Photo']) && sizeof($accessory['Photo']) > 0) {
+				 	foreach ($accessory['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '') && isset($photo['tmp_name']) && ($photo['tmp_name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							$photoFile = $accessory_id . md5(microtime()) . '.' . $photoExt;
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Accessory->Photo->create();
+								if ($this->Accessory->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Accessory->AccessoriesPhoto->create();
+									$this->Accessory->AccessoriesPhoto->save(array('accessory_id' => $accessory_id
+										, 'photo_id' => $this->Accessory->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+							
+						}
+				 	}
+				}
 
 				# Videos
 				if (isset($accessoryAux['Video']) && sizeof($accessoryAux['Video']) > 0) {
@@ -280,6 +344,20 @@ class AccessoriesController extends AppController {
 		$options['fields'] = array('id', 'name', 'image', 'paid');
 		$options['order'] = array('paid' => 'DESC', 'created' => 'DESC');
 		$options['recursive'] = -1;
+		return $this->Accessory->find('all', $options);
+	}
+
+
+/**
+ * getSalients method
+ *
+ * @return void
+ */
+	public function getSalients() {
+		$options['conditions'] = array('salient' => true);
+		// $options['fields'] = array('id', 'name', 'image', 'products', 'street', 'floor', 'department', 'website', 'email', 'phone');
+		$options['order'] = array('Accessory.created' => 'DESC');
+		// $options['recursive'] = -1;
 		return $this->Accessory->find('all', $options);
 	}
 

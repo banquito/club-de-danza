@@ -1,64 +1,128 @@
+<<<<<<< HEAD
+/*
+Syntax error: Invalid CSS after "te": expected selector, was "@import default..."
+        on line 1 of /datos/proyectos/clubdanza/app/webroot/sass/layouts/mapadeladanza.sass
+
+1: /datos/proyectos/clubdanza/app/webroot/sass/layouts/mapadeladanza.sass
+
+Backtrace:
+/datos/proyectos/clubdanza/app/webroot/sass/layouts/mapadeladanza.sass:1
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/scss/parser.rb:1148:in `expected'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/scss/parser.rb:1084:in `expected'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/scss/static_parser.rb:21:in `parse_selector'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/perform.rb:314:in `visit_rule'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/perform.rb:128:in `visit_root'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/engine.rb:315:in `_render'
+/var/lib/gems/1.8/gems/sass-3.2.7/lib/sass/../sass/engine.rb:262:in `render'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/commands/update_project.rb:45:in `perform'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/var/lib/gems/1.8/gems/compass-0.12.2/bin/compass:30
+/var/lib/gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/var/lib/gems/1.8/gems/compass-0.12.2/bin/compass:44
+/usr/local/bin/compass:19:in `load'
+/usr/local/bin/compass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"te\": expected selector, was \"@import default...\"\A         on line 1 of /datos/proyectos/clubdanza/app/webroot/sass/layouts/mapadeladanza.sass\A \A 1: /datos/proyectos/clubdanza/app/webroot/sass/layouts/mapadeladanza.sass"; }
+=======
 @import url(http://fonts.googleapis.com/css?family=Homenaje);
-/* line 3, ../../sass/_cajas.sass */
+/* line 3, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 a.btn-vermas {
   display: block;
 }
-/* line 6, ../../sass/_cajas.sass */
+/* line 6, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 a.btn-vermas img {
   margin-right: -9px;
 }
 
-/* line 9, ../../sass/_cajas.sass */
+/* line 9, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .caption.caption-vermas {
   padding-bottom: 0;
 }
 
-/* line 12, ../../sass/_cajas.sass */
+/* line 12, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
+.resume-vermas {
+  font-size: 0.9em;
+}
+
+/* line 15, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner {
   margin-bottom: 20px;
 }
-/* line 15, ../../sass/_cajas.sass */
+/* line 18, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner div:first-child {
   margin-top: 18px;
 }
-/* line 18, ../../sass/_cajas.sass */
+/* line 21, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner img {
   height: 200px;
 }
-/* line 21, ../../sass/_cajas.sass */
+/* line 24, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .row-banner img.banner-large {
   height: 400px;
 }
 
-/* line 24, ../../sass/_cajas.sass */
+/* line 27, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail {
   height: 192px;
   max-height: 192px;
 }
-/* line 28, ../../sass/_cajas.sass */
+/* line 31, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail p:hover {
   cursor: pointer;
 }
 
-/* line 31, ../../sass/_cajas.sass */
+/* line 34, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal {
   display: table;
   width: 454px;
 }
-/* line 35, ../../sass/_cajas.sass */
+/* line 38, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal .caption-vermas {
   height: 72%;
 }
-/* line 38, ../../sass/_cajas.sass */
+/* line 41, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal .img-horizontal {
+  display: table-cell;
   height: 100%;
   max-height: 350px;
-  display: table-cell;
   max-width: 195px;
   width: 195px;
   vertical-align: middle;
 }
-/* line 46, ../../sass/_cajas.sass */
+/* line 49, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-horizontal img {
   max-height: 178px;
   margin-bottom: auto;
@@ -66,37 +130,38 @@ a.btn-vermas img {
   max-width: 100%;
 }
 
-/* line 52, ../../sass/_cajas.sass */
+/* line 55, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vermas {
-  background-image: url('/img/layouts/vermas.png?1394154151');
+  background-image: url('/img/layouts/vermas.png?1393088704');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 12%;
 }
-/* line 59, ../../sass/_cajas.sass */
+/* line 62, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vermas.thumbnail-vermas-horizontal {
   background-size: 6%;
 }
 
-/* line 63, ../../sass/_cajas.sass */
+/* line 66, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vertical {
   display: table;
   width: 100%;
 }
-/* line 67, ../../sass/_cajas.sass */
+/* line 70, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vertical .caption-vermas {
   display: table-row;
   height: 72%;
 }
-/* line 71, ../../sass/_cajas.sass */
+/* line 74, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vertical .img-vertical {
-  height: 100%;
+  height: 135px;
+  min-height: 135px;
   max-height: 135px;
   display: table-cell;
   padding-bottom: 2px;
   vertical-align: middle;
 }
-/* line 78, ../../sass/_cajas.sass */
+/* line 82, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .thumbnail-vertical img {
   max-height: 135px;
   margin-bottom: auto;
@@ -104,20 +169,24 @@ a.btn-vermas img {
   max-width: 203px;
 }
 
-/* line 86, ../../sass/_cajas.sass */
+/* line 90, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .title-vermas {
   color: #dd104c;
   font-family: "Fagono";
   font-size: 1.1em;
+  height: 44px;
+  margin-top: 10px;
+  min-height: 44px;
+  max-height: 44px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 94, ../../sass/_cajas.sass */
+/* line 102, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 .title-vermas:hover {
   color: #a00f34;
 }
 
-/* line 97, ../../sass/_cajas.sass */
+/* line 105, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_cajas.sass */
 #text-nota4 {
   height: 100%;
 }
@@ -157,30 +226,30 @@ a.btn-vermas img {
   src: url('/css/fonts/avenir-lt-85-heavy.ttf') format('truetype');
 }
 
-/* line 1, ../../sass/_images.sass */
+/* line 1, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/_images.sass */
 .image-center {
   margin: auto;
 }
 
-/* line 3, ../../sass/layouts/default.sass */
+/* line 3, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
 
-/* line 6, ../../sass/layouts/default.sass */
+/* line 6, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 a:hover {
   color: #dd104c;
   text-decoration: none;
 }
 
-/* line 10, ../../sass/layouts/default.sass */
+/* line 10, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 footer > .navbar {
   font-size: 0.83em;
   margin-bottom: 0;
   padding-top: 14px;
 }
 
-/* line 15, ../../sass/layouts/default.sass */
+/* line 15, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 h1 {
   background-color: white;
   color: #a00f34;
@@ -192,31 +261,31 @@ h1 {
   text-transform: uppercase;
 }
 
-/* line 30, ../../sass/layouts/default.sass */
+/* line 30, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 h3 {
   font-size: 1em;
   margin-top: 5px;
   text-align: left;
 }
 
-/* line 35, ../../sass/layouts/default.sass */
+/* line 35, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 h4 {
   color: #a00f34;
   font-family: "Fagono";
   text-transform: uppercase;
 }
 
-/* line 41, ../../sass/layouts/default.sass */
+/* line 41, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 header nav {
-  background-image: url('/img/layouts/backheader.jpg?1394154151');
+  background-image: url('/img/layouts/backheader.jpg?1393088704');
 }
-/* line 44, ../../sass/layouts/default.sass */
+/* line 44, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 header nav.navbar {
   margin-bottom: 40px;
   border-bottom-color: #dd104c;
 }
 
-/* line 48, ../../sass/layouts/default.sass */
+/* line 48, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 li > a.menu-button {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
@@ -225,77 +294,77 @@ li > a.menu-button {
   padding-right: 7px;
 }
 
-/* line 54, ../../sass/layouts/default.sass */
+/* line 54, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .actions > a {
   color: #ca94aa;
 }
-/* line 57, ../../sass/layouts/default.sass */
+/* line 57, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .actions > a:hover {
   color: #dd104c;
 }
 
-/* line 60, ../../sass/layouts/default.sass */
+/* line 60, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .bootstrap-datetimepicker-widget {
   z-index: 2000;
 }
 
-/* line 63, ../../sass/layouts/default.sass */
+/* line 63, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .col-login {
   background-color: #dd104c;
 }
 
-/* line 66, ../../sass/layouts/default.sass */
+/* line 66, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .confirma {
   padding-top: 20px;
 }
 
-/* line 69, ../../sass/layouts/default.sass */
+/* line 69, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .flash-failure {
   position: fixed;
   right: 0;
   z-index: 2000;
 }
 
-/* line 74, ../../sass/layouts/default.sass */
+/* line 74, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .modal-dialog-login {
   width: 500px;
 }
 
-/* line 77, ../../sass/layouts/default.sass */
+/* line 77, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .navbar-brand {
   height: auto;
   padding-top: 12px;
 }
 
-/* line 81, ../../sass/layouts/default.sass */
+/* line 81, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .navbar-default .navbar-nav > li > a:hover {
   color: #dd104c;
 }
 
-/* line 84, ../../sass/layouts/default.sass */
+/* line 84, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .nav.redes-sociales a {
   padding-left: 7px;
   padding-right: 7px;
 }
-/* line 88, ../../sass/layouts/default.sass */
+/* line 88, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .nav.redes-sociales a .fa {
   vertical-align: top;
 }
-/* line 91, ../../sass/layouts/default.sass */
+/* line 91, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .nav.redes-sociales a.stack {
   padding-bottom: 10px;
   padding-top: 10px;
 }
-/* line 95, ../../sass/layouts/default.sass */
+/* line 95, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .nav.redes-sociales a.stack.facebook:hover {
   color: #3b5998;
 }
-/* line 98, ../../sass/layouts/default.sass */
+/* line 98, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .nav.redes-sociales a.stack.twitter:hover {
   color: #55acee;
 }
 
-/* line 101, ../../sass/layouts/default.sass */
+/* line 101, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .row-login {
   font-family: "Univers Condensed";
   letter-spacing: -1px;
@@ -308,21 +377,21 @@ li > a.menu-button {
   width: 199px;
   z-index: 100;
 }
-/* line 112, ../../sass/layouts/default.sass */
+/* line 112, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .row-login a, .row-login a:visited {
   color: white;
 }
-/* line 115, ../../sass/layouts/default.sass */
+/* line 115, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .row-login a:hover {
   color: #feccda;
 }
 
-/* line 120, ../../sass/layouts/default.sass */
+/* line 120, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .row-header-h1 {
   margin-bottom: 20px;
 }
 
-/* line 123, ../../sass/layouts/default.sass */
+/* line 123, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .row-redes-sociales {
   background-color: #dd104c;
   color: white;
@@ -332,24 +401,24 @@ li > a.menu-button {
   position: fixed;
   z-index: 100;
 }
-/* line 132, ../../sass/layouts/default.sass */
+/* line 132, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .row-redes-sociales a, .row-redes-sociales a:visited {
   color: white;
 }
 
-/* line 135, ../../sass/layouts/default.sass */
+/* line 135, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .text-description {
   padding-bottom: 15px;
   padding-top: 15px;
 }
 
-/* line 140, ../../sass/layouts/default.sass */
+/* line 140, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .text-pink {
   color: #a00f34;
   font-family: "Fagono";
 }
 
-/* line 145, ../../sass/layouts/default.sass */
+/* line 145, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 .view-info {
   border-style: solid;
   border-width: 2px;
@@ -357,12 +426,12 @@ li > a.menu-button {
   padding-top: 4px;
 }
 
-/* line 151, ../../sass/layouts/default.sass */
+/* line 151, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 #container {
   margin-top: 70px;
 }
 
-/* line 154, ../../sass/layouts/default.sass */
+/* line 154, /datos/Documentos/Colectivo Libre/Workspace/club-de-danza/app/webroot/sass/layouts/default.sass */
 #container-h1 {
   height: 0;
   width: 80px;
@@ -371,7 +440,88 @@ li > a.menu-button {
   border-right: 40px solid transparent;
 }
 
+/* line 3, ../../sass/_carrousel.sass */
+.carousel-control {
+  width: 0;
+}
+
+/* line 6, ../../sass/_carrousel.sass */
+.carousel-indicators {
+  bottom: 0;
+  left: 50%;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-left: -30%;
+  padding-left: 0;
+  position: absolute;
+  text-align: center;
+  width: auto;
+  z-index: 15;
+}
+
+/* line 20, ../../sass/_carrousel.sass */
+.carousel-caption {
+  background-color: rgba(221, 16, 76, 0.8);
+  bottom: 0;
+  color: white;
+  height: 20%;
+  left: 0;
+  padding: 3px 5px;
+  opacity: 0.9;
+  width: 50%;
+}
+
+/* line 31, ../../sass/_carrousel.sass */
+.carousel-control > .fa {
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+}
+/* line 36, ../../sass/_carrousel.sass */
+.carousel-control > .fa.fa-angle-left {
+  left: 5px;
+}
+/* line 39, ../../sass/_carrousel.sass */
+.carousel-control > .fa.fa-angle-right {
+  right: 5px;
+}
+
+/* line 44, ../../sass/_carrousel.sass */
+.carousel-inner {
+  box-shadow: 0 0 2px 2px #cccccc;
+  margin-bottom: 20px;
+}
+/* line 48, ../../sass/_carrousel.sass */
+.carousel-inner .item {
+  height: 252px;
+  min-height: 252px;
+  max-height: 252px;
+}
+/* line 53, ../../sass/_carrousel.sass */
+.carousel-inner a {
+  color: white;
+  font-family: "Homenaje";
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
 /* line 3, ../../sass/layouts/mapadeladanza.sass */
 #container {
   min-height: 550px;
 }
+
+/* line 6, ../../sass/layouts/mapadeladanza.sass */
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  height: 300px;
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 12, ../../sass/layouts/mapadeladanza.sass */
+.carousel-inner {
+  box-shadow: 0 0 0 0 white;
+}
+>>>>>>> 432a51641c92c2d3e7be817723cac1c8f18a3f76

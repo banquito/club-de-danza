@@ -21,7 +21,7 @@ class CallsController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getElements', 'view');
+		$this->Auth->allow('getElements', 'getElementsOutOfDate', 'getSalients', 'view');
 	}
 
 	public function isAuthorized($user) {
@@ -137,6 +137,36 @@ class CallsController extends AppController {
 									$this->Call->AttachmentsCall->create();
 									$this->Call->AttachmentsCall->save(array('call_id'=>$this->Call->id
 										, 'attachment_id' => $this->Call->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+			
+				# Photos
+				if (isset($call['Photo']) && sizeof($call['Photo']) > 0) {
+				 	foreach ($call['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							//$photoFile = $call_id . date("YmdHisu")  . '.' . $photoExt;
+							$photoFile = $call_id . md5(microtime()) . '.' . $photoExt; 
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Call->Photo->create();
+								if ($this->Call->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Call->CallsPhoto->create();
+									$this->Call->CallsPhoto->save(array('call_id'=>$this->Call->id
+										, 'photo_id' => $this->Call->Photo->id
 										, 'user_id' => AuthComponent::user('id')
 										)
 									);
@@ -267,6 +297,10 @@ class CallsController extends AppController {
 			$attachments = $this -> Call -> read(null, $id);
 			$call['Attachment'] = array_merge($call['Attachment'], $attachments['Attachment']);
 
+			# Para que no se eliminen las Photos en el save:
+			$photos = $this -> Call -> read(null, $id);
+			$call['Photo'] = array_merge($call['Photo'], $photos['Photo']);
+
 			if ($this->Call->save($call)) {
 				$call_id = $this->Call->id;
 				
@@ -298,6 +332,36 @@ class CallsController extends AppController {
 							}
 						}
 					}
+				}
+				
+				# Photos
+				if (isset($call['Photo']) && sizeof($call['Photo']) > 0) {
+				 	foreach ($call['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '') && isset($photo['tmp_name']) && ($photo['tmp_name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							$photoFile = $call_id . md5(microtime()) . '.' . $photoExt;
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Call->Photo->create();
+								if ($this->Call->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Call->CallsPhoto->create();
+									$this->Call->CallsPhoto->save(array('call_id' => $call_id
+										, 'photo_id' => $this->Call->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+							
+						}
+				 	}
 				}
 
 				# Videos
@@ -346,6 +410,33 @@ class CallsController extends AppController {
 		$options['recursive'] = -1;
 		return $this->Call->find('all', $options);
 	}
+	
+/**
+ * getElementsOutOfDate method (No Vigentes)
+ *
+ * @return void
+ */
+	public function getElementsOutOfDate() {
+		$options['conditions'] = array('element-date <' => date('Y-m-d H:i'));
+		$options['fields'] = array('id', 'title', 'image', 'element-date');
+		$options['order'] = 'element-date ASC';
+		$options['recursive'] = -1;
+		return $this->Call->find('all', $options);
+	}
+
+/**
+ * getSalients method
+ *
+ * @return void
+ */
+	public function getSalients() {
+		$options['conditions'] = array('salient' => true);
+		// $options['fields'] = array('id', 'title', 'image');
+		$options['order'] = array('Call.created' => 'DESC');
+		// $options['recursive'] = -1;
+		return $this->Call->find('all', $options);
+	}
+
 
 /**
  * index method

@@ -1,7 +1,9 @@
 <?php //if(isset($data)) debug($data, $showHtml = null, $showFrom = true) ?>
 <?php //if(isset($elements)) debug($elements, $showHtml = null, $showFrom = true) ?>
+<?php //if (isset($salients)) debug($salients, $showHtml = null, $showFrom = true); ?>
 <?php echo $this->Html->css('pages/inicio', array('inline' => false)); ?>
 
+<h1>Búsquedas</h1>
 <div class="row">
 	<div class="col-sm-12">
 		<?php echo $this->Form->create('Mapsearches', array('url' => '/mapadeladanza', 'class' => 'form-inline')) ?>
@@ -51,6 +53,7 @@
 					);
 				?>
 			</div>
+
 			<div class="form-group">
 				<?php 
 					$estilo = array(
@@ -68,11 +71,15 @@
 				<label class="sr-only">Palabra clave</label>
 				<input type="text" class="form-control" placeholder="Palabra clave" />
 			</div>
-			<button type="submit" class="btn btn-default"><?php echo __('Submit') ?></button>
+			<button type="submit" class="btn btn-default"><i class="fa fa-search"></i> <?php echo __('Submit') ?></button>
+
+
 		<?php echo $this->Form->end() ?>
 	</div>
 </div>
 <hr>
+
+<?php if(isset($salients) && sizeof($salients) > 0) echo $this->element('sliderSalients', array("items" => $salients)); # Slider Salients ?>
 
 <div class="row">
 	<div class="col-sm-12">

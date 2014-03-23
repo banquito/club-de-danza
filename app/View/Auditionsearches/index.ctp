@@ -1,73 +1,48 @@
 <?php //if(isset($data)) debug($data, $showHtml = null, $showFrom = true) ?>
 <?php //if(isset($elements)) debug($elements, $showHtml = null, $showFrom = true) ?>
+<?php //if(isset($salients)) debug($salients, $showHtml = null, $showFrom = true) ?>
 <?php echo $this->Html->css('pages/inicio', array('inline' => false)); ?>
+
+<h1>Búsquedas</h1>
 
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $this->Form->create('Auditionsearches', array('url' => '/audiciones', 'class' => 'form-inline')) ?>
-			<div class="form-group hidden">
-				<label>Categorías</label>
-				<div class="checkbox">
-					<label>
-						<?php echo $this->Form->checkbox('auditions', array('hiddenField' => false)) ?>
-						Audiciones
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<?php echo $this->Form->checkbox('calls', array('hiddenField' => false)) ?>
-						Convocatorias
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<?php echo $this->Form->checkbox('castings', array('hiddenField' => false)) ?>
-						Castings
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<?php echo $this->Form->checkbox('jobs', array('hiddenField' => false)) ?>
-						Búsquedas Laborales
-					</label>
-				</div>
-			</div>
+		<?php echo $this->Form->create('Filter', array('url' => '/audiciones', 'class' => 'form-inline')) ?>
 			<div class="form-group">
 				<?php 
 					$categories = array(
-						'all' => 'Categoría',
 						'auditions' => 'Audiciones', 
 						'calls' => 'Convocatorias', 
 						'castings' => 'Castings', 
 						'jobs' => 'Búsquedas Laborales'
 					);
 					echo $this->Form->input(
-					    'Categoría',
-					    array('label' => false, 'options' => $categories, 'default' => 'all', 'class' => 'form-control')
+					    'category',
+					    array('label' => false, 'options' => $categories, 'empty' => 'Categoría', 'class' => 'form-control')
 					);
 				?>
 			</div>
 			<div class="form-group">
 				<?php 
 					$pais = array(
-						'all' => 'Pais',
 						'ar' => 'Argentina'
 					);
 					echo $this->Form->input(
-					    'Pais',
-					    array('label' => false, 'options' => $pais, 'default' => 'all', 'class' => 'form-control')
+					    'country',
+					    array('label' => false, 'options' => $pais, 'empty' => 'País', 'class' => 'form-control')
 					);
 				?>
 			</div>
 			<div class="form-group">
 				<?php 
-					$profesion = array(
+					$professions = array(
 						'all' => 'Profesión',
 						'cantante' => 'Cantante'
 					);
 					echo $this->Form->input(
-					    'Profesión',
-					    array('label' => false, 'options' => $profesion, 'default' => 'all', 'class' => 'form-control')
+					    'professions',
+					    array('label' => false, 'options' => $professions, 'empty' => 'Profesión', 'class' => 'form-control')
+
 					);
 				?>
 			</div>
@@ -75,11 +50,13 @@
 				<label class="sr-only">Palabra clave</label>
 				<input type="text" class="form-control" placeholder="Palabra clave" />
 			</div>
-			<button type="submit" class="btn btn-default"><?php echo __('Submit') ?></button>
+			<button type="submit" class="btn btn-default btn-sm"><i class="fa fa-search"></i> Buscar</button>
 		<?php echo $this->Form->end() ?>
 	</div>
 </div>
 <hr>
+
+<?php if(isset($salients) && sizeof($salients) > 0) echo $this->element('sliderSalients', array("items" => $salients)); # Slider Salients ?>
 
 <div class="row">
 	<div class="col-sm-12">

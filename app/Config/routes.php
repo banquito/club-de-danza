@@ -80,9 +80,13 @@
 	Router::connect('/proximamente', array('controller' => 'pages', 'action' => 'display', 'proximamente'));
 	Router::connect('/registro', array('controller' => 'users', 'action' => 'add'));
 	
+	# Sliders
 	Router::connect('/sliders/nuevo', array('controller' => 'sliders', 'action' => 'add'));
 	Router::connect('/sliders/editar/*', array('controller' => 'sliders', 'action' => 'edit'));
 	Router::connect('/sliders/ver/*', array('controller' => 'sliders', 'action' => 'view'));
+	Router::connect('/slidernotes/nuevo', array('controller' => 'slidernotes', 'action' => 'add'));
+	Router::connect('/slidernotes/editar/*', array('controller' => 'slidernotes', 'action' => 'edit'));
+	Router::connect('/slidernotes/ver/*', array('controller' => 'slidernotes', 'action' => 'view'));
 	
 	Router::connect('/usuarios/listar', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/perfil/*', array('controller' => 'users', 'action' => 'view'));

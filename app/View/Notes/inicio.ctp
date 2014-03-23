@@ -1,7 +1,9 @@
+<?php //debug($notes, $showHtml = null, $showFrom = true) ?>
+
 <?php echo $this->Html->css('pages/inicio', array('inline' => false)); ?>
 
 <!-- Slider & Carrusel -->
-<?php echo $this -> element('slider'); ?>
+<?php echo $this -> element('slidernote'); ?>
 
 <!-- Título -->
 <div class="row row-header-h1">
@@ -30,6 +32,9 @@
 							<p class="title-vermas">
 								<?php echo ($title = $note['Note']['title']) ? substr($title, 0, 50) : __('No Title'); ?>
 							</p>
+							<p class="resume-vermas">
+								<?php echo ($resume = h($note['Note']['resume'])) ? substr($resume, 0, 50) : 'Sin Resumen'; ?>
+							</p>
 						</div>
 					</div>
 				</a>
@@ -48,25 +53,6 @@
 			//));
 			?>
 		</p>
-		<ul class="pagination">
-		  <li>
-		  	<?php echo $this->Paginator->prev('«', array('tag' => 'li'), null, array('class' => 'disabled')); ?>
-		  </li>
-		  
-			<?php
-				echo $this->Paginator->numbers(
-					array(
-						'currentClass' => 'active',
-						'separator' => '',
-						'tag' => 'li',
-						'currentTag' => 'span'
-					)
-				);				
-			?>
-		  
-		  <li> 
-		  	<?php echo $this->Paginator->next('»', array('tag' => 'li'), null, array('class' => 'disabled')); ?>
-		  </li>
-		</ul>
+
 	</div>
 </div>

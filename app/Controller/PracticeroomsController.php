@@ -21,7 +21,7 @@ class PracticeroomsController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getElements', 'view');
+		$this->Auth->allow('getElements', 'getSalients', 'view');
 	}
 
 	public function isAuthorized($user) {
@@ -120,6 +120,36 @@ class PracticeroomsController extends AppController {
 				 	}
 				}
 
+				# Photos
+				if (isset($practiceroom['Photo']) && sizeof($practiceroom['Photo']) > 0) {
+				 	foreach ($practiceroom['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							//$photoFile = $practiceroom_id . date("YmdHisu")  . '.' . $photoExt;
+							$photoFile = $practiceroom_id . md5(microtime()) . '.' . $photoExt; 
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Practiceroom->Photo->create();
+								if ($this->Practiceroom->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Practiceroom->PracticeroomsPhoto->create();
+									$this->Practiceroom->PracticeroomsPhoto->save(array('practiceroom_id'=>$this->Practiceroom->id
+										, 'photo_id' => $this->Practiceroom->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+
 				# Videos
 				if (isset($practiceroom['Video']) && sizeof($practiceroom['Video']) > 0) {
 				 	foreach ($practiceroom['Video'] as $key => $video) {
@@ -212,6 +242,9 @@ class PracticeroomsController extends AppController {
 			// $practiceroom['Video'] = array_merge($practiceroom['Video'], $practiceroomAux['Video']);
 
 			// debug($practiceroom, $showHtml = null, $showFrom = true);
+			# Para que no se eliminen las Photos en el save:
+			$photos = $this -> Practiceroom -> read(null, $id);
+			$practiceroom['Photo'] = array_merge($practiceroom['Photo'], $photos['Photo']);
 
 			if ($this->Practiceroom->save($practiceroom)) {
 				$practiceroom_id = $this->Practiceroom->id;
@@ -238,6 +271,36 @@ class PracticeroomsController extends AppController {
 									$this->Practiceroom->PracticeroomsTimetable->create();
 									$this->Practiceroom->PracticeroomsTimetable->save(array('practiceroom_id' => $practiceroom_id
 										, 'timetable_id' => $this->Practiceroom->Timetable->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+							
+						}
+				 	}
+				}
+
+				# Photos
+				if (isset($job['Photo']) && sizeof($job['Photo']) > 0) {
+				 	foreach ($job['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '') && isset($photo['tmp_name']) && ($photo['tmp_name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							$photoFile = $job_id . md5(microtime()) . '.' . $photoExt;
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Job->Photo->create();
+								if ($this->Job->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Job->JobsPhoto->create();
+									$this->Job->JobsPhoto->save(array('job_id' => $job_id
+										, 'photo_id' => $this->Job->Photo->id
 										, 'user_id' => AuthComponent::user('id')
 										)
 									);
@@ -290,6 +353,19 @@ class PracticeroomsController extends AppController {
 		$options['fields'] = array('id', 'name', 'image', 'paid');
 		$options['order'] = array('paid' => 'DESC', 'created' => 'DESC');
 		$options['recursive'] = -1;
+		return $this->Practiceroom->find('all', $options);
+	}
+	
+/**
+ * getSalients method
+ *
+ * @return void
+ */
+	public function getSalients() {
+		$options['conditions'] = array('salient' => true);
+		// $options['fields'] = array('id', 'name', 'image', 'street', 'floor', 'department', 'website', 'email', 'phone');
+		$options['order'] = array('Practiceroom.created' => 'DESC');
+		// $options['recursive'] = -1;
 		return $this->Practiceroom->find('all', $options);
 	}
 

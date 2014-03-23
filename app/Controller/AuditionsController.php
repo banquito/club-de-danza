@@ -22,7 +22,7 @@ class AuditionsController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getElements', 'view');
+		$this->Auth->allow('getElements', 'getElementsOutOfDate', 'getSalients', 'view');
 	}
 
 	public function isAuthorized($user) {
@@ -138,6 +138,36 @@ class AuditionsController extends AppController {
 									$this->Audition->AttachmentsAudition->create();
 									$this->Audition->AttachmentsAudition->save(array('audition_id'=>$this->Audition->id
 										, 'attachment_id' => $this->Audition->Attachment->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+				
+				# Photos
+				if (isset($audition['Photo']) && sizeof($audition['Photo']) > 0) {
+				 	foreach ($audition['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							//$photoFile = $audition_id . date("YmdHisu")  . '.' . $photoExt;
+							$photoFile = $audition_id . md5(microtime()) . '.' . $photoExt; 
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Audition->Photo->create();
+								if ($this->Audition->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Audition->AuditionsPhoto->create();
+									$this->Audition->AuditionsPhoto->save(array('audition_id'=>$this->Audition->id
+										, 'photo_id' => $this->Audition->Photo->id
 										, 'user_id' => AuthComponent::user('id')
 										)
 									);
@@ -268,6 +298,10 @@ class AuditionsController extends AppController {
 			$attachments = $this -> Audition -> read(null, $id);
 			$audition['Attachment'] = array_merge($audition['Attachment'], $attachments['Attachment']);
 
+			# Para que no se eliminen las Photos en el save:
+			$photos = $this -> Audition -> read(null, $id);
+			$audition['Photo'] = array_merge($audition['Photo'], $photos['Photo']);
+
 			if ($this->Audition->save($audition)) {
 				$audition_id = $this->Audition->id;
 				
@@ -299,6 +333,36 @@ class AuditionsController extends AppController {
 							}
 						}
 					}
+				}
+				
+				# Photos
+				if (isset($audition['Photo']) && sizeof($audition['Photo']) > 0) {
+				 	foreach ($audition['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '') && isset($photo['tmp_name']) && ($photo['tmp_name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							$photoFile = $audition_id . md5(microtime()) . '.' . $photoExt;
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Audition->Photo->create();
+								if ($this->Audition->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Audition->AuditionsPhoto->create();
+									$this->Audition->AuditionsPhoto->save(array('audition_id' => $audition_id
+										, 'photo_id' => $this->Audition->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+							
+						}
+				 	}
 				}
 
 				# Videos
@@ -348,6 +412,33 @@ class AuditionsController extends AppController {
 		$options['recursive'] = -1;
 		return $this->Audition->find('all', $options);
 	}
+
+/**
+ * getElementsOutOfDate method (No Vigentes)
+ *
+ * @return void
+ */
+	public function getElementsOutOfDate() {
+		$options['conditions'] = array('element-date <' => date('Y-m-d H:i'));
+		$options['fields'] = array('id', 'title', 'image', 'element-date');
+		$options['order'] = 'element-date ASC';
+		$options['recursive'] = -1;
+		return $this->Audition->find('all', $options);
+	}
+
+/**
+ * getSalients method
+ *
+ * @return void
+ */
+	public function getSalients() {
+		$options['conditions'] = array('salient' => true);
+		// $options['fields'] = array('id', 'title', 'image');
+		$options['order'] = array('Audition.created' => 'DESC');
+		// $options['recursive'] = -1;
+		return $this->Audition->find('all', $options);
+	}
+
 
 /**
  * index method
