@@ -118,12 +118,29 @@ class MapsearchesController extends AppController {
 			$id = $auxValues[0]['id'];
 			$image = ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
 			$name = $auxValues[0]['name'] ? substr($auxValues[0]['name'], 0, 50) : __('No Name');
+			$products = isset($auxValues[0]['products']) ? $auxValues[0]['products'] : null;
+			$street = isset($auxValues[0]['street']) ? $auxValues[0]['street'] : null;
+			$floor = isset($auxValues[0]['floor']) ? $auxValues[0]['floor'] : null;
+			$department = isset($auxValues[0]['department']) ? $auxValues[0]['department'] : null;
+			$website = isset($auxValues[0]['website']) ? $auxValues[0]['website'] : null;
+			$email = isset($auxValues[0]['email']) ? $auxValues[0]['email'] : null;
+			$phone = isset($auxValues[0]['phone']) ? $auxValues[0]['phone'] : null;
+			$dancestyle = isset($auxValues[0]['Dancestyle']) ? $auxValues[0]['Dancestyle'] : null;
 			
+			// array('id', 'name', 'image', 'products', 'street', 'floor', 'department', 'website', 'contact', 'email', 'phone');
 			$salients[$key] = array_merge($salient
 				, array('image' => $image
 					, 'link' => Router::url(array('controller'=>$namePlural, 'action'=>'view', $id))
 					, 'name-plural' => $namePlural
 					, 'title' => $name
+					, 'products' => $products
+					, 'street' => $street
+					, 'floor' => $floor
+					, 'department' => $department
+					, 'website' => $website
+					, 'email' => $email
+					, 'phone' => $phone
+					, 'Dancestyle' => $dancestyle
 				)
 			);
 		endforeach;

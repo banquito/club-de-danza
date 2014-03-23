@@ -137,6 +137,15 @@ class AuditionsearchesController extends AppController {
 			$id = $auxValues[0]['id'];
 			$image = ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
 			$title = $auxValues[0]['title'] ? substr($auxValues[0]['title'], 0, 50) : __('No Title');
+			$products = isset($auxValues[0]['products']) ? $auxValues[0]['products'] : null;
+			$street = isset($auxValues[0]['street']) ? $auxValues[0]['street'] : null;
+			$floor = isset($auxValues[0]['floor']) ? $auxValues[0]['floor'] : null;
+			$department = isset($auxValues[0]['department']) ? $auxValues[0]['department'] : null;
+			$website = isset($auxValues[0]['website']) ? $auxValues[0]['website'] : null;
+			$email = isset($auxValues[0]['email']) ? $auxValues[0]['email'] : null;
+			$phone = isset($auxValues[0]['phone']) ? $auxValues[0]['phone'] : null;
+			$dancestyle = isset($auxValues[0]['Dancestyle']) ? $auxValues[0]['Dancestyle'] : null;
+			$elementDate = isset($auxValues[0]['element-date']) ? $auxValues[0]['element-date'] : null;
 			
 			$salients[$key] = array_merge($salient
 				, array('image' => $image
@@ -144,6 +153,15 @@ class AuditionsearchesController extends AppController {
 					, 'name-plural' => $namePlural
 					, 'name' => $name
 					, 'title' => $title
+					, 'products' => $products
+					, 'street' => $street
+					, 'floor' => $floor
+					, 'department' => $department
+					, 'website' => $website
+					, 'email' => $email
+					, 'phone' => $phone
+					, 'Dancestyle' => $dancestyle
+					, 'element-date' => $elementDate
 				)
 			);
 		endforeach;

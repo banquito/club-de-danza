@@ -300,9 +300,9 @@ class PracticeroomsController extends AppController {
  */
 	public function getSalients() {
 		$options['conditions'] = array('salient' => true);
-		$options['fields'] = array('id', 'name', 'image');
-		$options['order'] = array('created' => 'DESC');
-		$options['recursive'] = -1;
+		// $options['fields'] = array('id', 'name', 'image', 'street', 'floor', 'department', 'website', 'email', 'phone');
+		$options['order'] = array('Practiceroom.created' => 'DESC');
+		// $options['recursive'] = -1;
 		return $this->Practiceroom->find('all', $options);
 	}
 
