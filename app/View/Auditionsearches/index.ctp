@@ -7,70 +7,40 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<?php echo $this->Form->create('Auditionsearches', array('url' => '/audiciones', 'class' => 'form-inline')) ?>
-			<div class="form-group hidden">
-				<label>Categorías</label>
-				<div class="checkbox">
-					<label>
-						<?php echo $this->Form->checkbox('auditions', array('hiddenField' => false)) ?>
-						Audiciones
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<?php echo $this->Form->checkbox('calls', array('hiddenField' => false)) ?>
-						Convocatorias
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<?php echo $this->Form->checkbox('castings', array('hiddenField' => false)) ?>
-						Castings
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<?php echo $this->Form->checkbox('jobs', array('hiddenField' => false)) ?>
-						Búsquedas Laborales
-					</label>
-				</div>
-			</div>
+		<?php echo $this->Form->create('Filter', array('url' => '/audiciones', 'class' => 'form-inline')) ?>
 			<div class="form-group">
 				<?php 
 					$categories = array(
-						'all' => 'Categoría',
 						'auditions' => 'Audiciones', 
 						'calls' => 'Convocatorias', 
 						'castings' => 'Castings', 
 						'jobs' => 'Búsquedas Laborales'
 					);
 					echo $this->Form->input(
-					    'Categoría',
-					    array('label' => false, 'options' => $categories, 'default' => 'all', 'class' => 'form-control')
+					    'category',
+					    array('label' => false, 'options' => $categories, 'empty' => 'Categoría', 'class' => 'form-control')
 					);
 				?>
 			</div>
 			<div class="form-group">
 				<?php 
 					$pais = array(
-						'all' => 'Pais',
 						'ar' => 'Argentina'
 					);
 					echo $this->Form->input(
-					    'Pais',
-					    array('label' => false, 'options' => $pais, 'default' => 'all', 'class' => 'form-control')
+					    'country',
+					    array('label' => false, 'options' => $pais, 'empty' => 'País', 'class' => 'form-control')
 					);
 				?>
 			</div>
 			<div class="form-group">
 				<?php 
-					$pais = array(
-						'all' => 'Profesión',
+					$professions = array(
 						'cantante' => 'Cantante'
 					);
 					echo $this->Form->input(
-					    'Profesión',
-					    array('label' => false, 'options' => $pais, 'default' => 'all', 'class' => 'form-control')
+					    'professions',
+					    array('label' => false, 'options' => $professions, 'empty' => 'Profesión', 'class' => 'form-control')
 					);
 				?>
 			</div>
@@ -78,7 +48,7 @@
 				<label class="sr-only">Palabra clave</label>
 				<input type="text" class="form-control" placeholder="Palabra clave" />
 			</div>
-			<button type="submit" class="btn btn-default"><?php echo __('Submit') ?></button>
+			<button type="submit" class="btn btn-default"><?php echo __('Buscar') ?></button>
 		<?php echo $this->Form->end() ?>
 	</div>
 </div>

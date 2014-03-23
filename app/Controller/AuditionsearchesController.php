@@ -42,44 +42,37 @@ class AuditionsearchesController extends AppController {
 		$this -> Auth -> allow('index');
 	}
 
-
-	/**
-	* Se desarrolla una lógica para independizarnos de los nombres de los Controllers
-	*/
 	public function index() {
 		$elements = array();
 		$todas = 1;
-		
-		if ($this->request->is('post')) {
-			if(isset($this->request->data['Auditionsearches'])) {
-				$data = $this->request->data['Auditionsearches'];
-				$todas = sizeof($data) == 0;
-				$this->set(compact('data'));
-				// $this->request->data['auditions'] = 1;
-			}
-		}
+
+        if($this->request->is('post') && isset($this->data['Filter'])){
+			$data = $this->request->data['Filter'];
+			$todas = empty($data['category']);
+			$this->set(compact('data'));
+        }
 
 		###
 		# Elementos Buscados
 		###
 		# Vigentes
-		if(isset($data['auditions']) || $todas)
+		if((isset($data['category']) && $data['category'] == "auditions") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'auditions', 'action' => 'getElements')));
-		if(isset($data['calls']) || $todas)
+		if((isset($data['category']) && $data['category'] == "calls") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'calls', 'action' => 'getElements')));
-		if(isset($data['castings']) || $todas)
+		if((isset($data['category']) && $data['category'] == "castings") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'castings', 'action' => 'getElements')));
-		if(isset($data['jobs']) || $todas)
+		if((isset($data['category']) && $data['category'] == "jobs") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'jobs', 'action' => 'getElements')));
 
 		# No Vigentes
-		if(isset($data['auditions']) || $todas)
+		if((isset($data['category']) && $data['category'] == "auditions") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'auditions', 'action' => 'getElementsOutOfDate')));
-		if(isset($data['calls']) || $todas)
+		if((isset($data['category']) && $data['category'] == "calls") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'calls', 'action' => 'getElementsOutOfDate')));
-		if(isset($data['castings']) || $todas)
+		if((isset($data['category']) && $data['category'] == "castings") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'castings', 'action' => 'getElementsOutOfDate')));
-		if(isset($data['jobs']) || $todas)
+		if((isset($data['category']) && $data['category'] == "jobs") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'jobs', 'action' => 'getElementsOutOfDate')));
 		
 
@@ -116,8 +109,6 @@ class AuditionsearchesController extends AppController {
 
 		usort($elements, 'sortElements');
 
-		# /elementosBuscados
-
 		###
 		# Elementos Destacados
 		###
@@ -151,8 +142,8 @@ class AuditionsearchesController extends AppController {
 		# /elementosDestacados
 
 		$this->set(compact('data', 'elements', 'salients'));
-		
 	}
+
 
 	// // Comparison function
 	// function datesDesc($a, $b) {
