@@ -146,6 +146,35 @@ class CastingsController extends AppController {
 					}
 				}
 				
+				# Photos
+				if (isset($casting['Photo']) && sizeof($casting['Photo']) > 0) {
+				 	foreach ($casting['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							//$photoFile = $casting_id . date("YmdHisu")  . '.' . $photoExt;
+							$photoFile = $casting_id . md5(microtime()) . '.' . $photoExt; 
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Casting->Photo->create();
+								if ($this->Casting->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Casting->CastingsPhoto->create();
+									$this->Casting->CastingsPhoto->save(array('casting_id'=>$this->Casting->id
+										, 'photo_id' => $this->Casting->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
 				# Videos
 				if (isset($casting['Video']) && sizeof($casting['Video']) > 0) {
 				 	foreach ($casting['Video'] as $key => $video) {
@@ -382,6 +411,9 @@ class CastingsController extends AppController {
 			$attachments = $this -> Casting -> read(null, $id);
 			$casting['Attachment'] = array_merge($casting['Attachment'], $attachments['Attachment']);
 
+			# Para que no se eliminen las Photos en el save:
+			$photos = $this -> Casting -> read(null, $id);
+			$casting['Photo'] = array_merge($casting['Photo'], $photos['Photo']);
 
 			if ($this->Casting->save($casting)) {
 				$casting_id = $this->Casting->id;
@@ -414,6 +446,36 @@ class CastingsController extends AppController {
 							}
 						}
 					}
+				}
+
+				# Photos
+				if (isset($casting['Photo']) && sizeof($casting['Photo']) > 0) {
+				 	foreach ($casting['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '') && isset($photo['tmp_name']) && ($photo['tmp_name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							$photoFile = $casting_id . md5(microtime()) . '.' . $photoExt;
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Casting->Photo->create();
+								if ($this->Casting->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Casting->CastingsPhoto->create();
+									$this->Casting->CastingsPhoto->save(array('casting_id' => $casting_id
+										, 'photo_id' => $this->Casting->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+							
+						}
+				 	}
 				}
 
 				# Videos

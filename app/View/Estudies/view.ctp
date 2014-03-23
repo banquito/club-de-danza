@@ -60,7 +60,12 @@
 							<span class="fa fa-angle-right fa-2x"></span>
 						</a>
 					</div>
-					
+				<?php else:?>
+					<?php
+						echo $this->Html->image('estudies/'.$estudy['Estudy']['image']
+							, array('class'=>'img-responsive')
+						);
+					?>	
 				<?php endif; ?>
 				<!-- Fin Sliders -->
 			</div>

@@ -6,9 +6,9 @@
 			<?php echo h($castingsPhoto['CastingsPhoto']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Job'); ?></dt>
+		<dt><?php echo __('Casting'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($castingsPhoto['Job']['title'], array('controller' => 'jobs', 'action' => 'view', $castingsPhoto['Job']['id'])); ?>
+			<?php echo $this->Html->link($castingsPhoto['Casting']['title'], array('controller' => 'castings', 'action' => 'view', $castingsPhoto['Casting']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Photo'); ?></dt>
@@ -40,8 +40,8 @@
 		<li><?php echo $this->Form->postLink(__('Delete Castings Photo'), array('action' => 'delete', $castingsPhoto['CastingsPhoto']['id']), null, __('Are you sure you want to delete # %s?', $castingsPhoto['CastingsPhoto']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Castings Photos'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Castings Photo'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Jobs'), array('controller' => 'jobs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Job'), array('controller' => 'jobs', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Castings'), array('controller' => 'castings', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Casting'), array('controller' => 'castings', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Photos'), array('controller' => 'photos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>

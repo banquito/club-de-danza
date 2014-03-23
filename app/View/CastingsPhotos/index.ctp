@@ -3,7 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('casting_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('photo_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
@@ -14,7 +14,7 @@
 	<tr>
 		<td><?php echo h($castingsPhoto['CastingsPhoto']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($castingsPhoto['Job']['title'], array('controller' => 'jobs', 'action' => 'view', $castingsPhoto['Job']['id'])); ?>
+			<?php echo $this->Html->link($castingsPhoto['Casting']['title'], array('controller' => 'castings', 'action' => 'view', $castingsPhoto['Casting']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($castingsPhoto['Photo']['name'], array('controller' => 'photos', 'action' => 'view', $castingsPhoto['Photo']['id'])); ?>
@@ -50,8 +50,8 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Castings Photo'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Jobs'), array('controller' => 'jobs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Job'), array('controller' => 'jobs', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Castings'), array('controller' => 'castings', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Casting'), array('controller' => 'castings', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Photos'), array('controller' => 'photos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>

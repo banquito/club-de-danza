@@ -146,6 +146,36 @@ class CallsController extends AppController {
 					}
 				}
 			
+				# Photos
+				if (isset($call['Photo']) && sizeof($call['Photo']) > 0) {
+				 	foreach ($call['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							//$photoFile = $call_id . date("YmdHisu")  . '.' . $photoExt;
+							$photoFile = $call_id . md5(microtime()) . '.' . $photoExt; 
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Call->Photo->create();
+								if ($this->Call->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Call->CallsPhoto->create();
+									$this->Call->CallsPhoto->save(array('call_id'=>$this->Call->id
+										, 'photo_id' => $this->Call->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+			
 				# Videos
 				if (isset($call['Video']) && sizeof($call['Video']) > 0) {
 				 	foreach ($call['Video'] as $key => $video) {
@@ -267,6 +297,10 @@ class CallsController extends AppController {
 			$attachments = $this -> Call -> read(null, $id);
 			$call['Attachment'] = array_merge($call['Attachment'], $attachments['Attachment']);
 
+			# Para que no se eliminen las Photos en el save:
+			$photos = $this -> Call -> read(null, $id);
+			$call['Photo'] = array_merge($call['Photo'], $photos['Photo']);
+
 			if ($this->Call->save($call)) {
 				$call_id = $this->Call->id;
 				
@@ -298,6 +332,36 @@ class CallsController extends AppController {
 							}
 						}
 					}
+				}
+				
+				# Photos
+				if (isset($call['Photo']) && sizeof($call['Photo']) > 0) {
+				 	foreach ($call['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '') && isset($photo['tmp_name']) && ($photo['tmp_name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							$photoFile = $call_id . md5(microtime()) . '.' . $photoExt;
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Call->Photo->create();
+								if ($this->Call->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Call->CallsPhoto->create();
+									$this->Call->CallsPhoto->save(array('call_id' => $call_id
+										, 'photo_id' => $this->Call->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+							
+						}
+				 	}
 				}
 
 				# Videos

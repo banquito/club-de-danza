@@ -15,7 +15,7 @@ class PracticeroomsPhoto extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'estudy_id' => array(
+		'practiceroom_id' => array(
 			'uuid' => array(
 				'rule' => array('uuid'),
 				//'message' => 'Your custom message here',
@@ -55,9 +55,9 @@ class PracticeroomsPhoto extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Estudy' => array(
-			'className' => 'Estudy',
-			'foreignKey' => 'estudy_id',
+		'Practiceroom' => array(
+			'className' => 'Practiceroom',
+			'foreignKey' => 'practiceroom_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

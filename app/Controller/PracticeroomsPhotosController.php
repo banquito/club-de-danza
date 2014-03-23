@@ -15,6 +15,48 @@ class PracticeroomsPhotosController extends AppController {
  */
 	public $components = array('Paginator');
 
+/*************************************************************************************************************************
+	* Autentication
+	**************************************************************************************************************************/
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow();
+	}
+
+	public function isAuthorized($user) {
+		$artist = array();
+		$owner = array('remove');
+		$admin = array_merge($artist, $owner, array());
+
+		// All artist users can index posts
+		if (in_array($this->action, $artist)) {
+			return true;
+		}
+
+		// The owner of an element can edit and delete it
+		if (in_array($this->action, $owner)) {
+			$elementId = $this->request->params['pass'][0];
+			if ($this->PracticeroomsPhoto->isOwnedBy($elementId, $user['id'])) {
+				return true;
+			}
+		}
+
+		# Usuario administrador(500) y superiores
+		if ($user['Rol']['weight'] >= User::ADMIN) {
+			if (in_array($this->action, $admin)) {
+				return true;
+			}
+		}
+
+		return parent::isAuthorized($user);
+	}
+
+	/*************************************************************************************************************************
+	* /autentication
+	**************************************************************************************************************************/
+
+
 /**
  * index method
  *
@@ -108,4 +150,26 @@ class PracticeroomsPhotosController extends AppController {
 			$this->Session->setFlash(__('The practicerooms photo could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
+	}
+	
+/**
+ * remove method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function remove($id = null) {
+		$this->PracticeroomsPhoto->id = $id;
+		if (!$this->PracticeroomsPhoto->exists()) {
+			throw new NotFoundException(__('Invalid practicerooms photo'));
+		}
+		$this->request->onlyAllow('get', 'delete');
+		if ($this->PracticeroomsPhoto->delete()) {
+			$this->Session->setFlash(__('The practicerooms photo has been deleted.'));
+		} else {
+			$this->Session->setFlash(__('The practicerooms photo could not be deleted. Please, try again.'));
+		}
+		return $this->redirect($this->referer());
+	}
+}

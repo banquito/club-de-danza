@@ -3,7 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Add Practicerooms Photo'); ?></legend>
 	<?php
-		echo $this->Form->input('estudy_id');
+		echo $this->Form->input('practiceroom_id');
 		echo $this->Form->input('photo_id');
 		echo $this->Form->input('user_id');
 	?>
@@ -16,7 +16,7 @@
 
 		<li><?php echo $this->Html->link(__('List Practicerooms Photos'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Estudies'), array('controller' => 'estudies', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Estudy'), array('controller' => 'estudies', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Practiceroom'), array('controller' => 'estudies', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Photos'), array('controller' => 'photos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>

@@ -15,6 +15,47 @@ class JobsPhotosController extends AppController {
  */
 	public $components = array('Paginator');
 
+/*************************************************************************************************************************
+	* Autentication
+	**************************************************************************************************************************/
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow();
+	}
+
+	public function isAuthorized($user) {
+		$artist = array();
+		$owner = array('remove');
+		$admin = array_merge($artist, $owner, array());
+
+		// All artist users can index posts
+		if (in_array($this->action, $artist)) {
+			return true;
+		}
+
+		// The owner of an element can edit and delete it
+		if (in_array($this->action, $owner)) {
+			$elementId = $this->request->params['pass'][0];
+			if ($this->JobsPhoto->isOwnedBy($elementId, $user['id'])) {
+				return true;
+			}
+		}
+
+		# Usuario administrador(500) y superiores
+		if ($user['Rol']['weight'] >= User::ADMIN) {
+			if (in_array($this->action, $admin)) {
+				return true;
+			}
+		}
+
+		return parent::isAuthorized($user);
+	}
+
+	/*************************************************************************************************************************
+	* /autentication
+	**************************************************************************************************************************/
+
 /**
  * index method
  *
@@ -108,4 +149,26 @@ class JobsPhotosController extends AppController {
 			$this->Session->setFlash(__('The jobs photo could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
+	}
+
+/**
+ * remove method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function remove($id = null) {
+		$this->JobsPhoto->id = $id;
+		if (!$this->JobsPhoto->exists()) {
+			throw new NotFoundException(__('Invalid jobs photo'));
+		}
+		$this->request->onlyAllow('get', 'delete');
+		if ($this->JobsPhoto->delete()) {
+			$this->Session->setFlash(__('The jobs photo has been deleted.'));
+		} else {
+			$this->Session->setFlash(__('The jobs photo could not be deleted. Please, try again.'));
+		}
+		return $this->redirect($this->referer());
+	}
+}
