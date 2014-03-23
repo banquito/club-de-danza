@@ -48,6 +48,16 @@
 					?>
 				</div>
 			</div>
+			<!-- Photos -->
+			<div class="form-group">
+				<label for="image" class="col-sm-4 control-label"><?php echo __('Photos'); ?></label>
+				<div id="photos" class="col-sm-7">
+					<input type="file" class="btn btn-default" name="data[Photo][]">
+				</div>
+				<div class="col-sm-1">
+					<button id="morePhotos" type="button" class="btn btn-default">+</button>
+				</div>
+			</div>
 			<div class="form-group">
 				<label for="image" class="col-sm-4 control-label"><?php echo __('Street'); ?></label>
 				<div class="col-sm-8">

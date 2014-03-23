@@ -3,7 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('estudy_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('practiceroom_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('photo_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
@@ -14,7 +14,7 @@
 	<tr>
 		<td><?php echo h($practiceroomsPhoto['PracticeroomsPhoto']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($practiceroomsPhoto['Estudy']['name'], array('controller' => 'estudies', 'action' => 'view', $practiceroomsPhoto['Estudy']['id'])); ?>
+			<?php echo $this->Html->link($practiceroomsPhoto['Practiceroom']['name'], array('controller' => 'practicerooms', 'action' => 'view', $practiceroomsPhoto['Practiceroom']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($practiceroomsPhoto['Photo']['name'], array('controller' => 'photos', 'action' => 'view', $practiceroomsPhoto['Photo']['id'])); ?>
@@ -50,8 +50,8 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Practicerooms Photo'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Estudies'), array('controller' => 'estudies', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Estudy'), array('controller' => 'estudies', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Estudies'), array('controller' => 'practicerooms', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Practiceroom'), array('controller' => 'practicerooms', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Photos'), array('controller' => 'photos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>

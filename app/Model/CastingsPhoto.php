@@ -15,7 +15,7 @@ class CastingsPhoto extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'job_id' => array(
+		'casting_id' => array(
 			'uuid' => array(
 				'rule' => array('uuid'),
 				//'message' => 'Your custom message here',
@@ -55,9 +55,9 @@ class CastingsPhoto extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Job' => array(
-			'className' => 'Job',
-			'foreignKey' => 'job_id',
+		'Casting' => array(
+			'className' => 'Casting',
+			'foreignKey' => 'casting_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

@@ -146,6 +146,36 @@ class JobsController extends AppController {
 					}
 				}
 				
+				# Photos
+				if (isset($job['Photo']) && sizeof($job['Photo']) > 0) {
+				 	foreach ($job['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							//$photoFile = $job_id . date("YmdHisu")  . '.' . $photoExt;
+							$photoFile = $job_id . md5(microtime()) . '.' . $photoExt; 
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+								# Se crea la relación
+								$this->Job->Photo->create();
+								if ($this->Job->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Job->JobsPhoto->create();
+									$this->Job->JobsPhoto->save(array('job_id'=>$this->Job->id
+										, 'photo_id' => $this->Job->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+				
 				# Videos
 				if (isset($job['Video']) && sizeof($job['Video']) > 0) {
 				 	foreach ($job['Video'] as $key => $video) {
@@ -267,6 +297,10 @@ class JobsController extends AppController {
 			$attachments = $this -> Job -> read(null, $id);
 			$job['Attachment'] = array_merge($job['Attachment'], $attachments['Attachment']);
 
+			# Para que no se eliminen las Photos en el save:
+			$photos = $this -> Job -> read(null, $id);
+			$job['Photo'] = array_merge($job['Photo'], $photos['Photo']);
+
 			if ($this->Job->save($job)) {
 				$job_id = $this->Job->id;
 				
@@ -298,6 +332,36 @@ class JobsController extends AppController {
 							}
 						}
 					}
+				}
+
+				# Photos
+				if (isset($job['Photo']) && sizeof($job['Photo']) > 0) {
+				 	foreach ($job['Photo'] as $key => $photo) {
+						
+						# Se verifica si se subió una photo y se setea la photo
+						if (isset($photo['name']) && ($photo['name'] != '') && isset($photo['tmp_name']) && ($photo['tmp_name'] != '')) {
+							$photoName = $photo['name'];
+							$photoExt = pathinfo($photo['name']);
+							$photoExt = $photoExt['extension'];
+							$photoFile = $job_id . md5(microtime()) . '.' . $photoExt;
+							$uploadDir = IMAGES_URL . 'photos/';
+							$uploadFile = $uploadDir . $photoFile;
+							
+							if (move_uploaded_file($photo['tmp_name'], $uploadFile)) {
+						 		# Se crea la relación
+						 		$this->Job->Photo->create();
+								if ($this->Job->Photo->save(array('file'=>$photoFile, 'name'=>$photoName))) {
+									$this->Job->JobsPhoto->create();
+									$this->Job->JobsPhoto->save(array('job_id' => $job_id
+										, 'photo_id' => $this->Job->Photo->id
+										, 'user_id' => AuthComponent::user('id')
+										)
+									);
+								}
+							}
+							
+						}
+				 	}
 				}
 
 				# Videos

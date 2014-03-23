@@ -4,7 +4,7 @@
 		<legend><?php echo __('Edit Jobs Photo'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('casting_id');
+		echo $this->Form->input('job_id');
 		echo $this->Form->input('photo_id');
 		echo $this->Form->input('user_id');
 	?>
@@ -17,8 +17,8 @@
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('JobsPhoto.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('JobsPhoto.id'))); ?></li>
 		<li><?php echo $this->Html->link(__('List Jobs Photos'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Castings'), array('controller' => 'castings', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Casting'), array('controller' => 'castings', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Jobs'), array('controller' => 'jobs', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Job'), array('controller' => 'jobs', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Photos'), array('controller' => 'photos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>

@@ -3,7 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Add Castings Photo'); ?></legend>
 	<?php
-		echo $this->Form->input('job_id');
+		echo $this->Form->input('casting_id');
 		echo $this->Form->input('photo_id');
 		echo $this->Form->input('user_id');
 	?>
@@ -15,8 +15,8 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Castings Photos'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Jobs'), array('controller' => 'jobs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Job'), array('controller' => 'jobs', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Casting'), array('controller' => 'castings', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Casting'), array('controller' => 'castings', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Photos'), array('controller' => 'photos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>

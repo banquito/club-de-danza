@@ -6,9 +6,9 @@
 			<?php echo h($practiceroomsPhoto['PracticeroomsPhoto']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Estudy'); ?></dt>
+		<dt><?php echo __('Practiceroom'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($practiceroomsPhoto['Estudy']['name'], array('controller' => 'estudies', 'action' => 'view', $practiceroomsPhoto['Estudy']['id'])); ?>
+			<?php echo $this->Html->link($practiceroomsPhoto['Practiceroom']['name'], array('controller' => 'practicerooms', 'action' => 'view', $practiceroomsPhoto['Practiceroom']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Photo'); ?></dt>
@@ -40,8 +40,8 @@
 		<li><?php echo $this->Form->postLink(__('Delete Practicerooms Photo'), array('action' => 'delete', $practiceroomsPhoto['PracticeroomsPhoto']['id']), null, __('Are you sure you want to delete # %s?', $practiceroomsPhoto['PracticeroomsPhoto']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Practicerooms Photos'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Practicerooms Photo'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Estudies'), array('controller' => 'estudies', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Estudy'), array('controller' => 'estudies', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Practicerooms'), array('controller' => 'practicerooms', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Practiceroom'), array('controller' => 'practicerooms', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Photos'), array('controller' => 'photos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Photo'), array('controller' => 'photos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
