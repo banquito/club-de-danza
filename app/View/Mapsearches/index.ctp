@@ -25,7 +25,7 @@
 					Salas de Ensayo
 				</label>
 			</div>
-			<button type="submit"><?php echo __('Submit') ?></button>
+			<button type="submit"><i class="fa fa-search"></i> Buscar</button>
 		<?php echo $this->Form->end() ?>
 	</div>
 </div>

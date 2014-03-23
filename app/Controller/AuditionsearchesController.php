@@ -42,44 +42,37 @@ class AuditionsearchesController extends AppController {
 		$this -> Auth -> allow('index');
 	}
 
-
-	/**
-	* Se desarrolla una lógica para independizarnos de los nombres de los Controllers
-	*/
 	public function index() {
 		$elements = array();
 		$todas = 1;
-		
-		if ($this->request->is('post')) {
-			if(isset($this->request->data['Auditionsearches'])) {
-				$data = $this->request->data['Auditionsearches'];
-				$todas = sizeof($data) == 0;
-				$this->set(compact('data'));
-				// $this->request->data['auditions'] = 1;
-			}
-		}
+
+        if($this->request->is('post') && isset($this->data['Filter'])){
+			$data = $this->request->data['Filter'];
+			$todas = empty($data['category']);
+			$this->set(compact('data'));
+        }
 
 		###
 		# Elementos Buscados
 		###
 		# Vigentes
-		if(isset($data['auditions']) || $todas)
+		if((isset($data['category']) && $data['category'] == "auditions") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'auditions', 'action' => 'getElements')));
-		if(isset($data['calls']) || $todas)
+		if((isset($data['category']) && $data['category'] == "calls") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'calls', 'action' => 'getElements')));
-		if(isset($data['castings']) || $todas)
+		if((isset($data['category']) && $data['category'] == "castings") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'castings', 'action' => 'getElements')));
-		if(isset($data['jobs']) || $todas)
+		if((isset($data['category']) && $data['category'] == "jobs") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'jobs', 'action' => 'getElements')));
 
 		# No Vigentes
-		if(isset($data['auditions']) || $todas)
+		if((isset($data['category']) && $data['category'] == "auditions") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'auditions', 'action' => 'getElementsOutOfDate')));
-		if(isset($data['calls']) || $todas)
+		if((isset($data['category']) && $data['category'] == "calls") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'calls', 'action' => 'getElementsOutOfDate')));
-		if(isset($data['castings']) || $todas)
+		if((isset($data['category']) && $data['category'] == "castings") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'castings', 'action' => 'getElementsOutOfDate')));
-		if(isset($data['jobs']) || $todas)
+		if((isset($data['category']) && $data['category'] == "jobs") || $todas)
 			$elements = array_merge($elements, $this->requestAction(array('controller' => 'jobs', 'action' => 'getElementsOutOfDate')));
 		
 
@@ -116,8 +109,6 @@ class AuditionsearchesController extends AppController {
 
 		usort($elements, 'sortElements');
 
-		# /elementosBuscados
-
 		###
 		# Elementos Destacados
 		###
@@ -137,6 +128,15 @@ class AuditionsearchesController extends AppController {
 			$id = $auxValues[0]['id'];
 			$image = ($auxValues[0]['image'] ? $namePlural . '/'.$auxValues[0]['image'] : 'layouts/sinfoto.jpg');
 			$title = $auxValues[0]['title'] ? substr($auxValues[0]['title'], 0, 50) : __('No Title');
+			$products = isset($auxValues[0]['products']) ? $auxValues[0]['products'] : null;
+			$street = isset($auxValues[0]['street']) ? $auxValues[0]['street'] : null;
+			$floor = isset($auxValues[0]['floor']) ? $auxValues[0]['floor'] : null;
+			$department = isset($auxValues[0]['department']) ? $auxValues[0]['department'] : null;
+			$website = isset($auxValues[0]['website']) ? $auxValues[0]['website'] : null;
+			$email = isset($auxValues[0]['email']) ? $auxValues[0]['email'] : null;
+			$phone = isset($auxValues[0]['phone']) ? $auxValues[0]['phone'] : null;
+			$dancestyle = isset($auxValues[0]['Dancestyle']) ? $auxValues[0]['Dancestyle'] : null;
+			$elementDate = isset($auxValues[0]['element-date']) ? $auxValues[0]['element-date'] : null;
 			
 			$salients[$key] = array_merge($salient
 				, array('image' => $image
@@ -144,6 +144,15 @@ class AuditionsearchesController extends AppController {
 					, 'name-plural' => $namePlural
 					, 'name' => $name
 					, 'title' => $title
+					, 'products' => $products
+					, 'street' => $street
+					, 'floor' => $floor
+					, 'department' => $department
+					, 'website' => $website
+					, 'email' => $email
+					, 'phone' => $phone
+					, 'Dancestyle' => $dancestyle
+					, 'element-date' => $elementDate
 				)
 			);
 		endforeach;
@@ -151,8 +160,8 @@ class AuditionsearchesController extends AppController {
 		# /elementosDestacados
 
 		$this->set(compact('data', 'elements', 'salients'));
-		
 	}
+
 
 	// // Comparison function
 	// function datesDesc($a, $b) {

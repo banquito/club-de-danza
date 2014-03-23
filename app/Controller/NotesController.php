@@ -132,7 +132,7 @@ class NotesController extends AppController {
 
 	public function inicio() {
 		$this->Note->recursive = -1;
-		$items = $this->requestAction(array('controller' => 'sliders', 'action' => 'getItems')
+		$items = $this->requestAction(array('controller' => 'slidernotes', 'action' => 'getItems')
 			, array('named' => array('category' => 1))
 		);
 

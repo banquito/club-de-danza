@@ -117,6 +117,9 @@ if((strpos($this->params->url, 'accesorios') !== FALSE)
 						<li><a href="/sliders"><?php echo __('List Slider'); ?></a></li>
 						<li><a href="/sliders/nuevo"><?php echo __('Add Slider'); ?></a></li>
 						<li class="divider"></li>
+						<li><a href="/slidernotes">Sliders de Notas</a></li>
+						<li><a href="/slidernotes/nuevo">Nuevo Slider de Notas</a></li>
+						<li class="divider"></li>
 						<li><a href="/banners"><?php echo __('List Banners'); ?></a></li>
 						<li><a href="/banners/nuevo"><?php echo __('Add Banners'); ?></a></li>
 						<li class="divider"></li>
